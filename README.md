@@ -16,5 +16,4 @@ puppets.
 | [docs/GLOSSARY.md](docs/GLOSSARY.md) | The game's vocabulary, used the same way in UI, code and tickets |
 | [docs/WORLDS.md](docs/WORLDS.md) | The worlds the engine can carry. The MVP is World A, Inferno |
 
-Free and open: no accounts, no ads, no payments. Code under the MIT license.
-[NEEDS CLARIFICATION: license for the original text and art. MIT too, or CC BY-SA 4.0?]
+Free and open: no accounts, no ads, no payments. Code, original text and original art under the MIT license; the public-domain sources stay public domain.

@@ -1,6 +1,6 @@
 # Grimfold — product brief
 
-Stage: skeleton (probe closed 2026-10-22: the probe answered the look, cut-paper on a night sea, and the loop, which Adrian played and wants to replay)
+Stage: build (skeleton closed 2026-10-23: the seven steps run end to end and Adrian confirmed the shape on his phone; the paper walk moves to the paper checkpoint)
 
 ## Who and what
 
@@ -67,9 +67,9 @@ other than Spanish.
 
 ## Current focus
 
-Skeleton: the seven demo steps walked end to end, ugly, by ~2026-10-29, together with the paper
-checkpoint. Art requests to Codex run in parallel per [ASSETS.md](../ASSETS.md) and enter in
-`build`, screen by screen. (as of 2026-10-22)
+Build: the look. The cut-paper language the probe proved goes into every screen, one demo step at a
+time, with the Codex art from [ASSETS.md](../ASSETS.md). Paper checkpoint around 2026-10-29. Live at
+rodacato.github.io/grimfold. (as of 2026-10-23)
 
 Stack: TypeScript, Vite, PWA, IndexedDB, Vitest (rules and balance simulation), GitHub Pages via
 Actions.

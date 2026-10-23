@@ -19,10 +19,10 @@ unless a gate says otherwise.
 - [ ] N3: a printed Marea is played to the end with only the Hoja de campaña, the Hoja de marea, a pencil and the dice, without opening the web
   EVIDENCE: pending
 
-- [ ] N3b: every Carta of the bay's Mazo has exactly one d66 row on the Hoja de marea, with the same content
+- [x] N3b: every Carta of the bay's Mazo has exactly one d66 row on the Hoja de marea, with the same content
   CHECK: npx vitest run tests/gates/n3-paper-parity.test.ts && echo GATE-N3B-OK
   EXPECT: GATE-N3B-OK
-  EVIDENCE: pending
+  EVIDENCE: automatic-evidence=v1; definition-sha256=d4c1749096a53c2d5602f0bb328e621d893d4e6aab387f41e7f155526b88116b; exit=0; EXPECT=matched; output-sha256=f92e510d49e04fbfc67b0eaad68dab90275b40e70ca4530803ad3541c9281b62; output-bytes=220
 
 - [ ] N4: every Marea, won or lost, keeps something (Bestiario, Equipo or Repisa), and a Campaña lost to the third Marca keeps the Bestiario for the next one
   CHECK: npx vitest run tests/gates/n4-loss-progress.test.ts && echo GATE-N4-OK
@@ -44,10 +44,10 @@ unless a gate says otherwise.
   EXPECT: GATE-N7-OK
   EVIDENCE: pending
 
-- [ ] N8: closing the app mid-Marea and reopening it restores the exact state from IndexedDB
+- [x] N8: closing the app mid-Marea and reopening it restores the exact state from IndexedDB
   CHECK: npx vitest run tests/gates/n8-resume.test.ts && echo GATE-N8-OK
   EXPECT: GATE-N8-OK
-  EVIDENCE: pending
+  EVIDENCE: automatic-evidence=v1; definition-sha256=cd7647a21b891642b7c5d1172b22cc41ab7b257c1f7b86ba5c0ce6739b3c71b6; exit=0; EXPECT=matched; output-sha256=51d7dea3b4b2d00a628d076b1b8e372f2466309a37a83e0afdcb86d60125a328; output-bytes=220
 
 - [ ] N8b: the installed PWA opens and plays a Marea in airplane mode on Adrian's phone
   EVIDENCE: pending

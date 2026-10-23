@@ -7,7 +7,7 @@ import { Bite, FightView, LootView } from "./screens/Fishing";
 import { Bestiary, Sessions } from "./screens/Records";
 import { RoomView } from "./screens/RoomView";
 import { SeaMap } from "./screens/SeaMap";
-import { Notes, Status } from "./TideParts";
+import { Status } from "./TideParts";
 
 function useHash(): string {
   const [hash, setHash] = useState(window.location.hash);
@@ -36,12 +36,11 @@ export function App() {
   if (hash === "#/bestiario") return <Bestiary />;
   if (hash === "#/registro") return <Sessions />;
   if (!game.tide) return <Dock />;
-  const Screen = PHASES[game.tide.phase];
+  const Phase = PHASES[game.tide.phase];
   return (
     <>
       <Status tide={game.tide} />
-      <Notes notes={game.notes} />
-      <Screen />
+      <Phase />
     </>
   );
 }

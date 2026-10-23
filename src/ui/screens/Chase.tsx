@@ -4,37 +4,43 @@ import { MAX_SCARS, type Tide } from "../../domain/state";
 import { escapeTarget } from "../../domain/tide/lighthouse";
 import { t } from "../../i18n/t";
 import { Art } from "../Art";
+import { FaroleroPuppet } from "../Farolero";
 import { useGame } from "../game";
-import { Dice, Items } from "../TideParts";
+import { Btn, Roll, Screen, Waves } from "../Paper";
+import { Items } from "../TideParts";
 
 export function FaroleroView() {
   const { game, ctx, send } = useGame();
   const encounter = (game.tide as Tide).encounter;
   return (
-    <main>
-      <Art src={bayArt.farolero} alt={t("farolero.name")} />
-      <p className="kicker">{t("lighthouse.boss")}</p>
-      <h2>{t("farolero.caught")}</h2>
-      <p>{t("farolero.rule", { n: escapeTarget(ctx) })}</p>
-      {encounter ? (
-        <>
-          <p>
-            <Dice dice={encounter.dice} /> <b>{encounter.dice.reduce((a, b) => a + b, 0)}</b>{" "}
+    <Screen>
+      <div className="scene tall">
+        <Waves />
+        <FaroleroPuppet width={330} />
+      </div>
+      <section className="paper dark">
+        <p className="kicker">{t("lighthouse.boss")}</p>
+        <h2>{t("farolero.caught")}</h2>
+        <p className="small">{t("farolero.rule", { n: escapeTarget(ctx) })}</p>
+        {encounter && (
+          <Roll dice={encounter.dice} rollKey={game.rng} total={encounter.dice.reduce((a, b) => a + b, 0)}>
             {t(encounter.escapes ? "farolero.escaped" : "farolero.hit")}
-          </p>
-          <button type="button" className="primary" onClick={() => send({ type: "afterEncounter" })}>
-            {t("farolero.continue")}
-          </button>
-        </>
+          </Roll>
+        )}
+      </section>
+      {encounter ? (
+        <Btn kind="primary" onClick={() => send({ type: "afterEncounter" })}>
+          {t("farolero.continue")}
+        </Btn>
       ) : (
         <>
-          <button type="button" className="primary" onClick={() => send({ type: "flee" })}>
+          <Btn kind="primary" onClick={() => send({ type: "flee" })}>
             {t("farolero.flee")}
-          </button>
+          </Btn>
           <Items when="chase" />
         </>
       )}
-    </main>
+    </Screen>
   );
 }
 
@@ -55,27 +61,32 @@ export function TideEndView() {
     if (latest) kept.push(t("end.keeps.mutation", { mutation: t(`mutation.${latest}`) }));
     kept.push(t("end.keeps.ceiling", { n: sanityCeiling(c) }));
   }
+  const art = how === "dock" ? bayArt.boat : how === "transformed" ? bayArt.transformed : null;
   return (
-    <main>
-      <Art src={how === "dock" ? bayArt.boat : null} alt={t(titleKey)} />
-      <p className="kicker">{t("end.kicker", { n: tide.number })}</p>
-      <h2>{t(titleKey)}</h2>
-      <p>
-        {how === "transformed"
-          ? t(lost ? "end.transformed.lost" : "end.transformed.text", { n: c.scars, max: MAX_SCARS })
-          : t(`${titleKey}.text`)}
-      </p>
-      <section>
+    <Screen>
+      <div className="scene place">
+        <Art src={art} alt={t(titleKey)} />
+      </div>
+      <section className={`paper ${how === "dock" ? "amber" : "dark"}`}>
+        <p className="kicker">{t("end.kicker", { n: tide.number })}</p>
+        <h2>{t(titleKey)}</h2>
+        <p>
+          {how === "transformed"
+            ? t(lost ? "end.transformed.lost" : "end.transformed.text", { n: c.scars, max: MAX_SCARS })
+            : t(`${titleKey}.text`)}
+        </p>
+      </section>
+      <section className="paper">
         <h3>{t("end.keeps")}</h3>
-        <ul>
+        <ul className="keeps">
           {kept.map((k) => (
             <li key={k}>{k}</li>
           ))}
         </ul>
       </section>
-      <button type="button" className="primary" onClick={() => send({ type: "backToDock" })}>
+      <Btn kind="primary" onClick={() => send({ type: "backToDock" })}>
         {t("end.toDock")}
-      </button>
-    </main>
+      </Btn>
+    </Screen>
   );
 }

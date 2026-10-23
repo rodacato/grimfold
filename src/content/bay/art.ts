@@ -30,5 +30,6 @@ export const bayArt = {
   lamp: "locations/faro-lampara.png",
   farolero: "horrors/farolero.png",
   boat: "objects/bote.png",
+  transformed: "characters/profundo.png",
   cardBack: (shadow: string) => `redo/dorso-${shadow}.png`,
 };

@@ -172,6 +172,8 @@
   "bestiary.title": "Bestiario · {n} de {of}",
   "bestiary.caught": "{n} pescadas. Solo las anotadas te enseñan su Vida y lo que cuenta el pueblo.",
   "bestiary.loot": "Suelta: {item}",
+  "bestiary.tap": "Toca una que ya hayas visto para abrir su ficha.",
+  "bestiary.back": "Volver al bestiario",
   "bestiary.notRecorded": "La pescaste, pero no la anotaste. La próxima vez que suba, anótala.",
   "bestiary.recorded": "Anotado. Techo de Cordura −1.",
 

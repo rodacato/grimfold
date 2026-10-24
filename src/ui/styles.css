@@ -1277,6 +1277,19 @@ p + p {
   padding: 6px 8px;
   background: var(--fiber), var(--card);
 }
+.bestiary li[role="button"] {
+  cursor: pointer;
+}
+.bestiary-sheet b {
+  display: block;
+  font-family: var(--display);
+  font-size: 22px;
+  line-height: 1.1;
+}
+.bestiary-sheet small {
+  display: block;
+  margin-top: 4px;
+}
 .bestiary .thumb {
   width: 64px;
   height: 64px;
@@ -1302,7 +1315,11 @@ p + p {
   font-size: 12px;
   color: var(--muted);
 }
-.bestiary .drops-loot {
+.drops-loot.named {
+  display: flex;
+}
+.bestiary .drops-loot,
+.bestiary-sheet .drops-loot {
   font-weight: 800;
   color: #7a4d0b;
 }

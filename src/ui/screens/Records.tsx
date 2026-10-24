@@ -1,64 +1,108 @@
+import { useState } from "react";
 import { bayArt } from "../../content/bay/art";
+import type { Creature } from "../../domain/content";
 import { caught, known, loot } from "../../domain/derived";
 import { t } from "../../i18n/t";
 import { Art, LootIcon } from "../Art";
 import { useGame } from "../game";
-import { Btn, Screen } from "../Paper";
+import { Horror } from "../Horror";
+import { Btn, Screen, Waves } from "../Paper";
 
 const goBack = () => {
   window.location.hash = "#/";
 };
 
+const where = (c: Creature) =>
+  c.water ? `${t(`water.${c.water}`)} · ${t("fight.depth", { n: c.depth })}` : t("fight.wanderer");
+
+function Entry({ c, isKnown }: { c: Creature; isKnown: boolean }) {
+  const { place } = useGame();
+  const item = loot(place, c.loot);
+  return (
+    <div>
+      <b>{t(`creature.${c.id}`)}</b>
+      <small>
+        {where(c)} ·{" "}
+        {c.unfishable ? t("fight.unfishable") : isKnown ? t("loot.hp", { n: c.hp }) : t("fight.hpUnknown")} ·{" "}
+        {t(`rarity.${c.rarity}`)}
+      </small>
+      <small className="drops-loot named">
+        <LootIcon id={item.id} />
+        {t("bestiary.loot", { item: item.id })}
+        {item.use && ` · ${t(`use.${item.use}`)}`}
+      </small>
+      {isKnown ? (
+        <div className="diary">
+          {t(`creature.${c.id}.diary`)}
+          <cite>— {t(`person.${c.diaryBy}`)}</cite>
+        </div>
+      ) : (
+        <p className="small voice">{t("bestiary.notRecorded")}</p>
+      )}
+    </div>
+  );
+}
+
+function Sheet({ c, isKnown, onClose }: { c: Creature; isKnown: boolean; onClose: () => void }) {
+  return (
+    <Screen>
+      <div className="scene">
+        <Waves />
+        <Horror c={c} />
+      </div>
+      <section className="paper bestiary-sheet">
+        <Entry c={c} isKnown={isKnown} />
+      </section>
+      <Btn onClick={onClose}>{t("bestiary.back")}</Btn>
+    </Screen>
+  );
+}
+
 export function Bestiary() {
   const { game, place } = useGame();
+  const [open, setOpen] = useState<string | null>(null);
+  const opened = place.creatures.find((c) => c.id === open);
+  // In development every sheet opens, so new puppets can be checked without fishing them.
+  const canOpen = (seen: boolean) => seen || import.meta.env.DEV;
+  if (opened)
+    return (
+      <Sheet
+        c={opened}
+        isKnown={known(game, opened.id) || import.meta.env.DEV}
+        onClose={() => setOpen(null)}
+      />
+    );
+
   return (
     <Screen>
       <section className="paper">
         <h2>{t("bestiary.title", { n: game.bestiary.length, of: place.creatures.length })}</h2>
         <p className="small">{t("bestiary.caught", { n: game.caught.length })}</p>
+        <p className="small">{t("bestiary.tap")}</p>
       </section>
       <ul className="bestiary">
         {place.creatures.map((c) => {
-          const where = c.water
-            ? `${t(`water.${c.water}`)} · ${t("fight.depth", { n: c.depth })}`
-            : t("fight.wanderer");
           const isKnown = known(game, c.id);
           const seen = isKnown || caught(game, c.id);
-          const item = loot(place, c.loot);
           return (
-            <li key={c.id} className={seen ? "" : "unknown"}>
+            <li
+              key={c.id}
+              className={seen ? "" : "unknown"}
+              {...(canOpen(seen) && {
+                role: "button",
+                tabIndex: 0,
+                onClick: () => setOpen(c.id),
+                onKeyDown: (e: { key: string }) => e.key === "Enter" && setOpen(c.id),
+              })}
+            >
               <Art src={bayArt.creature(c.id)} alt={seen ? t(`creature.${c.id}`) : "???"} className="thumb" />
               {seen ? (
-                <div>
-                  <b>{t(`creature.${c.id}`)}</b>
-                  <small>
-                    {where} ·{" "}
-                    {c.unfishable
-                      ? t("fight.unfishable")
-                      : isKnown
-                        ? t("loot.hp", { n: c.hp })
-                        : t("fight.hpUnknown")}{" "}
-                    · {t(`rarity.${c.rarity}`)}
-                  </small>
-                  <small className="drops-loot named">
-                    <LootIcon id={item.id} />
-                    {t("bestiary.loot", { item: item.id })}
-                    {item.use && ` · ${t(`use.${item.use}`)}`}
-                  </small>
-                  {isKnown ? (
-                    <div className="diary">
-                      {t(`creature.${c.id}.diary`)}
-                      <cite>— {t(`person.${c.diaryBy}`)}</cite>
-                    </div>
-                  ) : (
-                    <p className="small voice">{t("bestiary.notRecorded")}</p>
-                  )}
-                </div>
+                <Entry c={c} isKnown={isKnown} />
               ) : (
                 <div>
                   <b>???</b>
                   <small>
-                    {t("bite.title", { shadow: t(`shadow.${c.shadow}`) })} · {where}
+                    {t("bite.title", { shadow: t(`shadow.${c.shadow}`) })} · {where(c)}
                   </small>
                 </div>
               )}

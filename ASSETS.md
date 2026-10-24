@@ -141,25 +141,29 @@ Bust portraits, like old photos cut out of paper.
 
 ## Loot
 
-- [ ] `luz` — **La luz del faro.** The object you steal: a small lens with fire inside, wrapped in a rag.
-- [ ] `mecha` — **Mecha de farol.** Still warm.
-- [ ] `pinza` — **Pinza de latón.** A brass crab claw with a ring stuck in it.
-- [ ] `espina` — **Espina con veneno viejo.**
-- [ ] `red` — **Red remendada.** Patches in different colors.
-- [ ] `diente` — **Diente de leche.**
-- [ ] `perla` — **Perla turbia.** Something moving inside.
-- [ ] `lente` — **Lente de faro.** A curved fragment.
-- [ ] `concha` — **Concha que zumba.**
-- [ ] `ancla` — **Ancla que respira.**
-- [ ] `corona` — **Corona de coral.**
-- [ ] `brujula` — **Brújula que apunta abajo.**
+Transparent 1254×1254 in `assets/loot/`. The game shows each beside its name; one without art
+shows only the name.
+
+- [x] `luz` — **La luz del faro.** The object you steal: a small lens with fire inside, wrapped in a rag.
+- [x] `mecha` — **Mecha de farol.** Still warm.
+- [x] `pinza` — **Pinza de latón.** A brass crab claw with a ring stuck in it.
+- [x] `espina` — **Espina con veneno viejo.**
+- [x] `red` — **Red remendada.** Patches in different colors.
+- [x] `diente` — **Diente de leche.**
+- [x] `perla` — **Perla turbia.** Something moving inside.
+- [x] `lente` — **Lente de faro.** A curved fragment.
+- [x] `concha` — **Concha que zumba.**
+- [ ] `motor-tose` — **Motor que tose.** The Ruelas' outboard motor, still coughing, from the shark's belly.
+- [x] `ancla` — **Ancla que respira.**
+- [x] `corona` — **Corona de coral.**
+- [x] `brujula` — **Brújula que apunta abajo.**
 - [ ] `branquia` — **Branquia que flota.** One of the axolotl's black globes, still on its stalk.
 - [ ] `escudo` — **Escudo de esturión.** A bony plate shaped like a monolith's vertebra.
 - [ ] `flauta` — **Flauta de branquia.** A twisted gill tube that whistles on its own.
 - [ ] `mano` — **Mano al revés.** A hand with its fingers bent the wrong way.
-- [ ] `pluma` — **Pluma con sal.**
-- [ ] `ojo-madera` — **Ojo de madera.** The figurehead's eye.
-- [ ] `idolo` — **Ídolo de algo que duerme.** A faceless figure with closed eyes carved all over its body.
+- [x] `pluma` — **Pluma con sal.**
+- [x] `ojo-madera` — **Ojo de madera.** The figurehead's eye.
+- [x] `idolo` — **Ídolo de algo que duerme.** A faceless figure with closed eyes carved all over its body. Redone; the first one, which showed Cthulhu, is `candidates/objects/idolo-primero.png`.
 
 ## Cards
 

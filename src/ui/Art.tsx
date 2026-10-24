@@ -1,4 +1,27 @@
-import { useState } from "react";
+import { type ReactNode, useState } from "react";
+import { bayArt } from "../content/bay/art";
+
+/** A Botín's picture beside its name; one without art yet shows only the name. */
+export function LootIcon({
+  id,
+  big = false,
+  fallback = null,
+}: {
+  id: string;
+  big?: boolean;
+  fallback?: ReactNode;
+}) {
+  const [missing, setMissing] = useState(false);
+  if (missing) return fallback;
+  return (
+    <img
+      className={`loot-icon ${big ? "big" : ""}`}
+      src={`${import.meta.env.BASE_URL}${bayArt.loot(id)}`}
+      alt=""
+      onError={() => setMissing(true)}
+    />
+  );
+}
 
 interface Props {
   src: string | null;

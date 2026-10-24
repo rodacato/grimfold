@@ -1,7 +1,7 @@
 import { bayArt } from "../../content/bay/art";
 import { caught, known, loot } from "../../domain/derived";
 import { t } from "../../i18n/t";
-import { Art } from "../Art";
+import { Art, LootIcon } from "../Art";
 import { useGame } from "../game";
 import { Btn, Screen } from "../Paper";
 
@@ -40,7 +40,8 @@ export function Bestiary() {
                         : t("fight.hpUnknown")}{" "}
                     · {t(`rarity.${c.rarity}`)}
                   </small>
-                  <small className="drops-loot">
+                  <small className="drops-loot named">
+                    <LootIcon id={item.id} />
                     {t("bestiary.loot", { item: item.id })}
                     {item.use && ` · ${t(`use.${item.use}`)}`}
                   </small>

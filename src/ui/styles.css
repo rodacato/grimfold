@@ -353,6 +353,9 @@ p + p {
 .hold-guide b {
   font-size: 14px;
 }
+.hold-guide b.named {
+  display: flex;
+}
 .hold-guide small {
   font-size: 12.5px;
   color: var(--muted);
@@ -516,9 +519,34 @@ p + p {
   display: grid;
   gap: 8px;
 }
+.named {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.loot-icon {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.25));
+}
+.loot-icon.big {
+  width: 40px;
+  height: 40px;
+}
+.f3 .loot-icon.big {
+  width: 48px;
+  height: 48px;
+}
+.request-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+}
 .request {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 40px 1fr auto;
   gap: 8px;
   align-items: center;
   padding: 7px 9px;
@@ -941,7 +969,7 @@ p + p {
 }
 .f3 .face:not(.back) {
   display: grid;
-  grid-template-columns: 34px 1fr;
+  grid-template-columns: 48px 1fr;
   gap: 10px;
   align-items: center;
 }

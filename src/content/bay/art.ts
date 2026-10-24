@@ -4,6 +4,7 @@ import type { EventId, IslandId, WaterType, WreckId } from "../../domain/content
 export const bayArt = {
   creature: (id: string) => `web/horrors/${id}.webp`,
   person: (id: string) => `redo/${id}.png`,
+  loot: (id: string) => `loot/${id}.png`,
   town: ["town/pueblo-muelle.png", "town/pueblo-centro.png", "town/pueblo-loma.png"],
   title: "locations/pueblo-faro.png",
   water: {

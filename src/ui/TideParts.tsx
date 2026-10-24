@@ -4,6 +4,7 @@ import { chapterReady, loot, maxHp, requestWanting } from "../domain/derived";
 import { BASE_SANITY, HOLD_SIZE, type Tide } from "../domain/state";
 import { distance } from "../domain/tide/map";
 import { t } from "../i18n/t";
+import { LootIcon } from "./Art";
 import { useGame } from "./game";
 
 export function Status({ tide }: { tide: Tide }) {
@@ -53,7 +54,12 @@ export function Status({ tide }: { tide: Tide }) {
         >
           {t("status.hold", { n: tide.hold.length, max: HOLD_SIZE })} {holdOpen ? "▴" : "▾"}
         </button>
-        {tide.light && <span className="badge">{t("status.light")}</span>}
+        {tide.light && (
+          <span className="badge named">
+            <LootIcon id="luz" />
+            {t("status.light")}
+          </span>
+        )}
         {tide.farolero !== null && tide.phase !== "end" && (
           <span className="badge chase">
             {t("status.farolero", { n: distance(place.map.nodes, tide.farolero, tide.room) })}
@@ -87,7 +93,10 @@ function HoldGuide({ tide }: { tide: Tide }) {
         const forChapter = chapter?.wants.includes(id) && !chapterReady(place, c);
         return (
           <li key={`${id}-${i}`}>
-            <b>{t(`loot.${id}`)}</b>
+            <b className="named">
+              <LootIcon id={id} />
+              {t(`loot.${id}`)}
+            </b>
             <small>{use ? `${t(WHEN[use])} · ${t(`use.${use}`)}` : t("use.none")}</small>
             {forChapter && chapter && (
               <small className="home">{t("loot.forChapter", { who: t(`person.${chapter.by}`) })}</small>
@@ -126,7 +135,10 @@ export function Items({ when }: { when: When }) {
         key={`${id}-${index}`}
         onClick={() => send({ type: "useItem", index })}
       >
-        {t(`loot.${id}`)}
+        <span className="named">
+          <LootIcon id={id} />
+          {t(`loot.${id}`)}
+        </span>
         <em>{t(`use.${use}`)}</em>
       </button>,
     ];

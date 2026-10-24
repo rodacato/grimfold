@@ -11,7 +11,7 @@ import {
 import { MAX_SCARS } from "../../domain/state";
 import { t } from "../../i18n/t";
 import { ArponeraPuppet } from "../Arponera";
-import { Art } from "../Art";
+import { Art, LootIcon } from "../Art";
 import { FaroleroPuppet } from "../Farolero";
 import { useGame } from "../game";
 import { Btn, Screen } from "../Paper";
@@ -174,6 +174,9 @@ export function Dock() {
             const has = c.shelf.includes(r.wants);
             return (
               <div key={r.id} className={`request ${has ? "ready" : ""}`}>
+                <span className="request-icon">
+                  <LootIcon id={r.wants} big />
+                </span>
                 <div>
                   <b>{t("dock.request", { who: t(`person.${r.by}`), item: r.wants })}</b>
                   <small>
@@ -195,7 +198,10 @@ export function Dock() {
         {c.shelf.length > 0 && (
           <div className="shelf">
             {c.shelf.map((s, i) => (
-              <span key={`${s}-${i}`}>{t(`loot.${s}`)}</span>
+              <span key={`${s}-${i}`} className="named">
+                <LootIcon id={s} />
+                {t(`loot.${s}`)}
+              </span>
             ))}
           </div>
         )}

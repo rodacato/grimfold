@@ -4,7 +4,7 @@ import { chapterReady, creature, known, loot, requestWanting } from "../../domai
 import { HOLD_SIZE, type Tide } from "../../domain/state";
 import { seesHp, targetFor } from "../../domain/tide/fight";
 import { t } from "../../i18n/t";
-import { Art } from "../Art";
+import { Art, LootIcon } from "../Art";
 import { useGame } from "../game";
 import { Btn, Roll, Screen, Waves } from "../Paper";
 import { Items } from "../TideParts";
@@ -173,7 +173,7 @@ export function LootView() {
         </div>
         <div className="fold f3">
           <div className="face">
-            <span className="glyph">{RARITY_GLYPH[c.rarity]}</span>
+            <LootIcon id={item.id} big fallback={<span className="glyph">{RARITY_GLYPH[c.rarity]}</span>} />
             <div>
               <span className="kicker">{item.use ? t(`use.${item.use}`) : t("use.none")}</span>
               <b>{t(`loot.${item.id}`)}</b>
@@ -225,7 +225,10 @@ export function LootView() {
               );
             return (
               <li key={`${id}-${i}`}>
-                {t(`loot.${id}`)}
+                <span className="named">
+                  <LootIcon id={id} />
+                  {t(`loot.${id}`)}
+                </span>
                 {full && (
                   <button
                     type="button"

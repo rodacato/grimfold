@@ -1,5 +1,5 @@
 import { bayArt } from "../../content/bay/art";
-import { known } from "../../domain/derived";
+import { caught, known, loot } from "../../domain/derived";
 import { t } from "../../i18n/t";
 import { Art } from "../Art";
 import { useGame } from "../game";
@@ -15,29 +15,43 @@ export function Bestiary() {
     <Screen>
       <section className="paper">
         <h2>{t("bestiary.title", { n: game.bestiary.length, of: place.creatures.length })}</h2>
+        <p className="small">{t("bestiary.caught", { n: game.caught.length })}</p>
       </section>
       <ul className="bestiary">
         {place.creatures.map((c) => {
-          const where = c.water ? t(`water.${c.water}`) : t("fight.wanderer");
+          const where = c.water
+            ? `${t(`water.${c.water}`)} · ${t("fight.depth", { n: c.depth })}`
+            : t("fight.wanderer");
           const isKnown = known(game, c.id);
+          const seen = isKnown || caught(game, c.id);
+          const item = loot(place, c.loot);
           return (
-            <li key={c.id} className={isKnown ? "" : "unknown"}>
-              <Art
-                src={bayArt.creature(c.id)}
-                alt={isKnown ? t(`creature.${c.id}`) : "???"}
-                className="thumb"
-              />
-              {isKnown ? (
+            <li key={c.id} className={seen ? "" : "unknown"}>
+              <Art src={bayArt.creature(c.id)} alt={seen ? t(`creature.${c.id}`) : "???"} className="thumb" />
+              {seen ? (
                 <div>
                   <b>{t(`creature.${c.id}`)}</b>
                   <small>
-                    {where} · {c.unfishable ? t("fight.unfishable") : t("loot.hp", { n: c.hp })} ·{" "}
-                    {t(`rarity.${c.rarity}`)}
+                    {where} ·{" "}
+                    {c.unfishable
+                      ? t("fight.unfishable")
+                      : isKnown
+                        ? t("loot.hp", { n: c.hp })
+                        : t("fight.hpUnknown")}{" "}
+                    · {t(`rarity.${c.rarity}`)}
                   </small>
-                  <div className="diary">
-                    {t(`creature.${c.id}.diary`)}
-                    <cite>— {t(`person.${c.diaryBy}`)}</cite>
-                  </div>
+                  <small className="drops-loot">
+                    {t("bestiary.loot", { item: item.id })}
+                    {item.use && ` · ${t(`use.${item.use}`)}`}
+                  </small>
+                  {isKnown ? (
+                    <div className="diary">
+                      {t(`creature.${c.id}.diary`)}
+                      <cite>— {t(`person.${c.diaryBy}`)}</cite>
+                    </div>
+                  ) : (
+                    <p className="small voice">{t("bestiary.notRecorded")}</p>
+                  )}
                 </div>
               ) : (
                 <div>

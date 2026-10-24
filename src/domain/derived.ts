@@ -27,6 +27,7 @@ export function loot(place: Place, id: string): Loot {
 }
 
 export const known = (g: Game, creatureId: string): boolean => g.bestiary.includes(creatureId);
+export const caught = (g: Game, creatureId: string): boolean => g.caught.includes(creatureId);
 
 /** Requests the town is asking for now: the next level of a piece that is not yet done. */
 export const activeRequests = (place: Place, c: Campaign): Request[] =>

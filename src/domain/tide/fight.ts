@@ -87,9 +87,14 @@ export function bleed(ctx: Ctx): void {
   hit(ctx, fight, 2);
 }
 
+function markCaught({ g }: Ctx, id: string): void {
+  if (!g.caught.includes(id)) g.caught.push(id);
+}
+
 function settle(ctx: Ctx, fight: Fight): void {
   const tide = activeTide(ctx.g);
   if (fight.damage >= creature(ctx.place, fight.creature).hp) {
+    markCaught(ctx, fight.creature);
     tide.loot = { creature: fight.creature, recorded: false };
     tide.fight = null;
     tide.phase = "loot";
@@ -119,6 +124,7 @@ export function endure(ctx: Ctx, holdOn: boolean): void {
   const fight = activeFight(ctx);
   if (!fight || !creature(ctx.place, fight.creature).unfishable) return;
   const tide = activeTide(ctx.g);
+  markCaught(ctx, fight.creature);
   tide.fight = null;
   tide.phase = "room";
   if (!holdOn) {

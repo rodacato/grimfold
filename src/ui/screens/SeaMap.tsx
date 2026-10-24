@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { RoomKind, WaterType } from "../../domain/content";
 import type { Room, Tide } from "../../domain/state";
 import { blocked, isNeighbor, visible } from "../../domain/tide/map";
 import { castsLeft } from "../../domain/tide/sea";
@@ -9,6 +10,34 @@ import { Items } from "../TideParts";
 
 const WATER_FILL = { rio: "#9bb9a7", lago: "#5f9497", mar: "#2f6676", profundo: "#0b1c20" };
 const SPENT = "#8d9690";
+const DARK_WATER = new Set<WaterType>(["mar", "profundo"]);
+
+/** Cut-paper marks drawn on a 20×20 box centered on the node. */
+const GLYPHS: Record<RoomKind, string> = {
+  dock: "M4 6h12v3H4z M6 9h2v8H6z M12 9h2v8h-2z",
+  water: "M2 8c3-3 5 3 8 0s5 3 8 0 M2 13c3-3 5 3 8 0s5 3 8 0",
+  wreck: "M3 15l14-3-1 4H5z M9 13L11 3l1 9 M11 4l5 4-5 1",
+  island: "M2 16c3-5 13-5 16 0z M10 13V5 M10 5c-3-2-6 0-7 2 M10 5c3-2 6 0 7 2",
+  event: "M7 7c0-4 6-4 6 0 0 2-3 3-3 5v1 M10 16v1",
+  lighthouse: "M7 17l1-11h4l1 11z M8 6l2-3 2 3 M5 9h2 M13 9h2",
+};
+
+function Glyph({ kind, x, y, dark }: { kind: RoomKind; x: number; y: number; dark: boolean }) {
+  const filled = kind === "dock" || kind === "wreck" || kind === "island" || kind === "lighthouse";
+  const ink = dark ? "var(--cream)" : "var(--ink)";
+  return (
+    <path
+      d={GLYPHS[kind]}
+      transform={`translate(${x - 10} ${y - 10})`}
+      fill={filled ? ink : "none"}
+      stroke={ink}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    />
+  );
+}
 
 function Boat({ x, y }: { x: number; y: number }) {
   return (
@@ -125,7 +154,11 @@ export function SeaMap() {
                   stroke="var(--ink)"
                   strokeWidth="2.4"
                 />
-                {blocked(game.campaign, room) && <Lock x={n.x} y={n.y} />}
+                {blocked(game.campaign, room) ? (
+                  <Lock x={n.x} y={n.y} />
+                ) : (
+                  <Glyph kind={room.kind} x={n.x} y={n.y} dark={!spent && DARK_WATER.has(room.water)} />
+                )}
                 <text x={n.x} y={n.y + 31} textAnchor="middle">
                   {label(i, room)}
                 </text>

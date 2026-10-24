@@ -1,8 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { bay } from "../src/content/bay";
+import { castPool } from "../src/domain/tide/sea";
 import { hasString } from "../src/i18n/t";
 
 const lootIds = new Set(bay.loot.map((l) => l.id));
+const WATERS = ["rio", "lago", "mar", "profundo"] as const;
 
 describe("the bay's content holds together", () => {
   it("every loot a creature, request or chapter names exists", () => {
@@ -16,10 +18,27 @@ describe("the bay's content holds together", () => {
     expect(named.filter((id) => !lootIds.has(id))).toEqual([]);
   });
 
-  it("every water type has something that bites at depth 1, so a cast never comes up empty", () => {
-    for (const water of ["rio", "lago", "mar", "profundo"] as const) {
-      const deck = bay.creatures.filter((c) => c.water === water);
-      expect(deck.length, water).toBeGreaterThan(0);
+  it("a cast never comes up empty, at any depth of any water", () => {
+    for (const water of WATERS) {
+      for (let depth = 1; depth <= bay.maxDepth[water]; depth++) {
+        expect(castPool(bay, water, depth).length, `${water} ${depth}`).toBeGreaterThan(0);
+      }
+    }
+  });
+
+  it("the shallow waters offer at least three different Cartas from the first cast", () => {
+    for (const water of ["rio", "lago", "mar"] as const) {
+      expect(castPool(bay, water, 1).length, water).toBeGreaterThanOrEqual(3);
+    }
+  });
+
+  it("going deeper never takes a Carta away", () => {
+    for (const water of WATERS) {
+      for (let depth = 1; depth < bay.maxDepth[water]; depth++) {
+        const above = castPool(bay, water, depth).map((c) => c.id);
+        const below = castPool(bay, water, depth + 1).map((c) => c.id);
+        expect(below, `${water} ${depth}→${depth + 1}`).toEqual(expect.arrayContaining(above));
+      }
     }
   });
 

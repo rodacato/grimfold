@@ -1,5 +1,5 @@
 import { endTide } from "../campaign";
-import type { Creature } from "../content";
+import type { Creature, Place, WaterType } from "../content";
 import { type Ctx, gearLevel } from "../derived";
 import { d6, pick, shuffle } from "../rng";
 import { activeTide, CASTS_PER_ROOM, HOLD_SIZE, note, ROOMS_PER_SANITY, type Room } from "../state";
@@ -96,19 +96,19 @@ export function descend(ctx: Ctx): void {
   else note(ctx.g, "descent.clean", { roll });
 }
 
+/** The Hoja de marea's rule: reroll a Carta of another water or deeper than you; if none fits, the shallowest. */
+export function castPool(place: Place, water: WaterType, depth: number): Creature[] {
+  const deck = place.creatures.filter((c) => c.water === water);
+  const fits = deck.filter((c) => c.depth <= depth);
+  if (fits.length) return fits;
+  const shallowest = Math.min(...deck.map((c) => c.depth));
+  return deck.filter((c) => c.depth === shallowest);
+}
+
 function drawCard({ g, place }: Ctx): Creature {
   const tide = activeTide(g);
   const water = (tide.rooms[tide.room] as Room).water;
-  const deck = place.creatures.filter((c) => c.water === water);
-  const exact = deck.filter((c) => c.depth === tide.depth);
-  const shallower = deck.filter((c) => c.depth <= tide.depth);
-  const shallowest = Math.min(...deck.map((c) => c.depth));
-  const pool = exact.length
-    ? exact
-    : shallower.length
-      ? shallower
-      : deck.filter((c) => c.depth === shallowest);
-  return pick(g, pool);
+  return pick(g, castPool(place, water, tide.depth));
 }
 
 export function cast(ctx: Ctx): void {

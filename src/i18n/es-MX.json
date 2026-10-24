@@ -163,6 +163,9 @@
   "loot.toSea": "Al agua",
 
   "bestiary.title": "Bestiario · {n} de {of}",
+  "bestiary.caught": "{n} pescadas. Solo las anotadas te enseñan su Vida y lo que cuenta el pueblo.",
+  "bestiary.loot": "Suelta: {item}",
+  "bestiary.notRecorded": "La pescaste, pero no la anotaste. La próxima vez que suba, anótala.",
   "bestiary.recorded": "Anotado. Techo de Cordura −1.",
 
   "lighthouse.boss": "El Jefe · no se mata",
@@ -248,7 +251,7 @@
 
   "print.go": "Imprimir",
   "print.tide.title": "Hoja de marea · La bahía",
-  "print.tide.how": "Lápiz y 2d6. Al lanzar, tira 2d6: decenas y unidades dan la Carta. Si no es de esa agua o es más honda que tu profundidad, vuelve a tirar.",
+  "print.tide.how": "Lápiz y 2d6. Al lanzar, tira 2d6: decenas y unidades dan la Carta. Si no es de esa agua o es más honda que tu profundidad, vuelve a tirar. Si en esa agua ninguna es tan poco honda, pica la menos honda.",
   "print.tide.hp": "Vida",
   "print.tide.sanity": "Cordura",
   "print.tide.hold": "Bodega",
@@ -268,5 +271,6 @@
   "print.campaign.scars": "Marcas (a la {max}ª te quedas en el mar)",
   "print.campaign.chapters": "Capítulos",
   "print.campaign.requests": "Encargos",
-  "print.campaign.shelf": "Repisa"
+  "print.campaign.shelf": "Repisa",
+  "print.campaign.bestiary": "Primer cuadro: la pescaste. Segundo: la anotaste (solo las anotadas cuentan para la pelea)."
 }

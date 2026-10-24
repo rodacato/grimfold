@@ -20,7 +20,7 @@ below, the entry's text, and its format (still, puppet sheet, item sheet or laye
 |---|---|---|---|---|
 | 1 | Week 1, during the skeleton | **Pipeline test:** one loot item sheet (`luz`, `mecha`, `pinza`, `espina`, `red`), `mar-abierto` base and layer sheet (card backs done) | 3 | 3, 4 |
 | 2 | Week 1–2 | **Story:** the dock's layer sheet; the Arponera's base, sheet and stage 4; the Farolero's guardian pieces (townspeople, town panels and `faro-lampara` done; pick v1 or v2 of each portrait) | 5 | 1, 5 |
-| 3 | Week 2 | **Horrors:** the 14 are done on petrol; left: `farolero-persigue`, and magenta versions only for a creature that must sit over a location | 1+ | 3, 4 |
+| 3 | Week 2 | **Horrors:** the 18 are done on petrol; left: `farolero-persigue`, and magenta versions only for a creature that must sit over a location | 1+ | 3, 4 |
 | 4 | Week 2 | **Objects:** the rest of the loot in two sheets, the equipment in one | 3 sheets | 1, 4 |
 | 5 | Week 2–3 | **Places:** the horizontal ones are done; left: a 9:16 base of each, and a layer sheet for those marked (moves) | ~18 | 2, 3, 5 |
 
@@ -81,6 +81,7 @@ rules already have; there are no shops.
 - [x] `naufragio-ruelas` — The Ruelas' launch beached on a sandbar, intact, outboard motor ripped off, dinner still served on the table.
 - [x] `evento-boya` — A buoy ringing alone at night in the fog, no waves to move it.
 - [x] `evento-sal` — The boat under falling salt crystals; the dock in the distance, people watching without umbrellas.
+- [ ] `carta-bahia` — The Mapa: a 2:3 portrait sea chart of the bay seen from above, 1024×1536. Muelle at the bottom left, the lighthouse rock at the top right; the water darkens from tea-colored estuary near the Muelle to black sea below the lighthouse. Eight round clear spots of open water where the game places its Salas, at these fractions of width and height: Muelle 0.13 0.89 · 0.35 0.76 · 0.16 0.60 · 0.53 0.61 · 0.34 0.39 · 0.74 0.45 · 0.79 0.78 · lighthouse 0.85 0.21. Nothing drawn on those spots: what is there changes every Marea.
 
 ## Horrors
 
@@ -90,10 +91,14 @@ Odd, not muscular: the horror is the detail that should not be there.
 - [x] `cangrejo` — **Cangrejo de los ahogados.** Wedding rings threaded on its legs, shell shaped like a small tombstone.
 - [x] `globo` — **Pez globo resentido.** Puffed up, offended face, a little bell hanging from it that does not ring.
 - [x] `sinojos` — **Banco de peces sin ojos.** Hundreds of small silver fish with empty sockets that together form the outline of a face.
+- [x] `ajolote` — **Larva de la Puerta.** A pale axolotl with legs too long and a hollow skull; its six branching gills end in black globes. Lago, from a Codex candidate.
+- [x] `esturion` — **El Arzobispo del Limo.** An armored sturgeon with an eyeless bone mask, snout split into vertical jaws, a fossil of itself in its side. Lago, from a Codex candidate.
 - [x] `lucio` — **Lucio con dientes de leche.** Long pike with a child's baby teeth, small and uneven, one crooked.
 - [x] `medusa` — **Medusa de campana rota.** Its body is a cracked bronze church bell; its tentacles are bell-tower ropes.
 - [x] `linterna` — **Pez linterna desertor.** Wears a lighthouse lens as a monocle; its lure is out and it looks ashamed.
 - [x] `sirena` — **Sirena desafinada.** Not the pretty mermaid: half conch shell, mouth open on an endless note, seaweed hair. Nervous laughter more than fear.
+- [x] `pez-hacha` — **El Flautista del Tajo.** A blind hatchetfish whose gill tubes twist like flutes; teeth line its empty belly, pointing inward. Mar, from a Codex candidate.
+- [x] `tripode` — **El Oficiante del Fondo.** Three very tall fin rays ending in hands with inverted fingers; a small fish body on top, its face opening in three bony plates. Mar, from a Codex candidate.
 - [x] `tiburon` — **Tiburón de quilla.** Its dorsal fin is a launch's keel; a propeller shows through a stitched seam in its belly.
 - [x] `calamar` — **Calamar del ancla.** Coiled around a rusty anchor that has gills. The anchor is what breathes.
 - [x] `reina` — **Reina de los percebes.** A mound of barnacles on a rock forming a crown and the worn face of a town woman.
@@ -148,6 +153,10 @@ Bust portraits, like old photos cut out of paper.
 - [ ] `ancla` — **Ancla que respira.**
 - [ ] `corona` — **Corona de coral.**
 - [ ] `brujula` — **Brújula que apunta abajo.**
+- [ ] `branquia` — **Branquia que flota.** One of the axolotl's black globes, still on its stalk.
+- [ ] `escudo` — **Escudo de esturión.** A bony plate shaped like a monolith's vertebra.
+- [ ] `flauta` — **Flauta de branquia.** A twisted gill tube that whistles on its own.
+- [ ] `mano` — **Mano al revés.** A hand with its fingers bent the wrong way.
 - [ ] `pluma` — **Pluma con sal.**
 - [ ] `ojo-madera` — **Ojo de madera.** The figurehead's eye.
 - [ ] `idolo` — **Ídolo de algo que duerme.** A faceless figure with closed eyes carved all over its body.

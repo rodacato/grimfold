@@ -1114,8 +1114,13 @@ p + p {
   line-height: 1.1;
 }
 .bestiary small {
+  display: block;
   font-size: 12px;
   color: var(--muted);
+}
+.bestiary .drops-loot {
+  font-weight: 800;
+  color: #7a4d0b;
 }
 .bestiary .diary {
   margin-top: 4px;

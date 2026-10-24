@@ -100,7 +100,8 @@ export function CampaignSheet({ place }: { place: Place }) {
         ))}
       </ul>
       <h2>{t("nav.bestiary")}</h2>
-      <p>{place.creatures.map((c) => `☐ ${t(`creature.${c.id}`)}`).join(" · ")}</p>
+      <p>{t("print.campaign.bestiary")}</p>
+      <p>{place.creatures.map((c) => `☐☐ ${t(`creature.${c.id}`)}`).join(" · ")}</p>
       <h2>{t("print.campaign.shelf")}</h2>
       <p>{"_".repeat(60)}</p>
     </article>

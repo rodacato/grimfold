@@ -36,7 +36,8 @@ function rig(id) {
   const laps = existsSync(lapsFile) ? readJson(lapsFile).assets : [];
   const [W, H] = cuts.lienzo;
   const layers = cuts.capas;
-  const still = (i) => i === 0 || Boolean(layers[i].sin_solape);
+  // sin_solape alone is a fixed piece (a floor); with `movimiento` it floats free, like a school's fish.
+  const still = (i) => i === 0 || Boolean(layers[i].sin_solape && !layers[i].movimiento);
   const joints = (i) => (still(i) ? [] : [...joints(layers[i].parent ?? 0), layers[i].id]);
   const ancestors = (i) => joints(layers[i].parent ?? 0);
   mkdirSync(join(TARGET, id), { recursive: true });

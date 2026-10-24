@@ -89,18 +89,18 @@ Odd, not muscular: the horror is the detail that should not be there.
 
 - [x] `anguila` — **Anguila de faro apagado.** Long thin eel with a burnt lamp wick on its forehead, coiling in search of a light that no longer exists. Puppet: exact cuts with overlaps, 9 layers; faint seams show between its body segments.
 - [x] `cangrejo` — **Cangrejo de los ahogados.** Wedding rings threaded on its legs, shell shaped like a small tombstone. Puppet: exact cuts with overlaps, 11 layers.
-- [x] `globo` — **Pez globo resentido.** Puffed up, offended face, a little bell hanging from it that does not ring.
-- [x] `sinojos` — **Banco de peces sin ojos.** Hundreds of small silver fish with empty sockets that together form the outline of a face.
+- [x] `globo` — **Pez globo resentido.** Puffed up, offended face, a little bell hanging from it that does not ring. Puppet: exact cuts with overlaps, 9 layers.
+- [x] `sinojos` — **Banco de peces sin ojos.** Hundreds of small silver fish with empty sockets that together form the outline of a face. Puppet: exact cuts, 28 layers: the face and 27 floating groups, no overlaps.
 - [x] `ajolote` — **Larva de la Puerta.** A pale axolotl with legs too long and a hollow skull; its six branching gills end in black globes. Lago, from a Codex candidate. Puppet: exact cuts, 12 layers.
 - [x] `esturion` — **El Arzobispo del Limo.** An armored sturgeon with an eyeless bone mask, snout split into vertical jaws, a fossil of itself in its side. Lago, from a Codex candidate. Puppet: exact cuts, 11 layers; a faint seam shows at the jaw.
-- [x] `lucio` — **Lucio con dientes de leche.** Long pike with a child's baby teeth, small and uneven, one crooked.
-- [x] `medusa` — **Medusa de campana rota.** Its body is a cracked bronze church bell; its tentacles are bell-tower ropes.
-- [x] `linterna` — **Pez linterna desertor.** Wears a lighthouse lens as a monocle; its lure is out and it looks ashamed.
-- [x] `sirena` — **Sirena desafinada.** Not the pretty mermaid: half conch shell, mouth open on an endless note, seaweed hair. Nervous laughter more than fear.
+- [x] `lucio` — **Lucio con dientes de leche.** Long pike with a child's baby teeth, small and uneven, one crooked. Puppet: exact cuts with overlaps, 12 layers.
+- [x] `medusa` — **Medusa de campana rota.** Its body is a cracked bronze church bell; its tentacles are bell-tower ropes. Puppet: exact cuts with overlaps, 8 layers.
+- [x] `linterna` — **Pez linterna desertor.** Wears a lighthouse lens as a monocle; its lure is out and it looks ashamed. Puppet: exact cuts with overlaps, 10 layers.
+- [x] `sirena` — **Sirena desafinada.** Not the pretty mermaid: half conch shell, mouth open on an endless note, seaweed hair. Nervous laughter more than fear. Puppet: exact cuts with overlaps, 9 layers.
 - [x] `pez-hacha` — **El Flautista del Tajo.** A blind hatchetfish whose gill tubes twist like flutes; teeth line its empty belly, pointing inward. Mar, from a Codex candidate. Puppet: exact cuts with overlaps, 13 layers.
 - [x] `tripode` — **El Oficiante del Fondo.** Three very tall fin rays ending in hands with inverted fingers; a small fish body on top, its face opening in three bony plates. Mar, from a Codex candidate. Puppet: exact cuts with overlaps, 16 layers.
-- [x] `tiburon` — **Tiburón de quilla.** Its dorsal fin is a launch's keel; a propeller shows through a stitched seam in its belly.
-- [x] `calamar` — **Calamar del ancla.** Coiled around a rusty anchor that has gills. The anchor is what breathes.
+- [x] `tiburon` — **Tiburón de quilla.** Its dorsal fin is a launch's keel; a propeller shows through a stitched seam in its belly. Puppet: exact cuts with overlaps, 11 layers.
+- [x] `calamar` — **Calamar del ancla.** Coiled around a rusty anchor that has gills. The anchor is what breathes. Puppet: exact cuts with overlaps, 11 layers.
 - [x] `reina` — **Reina de los percebes.** A mound of barnacles on a rock forming a crown and the worn face of a town woman.
 - [x] `duerme` — **Lo que duerme bajo el ancla.** Never whole: a closed eyelid the size of a house under the water, an anchor chain going into it.
 - [x] `gaviota` — **Gaviota con dientes** (wanderer). A gull with a human smile, teeth too even and too white.

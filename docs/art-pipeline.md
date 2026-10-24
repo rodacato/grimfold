@@ -144,7 +144,8 @@ python3 -m venv .venv && .venv/bin/pip install numpy pillow scipy
 **Horrors with exact cuts skip all of this.** Their folder `assets/horrors/<id>/` holds the
 numbered layers, `armado.png` (the base), `cortes.json` and, when delivered, `solapes.json` with its
 overlaps; `node tools/art/web_art.mjs` crops each layer to its bbox without scaling and writes the
-rig to `src/content/bay/puppets.json`. The first layer, and any marked `sin_solape`, stays still;
+rig to `src/content/bay/puppets.json`. The first layer, and any marked `sin_solape` without `movimiento` (a floor), stays still; a
+floating piece (`movimiento`, like the groups of a school) turns around its own center;
 the rest drift 3°, or 1° when wider than 40% of the canvas, and a piece with a parent also follows
 its parent's motion (`follows`). Overlaps go at the back and follow their piece. The game uses
 the puppet wherever the creature is in the water, and the still on its Carta and in the bestiary.

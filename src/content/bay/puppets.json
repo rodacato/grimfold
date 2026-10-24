@@ -1,0 +1,238 @@
+{
+  "ajolote": {
+    "size": [1254, 1254],
+    "pieces": [
+      {
+        "id": "cuerpo",
+        "x": 307,
+        "y": 238,
+        "w": 539,
+        "pivot": null,
+        "file": "cuerpo.webp"
+      },
+      {
+        "id": "pata-posterior-izquierda",
+        "x": 55,
+        "y": 706,
+        "w": 443,
+        "pivot": [0.801, 0.365],
+        "file": "pata-posterior-izquierda.webp",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "cola",
+        "x": 712,
+        "y": 228,
+        "w": 542,
+        "pivot": [0.286, 0.783],
+        "file": "cola.webp",
+        "sway": 1,
+        "beat": 2.5
+      },
+      {
+        "id": "pata-posterior-derecha",
+        "x": 733,
+        "y": 751,
+        "w": 423,
+        "pivot": [0.118, 0.161],
+        "file": "pata-posterior-derecha.webp",
+        "sway": 1,
+        "beat": 2.9
+      },
+      {
+        "id": "brazo-izquierdo",
+        "x": 0,
+        "y": 591,
+        "w": 442,
+        "pivot": [0.808, 0.124],
+        "file": "brazo-izquierdo.webp",
+        "sway": 1,
+        "beat": 1.7
+      },
+      {
+        "id": "brazo-derecho",
+        "x": 367,
+        "y": 654,
+        "w": 419,
+        "pivot": [0.554, 0.072],
+        "file": "brazo-derecho.webp",
+        "sway": 1,
+        "beat": 2.1
+      },
+      {
+        "id": "branquia-izquierda-alta",
+        "x": 176,
+        "y": 35,
+        "w": 348,
+        "pivot": [0.649, 0.747],
+        "file": "branquia-izquierda-alta.webp",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "branquia-izquierda-media",
+        "x": 37,
+        "y": 99,
+        "w": 321,
+        "pivot": [0.96, 0.838],
+        "file": "branquia-izquierda-media.webp",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "branquia-izquierda-baja",
+        "x": 45,
+        "y": 399,
+        "w": 453,
+        "pivot": [0.645, 0.353],
+        "file": "branquia-izquierda-baja.webp",
+        "sway": 3,
+        "beat": 1.7
+      },
+      {
+        "id": "branquia-derecha-alta",
+        "x": 523,
+        "y": 23,
+        "w": 408,
+        "pivot": [0.27, 0.84],
+        "file": "branquia-derecha-alta.webp",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "branquia-derecha-media",
+        "x": 540,
+        "y": 185,
+        "w": 571,
+        "pivot": [0.21, 0.859],
+        "file": "branquia-derecha-media.webp",
+        "sway": 1,
+        "beat": 2.5
+      },
+      {
+        "id": "branquia-derecha-baja",
+        "x": 497,
+        "y": 455,
+        "w": 323,
+        "pivot": [0.48, 0.329],
+        "file": "branquia-derecha-baja.webp",
+        "sway": 3,
+        "beat": 2.9
+      }
+    ]
+  },
+  "esturion": {
+    "size": [1254, 1254],
+    "pieces": [
+      {
+        "id": "cuerpo",
+        "x": 93,
+        "y": 439,
+        "w": 1080,
+        "pivot": null,
+        "file": "cuerpo.webp"
+      },
+      {
+        "id": "aleta-pectoral-lejana",
+        "x": 371,
+        "y": 847,
+        "w": 165,
+        "pivot": [0.121, 0.064],
+        "file": "aleta-pectoral-lejana.webp",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "aleta-ventral-media",
+        "x": 741,
+        "y": 817,
+        "w": 236,
+        "pivot": [0.208, 0.3],
+        "file": "aleta-ventral-media.webp",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "aleta-rear-lejana",
+        "x": 1002,
+        "y": 533,
+        "w": 186,
+        "pivot": [0.231, 0.36],
+        "file": "aleta-rear-lejana.webp",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "aleta-rear-cercana",
+        "x": 777,
+        "y": 642,
+        "w": 447,
+        "pivot": [0.38, 0.16],
+        "file": "aleta-rear-cercana.webp",
+        "sway": 1,
+        "beat": 1.7
+      },
+      {
+        "id": "aleta-superior-posterior",
+        "x": 901,
+        "y": 258,
+        "w": 138,
+        "pivot": [0.391, 0.908],
+        "file": "aleta-superior-posterior.webp",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "aleta-caudal",
+        "x": 869,
+        "y": 23,
+        "w": 369,
+        "pivot": [0.572, 0.567],
+        "file": "aleta-caudal.webp",
+        "sway": 1,
+        "beat": 2.5
+      },
+      {
+        "id": "cresta-dorsal",
+        "x": 0,
+        "y": 19,
+        "w": 943,
+        "pivot": [0.68, 0.599],
+        "file": "cresta-dorsal.webp",
+        "sway": 1,
+        "beat": 2.9
+      },
+      {
+        "id": "aleta-pectoral-cercana",
+        "x": 481,
+        "y": 652,
+        "w": 630,
+        "pivot": [0.086, 0.267],
+        "file": "aleta-pectoral-cercana.webp",
+        "sway": 1,
+        "beat": 1.7
+      },
+      {
+        "id": "barbillones",
+        "x": 250,
+        "y": 824,
+        "w": 321,
+        "pivot": [0.196, 0.049],
+        "file": "barbillones.webp",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "mandibula",
+        "x": 29,
+        "y": 712,
+        "w": 381,
+        "pivot": [0.919, 0.261],
+        "file": "mandibula.webp",
+        "sway": 3,
+        "beat": 2.5
+      }
+    ]
+  }
+}

@@ -16,7 +16,7 @@ const TENTACLE: Piece = { id: "brazo-ventosas", x: 676, y: 640, w: 137, pivot: [
 function pieces(mutations: Mutation[]): Piece[] {
   const arm = mutations.includes("brazo");
   return [
-    ...(arm ? [TENTACLE, { ...BODY, file: "cuerpo-sin-mano" }] : [BODY]),
+    ...(arm ? [TENTACLE, { ...BODY, file: "cuerpo-sin-mano.png" }] : [BODY]),
     SKIRT,
     HARPOON,
     HEAD,

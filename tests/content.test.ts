@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { bay } from "../src/content/bay";
+import rigs from "../src/content/bay/puppets.json";
 import { castPool } from "../src/domain/tide/sea";
 import { hasString } from "../src/i18n/t";
 
@@ -16,6 +17,15 @@ describe("the bay's content holds together", () => {
       bay.abyssLoot,
     ];
     expect(named.filter((id) => !lootIds.has(id))).toEqual([]);
+  });
+
+  it("every puppet rig belongs to a creature of the Mazo, standing on a still body", () => {
+    const creatureIds = new Set(bay.creatures.map((c) => c.id));
+    for (const [id, rig] of Object.entries(rigs)) {
+      expect(creatureIds.has(id), id).toBe(true);
+      expect(rig.pieces[0]?.pivot, id).toBeNull();
+      expect(rig.pieces.slice(1).every((p) => p.pivot && p.sway && p.beat), id).toBe(true);
+    }
   });
 
   it("a cast never comes up empty, at any depth of any water", () => {

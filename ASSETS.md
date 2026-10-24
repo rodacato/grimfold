@@ -91,8 +91,8 @@ Odd, not muscular: the horror is the detail that should not be there.
 - [x] `cangrejo` — **Cangrejo de los ahogados.** Wedding rings threaded on its legs, shell shaped like a small tombstone.
 - [x] `globo` — **Pez globo resentido.** Puffed up, offended face, a little bell hanging from it that does not ring.
 - [x] `sinojos` — **Banco de peces sin ojos.** Hundreds of small silver fish with empty sockets that together form the outline of a face.
-- [x] `ajolote` — **Larva de la Puerta.** A pale axolotl with legs too long and a hollow skull; its six branching gills end in black globes. Lago, from a Codex candidate.
-- [x] `esturion` — **El Arzobispo del Limo.** An armored sturgeon with an eyeless bone mask, snout split into vertical jaws, a fossil of itself in its side. Lago, from a Codex candidate.
+- [x] `ajolote` — **Larva de la Puerta.** A pale axolotl with legs too long and a hollow skull; its six branching gills end in black globes. Lago, from a Codex candidate. Puppet: exact cuts, 12 layers.
+- [x] `esturion` — **El Arzobispo del Limo.** An armored sturgeon with an eyeless bone mask, snout split into vertical jaws, a fossil of itself in its side. Lago, from a Codex candidate. Puppet: exact cuts, 11 layers; a faint seam shows at the jaw.
 - [x] `lucio` — **Lucio con dientes de leche.** Long pike with a child's baby teeth, small and uneven, one crooked.
 - [x] `medusa` — **Medusa de campana rota.** Its body is a cracked bronze church bell; its tentacles are bell-tower ropes.
 - [x] `linterna` — **Pez linterna desertor.** Wears a lighthouse lens as a monocle; its lure is out and it looks ashamed.

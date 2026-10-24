@@ -9,7 +9,11 @@ export interface Piece {
   w: number;
   /** Fractions of the piece; null for a piece that does not move. */
   pivot: [number, number] | null;
+  /** With its extension; defaults to `<id>.png`. */
   file?: string;
+  /** Generic idle motion, for puppets whose pieces have no animation of their own: degrees, seconds. */
+  sway?: number;
+  beat?: number;
 }
 
 interface Props {
@@ -17,7 +21,7 @@ interface Props {
   dir: string;
   size: [number, number];
   pieces: Piece[];
-  width: number;
+  width: number | string;
   className?: string;
   children?: React.ReactNode;
 }
@@ -39,15 +43,18 @@ export function Puppet({ name, dir, size: [w, h], pieces, width, className = "",
         <img
           key={p.id}
           className={`piece ${p.id}`}
-          src={`${import.meta.env.BASE_URL}${dir}/${p.file ?? p.id}.png`}
+          src={`${import.meta.env.BASE_URL}${dir}/${p.file ?? `${p.id}.png`}`}
           alt=""
           onError={() => setMissing(true)}
-          style={{
-            left: pct(p.x, w),
-            top: pct(p.y, h),
-            width: pct(p.w, w),
-            transformOrigin: p.pivot ? `${p.pivot[0] * 100}% ${p.pivot[1] * 100}%` : undefined,
-          }}
+          style={
+            {
+              left: pct(p.x, w),
+              top: pct(p.y, h),
+              width: pct(p.w, w),
+              transformOrigin: p.pivot ? `${p.pivot[0] * 100}% ${p.pivot[1] * 100}%` : undefined,
+              ...(p.sway && { "--sway": `${p.sway}deg`, "--beat": `${p.beat}s` }),
+            } as React.CSSProperties
+          }
         />
       ))}
     </div>

@@ -25,7 +25,7 @@ asset earns motion, without redrawing anything.
 
 | Kind | Base | Sheet | In the MVP |
 |---|---|---|---|
-| Horrors | One creature on `#FF00FF` | Puppet sheet | Sheet only for the Farolero; the rest are stills |
+| Horrors | One creature on `#FF00FF` | Puppet sheet, then exact cuts | A puppet once its exact cuts arrive; a still until then |
 | The Arponera | Stage 1 on `#FF00FF` | Puppet sheet **plus mutation pieces** | Sheet; stage 4 is a separate base |
 | Locations | Vertical 9:16 scene | Layer sheet | Sheet only where the player stays: the four waters, the lighthouse, the Muelle |
 | Townspeople | One bust on `#FF00FF` | — | Stills |
@@ -64,6 +64,21 @@ and small hard shadows. Do not cast shadows from one piece onto another.
 If the pieces come back redrawn or at another size: *"Same sheet, but every piece must match the
 reference exactly in size; only separate them, do not redraw."* If the second try still does not
 fit, stop and note it: that creature is not worth animating.
+
+**Horrors: ask for exact cuts after the sheet.** A generative sheet redraws its pieces, so they
+never fit the base again (the first horror batch fit with errors of 0.10–0.39). The second request
+asks Codex to split the transparent base itself, by pixel, with this contract:
+
+```
+Each detached piece is cut from the attached transparent figure at exactly the same pixel size;
+placing every piece back at its original position must reproduce the attached figure. Deliver
+every piece as a PNG on the figure's full canvas at position 0,0, numbered back to front, plus a
+JSON with each piece's bbox and pivot.
+```
+
+The sheet is kept as support for painting what the cuts hide. Exact cuts have nothing under their
+joints, so large pieces (a ray's wings, a sturgeon's crest) open seams past 1–2°; the rig turns
+them less (below).
 
 **What a good sheet looks like:** each moving piece carries a small rectangular tab at its joint
 (that tab is where the pivot goes), and the body has a dark fill wherever a piece used to cover it.
@@ -123,6 +138,12 @@ Setup once (Python 3):
 ```
 python3 -m venv .venv && .venv/bin/pip install numpy pillow scipy
 ```
+
+**Horrors with exact cuts skip all of this.** Their folder `assets/horrors/<id>/` holds the
+numbered layers, `armado.png` (the base) and `cortes.json`; `node tools/art/web_art.mjs` crops each
+layer to its bbox without scaling and writes the rig to `src/content/bay/puppets.json`. The first
+layer is the still body; the rest drift 3°, or 1° when wider than 40% of the canvas. The game uses
+the puppet wherever the creature is in the water, and the still on its Carta and in the bestiary.
 
 1. **Cut.** `.venv/bin/python tools/art/cut_sheet.py SHEET.png OUT_DIR` removes the magenta, cleans
    the pink fringe from torn edges and writes one transparent PNG per piece, named after its

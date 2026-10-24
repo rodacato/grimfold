@@ -6,6 +6,7 @@ import { seesHp, targetFor } from "../../domain/tide/fight";
 import { t } from "../../i18n/t";
 import { Art, LootIcon } from "../Art";
 import { useGame } from "../game";
+import { Horror } from "../Horror";
 import { Btn, Roll, Screen, Waves } from "../Paper";
 import { Items } from "../TideParts";
 
@@ -16,11 +17,7 @@ function WaterScene({ c, shadow = false }: { c: Creature; shadow?: boolean }) {
     <div className="scene">
       <Waves />
       {!c.unfishable && <div className="line" />}
-      <Art
-        src={bayArt.creature(c.id)}
-        alt={shadow ? t(`shadow.${c.shadow}`) : t(`creature.${c.id}`)}
-        className={`creature ${c.shadow} ${shadow ? "shadow" : ""}`}
-      />
+      <Horror c={c} shadow={shadow} />
     </div>
   );
 }

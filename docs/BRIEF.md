@@ -45,8 +45,8 @@ renegotiating: (1) paper moves after the MVP and demo step 7 stays open; (2) the
 More than one Lugar · more Personajes or Clases · more than 3 Capítulos or 2 Finales · the probe's
 Laboratorio mechanics (Cordura that lies, dice drafting, chained bait, a Mapa drawn on arrival,
 campaign clock, daily sea, streaks) · a spatial Bodega · shops, money or selling in the town (the
-Encargos are the only trade) · new townspeople, such as a mayor, until the story is played · animation beyond two puppets (Farolero,
-Arponera) and layered locations · sound and music · final art on every screen (missing art ships as
+Encargos are the only trade) · new townspeople, such as a mayor, until the story is played · animation beyond puppets (the Farolero,
+the Arponera, and each horror as its exact cut arrives) and layered locations · sound and music · final art on every screen (missing art ships as
 a paper silhouette; art never blocks a screen) · paper ↔ web sync, QR codes, multiplayer, languages
 other than Spanish.
 

@@ -1143,26 +1143,41 @@ p + p {
     transform: rotate(9deg);
   }
 }
-.puppet .senuelo {
+.farolero .senuelo {
   animation-name: sway;
   animation-duration: 1.9s;
 }
-.puppet .aleta-dorsal {
+.farolero .aleta-dorsal {
   animation-name: bristle;
   animation-duration: 1.4s;
 }
-.puppet .cola {
+.farolero .cola {
   animation-name: flick;
   animation-duration: 0.5s;
 }
-.puppet .mandibula {
+.farolero .mandibula {
   animation-name: chew;
   animation-duration: 1.3s;
 }
-.puppet .aleta-lateral {
+.farolero .aleta-lateral {
   animation-name: paddle;
   animation-duration: 0.6s;
   clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 100%, 0 100%);
+}
+.puppet.horror {
+  animation: float 3.6s ease-in-out infinite alternate;
+}
+.horror .piece {
+  animation-name: drift;
+  animation-duration: var(--beat, 0s);
+}
+@keyframes drift {
+  from {
+    transform: rotate(calc(-1 * var(--sway, 0deg)));
+  }
+  to {
+    transform: rotate(var(--sway, 0deg));
+  }
 }
 .puppet .glow {
   position: absolute;

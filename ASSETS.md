@@ -81,7 +81,7 @@ rules already have; there are no shops.
 - [x] `naufragio-ruelas` — The Ruelas' launch beached on a sandbar, intact, outboard motor ripped off, dinner still served on the table.
 - [x] `evento-boya` — A buoy ringing alone at night in the fog, no waves to move it.
 - [x] `evento-sal` — The boat under falling salt crystals; the dock in the distance, people watching without umbrellas.
-- [ ] `carta-bahia` — The Mapa: a 2:3 portrait sea chart of the bay seen from above, 1024×1536. Muelle at the bottom left, the lighthouse rock at the top right; the water darkens from tea-colored estuary near the Muelle to black sea below the lighthouse. Eight round clear spots of open water where the game places its Salas, at these fractions of width and height: Muelle 0.13 0.89 · 0.35 0.76 · 0.16 0.60 · 0.53 0.61 · 0.34 0.39 · 0.74 0.45 · 0.79 0.78 · lighthouse 0.85 0.21. Nothing drawn on those spots: what is there changes every Marea.
+- [x] `carta-bahia` — The Mapa: a 2:3 portrait sea chart of the bay seen from above, 1024×1536. Muelle at the bottom left, the lighthouse rock at the top right; the water darkens from the shallow lagoon to black sea below the lighthouse. Nothing drawn where the Salas sit: what is there changes every Marea. The nodes in `src/content/bay` were placed on its open water by eye, so a redrawn chart means moving them.
 
 ## Horrors
 

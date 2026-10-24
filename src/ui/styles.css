@@ -645,11 +645,24 @@ p + p {
   width: 100%;
   height: auto;
 }
+.chart {
+  padding: 6px;
+}
 .chart text {
   font-family: var(--text);
   font-weight: 800;
-  font-size: 11px;
-  fill: var(--ink);
+  font-size: 12px;
+  fill: var(--cream);
+  stroke: var(--ink);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  paint-order: stroke;
+}
+.chart .route {
+  stroke: var(--cream);
+  stroke-width: 2.6;
+  stroke-dasharray: 6 5;
+  filter: drop-shadow(0 1px 0 var(--ink));
 }
 .chart [role="button"] {
   cursor: pointer;

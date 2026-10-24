@@ -7,12 +7,17 @@ const boxes = (n: number) => "☐ ".repeat(n).trim();
 const GEAR: GearPiece[] = ["cana", "sedal", "farol", "motor", "casco"];
 
 export function TideSheet({ place }: { place: Place }) {
-  const { nodes } = place.map;
+  const { nodes, size } = place.map;
   return (
     <article className="sheet">
       <h1>{t("print.tide.title")}</h1>
       <p>{t("print.tide.how")}</p>
-      <svg viewBox="0 0 340 300" className="sheet-map" role="img" aria-label={t("map.title")}>
+      <svg
+        viewBox={`0 0 ${size.width} ${size.height}`}
+        className="sheet-map"
+        role="img"
+        aria-label={t("map.title")}
+      >
         {nodes.flatMap((n, i) =>
           n.links
             .filter((j) => j > i)

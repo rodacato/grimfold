@@ -57,6 +57,8 @@ export interface Place {
   chapters: Chapter[];
   maxDepth: Record<WaterType, number>;
   map: {
+    /** The chart's coordinate space; node x and y are in it, on screen and on paper. */
+    size: { width: number; height: number };
     nodes: MapNode[];
     dock: number;
     lighthouse: number;

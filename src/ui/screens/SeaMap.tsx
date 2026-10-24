@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { bayArt } from "../../content/bay/art";
 import type { RoomKind, WaterType } from "../../domain/content";
 import type { Room, Tide } from "../../domain/state";
 import { blocked, isNeighbor, visible } from "../../domain/tide/map";
@@ -87,7 +88,7 @@ export function SeaMap() {
   const { game, place, send } = useGame();
   const tide = game.tide as Tide;
   const [chosen, setChosen] = useState<number | null>(null);
-  const { nodes, dock, lighthouse } = place.map;
+  const { nodes, dock, lighthouse, size } = place.map;
   const seen = (i: number) => visible(place, game.campaign, tide, i);
   const label = (i: number, room: Room) =>
     i === dock ? t("place.dock") : i === lighthouse ? t("place.lighthouse") : t(`room.${room.kind}`);
@@ -101,8 +102,14 @@ export function SeaMap() {
   return (
     <Screen>
       <section className="paper chart">
-        <svg viewBox="0 0 340 300" role="img" aria-label={t("map.title")}>
-          <rect width="340" height="300" fill="var(--card)" />
+        <svg viewBox={`0 0 ${size.width} ${size.height}`} role="img" aria-label={t("map.title")}>
+          <rect width={size.width} height={size.height} fill="var(--sea)" />
+          <image
+            href={`${import.meta.env.BASE_URL}${bayArt.chart}`}
+            width={size.width}
+            height={size.height}
+            preserveAspectRatio="xMidYMid slice"
+          />
           {nodes.flatMap((n, i) =>
             n.links
               .filter((j) => j > i && seen(i) && seen(j))
@@ -113,9 +120,7 @@ export function SeaMap() {
                   y1={n.y}
                   x2={nodes[j]?.x}
                   y2={nodes[j]?.y}
-                  stroke="var(--ink)"
-                  strokeWidth="2.4"
-                  strokeDasharray="6 5"
+                  className="route"
                 />
               )),
           )}

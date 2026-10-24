@@ -27,6 +27,7 @@ export const bayArt = {
     sal: "locations/evento-sal.png",
     sirena: null,
   } satisfies Record<EventId, string | null>,
+  chart: "locations/carta-bahia.png",
   lighthouse: "locations/faro-exterior.png",
   lamp: "locations/faro-lampara.png",
   farolero: "horrors/farolero.png",

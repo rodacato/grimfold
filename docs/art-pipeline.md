@@ -72,13 +72,15 @@ asks Codex to split the transparent base itself, by pixel, with this contract:
 ```
 Each detached piece is cut from the attached transparent figure at exactly the same pixel size;
 placing every piece back at its original position must reproduce the attached figure. Deliver
-every piece as a PNG on the figure's full canvas at position 0,0, numbered back to front, plus a
-JSON with each piece's bbox and pivot.
+every piece as a PNG on the figure's full canvas at position 0,0, plus a JSON with each piece's
+bbox, pivot, parent piece and stack order. Give every moving piece a hidden overlap at its joint,
+made from its own edge pixels and covered by its parent at rest.
 ```
 
-The sheet is kept as support for painting what the cuts hide. Exact cuts have nothing under their
-joints, so large pieces (a ray's wings, a sturgeon's crest) open seams past 1–2°; the rig turns
-them less (below).
+From batch 3 on, Codex delivers this without generating images: `cortes.json` carries `parent` and
+`orden_superior_a_inferior`, and `solapes.json` lists the overlaps (`solape-*`) and any cavity fill
+(`relleno-*`). Batches 1–2 have no overlaps, so their large pieces (a sturgeon's crest) show seams
+past 1–2°; the rig turns them less (below).
 
 **What a good sheet looks like:** each moving piece carries a small rectangular tab at its joint
 (that tab is where the pivot goes), and the body has a dark fill wherever a piece used to cover it.
@@ -140,9 +142,11 @@ python3 -m venv .venv && .venv/bin/pip install numpy pillow scipy
 ```
 
 **Horrors with exact cuts skip all of this.** Their folder `assets/horrors/<id>/` holds the
-numbered layers, `armado.png` (the base) and `cortes.json`; `node tools/art/web_art.mjs` crops each
-layer to its bbox without scaling and writes the rig to `src/content/bay/puppets.json`. The first
-layer is the still body; the rest drift 3°, or 1° when wider than 40% of the canvas. The game uses
+numbered layers, `armado.png` (the base), `cortes.json` and, when delivered, `solapes.json` with its
+overlaps; `node tools/art/web_art.mjs` crops each layer to its bbox without scaling and writes the
+rig to `src/content/bay/puppets.json`. The first layer, and any marked `sin_solape`, stays still;
+the rest drift 3°, or 1° when wider than 40% of the canvas, and a piece with a parent also follows
+its parent's motion (`follows`). Overlaps go at the back and follow their piece. The game uses
 the puppet wherever the creature is in the water, and the still on its Carta and in the bestiary.
 
 1. **Cut.** `.venv/bin/python tools/art/cut_sheet.py SHEET.png OUT_DIR` removes the magenta, cleans

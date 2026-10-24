@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { bay } from "../src/content/bay";
+import type { Rig } from "../src/content/bay/art";
 import rigs from "../src/content/bay/puppets.json";
 import { castPool } from "../src/domain/tide/sea";
 import { hasString } from "../src/i18n/t";
@@ -19,12 +20,23 @@ describe("the bay's content holds together", () => {
     expect(named.filter((id) => !lootIds.has(id))).toEqual([]);
   });
 
-  it("every puppet rig belongs to a creature of the Mazo, standing on a still body", () => {
+  it("every puppet rig belongs to a creature of the Mazo, its joints hanging from a still body", () => {
     const creatureIds = new Set(bay.creatures.map((c) => c.id));
-    for (const [id, rig] of Object.entries(rigs)) {
+    for (const [id, { pieces }] of Object.entries(rigs as unknown as Record<string, Rig>)) {
       expect(creatureIds.has(id), id).toBe(true);
-      expect(rig.pieces[0]?.pivot, id).toBeNull();
-      expect(rig.pieces.slice(1).every((p) => p.pivot && p.sway && p.beat), id).toBe(true);
+      const moving = new Set(pieces.filter((p) => p.pivot && p.sway && p.beat && p.h).map((p) => p.id));
+      expect(
+        pieces.filter((p) => p.pivot && !moving.has(p.id)),
+        id,
+      ).toEqual([]);
+      expect(
+        pieces.flatMap((p) => p.follows ?? []).filter((j) => !moving.has(j)),
+        id,
+      ).toEqual([]);
+      expect(
+        pieces.some((p) => !p.pivot && !p.follows && !p.id.startsWith("solape")),
+        id,
+      ).toBe(true);
     }
   });
 

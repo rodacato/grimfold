@@ -87,8 +87,8 @@ rules already have; there are no shops.
 
 Odd, not muscular: the horror is the detail that should not be there.
 
-- [x] `anguila` — **Anguila de faro apagado.** Long thin eel with a burnt lamp wick on its forehead, coiling in search of a light that no longer exists.
-- [x] `cangrejo` — **Cangrejo de los ahogados.** Wedding rings threaded on its legs, shell shaped like a small tombstone.
+- [x] `anguila` — **Anguila de faro apagado.** Long thin eel with a burnt lamp wick on its forehead, coiling in search of a light that no longer exists. Puppet: exact cuts with overlaps, 9 layers; faint seams show between its body segments.
+- [x] `cangrejo` — **Cangrejo de los ahogados.** Wedding rings threaded on its legs, shell shaped like a small tombstone. Puppet: exact cuts with overlaps, 11 layers.
 - [x] `globo` — **Pez globo resentido.** Puffed up, offended face, a little bell hanging from it that does not ring.
 - [x] `sinojos` — **Banco de peces sin ojos.** Hundreds of small silver fish with empty sockets that together form the outline of a face.
 - [x] `ajolote` — **Larva de la Puerta.** A pale axolotl with legs too long and a hollow skull; its six branching gills end in black globes. Lago, from a Codex candidate. Puppet: exact cuts, 12 layers.
@@ -97,8 +97,8 @@ Odd, not muscular: the horror is the detail that should not be there.
 - [x] `medusa` — **Medusa de campana rota.** Its body is a cracked bronze church bell; its tentacles are bell-tower ropes.
 - [x] `linterna` — **Pez linterna desertor.** Wears a lighthouse lens as a monocle; its lure is out and it looks ashamed.
 - [x] `sirena` — **Sirena desafinada.** Not the pretty mermaid: half conch shell, mouth open on an endless note, seaweed hair. Nervous laughter more than fear.
-- [x] `pez-hacha` — **El Flautista del Tajo.** A blind hatchetfish whose gill tubes twist like flutes; teeth line its empty belly, pointing inward. Mar, from a Codex candidate.
-- [x] `tripode` — **El Oficiante del Fondo.** Three very tall fin rays ending in hands with inverted fingers; a small fish body on top, its face opening in three bony plates. Mar, from a Codex candidate.
+- [x] `pez-hacha` — **El Flautista del Tajo.** A blind hatchetfish whose gill tubes twist like flutes; teeth line its empty belly, pointing inward. Mar, from a Codex candidate. Puppet: exact cuts with overlaps, 13 layers.
+- [x] `tripode` — **El Oficiante del Fondo.** Three very tall fin rays ending in hands with inverted fingers; a small fish body on top, its face opening in three bony plates. Mar, from a Codex candidate. Puppet: exact cuts with overlaps, 16 layers.
 - [x] `tiburon` — **Tiburón de quilla.** Its dorsal fin is a launch's keel; a propeller shows through a stitched seam in its belly.
 - [x] `calamar` — **Calamar del ancla.** Coiled around a rusty anchor that has gills. The anchor is what breathes.
 - [x] `reina` — **Reina de los percebes.** A mound of barnacles on a rock forming a crown and the worn face of a town woman.

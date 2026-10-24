@@ -1164,12 +1164,27 @@ p + p {
   animation-duration: 0.6s;
   clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 100%, 0 100%);
 }
+@property --sway {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+@property --beat {
+  syntax: "<time>";
+  inherits: false;
+  initial-value: 0s;
+}
 .puppet.horror {
   animation: float 3.6s ease-in-out infinite alternate;
 }
+.puppet .joint {
+  position: absolute;
+  inset: 0;
+  animation: drift var(--beat) ease-in-out infinite alternate;
+}
 .horror .piece {
   animation-name: drift;
-  animation-duration: var(--beat, 0s);
+  animation-duration: var(--beat);
 }
 @keyframes drift {
   from {

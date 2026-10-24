@@ -26,31 +26,50 @@ for (const file of files) {
 rmSync(scratch, { recursive: true });
 console.log(`${files.length} horrors → ${TARGET}`);
 
-// Layers stay at full size: scaling each cut on its own would open hairline seams between them.
-const rigs = {};
-for (const id of readdirSync(SOURCE).filter((d) => existsSync(join(SOURCE, d, "cortes.json")))) {
-  const cuts = JSON.parse(readFileSync(join(SOURCE, id, "cortes.json"), "utf8"));
+const readJson = (path) => JSON.parse(readFileSync(path, "utf8"));
+const toWebp = (src, out, crop = []) =>
+  run("cwebp", ["-quiet", "-lossless", "-exact", "-z", "9", ...crop.map(String), src, "-o", out]);
+
+function rig(id) {
+  const cuts = readJson(join(SOURCE, id, "cortes.json"));
+  const lapsFile = join(SOURCE, id, "solapes.json");
+  const laps = existsSync(lapsFile) ? readJson(lapsFile).assets : [];
+  const [W, H] = cuts.lienzo;
+  const layers = cuts.capas;
+  const still = (i) => i === 0 || Boolean(layers[i].sin_solape);
+  const joints = (i) => (still(i) ? [] : [...joints(layers[i].parent ?? 0), layers[i].id]);
+  const ancestors = (i) => joints(layers[i].parent ?? 0);
   mkdirSync(join(TARGET, id), { recursive: true });
-  const pieces = cuts.capas.map((layer, i) => {
+
+  // Overlaps sit at the back, hidden under opaque paper until their piece moves.
+  const back = laps.map((lap) => {
+    const name = basename(lap.archivo, ".png");
+    toWebp(join(SOURCE, id, lap.archivo), join(TARGET, id, `${name}.webp`));
+    const owner = lap.seguir ?? layers.findIndex((l) => l.id === lap.pieza);
+    return { id: name, x: 0, y: 0, w: W, h: H, pivot: null, file: `${name}.webp`, follows: joints(owner) };
+  });
+  const order = cuts.orden_superior_a_inferior?.toReversed() ?? layers.map((_, i) => i);
+  // Layers stay at full size: scaling each cut on its own would open hairline seams between them.
+  const front = order.map((i) => {
+    const layer = layers[i];
     const [x, y, w, h] = layer.bbox;
-    const crop = ["-crop", x, y, w, h].map(String);
-    run("cwebp", ["-quiet", "-lossless", "-exact", "-z", "9", ...crop, join(SOURCE, id, layer.archivo), "-o", join(TARGET, id, `${layer.id}.webp`)]);
-    if (i === 0) return { id: layer.id, x, y, w, pivot: null, file: `${layer.id}.webp` };
+    toWebp(join(SOURCE, id, layer.archivo), join(TARGET, id, `${layer.id}.webp`), ["-crop", x, y, w, h]);
+    const piece = { id: layer.id, x, y, w, h, pivot: null, file: `${layer.id}.webp`, follows: ancestors(i) };
+    if (still(i)) return piece;
     const [px, py] = layer.pivote;
-    const big = Math.max(w, h) > cuts.lienzo[0] * 0.4;
     return {
-      id: layer.id,
-      x,
-      y,
-      w,
+      ...piece,
       pivot: [+((px - x) / w).toFixed(3), +((py - y) / h).toFixed(3)],
-      file: `${layer.id}.webp`,
-      sway: big ? 1 : 3,
+      sway: Math.max(w, h) > W * 0.4 ? 1 : 3,
       beat: +(1.7 + (i % 4) * 0.4).toFixed(1),
     };
   });
-  rigs[id] = { size: cuts.lienzo, pieces };
+  const pieces = [...back, ...front].map(({ follows, ...p }) => (follows.length ? { ...p, follows } : p));
+  return { size: cuts.lienzo, pieces };
 }
+
+const rigs = {};
+for (const id of readdirSync(SOURCE).filter((d) => existsSync(join(SOURCE, d, "cortes.json")))) rigs[id] = rig(id);
 writeFileSync(RIGS, `${JSON.stringify(rigs, null, 2)}\n`);
 run("npx", ["biome", "format", "--write", RIGS]);
 console.log(`${Object.keys(rigs).length} puppets → ${RIGS}`);

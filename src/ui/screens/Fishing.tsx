@@ -213,6 +213,7 @@ export function LootView() {
 
       <section className="paper">
         <h3>{t("loot.hold", { n: tide.hold.length, max: HOLD_SIZE })}</h3>
+        <p className="small">{t("loot.fates")}</p>
         <ul className="hold">
           {Array.from({ length: HOLD_SIZE }, (_, i) => {
             const id = tide.hold[i];

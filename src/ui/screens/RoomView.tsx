@@ -57,7 +57,9 @@ export function RoomView() {
       <Screen>
         <div className="scene tall">
           <Art src={bayArt.lamp} alt={t("place.lighthouse")} />
-          <FaroleroPuppet width={260} />
+          <div className="stage">
+            <FaroleroPuppet width={260} />
+          </div>
         </div>
         <section className="paper dark">
           <p className="kicker">{t("lighthouse.boss")}</p>

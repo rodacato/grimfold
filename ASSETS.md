@@ -115,10 +115,10 @@ Odd, not muscular: the horror is the detail that should not be there.
 Same pose in all four; only the change moves. Stages 2 and 3 are pieces on her puppet sheet, not
 images of their own.
 
-- [ ] `arponera-1` **(moves)** — Red raincoat, rain hat, harpoon. Her sheet: body, head with hat, harpoon arm, coat tail.
-- [ ] `arponera-2` — **Ojos de bruma.** Extra yellow eyes opening on her cheek. A piece on the sheet.
-- [ ] `arponera-3` — **Brazo de ventosas.** One arm is now a tentacle, half hidden behind her. A piece on the sheet.
-- [ ] `arponera-4` — **Del mar.** The clothes remain; what is inside is something else. Its own base, with stage 1 attached. The Innsmouth-style amphibian already generated is a candidate.
+- [x] `arponera` **(moves)** — Red raincoat, rain hat, harpoon. Her sheet `arponera/sheet.png`: body, head with hat, harpoon arm, coat tail.
+- [x] `arponera-2` — **Ojos de bruma.** Extra yellow eyes on her cheek: `arponera/ojos-bruma.png`.
+- [x] `arponera-3` — **Brazo de ventosas.** The hanging arm becomes a tentacle, behind the coat: `arponera/brazo-ventosas.png`, worn with `cuerpo-sin-mano.png` (the body with the human hand erased).
+- [x] `arponera-del-mar` — **Del mar.** The clothes remain; what is inside is something else. Its own base; `profundo` stays as the reference it came from.
 
 ## Townspeople (bestiary diary)
 

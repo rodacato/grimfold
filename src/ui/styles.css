@@ -320,6 +320,47 @@ p + p {
 .eyes i.capped::after {
   display: none;
 }
+.strip.open {
+  padding-bottom: 44px;
+}
+.hold-toggle {
+  min-height: 32px;
+  padding: 2px 6px;
+  border: 1.5px dashed var(--ink);
+  background: none;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 13px;
+}
+.hold-guide {
+  display: grid;
+  gap: 5px;
+  max-height: 46dvh;
+  margin-top: 8px;
+  padding: 0 0 6px;
+  overflow-y: auto;
+  list-style: none;
+}
+.hold-guide li {
+  padding: 5px 8px;
+  background: var(--card);
+}
+.hold-guide b,
+.hold-guide small {
+  display: block;
+  line-height: 1.2;
+}
+.hold-guide b {
+  font-size: 14px;
+}
+.hold-guide small {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.hold-guide .home {
+  font-weight: 800;
+  color: #7a4d0b;
+}
 .badge {
   padding: 1px 6px;
   background: var(--lamp);
@@ -519,6 +560,15 @@ p + p {
   font-size: 12.5px;
   background: var(--card);
 }
+.crew {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+.crew > * + * {
+  margin-top: 0;
+}
 .gear {
   display: grid;
   gap: 5px;
@@ -630,9 +680,9 @@ p + p {
   left: 50%;
   bottom: -8px;
   aspect-ratio: 1;
-  object-fit: cover;
+  object-fit: contain;
   transform: translateX(-50%);
-  mask-image: radial-gradient(closest-side, #000 72%, transparent);
+  filter: drop-shadow(3px 5px 0 rgba(0, 0, 0, 0.35));
   animation: rise 1.1s var(--pin) both;
 }
 .creature.chica {
@@ -646,8 +696,8 @@ p + p {
   bottom: -40px;
 }
 .creature.shadow {
-  filter: brightness(0.12) blur(1.5px);
-  opacity: 0.85;
+  filter: brightness(0) blur(14px);
+  opacity: 0.75;
   animation: circle 3.6s ease-in-out infinite alternate;
 }
 @keyframes rise {
@@ -724,6 +774,7 @@ p + p {
 .foe-hp b {
   font-family: var(--display);
   font-weight: 400;
+  white-space: nowrap;
 }
 .knots {
   display: flex;
@@ -979,17 +1030,77 @@ p + p {
   padding-left: 18px;
 }
 
-.puppet {
+.stage {
   position: absolute;
   left: 50%;
   bottom: 0;
-  aspect-ratio: 783 / 620;
+  z-index: 1;
   transform: translateX(-50%);
+}
+.puppet {
+  position: relative;
+}
+.puppet.farolero {
   animation: float 3.2s ease-in-out infinite alternate;
 }
-.puppet .piece {
+.puppet .piece,
+.puppet .whole {
   position: absolute;
   animation: ease-in-out infinite alternate;
+}
+.puppet .whole {
+  inset: 0;
+  height: 100%;
+  object-fit: contain;
+}
+.arponera .cabeza,
+.arponera .ojos-bruma {
+  animation-name: nod;
+  animation-duration: 2.8s;
+}
+.arponera .brazo-arpon {
+  animation-name: grip;
+  animation-duration: 3.4s;
+}
+.arponera .faldon {
+  animation-name: flap;
+  animation-duration: 1.3s;
+}
+.arponera .brazo-ventosas {
+  animation-name: coil;
+  animation-duration: 1.8s;
+}
+@keyframes nod {
+  from {
+    transform: rotate(-2deg);
+  }
+  to {
+    transform: rotate(2.5deg);
+  }
+}
+@keyframes grip {
+  from {
+    transform: rotate(-1.2deg);
+  }
+  to {
+    transform: rotate(1.5deg);
+  }
+}
+@keyframes flap {
+  from {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: rotate(6deg);
+  }
+}
+@keyframes coil {
+  from {
+    transform: rotate(-8deg);
+  }
+  to {
+    transform: rotate(9deg);
+  }
 }
 .puppet .senuelo {
   animation-name: sway;
@@ -1025,10 +1136,10 @@ p + p {
 }
 @keyframes float {
   from {
-    transform: translate(-50%, -3%) rotate(-2deg);
+    transform: translateY(-3%) rotate(-2deg);
   }
   to {
-    transform: translate(-50%, 3%) rotate(2deg);
+    transform: translateY(3%) rotate(2deg);
   }
 }
 @keyframes sway {
@@ -1098,7 +1209,9 @@ p + p {
 .bestiary .thumb {
   width: 64px;
   height: 64px;
-  object-fit: cover;
+  padding: 4px;
+  object-fit: contain;
+  background: var(--abyss);
 }
 .bestiary .thumb.silhouette {
   min-height: 0;

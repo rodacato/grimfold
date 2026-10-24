@@ -3,6 +3,7 @@ import { campaignMutations, sanityCeiling } from "../../domain/derived";
 import { MAX_SCARS, type Tide } from "../../domain/state";
 import { escapeTarget } from "../../domain/tide/lighthouse";
 import { t } from "../../i18n/t";
+import { ArponeraPuppet } from "../Arponera";
 import { Art } from "../Art";
 import { FaroleroPuppet } from "../Farolero";
 import { useGame } from "../game";
@@ -16,7 +17,9 @@ export function FaroleroView() {
     <Screen>
       <div className="scene tall">
         <Waves />
-        <FaroleroPuppet width={330} />
+        <div className="stage">
+          <FaroleroPuppet width={330} />
+        </div>
       </div>
       <section className="paper dark">
         <p className="kicker">{t("lighthouse.boss")}</p>
@@ -61,11 +64,14 @@ export function TideEndView() {
     if (latest) kept.push(t("end.keeps.mutation", { mutation: t(`mutation.${latest}`) }));
     kept.push(t("end.keeps.ceiling", { n: sanityCeiling(c) }));
   }
-  const art = how === "dock" ? bayArt.boat : how === "transformed" ? bayArt.transformed : null;
+  const marked = how === "transformed" ? campaignMutations(c) : tide.mutations;
   return (
     <Screen>
-      <div className="scene place">
-        <Art src={art} alt={t(titleKey)} />
+      <div className="scene tall">
+        {how === "dock" && <Art src={bayArt.boat} alt="" />}
+        <div className="stage">
+          <ArponeraPuppet mutations={marked} fromSea={how === "transformed" && lost} width={180} />
+        </div>
       </div>
       <section className={`paper ${how === "dock" ? "amber" : "dark"}`}>
         <p className="kicker">{t("end.kicker", { n: tide.number })}</p>

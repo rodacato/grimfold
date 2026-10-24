@@ -2,7 +2,7 @@ import type { EventId, IslandId, WaterType, WreckId } from "../../domain/content
 
 /** Paths inside assets/; a missing file falls back to a paper silhouette. */
 export const bayArt = {
-  creature: (id: string) => `horrors/${id}.png`,
+  creature: (id: string) => `web/horrors/${id}.webp`,
   person: (id: string) => `redo/${id}.png`,
   town: ["town/pueblo-muelle.png", "town/pueblo-centro.png", "town/pueblo-loma.png"],
   title: "locations/pueblo-faro.png",
@@ -30,6 +30,6 @@ export const bayArt = {
   lamp: "locations/faro-lampara.png",
   farolero: "horrors/farolero.png",
   boat: "objects/bote.png",
-  transformed: "characters/profundo.png",
+  arponeraFromSea: "characters/arponera-del-mar.png",
   cardBack: (shadow: string) => `redo/dorso-${shadow}.png`,
 };

@@ -10,6 +10,7 @@ import {
 } from "../../domain/derived";
 import { MAX_SCARS } from "../../domain/state";
 import { t } from "../../i18n/t";
+import { ArponeraPuppet } from "../Arponera";
 import { Art } from "../Art";
 import { FaroleroPuppet } from "../Farolero";
 import { useGame } from "../game";
@@ -44,6 +45,11 @@ export function Dock() {
     return (
       <Screen>
         <Title />
+        <div className="scene tall">
+          <div className="stage">
+            <ArponeraPuppet mutations={[]} fromSea width={180} />
+          </div>
+        </div>
         <section className="paper dark">
           <p className="kicker">{t("dock.lost.kicker")}</p>
           <h2>{t("dock.lost.title")}</h2>
@@ -58,7 +64,9 @@ export function Dock() {
     return (
       <Screen>
         <div className="scene tall">
-          <FaroleroPuppet width={300} />
+          <div className="stage">
+            <FaroleroPuppet width={300} />
+          </div>
         </div>
         <section className="paper dark">
           <p className="kicker">{t("dock.ending.kicker")}</p>
@@ -183,6 +191,7 @@ export function Dock() {
             );
           })}
         </div>
+        {c.shelf.length > 0 && <p className="kicker">{t("dock.shelfTitle")}</p>}
         {c.shelf.length > 0 && (
           <div className="shelf">
             {c.shelf.map((s, i) => (
@@ -190,6 +199,23 @@ export function Dock() {
             ))}
           </div>
         )}
+      </section>
+
+      <section className="paper dark crew">
+        <ArponeraPuppet mutations={campaignMutations(c)} width={104} />
+        <div>
+          <h3>{t("arponera.name")}</h3>
+          {c.scars > 0 ? (
+            <p className="small">
+              <b>{t("dock.scars", { n: c.scars, max: MAX_SCARS, sanity: sanityCeiling(c) })}</b>{" "}
+              {campaignMutations(c)
+                .map((m) => t(`mutation.${m}`))
+                .join(" ")}
+            </p>
+          ) : (
+            <p className="small voice">{t("dock.noScars")}</p>
+          )}
+        </div>
       </section>
 
       <section className="paper">
@@ -207,14 +233,6 @@ export function Dock() {
             </div>
           ))}
         </div>
-        {c.scars > 0 && (
-          <p className="small">
-            <b>{t("dock.scars", { n: c.scars, max: MAX_SCARS, sanity: sanityCeiling(c) })}</b>{" "}
-            {campaignMutations(c)
-              .map((m) => t(`mutation.${m}`))
-              .join(" ")}
-          </p>
-        )}
       </section>
 
       {canStartTide(ctx) && (

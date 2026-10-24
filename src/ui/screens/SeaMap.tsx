@@ -34,7 +34,6 @@ function Glyph({ kind, x, y, dark }: { kind: RoomKind; x: number; y: number; dar
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      aria-hidden="true"
     />
   );
 }

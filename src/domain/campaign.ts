@@ -19,7 +19,8 @@ export function startTide(ctx: Ctx): void {
   if (!canStartTide(ctx)) return;
   const { g, place, at } = ctx;
   const c = g.campaign;
-  const ceiling = sanityCeiling(c);
+  const ceiling = sanityCeiling(c) + c.solace;
+  c.solace = 0;
   g.tide = {
     number: c.tides + 1,
     startedAt: at,
@@ -100,6 +101,7 @@ export function giveChapterPiece({ g, place }: Ctx): void {
   if (!piece || c.chapterPiece) return;
   c.shelf.splice(c.shelf.indexOf(piece), 1);
   c.chapterPiece = true;
+  c.solace = 1;
 }
 
 export function nextChapter({ g, place }: Ctx): void {

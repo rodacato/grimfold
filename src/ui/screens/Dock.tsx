@@ -147,7 +147,11 @@ export function Dock() {
         {!ready && <p className="small full voice">{t(`chapter.${chapter.id}.hint`)}</p>}
         {piece && (
           <div className="full">
-            <Btn kind="primary" onClick={() => send({ type: "giveChapterPiece" })}>
+            <Btn
+              kind="primary"
+              sub={t("dock.givePiece.sub")}
+              onClick={() => send({ type: "giveChapterPiece" })}
+            >
               {t("dock.givePiece", { item: piece })}
             </Btn>
           </div>

@@ -62,6 +62,7 @@ async function press(command: Command): Promise<void> {
     case "afterEncounter":
       return button(t("farolero.continue")).click();
     case "backToDock":
+      if ((await game()).tide?.light) await button(t("end.next")).click();
       return button(t("end.toDock")).click();
     case "deliverRequest":
       return button(t("dock.deliver")).click();

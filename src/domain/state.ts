@@ -1,6 +1,6 @@
 import type { EventId, GearPiece, IslandId, RoomKind, Shadow, WaterType, WreckId } from "./content";
 
-export const SAVE_VERSION = 3;
+export const SAVE_VERSION = 4;
 export const MAX_SCARS = 3;
 export const BASE_SANITY = 6;
 export const ROOMS_PER_SANITY = 3;
@@ -90,6 +90,8 @@ export interface Campaign {
   chapter: number;
   chapterLight: boolean;
   chapterPiece: boolean;
+  /** Cordura above the ceiling for the next Marea only, from handing back a Capítulo's piece. */
+  solace: number;
   scars: number;
   ending: null | "choose" | "faro" | "bajar";
   shelf: string[];
@@ -133,6 +135,7 @@ export function newCampaign(number: number): Campaign {
     chapter: 0,
     chapterLight: false,
     chapterPiece: false,
+    solace: 0,
     scars: 0,
     ending: null,
     shelf: [],

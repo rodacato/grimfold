@@ -88,6 +88,7 @@ export function CampaignSheet({ place }: { place: Place }) {
         {t("print.campaign.scars", { max: MAX_SCARS })} {boxes(MAX_SCARS)}
       </p>
       <h2>{t("print.campaign.chapters")}</h2>
+      <p>{t("dock.givePiece.sub")}</p>
       <ol>
         {place.chapters.map((c) => (
           <li key={c.id}>

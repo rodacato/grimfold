@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { bayArt } from "../../content/bay/art";
 import { campaignMutations, sanityCeiling } from "../../domain/derived";
 import { MAX_SCARS, type Tide } from "../../domain/state";
@@ -49,9 +50,26 @@ export function FaroleroView() {
 
 export function TideEndView() {
   const { game, place, send } = useGame();
+  const [dawn, setDawn] = useState(false);
   const tide = game.tide as Tide;
   const c = game.campaign;
   const how = tide.end ?? "dock";
+  const toDock = () => send({ type: "backToDock" });
+  if (dawn)
+    return (
+      <Screen>
+        <div className="scene tall">
+          <Art src={bayArt.lighthouse} alt={t("place.lighthouse")} />
+        </div>
+        <section className="paper">
+          <p className="kicker">{t("end.dawn.kicker")}</p>
+          <p>{t("end.dawn.text")}</p>
+        </section>
+        <Btn kind="primary" onClick={toDock}>
+          {t("end.toDock")}
+        </Btn>
+      </Screen>
+    );
   const lost = c.scars >= MAX_SCARS;
   const titleKey = how === "dock" ? (tide.light ? "end.dock.light" : "end.dock.dark") : `end.${how}`;
   const kept = [
@@ -90,9 +108,15 @@ export function TideEndView() {
           ))}
         </ul>
       </section>
-      <Btn kind="primary" onClick={() => send({ type: "backToDock" })}>
-        {t("end.toDock")}
-      </Btn>
+      {how === "dock" && tide.light ? (
+        <Btn kind="primary" onClick={() => setDawn(true)}>
+          {t("end.next")}
+        </Btn>
+      ) : (
+        <Btn kind="primary" onClick={toDock}>
+          {t("end.toDock")}
+        </Btn>
+      )}
     </Screen>
   );
 }

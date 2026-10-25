@@ -23,6 +23,7 @@
 | Final | One of the two endings, chosen after the third Capítulo: light the lighthouse or go down to him | — | `Ending` |
 | Encargo | A townsperson asks for a specific Botín; delivering it raises one Equipo piece a level | Capítulo | `Request` |
 | Repisa | Where the Botín brought home is kept between Mareas, waiting for an Encargo or a Capítulo | Bodega: what you carry at sea | `Shelf` |
+| Cebo | A Botín nobody asked for, spent at the Muelle so a Carta that drops something wanted is the first bite in its water next Marea | Encargo: a trade for Equipo | `bait` |
 | Marca | What a transformation leaves: the Cordura maximum drops 1 for the rest of the Campaña and the Mutación stays. The third Marca loses the Campaña | Mutación: the power a Marca brings | `Scar` |
 | Mutación | A power gained by losing Cordura: Ojos de bruma (see Vida), Brazo de ventosas (+1 damage). Temporary within a Marea, permanent once it comes with a Marca | Equipo | `Mutation` |
 | Bestiario | The record of the creatures you chose to write down. Writing one costs Cordura maximum for that Marea; it survives across Campañas | Mazo | `Bestiary` |

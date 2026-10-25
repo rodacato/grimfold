@@ -21,9 +21,9 @@ text, and its format (still, puppet sheet, item sheet or layers).
 | Horrors | All 22 of the Mazo, each a puppet; the Farolero in three poses; the Reina's learned face | — |
 | The Arponera | Base, puppet, Ojos de bruma, Brazo de ventosas, Del mar | — |
 | Loot | All 20 | — |
-| Equipment | Caña, Farol, Motor, both cascos, the boat | `sedal` |
+| Equipment | All five pieces, both cascos, the boat | — |
 | Cards | The three card backs, on the bite screen | The printed deck's layout |
-| Locations | Every Sala, the lamp room, the chart, the three town panels | `evento-nombre`, `evento-sirena`; layer sheets for what moves |
+| Locations | Every Sala and Evento, the lamp room, the chart, the three town panels | Layer sheets for what moves |
 | Townspeople | Five portraits, shown in the Capítulos | All five are in `redo/`: off-style, to redraw |
 
 **Next, in order:**
@@ -31,9 +31,7 @@ text, and its format (still, puppet sheet, item sheet or layers).
 1. **Townspeople redrawn.** They are the face of every Capítulo and the only art still off-style.
    `raw/candidates/characters/` has a v2 of Nico and Ruelas to pick from, and `marta-mayor` for the
    epilogue held in [LORE.md](LORE.md).
-2. **`evento-nombre` and `evento-sirena`.** The only two Salas that still show a paper silhouette.
-3. **`sedal`.** The only Equipo piece without an icon in the Muelle.
-4. **One layer sheet, `pueblo-muelle`, as a probe.** If it changes how the Muelle feels, then
+2. **One layer sheet, `pueblo-muelle`, as a probe.** If it changes how the Muelle feels, then
    `faro-lampara`; the other (moves) marks wait for that answer.
 
 ## Style lock (paste with every request)
@@ -90,8 +88,8 @@ rules already have; there are no shops.
 - [x] `naufragio-ruelas` — The Ruelas' launch beached on a sandbar, intact, outboard motor ripped off, dinner still served on the table.
 - [x] `evento-boya` — A buoy ringing alone at night in the fog, no waves to move it.
 - [x] `evento-sal` — The boat under falling salt crystals; the dock in the distance, people watching without umbrellas.
-- [ ] `evento-nombre` — *"Alguien dice tu nombre desde el agua."* Flat black water at night, the boat small, a pale shape just under the surface by the hull; nobody in sight.
-- [ ] `evento-sirena` — *"La sirena del faro suena tres veces."* The lighthouse seen from the water, its foghorn sounding: three rings of paper sound spreading over the fog.
+- [x] `evento-nombre` — *"Alguien dice tu nombre desde el agua."* Flat black water at night, the boat small, a pale shape just under the surface by the hull; nobody in sight.
+- [x] `evento-sirena` — *"La sirena del faro suena tres veces."* The lighthouse seen from the water, its foghorn sounding: three rings of paper sound spreading over the fog.
 - [x] `carta-bahia` — The Mapa: a 2:3 portrait sea chart of the bay seen from above, 1024×1536. Muelle at the bottom left, the lighthouse rock at the top right; the water darkens from the shallow lagoon to black sea below the lighthouse. Nothing drawn where the Salas sit: what is there changes every Marea. The nodes in `src/content/bay` were placed on its open water by eye, so a redrawn chart means moving them.
 
 ## Horrors
@@ -155,7 +153,7 @@ Transparent 1254×1254 in `assets/raw/gear/`, shown beside each piece in the Mue
 - [x] `casco-madera` — **Casco de madera.** Patched planks.
 - [x] `casco-reforzado` — **Casco reforzado.** Riveted plates sealed with barnacles; something breathes between the seams.
 - [x] `motor` — **Motor que tose.** Old outboard motor puffing smoke, an eye painted on it.
-- [ ] `sedal` — **Sedal.** A spool of fishing line with a knot every hand's width, one knot tied with red thread.
+- [x] `sedal` — **Sedal.** A spool of fishing line with a knot every hand's width, one knot tied with red thread.
 
 ## Loot
 

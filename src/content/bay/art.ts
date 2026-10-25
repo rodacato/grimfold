@@ -18,11 +18,8 @@ export const bayArt = {
   cardBack: (shadow: Shadow) => `cards/dorso-${shadow}.png`,
   person: (id: string) => `redo/${id}.png`,
   loot: (id: string) => `loot/${id}.png`,
-  /** The Sedal has no art yet. */
-  gear: (piece: GearPiece, level: number): string | null =>
-    piece === "sedal"
-      ? null
-      : `gear/${piece === "casco" ? (level >= 2 ? "casco-reforzado" : "casco-madera") : piece}.png`,
+  gear: (piece: GearPiece, level: number) =>
+    `gear/${piece === "casco" ? (level >= 2 ? "casco-reforzado" : "casco-madera") : piece}.png`,
   town: ["town/pueblo-muelle.png", "town/pueblo-centro.png", "town/pueblo-loma.png"],
   water: {
     rio: "locations/rio-estero.png",
@@ -40,10 +37,10 @@ export const bayArt = {
   } satisfies Record<IslandId, string>,
   event: {
     boya: "locations/evento-boya.png",
-    nombre: null,
+    nombre: "locations/evento-nombre.png",
     sal: "locations/evento-sal.png",
-    sirena: null,
-  } satisfies Record<EventId, string | null>,
+    sirena: "locations/evento-sirena.png",
+  } satisfies Record<EventId, string>,
   chart: "locations/carta-bahia.png",
   lighthouse: "locations/faro-exterior.png",
   lamp: "locations/faro-lampara.png",

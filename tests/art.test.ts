@@ -12,7 +12,7 @@ describe("the art the game asks for is in assets/web", () => {
       ...Object.values(bayArt.water),
       ...Object.values(bayArt.wreck),
       ...Object.values(bayArt.island),
-      ...Object.values(bayArt.event).filter((p): p is string => p !== null),
+      ...Object.values(bayArt.event),
       bayArt.chart,
       bayArt.lighthouse,
       bayArt.lamp,
@@ -22,10 +22,10 @@ describe("the art the game asks for is in assets/web", () => {
     expect(scenes.filter((p) => !shipped(p))).toEqual([]);
   });
 
-  it("every Botín, and every Equipo piece that has art at each level", () => {
+  it("every Botín, and every Equipo piece at each level", () => {
     const loot = bay.loot.map((l) => bayArt.loot(l.id));
     const gear = (["cana", "sedal", "farol", "motor", "casco"] as const).flatMap((g) =>
-      [1, 2, 3].map((level) => bayArt.gear(g, level)).filter((p): p is string => p !== null),
+      [1, 2, 3].map((level) => bayArt.gear(g, level)),
     );
     expect([...loot, ...gear].filter((p) => !shipped(p))).toEqual([]);
   });

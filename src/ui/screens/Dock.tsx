@@ -262,11 +262,7 @@ export function Dock() {
         <div className="gear">
           {GEAR.map((g) => (
             <div key={g}>
-              {bayArt.gear(g, c.gear[g]) ? (
-                <Art src={bayArt.gear(g, c.gear[g])} alt="" className="gear-icon" />
-              ) : (
-                <i className="gear-icon" />
-              )}
+              <Art src={bayArt.gear(g, c.gear[g])} alt="" className="gear-icon" />
               <b>{t(`gear.${g}`)}</b>
               <span className="levels" role="img" aria-label={`${c.gear[g]}/3`}>
                 {LEVELS.map((n) => (

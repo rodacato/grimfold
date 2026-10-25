@@ -2338,5 +2338,17 @@
  "horrors/reina-retazo/busto-nucleo.png": {
   "source": "95d5b1c78fae55dfdb7883f8b99c3925e103c82a55f186c557388f088fe73572",
   "tiny": true
+ },
+ "locations/evento-nombre.png": {
+  "source": "748de5fbcc33c7fe3dc39f8e929684943802a243f69f60767a23ba574a3b8348",
+  "tiny": true
+ },
+ "locations/evento-sirena.png": {
+  "source": "64532d6e22f77bac5c01567136f8671ede5ac141ae225dc7a2491955f25293b0",
+  "tiny": true
+ },
+ "gear/sedal.png": {
+  "source": "9f6f1c603ad45a562b74678c8612e08ce5a01e9e414683b18b06ffcbb481562a",
+  "tiny": true
  }
 }

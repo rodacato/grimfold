@@ -34,6 +34,8 @@ const LOCATIONS = [
   "isla-observatorio",
   "evento-boya",
   "evento-sal",
+  "evento-nombre",
+  "evento-sirena",
   "carta-bahia",
   "faro-exterior",
   "faro-lampara",

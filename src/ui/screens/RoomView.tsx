@@ -60,7 +60,11 @@ export function RoomView() {
           <Art src={bayArt.lamp} alt={t("place.lighthouse")} />
           {farolero.stage > 0 && (
             <div className="stage">
-              <FaroleroPuppet width={260} look={farolero.stage >= 3 ? "full" : "lure"} />
+              <FaroleroPuppet
+                pose="farolero-guardian"
+                width={260}
+                look={farolero.stage >= 3 ? "full" : "lure"}
+              />
             </div>
           )}
         </div>

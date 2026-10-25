@@ -66,9 +66,9 @@ for (const f of pngs("loot")) copy(`loot/${f}`);
 for (const f of pngs("gear")) copy(`gear/${f}`);
 copy("characters/arponera-del-mar.png");
 for (const f of pngs("characters/arponera", ["sheet", "ojos-bruma-parche"])) copy(`characters/arponera/${f}`);
-for (const f of pngs("horrors/farolero", ["sheet", "armado"])) copy(`horrors/farolero/${f}`);
 copy("objects/bote.png");
-for (const f of pngs("redo", ["dorso-"])) copy(`redo/${f}`, false);
+for (const f of pngs("redo")) copy(`redo/${f}`, false);
+for (const f of pngs("cards")) put(`cards/${f}`, (out) => ffmpeg(join(ASSETS, "cards", f), "scale=600:-1:flags=lanczos", out));
 for (const f of pngs("horrors", ["farolero"])) {
   put(`horrors/${f}`, (out) => ffmpeg(join(ASSETS, "horrors", f), KEY_AND_SIZE, out));
 }

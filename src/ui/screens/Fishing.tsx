@@ -12,24 +12,28 @@ import { Items } from "../TideParts";
 
 const RARITY_GLYPH = ["○", "◐", "●", "✶"];
 
-function WaterScene({ c, shadow = false }: { c: Creature; shadow?: boolean }) {
+function WaterScene({ c }: { c: Creature }) {
   return (
     <div className="scene">
       <Waves />
       {!c.unfishable && <div className="line" />}
-      <Horror c={c} shadow={shadow} />
+      <Horror c={c} />
     </div>
   );
 }
 
 export function Bite() {
-  const { game, place, send } = useGame();
+  const { game, send } = useGame();
   const tide = game.tide as Tide;
   const bite = tide.bite;
   if (!bite) return null;
   return (
     <Screen>
-      <WaterScene c={creature(place, bite.creature)} shadow />
+      <div className="scene">
+        <Waves />
+        <div className="line" />
+        <Art src={bayArt.cardBack(bite.shadow)} alt={t(`shadow.${bite.shadow}`)} className="card-back" />
+      </div>
       <section className="paper">
         <p className="kicker">{t("fight.depth", { n: tide.depth })}</p>
         <h2>{t("bite.title", { shadow: t(`shadow.${bite.shadow}`) })}</h2>

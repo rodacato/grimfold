@@ -104,13 +104,14 @@ Odd, not muscular: the horror is the detail that should not be there.
 - [x] `tiburon` — **Tiburón de quilla.** Its dorsal fin is a launch's keel; a propeller shows through a stitched seam in its belly. Puppet: exact cuts with overlaps, 11 layers.
 - [x] `calamar` — **Calamar del ancla.** Coiled around a rusty anchor that has gills. The anchor is what breathes. Puppet: exact cuts with overlaps, 11 layers.
 - [x] `reina` — **Reina de los percebes.** A mound of barnacles on a rock forming a crown and the worn face of a town woman. Puppet: exact cuts with overlaps, 15 layers.
-- [ ] `reina-retazo` — The same, with one scrap of red raincoat caught in the barnacles: the face is the Arponera's, still being learned ([LORE.md](LORE.md)).
+- [x] `reina-retazo` — The same, with one scrap of red raincoat caught in the barnacles: the face is the Arponera's, still being learned ([LORE.md](LORE.md)). Shown instead of the Reina once the Campaña has a Marca. Puppet: exact cuts with overlaps, 14 layers.
+- Kept out by LORE.md, not shipped: `nudo`, `ausencia`, `desove` and `inquilino` have exact-cut puppets in `raw/candidates/horrors/<id>/`, ready if a later volume wants them.
 - [x] `vibora` — **La Garganta que Mira.** A viperfish whose jaw opens too far back; inside its throat, one bony face set at an angle the body cannot have. Profundo, from a Codex candidate. Puppet: exact cuts with overlaps, 9 layers.
 - [x] `sifonoforo` — **El Coro sin Cabeza.** A twisted column through seven chambers, each holding an unfinished face; the last is empty. Profundo, from a Codex candidate. Puppet: exact cuts with overlaps, 8 layers.
 - [x] `duerme` — **Lo que duerme bajo el ancla.** Never whole: a closed eyelid the size of a house under the water, an anchor chain going into it. Puppet: exact cuts with overlaps, 6 layers; a close-up, cut by the frame on purpose.
 - [x] `gaviota` — **Gaviota con dientes** (wanderer). A gull with a human smile, teeth too even and too white. Puppet: exact cuts with overlaps, 10 layers.
 - [x] `mascaron` — **Mascarón de proa despierto** (wanderer). A ship's figurehead carved with the keeper's face, wooden eyes just opened. Puppet: exact cuts with overlaps, 11 layers.
-- [x] `farolero` **(moves)** — **El Farolero**, base: four-eyed anglerfish with a lantern lure.
+- [x] `farolero` **(moves)** — **El Farolero**, base: four-eyed anglerfish with a lantern lure. Three puppets from exact cuts: `farolero` (the ending, 7 layers), `farolero-guardian` (the lighthouse: the keeper's cap and coat, its lure the lamp room, 9 layers) and `farolero-persigue` (the chase, in profile, 10 layers). The first hand-cut rig is in `raw/horrors/farolero-hoja/`.
 - [x] `farolero-marioneta` — Its puppet sheet: body, jaw, lure, dorsal fin, side fin, tail.
 - [ ] `farolero-guardian` — Extra pieces for the same puppet: the keeper's cap, a torn coat, and a lure that is the lighthouse lamp itself.
 - [ ] `farolero-persigue` — The same, in profile, coming out of the fog in pursuit.
@@ -174,7 +175,7 @@ shows only the name.
 
 ## Cards
 
-- [ ] `dorso-chica`, `dorso-mediana`, `dorso-enorme` — Card backs: the creature's shadow seen from above the water, one per size. Used on the bite screen and in the printed deck.
+- [x] `dorso-chica`, `dorso-mediana`, `dorso-enorme` — Card backs: the creature's shadow seen from above the water, one per size. In `raw/cards/` (v2; the first ones in `cards/v1/`), shown on the bite screen. Not yet in the printed deck.
 
 ## Not used
 

@@ -68,7 +68,7 @@ export function Dock() {
       <Screen>
         <div className="scene tall">
           <div className="stage">
-            <FaroleroPuppet width={300} />
+            <FaroleroPuppet pose="farolero" width={300} />
           </div>
         </div>
         <section className="paper dark">

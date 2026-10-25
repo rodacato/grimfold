@@ -20,7 +20,11 @@ export function FaroleroView() {
       <div className="scene tall">
         <Waves />
         <div className="stage">
-          <FaroleroPuppet width={330} look={stage >= 3 ? "full" : stage === 2 ? "lured" : "shadow"} />
+          <FaroleroPuppet
+            pose="farolero-persigue"
+            width={330}
+            look={stage >= 3 ? "full" : stage === 2 ? "lured" : "shadow"}
+          />
         </div>
       </div>
       <section className="paper dark">

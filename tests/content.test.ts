@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { bay } from "../src/content/bay";
-import type { Rig } from "../src/content/bay/art";
+import { bayArt, type Rig } from "../src/content/bay/art";
 import rigs from "../src/content/bay/puppets.json";
 import { castPool, drawPool } from "../src/domain/tide/sea";
 import { hasString } from "../src/i18n/t";
@@ -20,8 +20,14 @@ describe("the bay's content holds together", () => {
     expect(named.filter((id) => !lootIds.has(id))).toEqual([]);
   });
 
-  it("every puppet rig belongs to a creature of the Mazo, its joints hanging from a still body", () => {
-    const creatureIds = new Set(bay.creatures.map((c) => c.id));
+  it("every puppet rig belongs to a creature, the Farolero or a learned face, its joints hanging from a still body", () => {
+    const creatureIds = new Set([
+      ...bay.creatures.map((c) => c.id),
+      "farolero",
+      "farolero-guardian",
+      "farolero-persigue",
+      ...Object.values(bayArt.learned),
+    ]);
     for (const [id, { pieces }] of Object.entries(rigs as unknown as Record<string, Rig>)) {
       expect(creatureIds.has(id), id).toBe(true);
       const moving = new Set(pieces.filter((p) => p.pivot && p.sway && p.beat && p.h).map((p) => p.id));

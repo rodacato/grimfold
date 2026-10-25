@@ -30,6 +30,16 @@ describe("the art the game asks for is in assets/web", () => {
     expect([...loot, ...gear].filter((p) => !shipped(p))).toEqual([]);
   });
 
+  it("a card back for every Sombra, and every piece of the Farolero's poses and the learned puppets", () => {
+    const backs = (["chica", "mediana", "enorme"] as const).map(bayArt.cardBack);
+    const rigs = ["farolero", "farolero-guardian", "farolero-persigue", ...Object.values(bayArt.learned)];
+    const pieces = rigs.flatMap((id) => {
+      const rig = bayArt.puppet(id);
+      return rig ? rig.pieces.map((p) => `horrors/${id}/${p.file}`) : [`horrors/${id}: no puppet`];
+    });
+    expect([...backs, ...pieces].filter((p) => !shipped(p))).toEqual([]);
+  });
+
   it("every creature's still, and every piece of its puppet", () => {
     const missing = bay.creatures.flatMap((c) => {
       const pieces = bayArt.puppet(c.id)?.pieces.map((p) => `horrors/${c.id}/${p.file}`) ?? [];

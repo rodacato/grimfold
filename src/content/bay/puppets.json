@@ -1131,6 +1131,480 @@
       }
     ]
   },
+  "farolero": {
+    "size": [1254, 1254],
+    "pieces": [
+      {
+        "id": "solape-mandibula",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-mandibula.png",
+        "follows": ["mandibula"]
+      },
+      {
+        "id": "solape-senuelo",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-senuelo.png",
+        "follows": ["senuelo"]
+      },
+      {
+        "id": "solape-aleta-dorsal",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-dorsal.png",
+        "follows": ["aleta-dorsal"]
+      },
+      {
+        "id": "solape-aleta-pectoral",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-pectoral.png",
+        "follows": ["aleta-pectoral"]
+      },
+      {
+        "id": "solape-cola",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-cola.png",
+        "follows": ["cola"]
+      },
+      {
+        "id": "relleno-boca-bajo-mandibula",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "relleno-boca-bajo-mandibula.png"
+      },
+      {
+        "id": "aletas-ventrales",
+        "x": 139,
+        "y": 916,
+        "w": 547,
+        "h": 198,
+        "pivot": [0.667, 0.369],
+        "file": "aletas-ventrales.png",
+        "sway": 1,
+        "beat": 2.5
+      },
+      {
+        "id": "cola",
+        "x": 887,
+        "y": 428,
+        "w": 324,
+        "h": 526,
+        "pivot": [0.423, 0.515],
+        "file": "cola.png",
+        "sway": 1,
+        "beat": 2.1
+      },
+      {
+        "id": "aleta-pectoral",
+        "x": 600,
+        "y": 685,
+        "w": 355,
+        "h": 387,
+        "pivot": [0.087, 0.109],
+        "file": "aleta-pectoral.png",
+        "sway": 3,
+        "beat": 1.7
+      },
+      {
+        "id": "aleta-dorsal",
+        "x": 506,
+        "y": 209,
+        "w": 441,
+        "h": 408,
+        "pivot": [0.429, 0.422],
+        "file": "aleta-dorsal.png",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "senuelo",
+        "x": 70,
+        "y": 129,
+        "w": 409,
+        "h": 442,
+        "pivot": [0.936, 0.491],
+        "file": "senuelo.png",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "mandibula",
+        "x": 83,
+        "y": 595,
+        "w": 560,
+        "h": 410,
+        "pivot": [0.848, 0.641],
+        "file": "mandibula.png",
+        "sway": 1,
+        "beat": 2.1
+      },
+      {
+        "id": "cuerpo",
+        "x": 176,
+        "y": 339,
+        "w": 819,
+        "h": 513,
+        "pivot": null,
+        "file": "cuerpo.png"
+      }
+    ]
+  },
+  "farolero-guardian": {
+    "size": [1254, 1254],
+    "pieces": [
+      {
+        "id": "solape-mandibula",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-mandibula.png",
+        "follows": ["mandibula"]
+      },
+      {
+        "id": "solape-senuelo",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-senuelo.png",
+        "follows": ["senuelo"]
+      },
+      {
+        "id": "solape-aleta-dorsal",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-dorsal.png",
+        "follows": ["aleta-dorsal"]
+      },
+      {
+        "id": "solape-aleta-pectoral",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-pectoral.png",
+        "follows": ["aleta-pectoral"]
+      },
+      {
+        "id": "solape-cola",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-cola.png",
+        "follows": ["cola"]
+      },
+      {
+        "id": "relleno-boca-bajo-mandibula",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "relleno-boca-bajo-mandibula.png"
+      },
+      {
+        "id": "gorra",
+        "x": 436,
+        "y": 225,
+        "w": 269,
+        "h": 145,
+        "pivot": null,
+        "file": "gorra.png"
+      },
+      {
+        "id": "abrigo",
+        "x": 735,
+        "y": 420,
+        "w": 475,
+        "h": 466,
+        "pivot": null,
+        "file": "abrigo.png"
+      },
+      {
+        "id": "aletas-ventrales",
+        "x": 139,
+        "y": 916,
+        "w": 547,
+        "h": 198,
+        "pivot": [0.667, 0.369],
+        "file": "aletas-ventrales.png",
+        "sway": 1,
+        "beat": 2.5
+      },
+      {
+        "id": "cola",
+        "x": 928,
+        "y": 428,
+        "w": 283,
+        "h": 526,
+        "pivot": [0.339, 0.515],
+        "file": "cola.png",
+        "sway": 1,
+        "beat": 2.1
+      },
+      {
+        "id": "aleta-pectoral",
+        "x": 600,
+        "y": 685,
+        "w": 355,
+        "h": 387,
+        "pivot": [0.087, 0.109],
+        "file": "aleta-pectoral.png",
+        "sway": 3,
+        "beat": 1.7
+      },
+      {
+        "id": "aleta-dorsal",
+        "x": 577,
+        "y": 209,
+        "w": 330,
+        "h": 333,
+        "pivot": [0.358, 0.517],
+        "file": "aleta-dorsal.png",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "senuelo",
+        "x": 146,
+        "y": 31,
+        "w": 339,
+        "h": 366,
+        "pivot": [0.909, 0.872],
+        "file": "senuelo.png",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "mandibula",
+        "x": 83,
+        "y": 595,
+        "w": 560,
+        "h": 410,
+        "pivot": [0.848, 0.641],
+        "file": "mandibula.png",
+        "sway": 1,
+        "beat": 2.1
+      },
+      {
+        "id": "cuerpo",
+        "x": 176,
+        "y": 330,
+        "w": 816,
+        "h": 522,
+        "pivot": null,
+        "file": "cuerpo.png"
+      }
+    ]
+  },
+  "farolero-persigue": {
+    "size": [1254, 1254],
+    "pieces": [
+      {
+        "id": "solape-mandibula",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-mandibula.png",
+        "follows": ["mandibula"]
+      },
+      {
+        "id": "solape-gorra",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-gorra.png",
+        "follows": ["gorra"]
+      },
+      {
+        "id": "solape-aleta-dorsal",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-dorsal.png",
+        "follows": ["aleta-dorsal"]
+      },
+      {
+        "id": "solape-aleta-pectoral",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-pectoral.png",
+        "follows": ["aleta-pectoral"]
+      },
+      {
+        "id": "solape-cola",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-cola.png",
+        "follows": ["cola"]
+      },
+      {
+        "id": "solape-abrigo-colas",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-abrigo-colas.png",
+        "follows": ["abrigo-colas"]
+      },
+      {
+        "id": "relleno-boca-bajo-mandibula",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "relleno-boca-bajo-mandibula.png"
+      },
+      {
+        "id": "bruma-vientre",
+        "x": 266,
+        "y": 858,
+        "w": 970,
+        "h": 396,
+        "pivot": null,
+        "file": "bruma-vientre.png"
+      },
+      {
+        "id": "bruma-cola",
+        "x": 898,
+        "y": 387,
+        "w": 356,
+        "h": 493,
+        "pivot": null,
+        "file": "bruma-cola.png"
+      },
+      {
+        "id": "abrigo-colas",
+        "x": 631,
+        "y": 538,
+        "w": 427,
+        "h": 393,
+        "pivot": [0.201, 0.087],
+        "file": "abrigo-colas.png",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "cola",
+        "x": 981,
+        "y": 463,
+        "w": 267,
+        "h": 468,
+        "pivot": [0.172, 0.53],
+        "file": "cola.png",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "aleta-pectoral",
+        "x": 511,
+        "y": 706,
+        "w": 339,
+        "h": 297,
+        "pivot": [0.029, 0.135],
+        "file": "aleta-pectoral.png",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "aleta-dorsal",
+        "x": 619,
+        "y": 323,
+        "w": 364,
+        "h": 264,
+        "pivot": [0.352, 0.67],
+        "file": "aleta-dorsal.png",
+        "sway": 3,
+        "beat": 1.7
+      },
+      {
+        "id": "gorra",
+        "x": 284,
+        "y": 281,
+        "w": 404,
+        "h": 230,
+        "pivot": [0.535, 0.717],
+        "file": "gorra.png",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "senuelo-faro",
+        "x": 31,
+        "y": 191,
+        "w": 326,
+        "h": 363,
+        "pivot": [0.994, 0.595],
+        "file": "senuelo-faro.png",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "mandibula",
+        "x": 114,
+        "y": 681,
+        "w": 403,
+        "h": 228,
+        "pivot": [0.898, 0.491],
+        "file": "mandibula.png",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "cuerpo",
+        "x": 0,
+        "y": 19,
+        "w": 1254,
+        "h": 1235,
+        "pivot": null,
+        "file": "cuerpo.png"
+      }
+    ]
+  },
   "gaviota": {
     "size": [1254, 1254],
     "pieces": [
@@ -3220,6 +3694,293 @@
         "y": 83,
         "w": 1014,
         "h": 1134,
+        "pivot": null,
+        "file": "busto-nucleo.png"
+      }
+    ]
+  },
+  "reina-retazo": {
+    "size": [1254, 1254],
+    "pieces": [
+      {
+        "id": "solape-percebe-central",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-percebe-central.png",
+        "follows": ["percebe-central"]
+      },
+      {
+        "id": "solape-percebe-corona-izquierdo",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-percebe-corona-izquierdo.png",
+        "follows": ["percebe-corona-izquierdo"]
+      },
+      {
+        "id": "solape-percebe-corona-derecho",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-percebe-corona-derecho.png",
+        "follows": ["percebe-corona-derecho"]
+      },
+      {
+        "id": "solape-percebe-sien-izquierda",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-percebe-sien-izquierda.png",
+        "follows": ["percebe-sien-izquierda"]
+      },
+      {
+        "id": "solape-percebe-sien-derecha",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-percebe-sien-derecha.png",
+        "follows": ["percebe-sien-derecha"]
+      },
+      {
+        "id": "solape-percebe-lateral-inferior",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-percebe-lateral-inferior.png",
+        "follows": ["percebe-lateral-inferior"]
+      },
+      {
+        "id": "solape-percebe-mejilla",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-percebe-mejilla.png",
+        "follows": ["percebe-mejilla"]
+      },
+      {
+        "id": "solape-percebe-cuello",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-percebe-cuello.png",
+        "follows": ["percebe-cuello"]
+      },
+      {
+        "id": "solape-percebe-hombro",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-percebe-hombro.png",
+        "follows": ["percebe-hombro"]
+      },
+      {
+        "id": "solape-alga-temporal",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-alga-temporal.png",
+        "follows": ["alga-temporal"]
+      },
+      {
+        "id": "solape-alga-oreja",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-alga-oreja.png",
+        "follows": ["alga-oreja"]
+      },
+      {
+        "id": "solape-alga-cuello",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-alga-cuello.png",
+        "follows": ["alga-cuello"]
+      },
+      {
+        "id": "solape-retazo-impermeable",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-retazo-impermeable.png",
+        "follows": ["retazo-impermeable"]
+      },
+      {
+        "id": "retazo-impermeable",
+        "x": 357,
+        "y": 622,
+        "w": 188,
+        "h": 262,
+        "pivot": [0.404, 0.134],
+        "file": "retazo-impermeable.png",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "alga-cuello",
+        "x": 769,
+        "y": 886,
+        "w": 170,
+        "h": 217,
+        "pivot": [0.259, 0.253],
+        "file": "alga-cuello.png",
+        "sway": 3,
+        "beat": 1.7
+      },
+      {
+        "id": "alga-oreja",
+        "x": 881,
+        "y": 593,
+        "w": 90,
+        "h": 197,
+        "pivot": [0.311, 0.168],
+        "file": "alga-oreja.png",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "alga-temporal",
+        "x": 424,
+        "y": 350,
+        "w": 124,
+        "h": 157,
+        "pivot": [0.879, 0.172],
+        "file": "alga-temporal.png",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "percebe-hombro",
+        "x": 939,
+        "y": 948,
+        "w": 130,
+        "h": 122,
+        "pivot": [0.515, 0.811],
+        "file": "percebe-hombro.png",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "percebe-cuello",
+        "x": 351,
+        "y": 769,
+        "w": 158,
+        "h": 151,
+        "pivot": [0.475, 0.775],
+        "file": "percebe-cuello.png",
+        "sway": 3,
+        "beat": 1.7
+      },
+      {
+        "id": "percebe-mejilla",
+        "x": 458,
+        "y": 519,
+        "w": 146,
+        "h": 164,
+        "pivot": [0.548, 0.835],
+        "file": "percebe-mejilla.png",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "percebe-lateral-inferior",
+        "x": 245,
+        "y": 570,
+        "w": 173,
+        "h": 148,
+        "pivot": [0.832, 0.723],
+        "file": "percebe-lateral-inferior.png",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "percebe-sien-derecha",
+        "x": 870,
+        "y": 243,
+        "w": 133,
+        "h": 174,
+        "pivot": [0.391, 0.868],
+        "file": "percebe-sien-derecha.png",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "percebe-sien-izquierda",
+        "x": 306,
+        "y": 255,
+        "w": 150,
+        "h": 176,
+        "pivot": [0.687, 0.824],
+        "file": "percebe-sien-izquierda.png",
+        "sway": 3,
+        "beat": 1.7
+      },
+      {
+        "id": "percebe-corona-derecho",
+        "x": 751,
+        "y": 76,
+        "w": 152,
+        "h": 207,
+        "pivot": [0.559, 0.908],
+        "file": "percebe-corona-derecho.png",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "percebe-corona-izquierdo",
+        "x": 416,
+        "y": 103,
+        "w": 167,
+        "h": 223,
+        "pivot": [0.677, 0.883],
+        "file": "percebe-corona-izquierdo.png",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "percebe-central",
+        "x": 556,
+        "y": 15,
+        "w": 162,
+        "h": 202,
+        "pivot": [0.519, 0.921],
+        "file": "percebe-central.png",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "busto-nucleo",
+        "x": 0,
+        "y": 13,
+        "w": 1186,
+        "h": 1210,
         "pivot": null,
         "file": "busto-nucleo.png"
       }

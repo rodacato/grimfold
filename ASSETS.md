@@ -10,23 +10,31 @@ Save each Codex original as `assets/raw/<folder>/<id>.png` (gitignored), add its
 `prompts.json` and tick it here ([assets/README.md](assets/README.md)). How each kind is requested, cut and animated (puppet sheets, item sheets, layers) is
 in [docs/art-pipeline.md](docs/art-pipeline.md).
 
-## Batches
+## Where we are
 
-Art enters in `build`, screen by screen, and never blocks one: a screen whose art is missing ships
-with a paper silhouette ([docs/BRIEF.md](docs/BRIEF.md)). One request per Codex chat: the style lock
-below, the entry's text, and its format (still, puppet sheet, item sheet or layers).
+Art never blocks a screen: one whose art is missing ships with a paper silhouette
+([docs/BRIEF.md](docs/BRIEF.md)). One request per Codex chat: the style lock below, the entry's
+text, and its format (still, puppet sheet, item sheet or layers).
 
-| # | When | Batch | Requests | Serves demo step |
-|---|---|---|---|---|
-| 1 | Week 1, during the skeleton | **Pipeline test:** one loot item sheet (`luz`, `mecha`, `pinza`, `espina`, `red`), `mar-abierto` base and layer sheet (card backs done) | 3 | 3, 4 |
-| 2 | Week 1–2 | **Story:** the dock's layer sheet; the Arponera's base, sheet and stage 4; the Farolero's guardian pieces (townspeople, town panels and `faro-lampara` done; pick v1 or v2 of each portrait) | 5 | 1, 5 |
-| 3 | Week 2 | **Horrors:** the 22 are done on petrol; left: `farolero-persigue`, and magenta versions only for a creature that must sit over a location | 1+ | 3, 4 |
-| 4 | Week 2 | **Objects:** the rest of the loot in two sheets, the equipment in one | 3 sheets | 1, 4 |
-| 5 | Week 2–3 | **Places:** the horizontal ones are done; left: a 9:16 base of each, and a layer sheet for those marked (moves) | ~18 | 2, 3, 5 |
+| Kind | Done | Missing |
+|---|---|---|
+| Horrors | All 22 of the Mazo, each a puppet; the Farolero in three poses; the Reina's learned face | — |
+| The Arponera | Base, puppet, Ojos de bruma, Brazo de ventosas, Del mar | — |
+| Loot | All 20 | — |
+| Equipment | Caña, Farol, Motor, both cascos, the boat | `sedal` |
+| Cards | The three card backs, on the bite screen | The printed deck's layout |
+| Locations | Every Sala, the lamp room, the chart, the three town panels | `evento-nombre`, `evento-sirena`; layer sheets for what moves |
+| Townspeople | Five portraits, shown in the Capítulos | All five are in `redo/`: off-style, to redraw |
 
-Batch 1 goes first because item sheets and layered locations are still untried in the pipeline;
-ordering forty requests on an unproven format is how a week gets lost. If the appetite runs short,
-the Arponera's puppet is the second cut in the brief: her four stages stay as stills.
+**Next, in order:**
+
+1. **Townspeople redrawn.** They are the face of every Capítulo and the only art still off-style.
+   `raw/candidates/characters/` has a v2 of Nico and Ruelas to pick from, and `marta-mayor` for the
+   epilogue held in [LORE.md](LORE.md).
+2. **`evento-nombre` and `evento-sirena`.** The only two Salas that still show a paper silhouette.
+3. **`sedal`.** The only Equipo piece without an icon in the Muelle.
+4. **One layer sheet, `pueblo-muelle`, as a probe.** If it changes how the Muelle feels, then
+   `faro-lampara`; the other (moves) marks wait for that answer.
 
 ## Style lock (paste with every request)
 
@@ -57,8 +65,9 @@ only.
 
 ## Locations
 
-Every ticked location except the town panels exists only horizontally (1536×1024): each still needs
-its 9:16 base, with the horizontal one attached as reference.
+Sala scenes are horizontal (1536×1024), which is what the game's wide scene strip shows; no 9:16
+versions are needed. Only `pueblo-muelle` and then `faro-lampara` are candidates for a layer sheet
+(see *Next*); the other (moves) marks are on hold.
 
 **The town is a panorama of three 9:16 panels** that scroll sideways on the Muelle screen. Each
 panel is requested with the previous one attached: *"continue this town to the right"*. Where two
@@ -68,7 +77,7 @@ rules already have; there are no shops.
 - [x] `pueblo-muelle` **(moves)** — The dock at night: your launch tied up, Ruelas padre mending nets, Chela's shed with a huge key ring on the door, the lighthouse across the water. Taps: Equipo and Bajar, Ruelas, Chela.
 - [x] `pueblo-centro` — The small square: don Tomás's register office with a lamp on, Marta's window with a jar on the sill, Nico on a wall looking toward the lighthouse. Taps: don Tomás, Marta, Nico.
 - [x] `pueblo-loma` — The hill above town: the keeper's house, now yours, its window facing the lighthouse; the father's things still on the porch. Taps: Repisa, Bestiario, Marcas.
-- [x] `pueblo-faro` **(moves)** — The town, the dock and the lighthouse across the bay; ruins and tentacles in the fog. Title screen. (horizontal only)
+- [x] `pueblo-faro` — The town, the dock and the lighthouse across the bay; ruins and tentacles in the fog. Meant for a title screen the game does not have; not shipped.
 - [x] `naufragio-cementerio` — Ship graveyard on a tidal flat. Naufragio Sala. (horizontal only)
 - [x] `isla-observatorio` — Observatory on a rock among stone arches. Isla Sala: from here you see two more Salas. (horizontal only)
 - [x] `rio-estero` **(moves)** — Narrow mangrove estuary, tea-colored water, empty stilt houses with nets still drying, a bell buoy that stays still in the wind.
@@ -81,6 +90,8 @@ rules already have; there are no shops.
 - [x] `naufragio-ruelas` — The Ruelas' launch beached on a sandbar, intact, outboard motor ripped off, dinner still served on the table.
 - [x] `evento-boya` — A buoy ringing alone at night in the fog, no waves to move it.
 - [x] `evento-sal` — The boat under falling salt crystals; the dock in the distance, people watching without umbrellas.
+- [ ] `evento-nombre` — *"Alguien dice tu nombre desde el agua."* Flat black water at night, the boat small, a pale shape just under the surface by the hull; nobody in sight.
+- [ ] `evento-sirena` — *"La sirena del faro suena tres veces."* The lighthouse seen from the water, its foghorn sounding: three rings of paper sound spreading over the fog.
 - [x] `carta-bahia` — The Mapa: a 2:3 portrait sea chart of the bay seen from above, 1024×1536. Muelle at the bottom left, the lighthouse rock at the top right; the water darkens from the shallow lagoon to black sea below the lighthouse. Nothing drawn where the Salas sit: what is there changes every Marea. The nodes in `src/content/bay` were placed on its open water by eye, so a redrawn chart means moving them.
 
 ## Horrors
@@ -112,9 +123,6 @@ Odd, not muscular: the horror is the detail that should not be there.
 - [x] `gaviota` — **Gaviota con dientes** (wanderer). A gull with a human smile, teeth too even and too white. Puppet: exact cuts with overlaps, 10 layers.
 - [x] `mascaron` — **Mascarón de proa despierto** (wanderer). A ship's figurehead carved with the keeper's face, wooden eyes just opened. Puppet: exact cuts with overlaps, 11 layers.
 - [x] `farolero` **(moves)** — **El Farolero**, base: four-eyed anglerfish with a lantern lure. Three puppets from exact cuts: `farolero` (the ending, 7 layers), `farolero-guardian` (the lighthouse: the keeper's cap and coat, its lure the lamp room, 9 layers) and `farolero-persigue` (the chase, in profile, 10 layers). The first hand-cut rig is in `raw/horrors/farolero-hoja/`.
-- [x] `farolero-marioneta` — Its puppet sheet: body, jaw, lure, dorsal fin, side fin, tail.
-- [ ] `farolero-guardian` — Extra pieces for the same puppet: the keeper's cap, a torn coat, and a lure that is the lighthouse lamp itself.
-- [ ] `farolero-persigue` — The same, in profile, coming out of the fog in pursuit.
 
 ## The Arponera, four stages
 
@@ -128,7 +136,8 @@ images of their own.
 
 ## Townspeople (bestiary diary)
 
-Bust portraits, like old photos cut out of paper.
+Bust portraits, like old photos cut out of paper. The current five are in `raw/redo/`: they ship and
+show in the Capítulos, but do not match the style references, so they stay unticked until redrawn.
 
 - [ ] `chela` — **Chela, la del muelle.** Apron, a huge key ring, looks sideways like someone who knows.
 - [ ] `tomas` — **don Tomás, el del registro.** Glasses, a record book under his arm with a page torn out.
@@ -138,7 +147,7 @@ Bust portraits, like old photos cut out of paper.
 
 ## Equipment
 
-Transparent 1254×1254 in `assets/raw/gear/`, shown beside each piece in the Muelle; the casco turns reforzado at level 2. The Sedal has no art yet.
+Transparent 1254×1254 in `assets/raw/gear/`, shown beside each piece in the Muelle; the casco turns reforzado at level 2.
 
 - [x] `farol` — **Farol de aceite.** Rusty oil lantern; `raw/gear/farol.png` is the transparent copy the Muelle shows.
 - [x] `bote` — The boat, transparent; the one on petrol is `raw/objects/bote-fondo.png`.
@@ -146,6 +155,7 @@ Transparent 1254×1254 in `assets/raw/gear/`, shown beside each piece in the Mue
 - [x] `casco-madera` — **Casco de madera.** Patched planks.
 - [x] `casco-reforzado` — **Casco reforzado.** Riveted plates sealed with barnacles; something breathes between the seams.
 - [x] `motor` — **Motor que tose.** Old outboard motor puffing smoke, an eye painted on it.
+- [ ] `sedal` — **Sedal.** A spool of fishing line with a knot every hand's width, one knot tied with red thread.
 
 ## Loot
 

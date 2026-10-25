@@ -262,7 +262,7 @@
 
   "print.go": "Imprimir",
   "print.tide.title": "Hoja de marea · La bahía",
-  "print.tide.how": "Lápiz y 2d6. Al lanzar, tira 2d6: decenas y unidades dan la Carta. Si no es de esa agua o es más honda que tu profundidad, vuelve a tirar. Si en esa agua ninguna es tan poco honda, pica la menos honda.",
+  "print.tide.how": "Lápiz y 2d6. Al lanzar, tira 2d6: decenas y unidades dan la Carta. Si no es de esa agua o es más honda que tu profundidad, vuelve a tirar. Si en esa agua ninguna es tan poco honda, pica la menos honda. Si ya picó en esta Marea, vuelve a tirar, salvo que ya hayan picado todas las que caben.",
   "print.tide.hp": "Vida",
   "print.tide.sanity": "Cordura",
   "print.tide.hold": "Bodega",

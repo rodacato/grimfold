@@ -1,6 +1,6 @@
 import type { EventId, GearPiece, IslandId, RoomKind, Shadow, WaterType, WreckId } from "./content";
 
-export const SAVE_VERSION = 2;
+export const SAVE_VERSION = 3;
 export const MAX_SCARS = 3;
 export const BASE_SANITY = 6;
 export const ROOMS_PER_SANITY = 3;
@@ -69,6 +69,8 @@ export interface Tide {
   lead: number;
   light: boolean;
   hold: string[];
+  /** Cartas that bit this Marea, so the next cast prefers another. */
+  drawn: string[];
   mutations: Mutation[];
   bite: { creature: string; shadow: Shadow } | null;
   fight: Fight | null;

@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { bay } from "../src/content/bay";
 import type { Rig } from "../src/content/bay/art";
 import rigs from "../src/content/bay/puppets.json";
-import { castPool } from "../src/domain/tide/sea";
+import { castPool, drawPool } from "../src/domain/tide/sea";
 import { hasString } from "../src/i18n/t";
 
 const lootIds = new Set(bay.loot.map((l) => l.id));
@@ -38,6 +38,17 @@ describe("the bay's content holds together", () => {
         id,
       ).toBe(true);
     }
+  });
+
+  it("a Carta does not bite twice in a Marea until every one that fits has bitten", () => {
+    const pool = castPool(bay, "lago", 1).map((c) => c.id);
+    const drawn: string[] = [];
+    for (const _ of pool) {
+      const next = drawPool(bay, "lago", 1, drawn).map((c) => c.id);
+      expect(next.some((id) => drawn.includes(id))).toBe(false);
+      drawn.push(next[0] as string);
+    }
+    expect(drawPool(bay, "lago", 1, drawn).map((c) => c.id)).toEqual(pool);
   });
 
   it("a cast never comes up empty, at any depth of any water", () => {

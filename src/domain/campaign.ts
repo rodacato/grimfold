@@ -41,6 +41,7 @@ export function startTide(ctx: Ctx): void {
     lead: 0,
     light: false,
     hold: [],
+    drawn: [],
     mutations: campaignMutations(c),
     bite: null,
     fight: null,

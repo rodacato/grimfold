@@ -105,10 +105,19 @@ export function castPool(place: Place, water: WaterType, depth: number): Creatur
   return deck.filter((c) => c.depth === shallowest);
 }
 
+/** No Carta bites twice in a Marea until every one that fits has bitten. */
+export function drawPool(place: Place, water: WaterType, depth: number, drawn: string[]): Creature[] {
+  const pool = castPool(place, water, depth);
+  const fresh = pool.filter((c) => !drawn.includes(c.id));
+  return fresh.length ? fresh : pool;
+}
+
 function drawCard({ g, place }: Ctx): Creature {
   const tide = activeTide(g);
   const water = (tide.rooms[tide.room] as Room).water;
-  return pick(g, castPool(place, water, tide.depth));
+  const card = pick(g, drawPool(place, water, tide.depth, tide.drawn));
+  tide.drawn.push(card.id);
+  return card;
 }
 
 export function cast(ctx: Ctx): void {

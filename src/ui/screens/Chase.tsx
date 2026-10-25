@@ -73,7 +73,11 @@ export function TideEndView() {
   const lost = c.scars >= MAX_SCARS;
   const titleKey = how === "dock" ? (tide.light ? "end.dock.light" : "end.dock.dark") : `end.${how}`;
   const kept = [
-    t("end.keeps.bestiary", { n: game.bestiary.length, of: place.creatures.length }),
+    t("end.keeps.bestiary", {
+      caught: game.caught.length,
+      n: game.bestiary.length,
+      of: place.creatures.length,
+    }),
     t("end.keeps.gear"),
     how === "dock" ? t("end.keeps.shelf", { n: tide.hold.length }) : t("end.keeps.holdLost"),
   ];

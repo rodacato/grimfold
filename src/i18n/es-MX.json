@@ -251,7 +251,7 @@
   "end.transformed.text": "Ruelas te sacó con la red al amanecer. Ya no eres la misma: marca {n} de {max}.",
   "end.transformed.lost": "Esta vez nadie te sacó.",
   "end.keeps": "Conservas",
-  "end.keeps.bestiary": "Bestiario: {n} de {of}",
+  "end.keeps.bestiary": "Bestiario: {caught} pescadas y {n} anotadas, de {of}",
   "end.keeps.gear": "El Equipo",
   "end.keeps.shelf": "{n} Botín a la repisa, para encargos y capítulos",
   "end.keeps.holdLost": "La Bodega se hundió",

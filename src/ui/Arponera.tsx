@@ -9,9 +9,10 @@ const BODY: Piece = { id: "cuerpo", x: 314, y: 382, w: 500, pivot: null };
 /** Tucked behind the coat: the cut lost the back panel that joins them. */
 const SKIRT: Piece = { id: "faldon", x: 704, y: 972, w: 200, pivot: [0.05, 0.3] };
 const HARPOON: Piece = { id: "brazo-arpon", x: 244, y: 84, w: 206, pivot: [0.8, 0.31] };
-const HEAD: Piece = { id: "cabeza", x: 338, y: 140, w: 348, pivot: [0.45, 0.95] };
-/** Its pivot is the head's, so the patch nods with the cheek it sits on. */
-const EYES: Piece = { id: "ojos-bruma", x: 470, y: 290, w: 66, pivot: [0.37, 1.09] };
+/** Low enough that the bun covers the back of the collar, as on the base. */
+const HEAD: Piece = { id: "cabeza", x: 338, y: 178, w: 348, pivot: [0.45, 0.95] };
+/** Its pivot is the head's, so the eyes nod with the cheek they grow on. */
+const EYES: Piece = { id: "ojos-bruma", x: 470, y: 318, w: 66, pivot: [0.37, 1.21] };
 const TENTACLE: Piece = { id: "brazo-ventosas", x: 676, y: 640, w: 137, pivot: [0.5, 0.02] };
 
 function pieces(mutations: Mutation[]): Piece[] {

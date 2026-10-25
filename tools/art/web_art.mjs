@@ -64,7 +64,7 @@ for (const f of ["pueblo-muelle", "pueblo-centro", "pueblo-loma"]) copy(`town/${
 for (const f of LOCATIONS) copy(`locations/${f}.png`);
 for (const f of pngs("loot")) copy(`loot/${f}`);
 copy("characters/arponera-del-mar.png");
-for (const f of pngs("characters/arponera", ["sheet"])) copy(`characters/arponera/${f}`);
+for (const f of pngs("characters/arponera", ["sheet", "ojos-bruma-parche"])) copy(`characters/arponera/${f}`);
 for (const f of pngs("horrors/farolero", ["sheet", "armado"])) copy(`horrors/farolero/${f}`);
 copy("objects/bote.png");
 for (const f of pngs("redo", ["dorso-"])) copy(`redo/${f}`, false);

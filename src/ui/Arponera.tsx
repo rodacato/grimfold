@@ -6,7 +6,8 @@ import { type Piece, Puppet } from "./Puppet";
 
 /** Cut from assets/raw/characters/arponera/sheet.png and fitted on its arponera.png. */
 const BODY: Piece = { id: "cuerpo", x: 314, y: 382, w: 500, pivot: null };
-const SKIRT: Piece = { id: "faldon", x: 744, y: 962, w: 200, pivot: [0.05, 0.3] };
+/** Tucked behind the coat: the cut lost the back panel that joins them. */
+const SKIRT: Piece = { id: "faldon", x: 704, y: 972, w: 200, pivot: [0.05, 0.3] };
 const HARPOON: Piece = { id: "brazo-arpon", x: 244, y: 84, w: 206, pivot: [0.8, 0.31] };
 const HEAD: Piece = { id: "cabeza", x: 338, y: 140, w: 348, pivot: [0.45, 0.95] };
 /** Its pivot is the head's, so the patch nods with the cheek it sits on. */
@@ -16,8 +17,8 @@ const TENTACLE: Piece = { id: "brazo-ventosas", x: 676, y: 640, w: 137, pivot: [
 function pieces(mutations: Mutation[]): Piece[] {
   const arm = mutations.includes("brazo");
   return [
-    ...(arm ? [TENTACLE, { ...BODY, file: "cuerpo-sin-mano.png" }] : [BODY]),
     SKIRT,
+    ...(arm ? [TENTACLE, { ...BODY, file: "cuerpo-sin-mano.png" }] : [BODY]),
     HARPOON,
     HEAD,
     ...(mutations.includes("ojos") ? [EYES] : []),

@@ -2,7 +2,16 @@ import { endTide } from "../campaign";
 import type { Creature, Place, WaterType } from "../content";
 import { type Ctx, gearLevel } from "../derived";
 import { d6, pick, shuffle } from "../rng";
-import { activeTide, CASTS_PER_ROOM, HOLD_SIZE, note, ROOMS_PER_SANITY, type Room } from "../state";
+import {
+  activeTide,
+  CASTS_PER_ROOM,
+  HOLD_SIZE,
+  note,
+  ROOMS_PER_SANITY,
+  type Room,
+  WANDERER_SANITY,
+  WANDERER_SANITY_LIT,
+} from "../state";
 import { startFight } from "./fight";
 import { blocked, distance, isNeighbor, stepToward, visible } from "./map";
 import { changeHp, gainSanity, loseSanity } from "./vitals";
@@ -54,7 +63,7 @@ export function navigate(ctx: Ctx, destination: number): void {
     return;
   }
   if (timePasses(ctx)) return;
-  const threshold = tide.light ? 5 : 3;
+  const threshold = tide.light ? WANDERER_SANITY_LIT : WANDERER_SANITY;
   if (tide.sanity <= threshold && d6(g) <= 2) {
     const wanderers = place.creatures.filter((c) => c.water === null);
     note(g, tide.light ? "wanderer.light" : "wanderer.found", undefined, true);

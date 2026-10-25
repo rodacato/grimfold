@@ -240,10 +240,17 @@ export function LootView() {
         </ul>
       </section>
       <div className="actions two">
-        <Btn kind="primary" disabled={full} onClick={() => send({ type: "stow", choice: { to: "hold" } })}>
+        <Btn
+          kind="primary"
+          sub={t("loot.toHold.sub")}
+          disabled={full}
+          onClick={() => send({ type: "stow", choice: { to: "hold" } })}
+        >
           {t("loot.toHold")}
         </Btn>
-        <Btn onClick={() => send({ type: "stow", choice: { to: "sea" } })}>{t("loot.toSea")}</Btn>
+        <Btn sub={t("loot.toSea.sub")} onClick={() => send({ type: "stow", choice: { to: "sea" } })}>
+          {t("loot.toSea")}
+        </Btn>
       </div>
     </Screen>
   );

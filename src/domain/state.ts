@@ -4,6 +4,9 @@ export const SAVE_VERSION = 3;
 export const MAX_SCARS = 3;
 export const BASE_SANITY = 6;
 export const ROOMS_PER_SANITY = 3;
+/** At or under this Cordura, Errantes can find you as you sail; carrying the Luz raises it. */
+export const WANDERER_SANITY = 3;
+export const WANDERER_SANITY_LIT = 5;
 export const CASTS_PER_ROOM = 3;
 export const HOLD_SIZE = 6;
 

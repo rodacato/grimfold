@@ -1,8 +1,7 @@
-import { endTide } from "../campaign";
 import type { Creature } from "../content";
 import { type Ctx, creature, gearLevel, known, loot } from "../derived";
 import { d6 } from "../rng";
-import { activeTide, type Fight, HOLD_SIZE, note } from "../state";
+import { activeTide, type Fight, type Game, HOLD_SIZE, note } from "../state";
 import { stepAway } from "./map";
 import { changeHp, gainSanity, loseSanity } from "./vitals";
 
@@ -30,8 +29,11 @@ function activeFight(ctx: Ctx): Fight | null {
   return tide.phase === "fight" ? tide.fight : null;
 }
 
-export const targetFor = (ctx: Ctx, c: Creature, fight: Fight): number =>
-  5 + c.depth - (known(ctx.g, c.id) ? 1 : 0) - (gearLevel(ctx.g.campaign, "cana") - 1) - fight.bonus;
+/** What a hit needs on 2d6 before this fight's bonuses: the bestiary shows it too. */
+export const baseTarget = (g: Game, c: Creature): number =>
+  5 + c.depth - (known(g, c.id) ? 1 : 0) - (gearLevel(g.campaign, "cana") - 1);
+
+export const targetFor = (ctx: Ctx, c: Creature, fight: Fight): number => baseTarget(ctx.g, c) - fight.bonus;
 
 const extraDamage = (ctx: Ctx): number => (activeTide(ctx.g).mutations.includes("brazo") ? 1 : 0);
 
@@ -178,12 +180,8 @@ export function record(ctx: Ctx): void {
   ctx.g.bestiary.push(tide.loot.creature);
   tide.loot.recorded = true;
   tide.ceiling--;
-  if (tide.sanity > tide.ceiling) {
-    tide.causes.bestiary = (tide.causes.bestiary ?? 0) + 1;
-    tide.sanity = tide.ceiling;
-  }
   note(ctx.g, "bestiary.recorded", undefined, true);
-  if (tide.sanity === 0) endTide(ctx, "transformed");
+  if (tide.sanity > tide.ceiling) loseSanity(ctx, tide.sanity - tide.ceiling, "bestiary");
 }
 
 export type Stow = { to: "hold" } | { to: "sea" } | { to: "swap"; drop: number };

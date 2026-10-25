@@ -320,6 +320,24 @@ p + p {
 .eyes i.capped::after {
   display: none;
 }
+.eyes i.edge {
+  box-shadow: 0 4px 0 -1px var(--rust);
+}
+.counters .next {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--rust);
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(155, 185, 167, 0.7) 100%);
+  opacity: calc(var(--dread, 0) * 0.9);
+  transition: opacity 1.4s ease;
+}
 .strip.open {
   padding-bottom: 44px;
 }
@@ -692,6 +710,22 @@ p + p {
 }
 .scene.tall {
   height: 290px;
+}
+.scene.showcase {
+  height: 390px;
+}
+.showcase .creature {
+  top: 56px;
+  bottom: auto;
+}
+.showcase .creature.chica {
+  width: 230px;
+}
+.showcase .creature.mediana {
+  width: 280px;
+}
+.showcase .creature.enorme {
+  width: 320px;
 }
 .scene > .art {
   position: absolute;

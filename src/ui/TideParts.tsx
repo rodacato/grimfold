@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { ItemUse } from "../domain/content";
 import { chapterReady, loot, maxHp, requestWanting } from "../domain/derived";
 import { BASE_SANITY, HOLD_SIZE, type Tide } from "../domain/state";
@@ -6,6 +6,15 @@ import { distance } from "../domain/tide/map";
 import { t } from "../i18n/t";
 import { LootIcon } from "./Art";
 import { useGame } from "./game";
+
+/** The Cordura at which each next change happens, read by the eye that will close there. */
+const MARK_LINE = { ojos: 4, brazo: 2, marca: 0 } as const;
+
+function nextMark(tide: Tide): keyof typeof MARK_LINE {
+  if (tide.sanity > MARK_LINE.ojos && !tide.mutations.includes("ojos")) return "ojos";
+  if (tide.sanity > MARK_LINE.brazo && !tide.mutations.includes("brazo")) return "brazo";
+  return "marca";
+}
 
 export function Status({ tide }: { tide: Tide }) {
   const { game, place } = useGame();
@@ -18,7 +27,16 @@ export function Status({ tide }: { tide: Tide }) {
       : tide.room === place.map.lighthouse
         ? t("place.lighthouse")
         : t("place.room", { n: tide.room, water: t(`water.${room?.water}`) });
-  const eye = (i: number) => (i >= tide.ceiling ? "capped" : i < tide.sanity ? "" : "shut");
+  const next = nextMark(tide);
+  const eye = (i: number) =>
+    `${i >= tide.ceiling ? "capped" : i < tide.sanity ? "" : "shut"} ${i === MARK_LINE[next] ? "edge" : ""}`;
+  useEffect(() => {
+    const dread = Math.max(0, BASE_SANITY - tide.sanity) / BASE_SANITY;
+    document.documentElement.style.setProperty("--dread", dread.toFixed(2));
+    return () => {
+      document.documentElement.style.removeProperty("--dread");
+    };
+  }, [tide.sanity]);
   return (
     <header className={`strip ${holdOpen ? "open" : ""}`}>
       <div className="row">
@@ -45,6 +63,7 @@ export function Status({ tide }: { tide: Tide }) {
               <i key={i} className={eye(i)} />
             ))}
           </span>
+          <small className="next">{t(`status.sanityNext.${next}`)}</small>
         </span>
         <button
           type="button"

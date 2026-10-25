@@ -2,6 +2,7 @@ import { useState } from "react";
 import { bayArt } from "../../content/bay/art";
 import type { Creature } from "../../domain/content";
 import { caught, known, loot } from "../../domain/derived";
+import { baseTarget } from "../../domain/tide/fight";
 import { t } from "../../i18n/t";
 import { Art, LootIcon } from "../Art";
 import { useGame } from "../game";
@@ -16,16 +17,18 @@ const where = (c: Creature) =>
   c.water ? `${t(`water.${c.water}`)} · ${t("fight.depth", { n: c.depth })}` : t("fight.wanderer");
 
 function Entry({ c, isKnown }: { c: Creature; isKnown: boolean }) {
-  const { place } = useGame();
+  const { game, place } = useGame();
   const item = loot(place, c.loot);
+  const hp = isKnown
+    ? t("loot.hp", { n: c.hp })
+    : `${t("fight.hpUnknown")} · ${t(`bestiary.size.${c.shadow}`)}`;
   return (
     <div>
       <b>{t(`creature.${c.id}`)}</b>
       <small>
-        {where(c)} ·{" "}
-        {c.unfishable ? t("fight.unfishable") : isKnown ? t("loot.hp", { n: c.hp }) : t("fight.hpUnknown")} ·{" "}
-        {t(`rarity.${c.rarity}`)}
+        {where(c)} · {c.unfishable ? t("fight.unfishable") : hp} · {t(`rarity.${c.rarity}`)}
       </small>
+      {!c.unfishable && <small>{t("bestiary.target", { n: baseTarget(game, c) })}</small>}
       <small className="drops-loot named">
         <LootIcon id={item.id} />
         {t("bestiary.loot", { item: item.id })}
@@ -46,7 +49,7 @@ function Entry({ c, isKnown }: { c: Creature; isKnown: boolean }) {
 function Sheet({ c, isKnown, onClose }: { c: Creature; isKnown: boolean; onClose: () => void }) {
   return (
     <Screen>
-      <div className="scene">
+      <div className="scene showcase">
         <Waves />
         <Horror c={c} />
       </div>

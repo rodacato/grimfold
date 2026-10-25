@@ -281,7 +281,7 @@ export const bay: Place = {
   ],
   chapters: [
     { id: "luz", by: "nico", wants: [] },
-    { id: "acta", by: "tomas", wants: ["pinza"] },
+    { id: "acta", by: "tomas", wants: ["pinza", "pluma"] },
     { id: "duerme", by: "chela", wants: ["corona", "idolo"] },
   ],
   maxDepth: { rio: 1, lago: 2, mar: 3, profundo: 4 },

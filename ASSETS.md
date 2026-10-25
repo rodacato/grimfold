@@ -103,13 +103,13 @@ Odd, not muscular: the horror is the detail that should not be there.
 - [x] `tripode` — **El Oficiante del Fondo.** Three very tall fin rays ending in hands with inverted fingers; a small fish body on top, its face opening in three bony plates. Mar, from a Codex candidate. Puppet: exact cuts with overlaps, 16 layers.
 - [x] `tiburon` — **Tiburón de quilla.** Its dorsal fin is a launch's keel; a propeller shows through a stitched seam in its belly. Puppet: exact cuts with overlaps, 11 layers.
 - [x] `calamar` — **Calamar del ancla.** Coiled around a rusty anchor that has gills. The anchor is what breathes. Puppet: exact cuts with overlaps, 11 layers.
-- [x] `reina` — **Reina de los percebes.** A mound of barnacles on a rock forming a crown and the worn face of a town woman.
+- [x] `reina` — **Reina de los percebes.** A mound of barnacles on a rock forming a crown and the worn face of a town woman. Puppet: exact cuts with overlaps, 15 layers.
 - [ ] `reina-retazo` — The same, with one scrap of red raincoat caught in the barnacles: the face is the Arponera's, still being learned ([LORE.md](LORE.md)).
 - [x] `vibora` — **La Garganta que Mira.** A viperfish whose jaw opens too far back; inside its throat, one bony face set at an angle the body cannot have. Profundo, from a Codex candidate. Puppet: exact cuts with overlaps, 9 layers.
 - [x] `sifonoforo` — **El Coro sin Cabeza.** A twisted column through seven chambers, each holding an unfinished face; the last is empty. Profundo, from a Codex candidate. Puppet: exact cuts with overlaps, 8 layers.
-- [x] `duerme` — **Lo que duerme bajo el ancla.** Never whole: a closed eyelid the size of a house under the water, an anchor chain going into it.
-- [x] `gaviota` — **Gaviota con dientes** (wanderer). A gull with a human smile, teeth too even and too white.
-- [x] `mascaron` — **Mascarón de proa despierto** (wanderer). A ship's figurehead carved with the keeper's face, wooden eyes just opened.
+- [x] `duerme` — **Lo que duerme bajo el ancla.** Never whole: a closed eyelid the size of a house under the water, an anchor chain going into it. Puppet: exact cuts with overlaps, 6 layers; a close-up, cut by the frame on purpose.
+- [x] `gaviota` — **Gaviota con dientes** (wanderer). A gull with a human smile, teeth too even and too white. Puppet: exact cuts with overlaps, 10 layers.
+- [x] `mascaron` — **Mascarón de proa despierto** (wanderer). A ship's figurehead carved with the keeper's face, wooden eyes just opened. Puppet: exact cuts with overlaps, 11 layers.
 - [x] `farolero` **(moves)** — **El Farolero**, base: four-eyed anglerfish with a lantern lure.
 - [x] `farolero-marioneta` — Its puppet sheet: body, jaw, lure, dorsal fin, side fin, tail.
 - [ ] `farolero-guardian` — Extra pieces for the same puppet: the keeper's cap, a torn coat, and a lure that is the lighthouse lamp itself.
@@ -137,12 +137,14 @@ Bust portraits, like old photos cut out of paper.
 
 ## Equipment
 
-- [x] `farol` — **Farol de aceite.** Rusty oil lantern.
-- [x] `bote` — The boat.
-- [ ] `cana` — **Caña de mar.** Reinforced rod with bone charms tied on.
-- [ ] `casco-madera` — **Casco de madera.** Patched planks.
-- [ ] `casco-reforzado` — **Casco reforzado.** Riveted plates sealed with barnacles; something breathes between the seams.
-- [ ] `motor` — **Motor que tose.** Old outboard motor puffing smoke, an eye painted on it.
+Transparent 1254×1254 in `assets/raw/gear/`, shown beside each piece in the Muelle; the casco turns reforzado at level 2. The Sedal has no art yet.
+
+- [x] `farol` — **Farol de aceite.** Rusty oil lantern; `raw/gear/farol.png` is the transparent copy the Muelle shows.
+- [x] `bote` — The boat, transparent; the one on petrol is `raw/objects/bote-fondo.png`.
+- [x] `cana` — **Caña de mar.** Reinforced rod with bone charms tied on.
+- [x] `casco-madera` — **Casco de madera.** Patched planks.
+- [x] `casco-reforzado` — **Casco reforzado.** Riveted plates sealed with barnacles; something breathes between the seams.
+- [x] `motor` — **Motor que tose.** Old outboard motor puffing smoke, an eye painted on it.
 
 ## Loot
 
@@ -158,14 +160,14 @@ shows only the name.
 - [x] `perla` — **Perla turbia.** Something moving inside.
 - [x] `lente` — **Lente de faro.** A curved fragment.
 - [x] `concha` — **Concha que zumba.**
-- [ ] `motor-tose` — **Motor que tose.** The Ruelas' outboard motor, still coughing, from the shark's belly.
+- [x] `motor-tose` — **Motor que tose.** The Ruelas' outboard motor, still coughing, from the shark's belly.
 - [x] `ancla` — **Ancla que respira.**
 - [x] `corona` — **Corona de coral.**
 - [x] `brujula` — **Brújula que apunta abajo.**
-- [ ] `branquia` — **Branquia que flota.** One of the axolotl's black globes, still on its stalk.
-- [ ] `escudo` — **Escudo de esturión.** A bony plate shaped like a monolith's vertebra.
-- [ ] `flauta` — **Flauta de branquia.** A twisted gill tube that whistles on its own.
-- [ ] `mano` — **Mano al revés.** A hand with its fingers bent the wrong way.
+- [x] `branquia` — **Branquia que flota.** One of the axolotl's black globes, still on its stalk.
+- [x] `escudo` — **Escudo de esturión.** A bony plate shaped like a monolith's vertebra.
+- [x] `flauta` — **Flauta de branquia.** A twisted gill tube that whistles on its own.
+- [x] `mano` — **Mano al revés.** A hand with its fingers bent the wrong way.
 - [x] `pluma` — **Pluma con sal.**
 - [x] `ojo-madera` — **Ojo de madera.** The figurehead's eye.
 - [x] `idolo` — **Ídolo de algo que duerme.** A faceless figure with closed eyes carved all over its body. Redone; the first one, which showed Cthulhu, is `raw/candidates/objects/idolo-primero.png`.

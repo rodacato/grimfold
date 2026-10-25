@@ -621,10 +621,15 @@ body::after {
 }
 .gear div {
   display: grid;
-  grid-template-columns: 62px 54px 1fr;
+  grid-template-columns: 36px 58px 54px 1fr;
   gap: 8px;
   align-items: center;
   font-size: 14px;
+}
+.gear-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
 }
 .gear b {
   font-weight: 800;

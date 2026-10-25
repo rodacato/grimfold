@@ -894,6 +894,119 @@
       }
     ]
   },
+  "duerme": {
+    "size": [1254, 1254],
+    "pieces": [
+      {
+        "id": "solape-parpado-superior",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-parpado-superior.png",
+        "follows": ["parpado-superior"]
+      },
+      {
+        "id": "solape-parpado-inferior",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-parpado-inferior.png",
+        "follows": ["parpado-inferior"]
+      },
+      {
+        "id": "solape-cadena",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-cadena.png",
+        "follows": ["cadena"]
+      },
+      {
+        "id": "relleno-papel-bajo-parpado-superior",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "relleno-papel-bajo-parpado-superior.png"
+      },
+      {
+        "id": "relleno-papel-bajo-parpado-inferior",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "relleno-papel-bajo-parpado-inferior.png"
+      },
+      {
+        "id": "bruma-derecha",
+        "x": 1028,
+        "y": 554,
+        "w": 226,
+        "h": 104,
+        "pivot": null,
+        "file": "bruma-derecha.png"
+      },
+      {
+        "id": "bruma-izquierda",
+        "x": 0,
+        "y": 110,
+        "w": 905,
+        "h": 346,
+        "pivot": null,
+        "file": "bruma-izquierda.png"
+      },
+      {
+        "id": "cadena",
+        "x": 793,
+        "y": 0,
+        "w": 425,
+        "h": 796,
+        "pivot": [0.299, 0.918],
+        "file": "cadena.png",
+        "sway": 1,
+        "beat": 2.9
+      },
+      {
+        "id": "parpado-inferior",
+        "x": 0,
+        "y": 676,
+        "w": 1008,
+        "h": 272,
+        "pivot": [0.73, 0.563],
+        "file": "parpado-inferior.png",
+        "sway": 1,
+        "beat": 2.5
+      },
+      {
+        "id": "parpado-superior",
+        "x": 0,
+        "y": 391,
+        "w": 804,
+        "h": 403,
+        "pivot": [0.925, 0.891],
+        "file": "parpado-superior.png",
+        "sway": 1,
+        "beat": 2.1
+      },
+      {
+        "id": "piel-pliegue",
+        "x": 0,
+        "y": 242,
+        "w": 1254,
+        "h": 1012,
+        "pivot": null,
+        "file": "piel-pliegue.png"
+      }
+    ]
+  },
   "esturion": {
     "size": [1254, 1254],
     "pieces": [
@@ -1015,6 +1128,242 @@
         "file": "mandibula.png",
         "sway": 3,
         "beat": 2.5
+      }
+    ]
+  },
+  "gaviota": {
+    "size": [1254, 1254],
+    "pieces": [
+      {
+        "id": "solape-cabeza",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-cabeza.png",
+        "follows": ["cabeza"]
+      },
+      {
+        "id": "solape-ojo-cercano",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-ojo-cercano.png",
+        "follows": ["cabeza", "ojo-cercano"]
+      },
+      {
+        "id": "solape-ojo-lejano",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-ojo-lejano.png",
+        "follows": ["cabeza", "ojo-lejano"]
+      },
+      {
+        "id": "solape-mandibula",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-mandibula.png",
+        "follows": ["cabeza", "mandibula"]
+      },
+      {
+        "id": "solape-ala-alta",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-ala-alta.png",
+        "follows": ["ala-alta"]
+      },
+      {
+        "id": "solape-ala-baja",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-ala-baja.png",
+        "follows": ["ala-baja"]
+      },
+      {
+        "id": "solape-cola",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-cola.png",
+        "follows": ["cola"]
+      },
+      {
+        "id": "solape-pata-izquierda",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-pata-izquierda.png",
+        "follows": ["pata-izquierda"]
+      },
+      {
+        "id": "solape-pata-derecha",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-pata-derecha.png",
+        "follows": ["pata-derecha"]
+      },
+      {
+        "id": "relleno-sombra-bajo-ojo-cercano",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "relleno-sombra-bajo-ojo-cercano.png",
+        "follows": ["cabeza"]
+      },
+      {
+        "id": "relleno-sombra-bajo-ojo-lejano",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "relleno-sombra-bajo-ojo-lejano.png",
+        "follows": ["cabeza"]
+      },
+      {
+        "id": "relleno-interior-bajo-mandibula",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "relleno-interior-bajo-mandibula.png",
+        "follows": ["cabeza"]
+      },
+      {
+        "id": "pata-derecha",
+        "x": 314,
+        "y": 811,
+        "w": 169,
+        "h": 204,
+        "pivot": [0.87, 0.098],
+        "file": "pata-derecha.png",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "pata-izquierda",
+        "x": 179,
+        "y": 762,
+        "w": 234,
+        "h": 238,
+        "pivot": [0.885, 0.088],
+        "file": "pata-izquierda.png",
+        "sway": 3,
+        "beat": 1.7
+      },
+      {
+        "id": "cola",
+        "x": 123,
+        "y": 644,
+        "w": 299,
+        "h": 201,
+        "pivot": [0.839, 0.348],
+        "file": "cola.png",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "ala-baja",
+        "x": 660,
+        "y": 651,
+        "w": 570,
+        "h": 549,
+        "pivot": [0.351, 0.073],
+        "file": "ala-baja.png",
+        "sway": 1,
+        "beat": 2.5
+      },
+      {
+        "id": "ala-alta",
+        "x": 31,
+        "y": 28,
+        "w": 649,
+        "h": 652,
+        "pivot": [0.88, 0.805],
+        "file": "ala-alta.png",
+        "sway": 1,
+        "beat": 2.1
+      },
+      {
+        "id": "mandibula",
+        "x": 813,
+        "y": 479,
+        "w": 144,
+        "h": 133,
+        "pivot": [0.028, 0.068],
+        "file": "mandibula.png",
+        "sway": 3,
+        "beat": 1.7,
+        "follows": ["cabeza"]
+      },
+      {
+        "id": "ojo-lejano",
+        "x": 938,
+        "y": 431,
+        "w": 18,
+        "h": 52,
+        "pivot": [0.5, 0.538],
+        "file": "ojo-lejano.png",
+        "sway": 3,
+        "beat": 2.9,
+        "follows": ["cabeza"]
+      },
+      {
+        "id": "ojo-cercano",
+        "x": 806,
+        "y": 405,
+        "w": 77,
+        "h": 80,
+        "pivot": [0.545, 0.45],
+        "file": "ojo-cercano.png",
+        "sway": 3,
+        "beat": 2.5,
+        "follows": ["cabeza"]
+      },
+      {
+        "id": "cabeza",
+        "x": 690,
+        "y": 371,
+        "w": 328,
+        "h": 243,
+        "pivot": [0.372, 0.848],
+        "file": "cabeza.png",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "cuerpo",
+        "x": 375,
+        "y": 520,
+        "w": 492,
+        "h": 343,
+        "pivot": null,
+        "file": "cuerpo.png"
       }
     ]
   },
@@ -1749,6 +2098,258 @@
       }
     ]
   },
+  "mascaron": {
+    "size": [1254, 1254],
+    "pieces": [
+      {
+        "id": "solape-cabeza",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-cabeza.png",
+        "follows": ["cabeza"]
+      },
+      {
+        "id": "solape-gorra",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-gorra.png",
+        "follows": ["cabeza", "gorra"]
+      },
+      {
+        "id": "solape-ojo-cercano",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-ojo-cercano.png",
+        "follows": ["cabeza", "ojo-cercano"]
+      },
+      {
+        "id": "solape-ojo-lejano",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-ojo-lejano.png",
+        "follows": ["cabeza", "ojo-lejano"]
+      },
+      {
+        "id": "solape-ceja-cercana",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-ceja-cercana.png",
+        "follows": ["cabeza", "ceja-cercana"]
+      },
+      {
+        "id": "solape-ceja-lejana",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-ceja-lejana.png",
+        "follows": ["cabeza", "ceja-lejana"]
+      },
+      {
+        "id": "solape-bigote-izquierdo",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-bigote-izquierdo.png",
+        "follows": ["cabeza", "bigote-izquierdo"]
+      },
+      {
+        "id": "solape-bigote-derecho",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-bigote-derecho.png",
+        "follows": ["cabeza", "bigote-derecho"]
+      },
+      {
+        "id": "solape-barba",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-barba.png",
+        "follows": ["cabeza", "barba"]
+      },
+      {
+        "id": "solape-voluta",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-voluta.png",
+        "follows": ["voluta"]
+      },
+      {
+        "id": "relleno-sombra-bajo-ojo-cercano",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "relleno-sombra-bajo-ojo-cercano.png",
+        "follows": ["cabeza"]
+      },
+      {
+        "id": "relleno-sombra-bajo-ojo-lejano",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "relleno-sombra-bajo-ojo-lejano.png",
+        "follows": ["cabeza"]
+      },
+      {
+        "id": "voluta",
+        "x": 588,
+        "y": 936,
+        "w": 381,
+        "h": 293,
+        "pivot": [0.331, 0.543],
+        "file": "voluta.png",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "barba",
+        "x": 663,
+        "y": 572,
+        "w": 297,
+        "h": 293,
+        "pivot": [0.512, 0.113],
+        "file": "barba.png",
+        "sway": 3,
+        "beat": 2.1,
+        "follows": ["cabeza"]
+      },
+      {
+        "id": "bigote-derecho",
+        "x": 879,
+        "y": 472,
+        "w": 70,
+        "h": 153,
+        "pivot": [0.243, 0.248],
+        "file": "bigote-derecho.png",
+        "sway": 3,
+        "beat": 1.7,
+        "follows": ["cabeza"]
+      },
+      {
+        "id": "bigote-izquierdo",
+        "x": 623,
+        "y": 478,
+        "w": 243,
+        "h": 162,
+        "pivot": [0.774, 0.185],
+        "file": "bigote-izquierdo.png",
+        "sway": 3,
+        "beat": 2.9,
+        "follows": ["cabeza"]
+      },
+      {
+        "id": "ceja-lejana",
+        "x": 877,
+        "y": 286,
+        "w": 83,
+        "h": 88,
+        "pivot": [0.386, 0.545],
+        "file": "ceja-lejana.png",
+        "sway": 3,
+        "beat": 2.5,
+        "follows": ["cabeza"]
+      },
+      {
+        "id": "ceja-cercana",
+        "x": 659,
+        "y": 264,
+        "w": 197,
+        "h": 75,
+        "pivot": [0.437, 0.373],
+        "file": "ceja-cercana.png",
+        "sway": 3,
+        "beat": 2.1,
+        "follows": ["cabeza"]
+      },
+      {
+        "id": "ojo-lejano",
+        "x": 880,
+        "y": 363,
+        "w": 45,
+        "h": 62,
+        "pivot": [0.622, 0.5],
+        "file": "ojo-lejano.png",
+        "sway": 3,
+        "beat": 1.7,
+        "follows": ["cabeza"]
+      },
+      {
+        "id": "ojo-cercano",
+        "x": 701,
+        "y": 322,
+        "w": 97,
+        "h": 60,
+        "pivot": [0.68, 0.5],
+        "file": "ojo-cercano.png",
+        "sway": 3,
+        "beat": 2.9,
+        "follows": ["cabeza"]
+      },
+      {
+        "id": "gorra",
+        "x": 348,
+        "y": 24,
+        "w": 666,
+        "h": 352,
+        "pivot": [0.437, 0.665],
+        "file": "gorra.png",
+        "sway": 1,
+        "beat": 2.5,
+        "follows": ["cabeza"]
+      },
+      {
+        "id": "cabeza",
+        "x": 290,
+        "y": 203,
+        "w": 672,
+        "h": 644,
+        "pivot": [0.624, 0.936],
+        "file": "cabeza.png",
+        "sway": 1,
+        "beat": 2.1
+      },
+      {
+        "id": "casco-nucleo",
+        "x": 257,
+        "y": 531,
+        "w": 643,
+        "h": 562,
+        "pivot": null,
+        "file": "casco-nucleo.png"
+      }
+    ]
+  },
   "medusa": {
     "size": [1254, 1254],
     "pieces": [
@@ -2295,6 +2896,332 @@
         "file": "mandibula-inferior-derecha.png",
         "sway": 3,
         "beat": 2.1
+      }
+    ]
+  },
+  "reina": {
+    "size": [1254, 1254],
+    "pieces": [
+      {
+        "id": "solape-percebe-central",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-percebe-central.png",
+        "follows": ["percebe-central"]
+      },
+      {
+        "id": "solape-percebe-corona-izquierdo",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-percebe-corona-izquierdo.png",
+        "follows": ["percebe-corona-izquierdo"]
+      },
+      {
+        "id": "solape-percebe-corona-derecho",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-percebe-corona-derecho.png",
+        "follows": ["percebe-corona-derecho"]
+      },
+      {
+        "id": "solape-percebe-sien-izquierda",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-percebe-sien-izquierda.png",
+        "follows": ["percebe-sien-izquierda"]
+      },
+      {
+        "id": "solape-percebe-sien-derecha",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-percebe-sien-derecha.png",
+        "follows": ["percebe-sien-derecha"]
+      },
+      {
+        "id": "solape-percebe-lateral-inferior",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-percebe-lateral-inferior.png",
+        "follows": ["percebe-lateral-inferior"]
+      },
+      {
+        "id": "solape-percebe-mejilla",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-percebe-mejilla.png",
+        "follows": ["percebe-mejilla"]
+      },
+      {
+        "id": "solape-percebe-cuello",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-percebe-cuello.png",
+        "follows": ["percebe-cuello"]
+      },
+      {
+        "id": "solape-percebe-hombro",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-percebe-hombro.png",
+        "follows": ["percebe-hombro"]
+      },
+      {
+        "id": "solape-alga-temporal",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-alga-temporal.png",
+        "follows": ["alga-temporal"]
+      },
+      {
+        "id": "solape-alga-oreja",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-alga-oreja.png",
+        "follows": ["alga-oreja"]
+      },
+      {
+        "id": "solape-alga-cuello",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-alga-cuello.png",
+        "follows": ["alga-cuello"]
+      },
+      {
+        "id": "solape-parpado-izquierdo",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-parpado-izquierdo.png",
+        "follows": ["parpado-izquierdo"]
+      },
+      {
+        "id": "solape-parpado-derecho",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-parpado-derecho.png",
+        "follows": ["parpado-derecho"]
+      },
+      {
+        "id": "relleno-sombra-bajo-parpado-izquierdo",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "relleno-sombra-bajo-parpado-izquierdo.png"
+      },
+      {
+        "id": "relleno-sombra-bajo-parpado-derecho",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "relleno-sombra-bajo-parpado-derecho.png"
+      },
+      {
+        "id": "parpado-derecho",
+        "x": 856,
+        "y": 514,
+        "w": 54,
+        "h": 43,
+        "pivot": [0.481, 0.581],
+        "file": "parpado-derecho.png",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "parpado-izquierdo",
+        "x": 700,
+        "y": 471,
+        "w": 85,
+        "h": 38,
+        "pivot": [0.494, 0.632],
+        "file": "parpado-izquierdo.png",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "alga-cuello",
+        "x": 767,
+        "y": 887,
+        "w": 170,
+        "h": 215,
+        "pivot": [0.271, 0.251],
+        "file": "alga-cuello.png",
+        "sway": 3,
+        "beat": 1.7
+      },
+      {
+        "id": "alga-oreja",
+        "x": 882,
+        "y": 596,
+        "w": 81,
+        "h": 193,
+        "pivot": [0.333, 0.155],
+        "file": "alga-oreja.png",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "alga-temporal",
+        "x": 425,
+        "y": 350,
+        "w": 123,
+        "h": 158,
+        "pivot": [0.878, 0.171],
+        "file": "alga-temporal.png",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "percebe-hombro",
+        "x": 939,
+        "y": 945,
+        "w": 130,
+        "h": 125,
+        "pivot": [0.515, 0.816],
+        "file": "percebe-hombro.png",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "percebe-cuello",
+        "x": 351,
+        "y": 755,
+        "w": 158,
+        "h": 161,
+        "pivot": [0.475, 0.814],
+        "file": "percebe-cuello.png",
+        "sway": 3,
+        "beat": 1.7
+      },
+      {
+        "id": "percebe-mejilla",
+        "x": 458,
+        "y": 519,
+        "w": 146,
+        "h": 164,
+        "pivot": [0.548, 0.835],
+        "file": "percebe-mejilla.png",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "percebe-lateral-inferior",
+        "x": 246,
+        "y": 484,
+        "w": 172,
+        "h": 234,
+        "pivot": [0.831, 0.825],
+        "file": "percebe-lateral-inferior.png",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "percebe-sien-derecha",
+        "x": 870,
+        "y": 243,
+        "w": 133,
+        "h": 174,
+        "pivot": [0.391, 0.868],
+        "file": "percebe-sien-derecha.png",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "percebe-sien-izquierda",
+        "x": 307,
+        "y": 256,
+        "w": 149,
+        "h": 175,
+        "pivot": [0.685, 0.823],
+        "file": "percebe-sien-izquierda.png",
+        "sway": 3,
+        "beat": 1.7
+      },
+      {
+        "id": "percebe-corona-derecho",
+        "x": 752,
+        "y": 76,
+        "w": 152,
+        "h": 207,
+        "pivot": [0.553, 0.908],
+        "file": "percebe-corona-derecho.png",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "percebe-corona-izquierdo",
+        "x": 416,
+        "y": 103,
+        "w": 167,
+        "h": 223,
+        "pivot": [0.677, 0.883],
+        "file": "percebe-corona-izquierdo.png",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "percebe-central",
+        "x": 559,
+        "y": 16,
+        "w": 159,
+        "h": 201,
+        "pivot": [0.509, 0.92],
+        "file": "percebe-central.png",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "busto-nucleo",
+        "x": 121,
+        "y": 83,
+        "w": 1014,
+        "h": 1134,
+        "pivot": null,
+        "file": "busto-nucleo.png"
       }
     ]
   },

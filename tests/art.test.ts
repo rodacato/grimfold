@@ -22,6 +22,14 @@ describe("the art the game asks for is in assets/web", () => {
     expect(scenes.filter((p) => !shipped(p))).toEqual([]);
   });
 
+  it("every Botín, and every Equipo piece that has art at each level", () => {
+    const loot = bay.loot.map((l) => bayArt.loot(l.id));
+    const gear = (["cana", "sedal", "farol", "motor", "casco"] as const).flatMap((g) =>
+      [1, 2, 3].map((level) => bayArt.gear(g, level)).filter((p): p is string => p !== null),
+    );
+    expect([...loot, ...gear].filter((p) => !shipped(p))).toEqual([]);
+  });
+
   it("every creature's still, and every piece of its puppet", () => {
     const missing = bay.creatures.flatMap((c) => {
       const pieces = bayArt.puppet(c.id)?.pieces.map((p) => `horrors/${c.id}/${p.file}`) ?? [];

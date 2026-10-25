@@ -63,6 +63,7 @@ const ffmpeg = (src, filter, out) => run("ffmpeg", ["-loglevel", "error", "-y", 
 for (const f of ["pueblo-muelle", "pueblo-centro", "pueblo-loma"]) copy(`town/${f}.png`);
 for (const f of LOCATIONS) copy(`locations/${f}.png`);
 for (const f of pngs("loot")) copy(`loot/${f}`);
+for (const f of pngs("gear")) copy(`gear/${f}`);
 copy("characters/arponera-del-mar.png");
 for (const f of pngs("characters/arponera", ["sheet", "ojos-bruma-parche"])) copy(`characters/arponera/${f}`);
 for (const f of pngs("horrors/farolero", ["sheet", "armado"])) copy(`horrors/farolero/${f}`);

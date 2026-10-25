@@ -180,7 +180,7 @@
   "tiny": true
  },
  "objects/bote.png": {
-  "source": "2d2d801f8b942458c64dfcf87c7a520e8e204322d5d9bafa1318cec89bf43d12",
+  "source": "265eded2ea32ab36da5cde45deecf0889bc2472f984d37296c19e2411b33fa02",
   "tiny": true
  },
  "redo/chela.png": {
@@ -1673,6 +1673,394 @@
  },
  "horrors/vibora/arco-dental-derecho.png": {
   "source": "68c798351352b4aed780de9d78b52c036721b271339531e849f4a9b1c115bc4e",
+  "tiny": true
+ },
+ "loot/branquia.png": {
+  "source": "a48b777112a2d524ba44ac1a48e624526647c9d3d1530707641d72023ceb27ba",
+  "tiny": true
+ },
+ "loot/escudo.png": {
+  "source": "41542e51f3a1db7d2f90d2d012782a7fc28baa56695c82e3ea26e48d9790879e",
+  "tiny": true
+ },
+ "loot/flauta.png": {
+  "source": "c028b6973de3998d3937a5ecab7f93451b7a8cc669bba73ce44de095f145f793",
+  "tiny": true
+ },
+ "loot/mano.png": {
+  "source": "fa90b5ae62e77055d8f975dad7df8678fcc7f6c1709eb3b1c36cab3a4e0aaea9",
+  "tiny": true
+ },
+ "loot/motor-tose.png": {
+  "source": "0fe57eb1c5720281b8932c2f220e56f01ebe512134fdfe3f639b3fed91302d88",
+  "tiny": true
+ },
+ "gear/cana.png": {
+  "source": "be04cda53752e1313c82a666fcb1e41b26a81b63d68b6b8c980fe7a5d69fa9aa",
+  "tiny": true
+ },
+ "gear/casco-madera.png": {
+  "source": "7a55540358f3504121c104717b85f0c71966f2cbf5d246c7f0eaa7b49fa3b609",
+  "tiny": true
+ },
+ "gear/casco-reforzado.png": {
+  "source": "4536074a84153c07a3e5161d29ad9a2e51b5523de716e3b82cf8bf8195d8c45d",
+  "tiny": true
+ },
+ "gear/farol.png": {
+  "source": "1305ec254e729b6cf5c16f29d0bccaf4285a00cf9dc4ee62dd2d3e913643390c",
+  "tiny": true
+ },
+ "gear/motor.png": {
+  "source": "7a15e17bfed36b32ef62f99a66279754183c673db92fd8939ed3ef70efd0d893",
+  "tiny": true
+ },
+ "horrors/duerme/solape-parpado-superior.png": {
+  "source": "f55b6bcab614c76a53cc43e5467c3baa11ea53b411152841f5b81bd384bdb738",
+  "tiny": false
+ },
+ "horrors/duerme/solape-parpado-inferior.png": {
+  "source": "3a2309d669e47eb900787da77294f4b1f9e9925dd2b7ac0f3eb093efad4ebe13",
+  "tiny": false
+ },
+ "horrors/duerme/solape-cadena.png": {
+  "source": "a6ba34a28c70f5f77a03d7616a611a4dbc0de9d9256680fea8e06c49fdc2c3ba",
+  "tiny": false
+ },
+ "horrors/duerme/relleno-papel-bajo-parpado-superior.png": {
+  "source": "ec4c7a6c3356cfcc38716fc9f792323f3984dcec523250c1a9d4a9dee23ca619",
+  "tiny": true
+ },
+ "horrors/duerme/relleno-papel-bajo-parpado-inferior.png": {
+  "source": "d35284ec9e6aad9ee5e2e372d3a7ad9957d529bdbc0bcfd1ae0a5fc187157fb7",
+  "tiny": false
+ },
+ "horrors/duerme/bruma-derecha.png": {
+  "source": "e979dfea0df25dbf4e449b43252b2886eb73f381f0c8e782002206a7b95ca948",
+  "tiny": false
+ },
+ "horrors/duerme/bruma-izquierda.png": {
+  "source": "594eea072bfb845802fdebe9bd22de446f2e1facdd1fb8542f96b6b349a12bbc",
+  "tiny": true
+ },
+ "horrors/duerme/cadena.png": {
+  "source": "2e0d5c71e2aba02cc07ac0f67eacface6f8ff7e8c610b6afd9b090b282804746",
+  "tiny": true
+ },
+ "horrors/duerme/parpado-inferior.png": {
+  "source": "a7dcd9c43ee4d1e64a3ae99150aefc4f8b305e95b6f48735ad5e20e6fe5f88d5",
+  "tiny": true
+ },
+ "horrors/duerme/parpado-superior.png": {
+  "source": "962d56266fccc260c24e81023f2a2b0c291ab43197a9715ec79131832842c3d9",
+  "tiny": true
+ },
+ "horrors/duerme/piel-pliegue.png": {
+  "source": "ec14f6c27aa046634615b614bb0a4d80de0332d96a31a6e35644234721645135",
+  "tiny": true
+ },
+ "horrors/gaviota/solape-cabeza.png": {
+  "source": "b76404dd710a3d8480c7ce95264221fa27e03c9b073e2db885fb80a00324ae31",
+  "tiny": false
+ },
+ "horrors/gaviota/solape-ojo-cercano.png": {
+  "source": "dd154459276ea8afdd8b415d47ed82e099165821b87ba510e8e787064be32299",
+  "tiny": false
+ },
+ "horrors/gaviota/solape-ojo-lejano.png": {
+  "source": "5577826d053ebaebbf105b42f8de002b091cf35dda00545a43649188f6a27457",
+  "tiny": false
+ },
+ "horrors/gaviota/solape-mandibula.png": {
+  "source": "b9b02b18995b2b5f59d0c3742a595c8c16cf822c62a38af1b5afec9a80f4a832",
+  "tiny": false
+ },
+ "horrors/gaviota/solape-ala-alta.png": {
+  "source": "efe78877dba2b8e0343df95dce8e393aab5be6de31a25866ad71243355e88be9",
+  "tiny": false
+ },
+ "horrors/gaviota/solape-ala-baja.png": {
+  "source": "fbf6fd9eca74f9022e747a7ab1d3da4e94773db9d0a7495975c9551e64f5f215",
+  "tiny": false
+ },
+ "horrors/gaviota/solape-cola.png": {
+  "source": "888d6172a621045a24423de820fba8b0bc8b788720a300810cfc6077fb4dcb2d",
+  "tiny": false
+ },
+ "horrors/gaviota/solape-pata-izquierda.png": {
+  "source": "2dbf26827c4e30dfb5d0bca59d72ee9c1218615d0a640fb53aee2c55338a3769",
+  "tiny": false
+ },
+ "horrors/gaviota/solape-pata-derecha.png": {
+  "source": "1f687cc8ad213978afecd9237ee37684909f9347be1e67419da0354d1bff0448",
+  "tiny": false
+ },
+ "horrors/gaviota/relleno-sombra-bajo-ojo-cercano.png": {
+  "source": "3d6a4ed77a4b6f1a7acfa5c96323b236d93af732746e85b13e231f13a9f527a3",
+  "tiny": false
+ },
+ "horrors/gaviota/relleno-sombra-bajo-ojo-lejano.png": {
+  "source": "ea0f552f04042d60d5ab4f8eaba9c2aa724157a8c134d97a49cabcee3afb29bc",
+  "tiny": false
+ },
+ "horrors/gaviota/relleno-interior-bajo-mandibula.png": {
+  "source": "4bdcced4bdf4d65a2a2d28da34a0ca654176125119f587705f838d6fb60663bf",
+  "tiny": false
+ },
+ "horrors/gaviota/pata-derecha.png": {
+  "source": "b6a0009bd4edf1331b74495f4c400cb3b1b8fc4dac20f3b3476af520b0dd1dab",
+  "tiny": true
+ },
+ "horrors/gaviota/pata-izquierda.png": {
+  "source": "16c5b550878812850f8d204094ab178efcc619ed8eedd4a849e8245af5b29a14",
+  "tiny": true
+ },
+ "horrors/gaviota/cola.png": {
+  "source": "a9f56b2d5d92f23ffa35e2f461d15b298a5a5cb207a7c310a1560f35766b909a",
+  "tiny": true
+ },
+ "horrors/gaviota/ala-baja.png": {
+  "source": "fa70f14addabc2288af3110eaf95d85aa251bea62b9ec1fadfc6a914c5611b97",
+  "tiny": true
+ },
+ "horrors/gaviota/ala-alta.png": {
+  "source": "2a66b90f68d80e7715dfdd3c2fbb8a0d3fdf1d1ca873c7996c0dff48a285348d",
+  "tiny": true
+ },
+ "horrors/gaviota/mandibula.png": {
+  "source": "5b3c864af4b35091b81effa2b49d84efe8f018c3717378d8e143916686259a18",
+  "tiny": false
+ },
+ "horrors/gaviota/ojo-lejano.png": {
+  "source": "803533a570eb9473b5099e8bbfd167d7e13649050e9fdaded524c13267c23612",
+  "tiny": false
+ },
+ "horrors/gaviota/ojo-cercano.png": {
+  "source": "01ec55b6f64dd8ef599c443e666a4116cbdb62e408acca6bd215edcd221f9aa6",
+  "tiny": false
+ },
+ "horrors/gaviota/cabeza.png": {
+  "source": "c9432e239e6d08c8b135ba1b2c18604f7aafad6709acb16b5462ff04ea221102",
+  "tiny": true
+ },
+ "horrors/gaviota/cuerpo.png": {
+  "source": "8649c69e9230247f499e61603554d61abba468574739b9bbd8051e40f11ad9aa",
+  "tiny": true
+ },
+ "horrors/mascaron/solape-cabeza.png": {
+  "source": "ec753d5a96b119219c179c98d6016489277afd23b70c0a55be2ead2f35828b15",
+  "tiny": false
+ },
+ "horrors/mascaron/solape-gorra.png": {
+  "source": "0652e5f9795fd87e917b250a1c7729f4302c8d8ae14be87964d9181c52faefa7",
+  "tiny": false
+ },
+ "horrors/mascaron/solape-ojo-cercano.png": {
+  "source": "9564d06493581755ff40ca8b00fadbdf448e55233acaca4241dbaac041dd56b7",
+  "tiny": false
+ },
+ "horrors/mascaron/solape-ojo-lejano.png": {
+  "source": "570b5e48c194fb54d6db288b53dbd04adb760153d01ef101df636a4ba47fcdf2",
+  "tiny": false
+ },
+ "horrors/mascaron/solape-ceja-cercana.png": {
+  "source": "71420cef9a48f91c418b436578c3871c7d5d74d1dc2fb9ce8b035f44cff463e3",
+  "tiny": false
+ },
+ "horrors/mascaron/solape-ceja-lejana.png": {
+  "source": "d504f89711b06e52d51446157c57ddc360f6a3a7ff022e973154baca2c75396b",
+  "tiny": false
+ },
+ "horrors/mascaron/solape-bigote-izquierdo.png": {
+  "source": "18fda4f74c313249bfc36348d6902ed8d4b59d7c3ebc9df91c1c92048c3dd393",
+  "tiny": false
+ },
+ "horrors/mascaron/solape-bigote-derecho.png": {
+  "source": "36215e5817477016b06b052d22d313a96a9f8861dcbfc89f5d9f904b6cc3f26c",
+  "tiny": false
+ },
+ "horrors/mascaron/solape-barba.png": {
+  "source": "db5d411b0fedb45bbe0fc0c872a502e42589b4d770f11ea10b226ed34c595a6f",
+  "tiny": false
+ },
+ "horrors/mascaron/solape-voluta.png": {
+  "source": "ffe0795ceaa2975532e24fc2039817c648bedc3748bd41e259d486226b72d21f",
+  "tiny": false
+ },
+ "horrors/mascaron/relleno-sombra-bajo-ojo-cercano.png": {
+  "source": "f4a09f6e300d2d72ede602d1213e8beaa97c27d8a3792b98620928671f484365",
+  "tiny": false
+ },
+ "horrors/mascaron/relleno-sombra-bajo-ojo-lejano.png": {
+  "source": "6ac5e00ca6a5cb7c4fc4c787489ef81f280ddaecdf26975df459826b55c71414",
+  "tiny": false
+ },
+ "horrors/mascaron/voluta.png": {
+  "source": "a2a6ba2ea2c486d095e64afa17267c6fad819903a23049dad1531b72a4c38327",
+  "tiny": true
+ },
+ "horrors/mascaron/barba.png": {
+  "source": "908a05db78971846d58fe6e48c2dfe5bd7a29ffa5a2f6cfb1f366709ac5c4353",
+  "tiny": true
+ },
+ "horrors/mascaron/bigote-derecho.png": {
+  "source": "a08a5740abd50a6f593b006641c237218b4bd176aa088a4a1f95b45b543885ba",
+  "tiny": false
+ },
+ "horrors/mascaron/bigote-izquierdo.png": {
+  "source": "7d4b96ffebf01359694b1251cf4db874acbfcf7ff071521bc368da83ad943a6e",
+  "tiny": true
+ },
+ "horrors/mascaron/ceja-lejana.png": {
+  "source": "21ca44439e9b0cb49ab50b63323c9f07c919b74c50b84c6dab8fe57befb9b59f",
+  "tiny": false
+ },
+ "horrors/mascaron/ceja-cercana.png": {
+  "source": "b96f48351e9f7ab87f91491e9371b64d46d5fdd4d2ffcacbc5187628e63d89f9",
+  "tiny": false
+ },
+ "horrors/mascaron/ojo-lejano.png": {
+  "source": "59d74c72e9a5379ea0727d749a48633b569d99d2bd886c43a81c48b15c65abd6",
+  "tiny": false
+ },
+ "horrors/mascaron/ojo-cercano.png": {
+  "source": "2a7149e53391a02d000b48030244fbd662ac6e2577bcba282ed4b4cffa0cd96e",
+  "tiny": false
+ },
+ "horrors/mascaron/gorra.png": {
+  "source": "2f741ff5e9535928bdd98670b97c5b9a3161083f2cfeee1d10c4e01610497e36",
+  "tiny": true
+ },
+ "horrors/mascaron/cabeza.png": {
+  "source": "26a6ea297e0795a6fc6e4af6535cb28e21fa9a24b32589d38b797dd6e820663b",
+  "tiny": true
+ },
+ "horrors/mascaron/casco-nucleo.png": {
+  "source": "9bf82652537c9f0102b3ad464e606ef06204da993008aa66e82030f54c619e2d",
+  "tiny": true
+ },
+ "horrors/reina/solape-percebe-central.png": {
+  "source": "5f7326024378b96b3cdf05677acfaef3ac551d959dde41f9d903013e4d531068",
+  "tiny": false
+ },
+ "horrors/reina/solape-percebe-corona-izquierdo.png": {
+  "source": "251f01daf4c7a2bbfcd686beec3d1db13ae5d99d86c5044707272c580d8542d0",
+  "tiny": false
+ },
+ "horrors/reina/solape-percebe-corona-derecho.png": {
+  "source": "9fa64ba65ad328d350c948ff945589901c76e07bb8efada22c9c09f36a2a3034",
+  "tiny": false
+ },
+ "horrors/reina/solape-percebe-sien-izquierda.png": {
+  "source": "b4f20a1e5ac14c1cf19b3b12c62be5ee2196da13c9d2cb6095f914e0a2603631",
+  "tiny": false
+ },
+ "horrors/reina/solape-percebe-sien-derecha.png": {
+  "source": "5c2c16a0f86ab96334ba410c1c5a6b1c703d4335b499e762d4a775fc96bb74fc",
+  "tiny": false
+ },
+ "horrors/reina/solape-percebe-lateral-inferior.png": {
+  "source": "49f2973a26f78a14c5d7b8dc43e250392cf9f2972fb32b06385f3292568aed92",
+  "tiny": false
+ },
+ "horrors/reina/solape-percebe-mejilla.png": {
+  "source": "01722de1f7553a6a2ff728f6db197ce96a654ef9fa3aecc144658acc01b4d1d3",
+  "tiny": false
+ },
+ "horrors/reina/solape-percebe-cuello.png": {
+  "source": "094689523d3e786e2cda1a1ec0dff6f9053086f1fd712890b95e0ce819226ce9",
+  "tiny": false
+ },
+ "horrors/reina/solape-percebe-hombro.png": {
+  "source": "ccaec7a6f92c871fbb0b4c85e1fa4c6a02eef40dad8fc764f9b12091fc140483",
+  "tiny": false
+ },
+ "horrors/reina/solape-alga-temporal.png": {
+  "source": "f0e8a6dc6148a5737051c61307aeaa27e3d09233db61da6b5ef072e7d1293a91",
+  "tiny": false
+ },
+ "horrors/reina/solape-alga-oreja.png": {
+  "source": "fc95c9c3d5d79434c52f72ace6712b54c26b392ad1400215eb8060a6c273cd91",
+  "tiny": false
+ },
+ "horrors/reina/solape-alga-cuello.png": {
+  "source": "e7677f5aa85de5974634702075da76f50993c861b98fd69dd3ad6f5c055ed67d",
+  "tiny": false
+ },
+ "horrors/reina/solape-parpado-izquierdo.png": {
+  "source": "0a609326da4576bd097d54a06b23cee29be8994494db4cd8714080a55da409ec",
+  "tiny": false
+ },
+ "horrors/reina/solape-parpado-derecho.png": {
+  "source": "8433e65f980dcbb5917fd25830275e05dbd8261989cad31dda9b7c596efc1653",
+  "tiny": false
+ },
+ "horrors/reina/relleno-sombra-bajo-parpado-izquierdo.png": {
+  "source": "ec3f3f75cf8a2cd9b9f641998b5241d9d092bf61054528f288ba37639e6c590e",
+  "tiny": false
+ },
+ "horrors/reina/relleno-sombra-bajo-parpado-derecho.png": {
+  "source": "ed7a8e41b66a77a9fae05d15028810777bef62c467c8bd9b478b76fae0adec21",
+  "tiny": false
+ },
+ "horrors/reina/parpado-derecho.png": {
+  "source": "37fae575b05d79e8cf942c017246ca0391ee2da28d7380e2f332bbc884e7cdb3",
+  "tiny": false
+ },
+ "horrors/reina/parpado-izquierdo.png": {
+  "source": "73dfb8c3d6307edf63a822f811d57d977db775201f55269b76ca438fd5d37853",
+  "tiny": false
+ },
+ "horrors/reina/alga-cuello.png": {
+  "source": "84a7dcce759def16b1f3cadaf423ffac83298a48a46ad584b06ec3c774f6de2b",
+  "tiny": true
+ },
+ "horrors/reina/alga-oreja.png": {
+  "source": "ac0e5cdd5f179d6a10a945b41b8411827479799ff3fcd468a5df4301b67dd05a",
+  "tiny": false
+ },
+ "horrors/reina/alga-temporal.png": {
+  "source": "5bc36520cb4ba6706631ac57167739546341f929eb8576d60a9603f24a850019",
+  "tiny": true
+ },
+ "horrors/reina/percebe-hombro.png": {
+  "source": "32c7e0b7169f85d868ff7929be527b66fdb12c8d2fa455b76bfee21ea485e42e",
+  "tiny": true
+ },
+ "horrors/reina/percebe-cuello.png": {
+  "source": "daf933d310c1d6d501e6213c590dac07a4b56953b3dca092cacfeacf01c9f624",
+  "tiny": true
+ },
+ "horrors/reina/percebe-mejilla.png": {
+  "source": "68164abf3a6a655f7f2c9aa9869916633faa0e1daf2d5d9872a44fed4904d11a",
+  "tiny": true
+ },
+ "horrors/reina/percebe-lateral-inferior.png": {
+  "source": "52d81c8d063b4365bc9352b01a9aa809d5d821abd97179e52f849bc99573dea2",
+  "tiny": true
+ },
+ "horrors/reina/percebe-sien-derecha.png": {
+  "source": "34abf51dbf9748aae5e1750213d5f6c904536694910b3f061eaa21ec60253268",
+  "tiny": true
+ },
+ "horrors/reina/percebe-sien-izquierda.png": {
+  "source": "2819fc9b6d23c76ca702ba677f8c2a5032a3051746507ee9a7281732bfc3060e",
+  "tiny": true
+ },
+ "horrors/reina/percebe-corona-derecho.png": {
+  "source": "c7788e701d9c374dc0a95eee0d43632a851f7d1bb04fc21b4edf2864420fb001",
+  "tiny": true
+ },
+ "horrors/reina/percebe-corona-izquierdo.png": {
+  "source": "fe7384411c869ec928976cf4d727e6b33f1f5d62eb24bc42b013e94c9e84c281",
+  "tiny": true
+ },
+ "horrors/reina/percebe-central.png": {
+  "source": "3d122b728605be4874f67e20cc0e8cae98570d5c446422909c8fc74d4dd33456",
+  "tiny": true
+ },
+ "horrors/reina/busto-nucleo.png": {
+  "source": "696f9fdaf0b7fc975be322bd786021157eb226843286c97bbdc254baec87f790",
   "tiny": true
  }
 }

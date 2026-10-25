@@ -1,4 +1,4 @@
-import type { EventId, IslandId, WaterType, WreckId } from "../../domain/content";
+import type { EventId, GearPiece, IslandId, WaterType, WreckId } from "../../domain/content";
 import type { Piece } from "../../ui/Puppet";
 import rigs from "./puppets.json";
 
@@ -14,6 +14,11 @@ export const bayArt = {
   puppet: (id: string) => (rigs as unknown as Record<string, Rig>)[id],
   person: (id: string) => `redo/${id}.png`,
   loot: (id: string) => `loot/${id}.png`,
+  /** The Sedal has no art yet. */
+  gear: (piece: GearPiece, level: number): string | null =>
+    piece === "sedal"
+      ? null
+      : `gear/${piece === "casco" ? (level >= 2 ? "casco-reforzado" : "casco-madera") : piece}.png`,
   town: ["town/pueblo-muelle.png", "town/pueblo-centro.png", "town/pueblo-loma.png"],
   water: {
     rio: "locations/rio-estero.png",

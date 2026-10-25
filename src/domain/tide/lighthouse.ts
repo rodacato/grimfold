@@ -9,6 +9,7 @@ export function stealLight(ctx: Ctx): void {
   const tide = activeTide(g);
   if (tide.phase !== "room" || tide.room !== place.map.lighthouse || tide.light) return;
   tide.light = true;
+  g.sightings++;
   (tide.rooms[place.map.lighthouse] as Room).resolved = true;
   tide.farolero = place.map.lighthouse;
   tide.lead = gearLevel(g.campaign, "motor") >= 2 ? 2 : 1;

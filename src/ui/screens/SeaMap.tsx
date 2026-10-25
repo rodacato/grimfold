@@ -5,6 +5,7 @@ import type { Room, Tide } from "../../domain/state";
 import { blocked, isNeighbor, visible } from "../../domain/tide/map";
 import { castsLeft } from "../../domain/tide/sea";
 import { t } from "../../i18n/t";
+import { useFarolero } from "../Farolero";
 import { useGame } from "../game";
 import { Btn, Screen } from "../Paper";
 import { Items } from "../TideParts";
@@ -86,6 +87,7 @@ function Lock({ x, y }: { x: number; y: number }) {
 
 export function SeaMap() {
   const { game, place, send } = useGame();
+  const farolero = useFarolero();
   const tide = game.tide as Tide;
   const [chosen, setChosen] = useState<number | null>(null);
   const { nodes, dock, lighthouse, size } = place.map;
@@ -185,7 +187,9 @@ export function SeaMap() {
             {chosen === dock ? t(tide.light ? "map.homeLight" : "map.homeDark") : label(chosen, target)}
           </h2>
           {blocked(game.campaign, target) && <p className="warn">{t("map.needsHull")}</p>}
-          {tide.farolero === chosen && <p className="warn">{t("map.faroleroThere")}</p>}
+          {tide.farolero === chosen && (
+            <p className="warn">{t("map.faroleroThere", { farolero: farolero.name })}</p>
+          )}
           <Btn
             kind="primary"
             disabled={blocked(game.campaign, target)}

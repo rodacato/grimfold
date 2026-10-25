@@ -28,6 +28,27 @@ describe("losing Cordura says what it costs", () => {
   });
 });
 
+describe("the light's keeper", () => {
+  it("is seen once more each time the light is taken, and stays seen across Campañas", () => {
+    for (let seed = 1; seed <= 10; seed++) {
+      let game = newGame(seed, bay.id);
+      let thefts = 0;
+      for (let step = 0; step < 4000; step++) {
+        const command = nextCommand(game, bay);
+        if (!command) break;
+        const before = game.tide?.light;
+        game = reduce(game, { ...command, at: step * 15_000 }, bay);
+        if (before === false && game.tide?.light) thefts++;
+      }
+      expect(thefts, `seed ${seed}`).toBeGreaterThan(0);
+      expect(game.sightings, `seed ${seed}`).toBe(thefts);
+      game = reduce(game, { type: "newCampaign", at: 0 }, bay);
+      expect(game.campaign.number, `seed ${seed}`).toBe(2);
+      expect(game.sightings, `seed ${seed}`).toBe(thefts);
+    }
+  });
+});
+
 describe("handing back a Capítulo's piece", () => {
   it("raises Cordura by one for the next Marea only", () => {
     let checked = 0;

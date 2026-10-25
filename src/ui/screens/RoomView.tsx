@@ -5,7 +5,7 @@ import { CASTS_PER_ROOM } from "../../domain/state";
 import { castsLeft } from "../../domain/tide/sea";
 import { t } from "../../i18n/t";
 import { Art } from "../Art";
-import { FaroleroPuppet } from "../Farolero";
+import { FaroleroPuppet, useFarolero } from "../Farolero";
 import { useGame } from "../game";
 import { Btn, Roll, Screen } from "../Paper";
 import { Items } from "../TideParts";
@@ -38,6 +38,7 @@ function PlaceScene({ src, alt }: { src: string | null; alt: string }) {
 
 export function RoomView() {
   const { game, place, send } = useGame();
+  const farolero = useFarolero();
   const tide = game.tide as Tide;
   const room = tide.rooms[tide.room] as Room;
   const back = <Btn onClick={() => send({ type: "openMap" })}>{t("room.back")}</Btn>;
@@ -57,9 +58,11 @@ export function RoomView() {
       <Screen>
         <div className="scene tall">
           <Art src={bayArt.lamp} alt={t("place.lighthouse")} />
-          <div className="stage">
-            <FaroleroPuppet width={260} />
-          </div>
+          {farolero.stage > 0 && (
+            <div className="stage">
+              <FaroleroPuppet width={260} look={farolero.stage >= 3 ? "full" : "lure"} />
+            </div>
+          )}
         </div>
         <section className="paper dark">
           <p className="kicker">{t("lighthouse.boss")}</p>

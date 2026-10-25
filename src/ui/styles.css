@@ -1118,6 +1118,14 @@ body::after {
 .puppet.farolero {
   animation: float 3.2s ease-in-out infinite alternate;
 }
+.farolero.lure .piece:not(.senuelo) {
+  visibility: hidden;
+}
+.farolero.shadow .piece,
+.farolero.lured .piece:not(.senuelo) {
+  filter: brightness(0) blur(2px);
+  opacity: 0.8;
+}
 .puppet .piece,
 .puppet .whole {
   position: absolute;

@@ -26,6 +26,9 @@ export function loot(place: Place, id: string): Loot {
   return found;
 }
 
+/** 0 unseen, 1 a shadow, 2 a shadow with a lit lure, 3 the whole fish. */
+export const faroleroStage = (g: Game): number => Math.min(g.sightings, 3);
+
 export const known = (g: Game, creatureId: string): boolean => g.bestiary.includes(creatureId);
 export const caught = (g: Game, creatureId: string): boolean => g.caught.includes(creatureId);
 

@@ -5,6 +5,7 @@ import { BASE_SANITY, HOLD_SIZE, type Tide } from "../domain/state";
 import { distance } from "../domain/tide/map";
 import { t } from "../i18n/t";
 import { LootIcon } from "./Art";
+import { useFarolero } from "./Farolero";
 import { useGame } from "./game";
 
 /** The Cordura at which each next change happens, read by the eye that will close there. */
@@ -18,6 +19,7 @@ function nextMark(tide: Tide): keyof typeof MARK_LINE {
 
 export function Status({ tide }: { tide: Tide }) {
   const { game, place } = useGame();
+  const farolero = useFarolero();
   const [holdOpen, setHoldOpen] = useState(false);
   const room = tide.rooms[tide.room];
   const max = maxHp(game.campaign);
@@ -81,7 +83,10 @@ export function Status({ tide }: { tide: Tide }) {
         )}
         {tide.farolero !== null && tide.phase !== "end" && (
           <span className="badge chase">
-            {t("status.farolero", { n: distance(place.map.nodes, tide.farolero, tide.room) })}
+            {t("status.farolero", {
+              farolero: farolero.name,
+              n: distance(place.map.nodes, tide.farolero, tide.room),
+            })}
           </span>
         )}
       </div>

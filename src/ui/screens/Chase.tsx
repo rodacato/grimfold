@@ -6,7 +6,7 @@ import { escapeTarget } from "../../domain/tide/lighthouse";
 import { t } from "../../i18n/t";
 import { ArponeraPuppet } from "../Arponera";
 import { Art } from "../Art";
-import { FaroleroPuppet } from "../Farolero";
+import { FaroleroPuppet, useFarolero } from "../Farolero";
 import { useGame } from "../game";
 import { Btn, Roll, Screen, Waves } from "../Paper";
 import { Items } from "../TideParts";
@@ -14,17 +14,18 @@ import { Items } from "../TideParts";
 export function FaroleroView() {
   const { game, ctx, send } = useGame();
   const encounter = (game.tide as Tide).encounter;
+  const { stage, name } = useFarolero();
   return (
     <Screen>
       <div className="scene tall">
         <Waves />
         <div className="stage">
-          <FaroleroPuppet width={330} />
+          <FaroleroPuppet width={330} look={stage >= 3 ? "full" : stage === 2 ? "lured" : "shadow"} />
         </div>
       </div>
       <section className="paper dark">
         <p className="kicker">{t("lighthouse.boss")}</p>
-        <h2>{t("farolero.caught")}</h2>
+        <h2>{t("farolero.caught", { farolero: name })}</h2>
         <p className="small">{t("farolero.rule", { n: escapeTarget(ctx) })}</p>
         {encounter && (
           <Roll dice={encounter.dice} rollKey={game.rng} total={encounter.dice.reduce((a, b) => a + b, 0)}>

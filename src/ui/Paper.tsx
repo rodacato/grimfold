@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { t } from "../i18n/t";
+import { useFarolero } from "./Farolero";
 import { useGame } from "./game";
 
 interface BtnProps {
@@ -21,13 +22,14 @@ export function Btn({ kind = "secondary", sub, children, ...rest }: BtnProps) {
 
 export function Screen({ children }: { children: ReactNode }) {
   const { game } = useGame();
+  const farolero = useFarolero().name;
   return (
     <main className="screen">
       {game.notes.length > 0 && (
         <ul className="notes" aria-live="polite">
           {game.notes.map((n, i) => (
             <li key={`${n.key}-${i}`} className={n.bad ? "bad" : ""}>
-              {t(n.key, n.params)}
+              {t(n.key, { farolero, ...n.params })}
             </li>
           ))}
         </ul>

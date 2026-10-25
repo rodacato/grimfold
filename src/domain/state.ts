@@ -1,6 +1,6 @@
 import type { EventId, GearPiece, IslandId, RoomKind, Shadow, WaterType, WreckId } from "./content";
 
-export const SAVE_VERSION = 7;
+export const SAVE_VERSION = 8;
 export const MAX_SCARS = 3;
 export const BASE_SANITY = 6;
 export const ROOMS_PER_SANITY = 3;
@@ -124,6 +124,8 @@ export interface Game {
   bestiary: string[];
   /** Landed or faced at least once; recording in the bestiary is the costly second step. */
   caught: string[];
+  /** Times the light was taken, across Campañas: how much of its keeper you have seen. */
+  sightings: number;
   sessions: SessionEntry[];
   campaign: Campaign;
   tide: Tide | null;
@@ -154,6 +156,7 @@ export function newGame(seed: number, place: string): Game {
     place,
     bestiary: [],
     caught: [],
+    sightings: 0,
     sessions: [],
     campaign: newCampaign(1),
     tide: null,

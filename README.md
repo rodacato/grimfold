@@ -7,7 +7,11 @@ phone as an offline app, and on paper with a pencil and two dice, using the same
 
 The art is cut-paper collage, moved like puppets.
 
-**Status:** pre-MVP, building the walking skeleton. Spanish only at launch.
+The town voted to switch its lighthouse off, and since then the fish come in on their own. The
+lighthouse is still lit some nights, and something out there keeps calling you.
+
+**Status:** pre-MVP, in build: every demo step runs, the screens are getting their art. Spanish only
+at launch. Play it at [rodacato.github.io/grimfold](https://rodacato.github.io/grimfold).
 
 | Document | What it holds |
 |---|---|
@@ -15,6 +19,7 @@ The art is cut-paper collage, moved like puppets.
 | [GATES.md](GATES.md) | The non-negotiables, each with the gate that proves it |
 | [docs/GLOSSARY.md](docs/GLOSSARY.md) | The game's vocabulary, used the same way in UI, code and tickets |
 | [docs/WORLDS.md](docs/WORLDS.md) | The worlds the engine can carry. The MVP is the Sea |
+| [LORE.md](LORE.md) | **Spoilers.** The truth under the bay, for whoever writes the next diary or volume |
 | [ASSETS.md](ASSETS.md) | The art to request, and [docs/art-pipeline.md](docs/art-pipeline.md) for how |
 
 Free and open: no accounts, no ads, no payments. Code, original text and original art under the MIT license; the public-domain sources stay public domain.

@@ -91,7 +91,7 @@ Odd, not muscular: the horror is the detail that should not be there.
 - [x] `cangrejo` — **Cangrejo de los ahogados.** Wedding rings threaded on its legs, shell shaped like a small tombstone. Puppet: exact cuts with overlaps, 11 layers.
 - [x] `globo` — **Pez globo resentido.** Puffed up, offended face, a little bell hanging from it that does not ring. Puppet: exact cuts with overlaps, 9 layers.
 - [x] `bagre` — **Vástago del Cauce Negro.** A catfish with an oversized head and a vertical mouth; two gill growths like hands hold its jaw open, its barbels feel the water like roots. Río, from a Codex candidate. Puppet: exact cuts, 10 layers.
-- [x] `raya` — **El Manto del Estero** (provisional name). A river ray whose belly is an ancient face: welded eyelids, four jaw plates, short palps around a vertical throat. Río, from a Codex candidate. Puppet: exact cuts, 10 layers.
+- [x] `raya` — **La Cara de Abajo.** A river ray whose belly is an ancient face: welded eyelids, four jaw plates, short palps around a vertical throat. Río, from a Codex candidate. Puppet: exact cuts, 10 layers.
 - [x] `sinojos` — **Banco de peces sin ojos.** Hundreds of small silver fish with empty sockets that together form the outline of a face. Puppet: exact cuts, 28 layers: the face and 27 floating groups, no overlaps.
 - [x] `ajolote` — **Larva de la Puerta.** A pale axolotl with legs too long and a hollow skull; its six branching gills end in black globes. Lago, from a Codex candidate. Puppet: exact cuts, 12 layers.
 - [x] `esturion` — **El Arzobispo del Limo.** An armored sturgeon with an eyeless bone mask, snout split into vertical jaws, a fossil of itself in its side. Lago, from a Codex candidate. Puppet: exact cuts, 11 layers; a faint seam shows at the jaw.
@@ -104,6 +104,7 @@ Odd, not muscular: the horror is the detail that should not be there.
 - [x] `tiburon` — **Tiburón de quilla.** Its dorsal fin is a launch's keel; a propeller shows through a stitched seam in its belly. Puppet: exact cuts with overlaps, 11 layers.
 - [x] `calamar` — **Calamar del ancla.** Coiled around a rusty anchor that has gills. The anchor is what breathes. Puppet: exact cuts with overlaps, 11 layers.
 - [x] `reina` — **Reina de los percebes.** A mound of barnacles on a rock forming a crown and the worn face of a town woman.
+- [ ] `reina-retazo` — The same, with one scrap of red raincoat caught in the barnacles: the face is the Arponera's, still being learned ([LORE.md](LORE.md)).
 - [x] `vibora` — **La Garganta que Mira.** A viperfish whose jaw opens too far back; inside its throat, one bony face set at an angle the body cannot have. Profundo, from a Codex candidate. Puppet: exact cuts with overlaps, 9 layers.
 - [x] `sifonoforo` — **El Coro sin Cabeza.** A twisted column through seven chambers, each holding an unfinished face; the last is empty. Profundo, from a Codex candidate. Puppet: exact cuts with overlaps, 8 layers.
 - [x] `duerme` — **Lo que duerme bajo el ancla.** Never whole: a closed eyelid the size of a house under the water, an anchor chain going into it.

@@ -35,7 +35,7 @@ Every world shares one look: **cut-paper collage, moved like puppets**. That is 
 
 ### The mystery
 
-The town voted, eleven raised hands, to switch the lighthouse off. The keeper went into the water of his own will, so that something below would keep sleeping. The Farolero who guards the lighthouse now is the keeper, changed. Each Luz you steal from him wakes it a little more. Transforming makes the Arponera more like her father, which is why the Marcas carry the theme. Two Finales: relight the lighthouse (it sleeps again, the town goes back to fishing far out) or go down to him (the fish keep coming). The authored text lives in the code; this is only the shape.
+The town voted, eleven raised hands, to switch the lighthouse off. The keeper went into the water of his own will, so that something below would keep sleeping. The Farolero who guards the lighthouse now is the keeper, changed. Each Luz you steal from him wakes it a little more. Transforming makes the Arponera more like her father, which is why the Marcas carry the theme. Two Finales: relight the lighthouse (it sleeps again, the town goes back to fishing far out) or go down to him (the fish keep coming). The authored text lives in the code; this is only the shape. What lies under it, and the rules for writing more, is [LORE.md](../LORE.md).
 
 ### Sources and cautions
 

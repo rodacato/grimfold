@@ -52,6 +52,7 @@ export function navigate(ctx: Ctx, destination: number): void {
   tide.depth = 1;
   tide.lastRoll = null;
   if (!tide.visited.includes(destination)) tide.visited.push(destination);
+  assignContent(ctx, target);
   tide.turn++;
   if (tide.turn % ROOMS_PER_SANITY === 0 && loseSanity(ctx, 1, "time", "sanity.time")) return;
   if (g.campaign.chapter === place.chapters.length - 1 && tide.turn === 3 && tide.farolero === null) {
@@ -70,7 +71,6 @@ export function navigate(ctx: Ctx, destination: number): void {
     startFight(ctx, pick(g, wanderers).id, true);
     return;
   }
-  assignContent(ctx, target);
   tide.phase = "room";
 }
 

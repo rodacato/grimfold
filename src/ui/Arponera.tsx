@@ -4,7 +4,7 @@ import { t } from "../i18n/t";
 import { Art } from "./Art";
 import { type Piece, Puppet } from "./Puppet";
 
-/** Cut from characters/arponera/sheet.png and fitted on characters/arponera.png. */
+/** Cut from assets/raw/characters/arponera/sheet.png and fitted on its arponera.png. */
 const BODY: Piece = { id: "cuerpo", x: 314, y: 382, w: 500, pivot: null };
 const SKIRT: Piece = { id: "faldon", x: 744, y: 962, w: 200, pivot: [0.05, 0.3] };
 const HARPOON: Piece = { id: "brazo-arpon", x: 244, y: 84, w: 206, pivot: [0.8, 0.31] };

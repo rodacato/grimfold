@@ -9,7 +9,7 @@
         "w": 539,
         "h": 712,
         "pivot": null,
-        "file": "cuerpo.webp"
+        "file": "cuerpo.png"
       },
       {
         "id": "pata-posterior-izquierda",
@@ -18,7 +18,7 @@
         "w": 443,
         "h": 323,
         "pivot": [0.801, 0.365],
-        "file": "pata-posterior-izquierda.webp",
+        "file": "pata-posterior-izquierda.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -29,7 +29,7 @@
         "w": 542,
         "h": 831,
         "pivot": [0.286, 0.783],
-        "file": "cola.webp",
+        "file": "cola.png",
         "sway": 1,
         "beat": 2.5
       },
@@ -40,7 +40,7 @@
         "w": 423,
         "h": 503,
         "pivot": [0.118, 0.161],
-        "file": "pata-posterior-derecha.webp",
+        "file": "pata-posterior-derecha.png",
         "sway": 1,
         "beat": 2.9
       },
@@ -51,7 +51,7 @@
         "w": 442,
         "h": 663,
         "pivot": [0.808, 0.124],
-        "file": "brazo-izquierdo.webp",
+        "file": "brazo-izquierdo.png",
         "sway": 1,
         "beat": 1.7
       },
@@ -62,7 +62,7 @@
         "w": 419,
         "h": 600,
         "pivot": [0.554, 0.072],
-        "file": "brazo-derecho.webp",
+        "file": "brazo-derecho.png",
         "sway": 1,
         "beat": 2.1
       },
@@ -73,7 +73,7 @@
         "w": 348,
         "h": 384,
         "pivot": [0.649, 0.747],
-        "file": "branquia-izquierda-alta.webp",
+        "file": "branquia-izquierda-alta.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -84,7 +84,7 @@
         "w": 321,
         "h": 333,
         "pivot": [0.96, 0.838],
-        "file": "branquia-izquierda-media.webp",
+        "file": "branquia-izquierda-media.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -95,7 +95,7 @@
         "w": 453,
         "h": 278,
         "pivot": [0.645, 0.353],
-        "file": "branquia-izquierda-baja.webp",
+        "file": "branquia-izquierda-baja.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -106,7 +106,7 @@
         "w": 408,
         "h": 376,
         "pivot": [0.27, 0.84],
-        "file": "branquia-derecha-alta.webp",
+        "file": "branquia-derecha-alta.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -117,7 +117,7 @@
         "w": 571,
         "h": 297,
         "pivot": [0.21, 0.859],
-        "file": "branquia-derecha-media.webp",
+        "file": "branquia-derecha-media.png",
         "sway": 1,
         "beat": 2.5
       },
@@ -128,7 +128,7 @@
         "w": 323,
         "h": 225,
         "pivot": [0.48, 0.329],
-        "file": "branquia-derecha-baja.webp",
+        "file": "branquia-derecha-baja.png",
         "sway": 3,
         "beat": 2.9
       }
@@ -144,7 +144,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-curva-superior.webp",
+        "file": "solape-curva-superior.png",
         "follows": ["curva-superior"]
       },
       {
@@ -154,7 +154,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-curva-central.webp",
+        "file": "solape-curva-central.png",
         "follows": ["curva-superior", "curva-central"]
       },
       {
@@ -164,7 +164,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-tramo-inferior.webp",
+        "file": "solape-tramo-inferior.png",
         "follows": ["curva-superior", "curva-central", "tramo-inferior"]
       },
       {
@@ -174,7 +174,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-cola.webp",
+        "file": "solape-cola.png",
         "follows": ["curva-superior", "curva-central", "tramo-inferior", "cola"]
       },
       {
@@ -184,7 +184,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-lejana.webp",
+        "file": "solape-aleta-lejana.png",
         "follows": ["aleta-lejana"]
       },
       {
@@ -194,7 +194,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-cercana.webp",
+        "file": "solape-aleta-cercana.png",
         "follows": ["aleta-cercana"]
       },
       {
@@ -204,7 +204,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-mecha.webp",
+        "file": "solape-mecha.png",
         "follows": ["mecha"]
       },
       {
@@ -214,7 +214,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-mandibula-inferior.webp",
+        "file": "solape-mandibula-inferior.png",
         "follows": ["mandibula-inferior"]
       },
       {
@@ -224,7 +224,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "relleno-boca.webp"
+        "file": "relleno-boca.png"
       },
       {
         "id": "cola",
@@ -233,7 +233,7 @@
         "w": 278,
         "h": 261,
         "pivot": [0.126, 0.448],
-        "file": "cola.webp",
+        "file": "cola.png",
         "sway": 3,
         "beat": 1.7,
         "follows": ["curva-superior", "curva-central", "tramo-inferior"]
@@ -245,7 +245,7 @@
         "w": 476,
         "h": 210,
         "pivot": [0, 0.481],
-        "file": "tramo-inferior.webp",
+        "file": "tramo-inferior.png",
         "sway": 3,
         "beat": 2.9,
         "follows": ["curva-superior", "curva-central"]
@@ -257,7 +257,7 @@
         "w": 667,
         "h": 543,
         "pivot": [1, 0.471],
-        "file": "curva-central.webp",
+        "file": "curva-central.png",
         "sway": 1,
         "beat": 2.5,
         "follows": ["curva-superior"]
@@ -269,7 +269,7 @@
         "w": 486,
         "h": 591,
         "pivot": [0, 0.245],
-        "file": "curva-superior.webp",
+        "file": "curva-superior.png",
         "sway": 1,
         "beat": 2.1
       },
@@ -280,7 +280,7 @@
         "w": 200,
         "h": 155,
         "pivot": [0.645, 0.671],
-        "file": "mandibula-inferior.webp",
+        "file": "mandibula-inferior.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -291,7 +291,7 @@
         "w": 85,
         "h": 148,
         "pivot": [0.753, 0.905],
-        "file": "mecha.webp",
+        "file": "mecha.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -302,7 +302,7 @@
         "w": 117,
         "h": 223,
         "pivot": [0.154, 0.238],
-        "file": "aleta-cercana.webp",
+        "file": "aleta-cercana.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -313,7 +313,7 @@
         "w": 260,
         "h": 129,
         "pivot": [0.412, 0.186],
-        "file": "aleta-lejana.webp",
+        "file": "aleta-lejana.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -324,7 +324,120 @@
         "w": 530,
         "h": 502,
         "pivot": null,
-        "file": "cuerpo.webp"
+        "file": "cuerpo.png"
+      }
+    ]
+  },
+  "bagre": {
+    "size": [1254, 1254],
+    "pieces": [
+      {
+        "id": "cuerpo",
+        "x": 0,
+        "y": 57,
+        "w": 1240,
+        "h": 1197,
+        "pivot": null,
+        "file": "cuerpo.png"
+      },
+      {
+        "id": "aleta-dorsal",
+        "x": 533,
+        "y": 89,
+        "w": 577,
+        "h": 326,
+        "pivot": [0.4, 0.577],
+        "file": "aleta-dorsal.png",
+        "sway": 1,
+        "beat": 2.1
+      },
+      {
+        "id": "aleta-pectoral-izquierda",
+        "x": 15,
+        "y": 495,
+        "w": 295,
+        "h": 359,
+        "pivot": [0.905, 0.298],
+        "file": "aleta-pectoral-izquierda.png",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "aleta-pectoral-derecha",
+        "x": 797,
+        "y": 604,
+        "w": 435,
+        "h": 339,
+        "pivot": [0.078, 0.18],
+        "file": "aleta-pectoral-derecha.png",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "aleta-caudal",
+        "x": 814,
+        "y": 20,
+        "w": 356,
+        "h": 285,
+        "pivot": [0.834, 0.681],
+        "file": "aleta-caudal.png",
+        "sway": 3,
+        "beat": 1.7
+      },
+      {
+        "id": "mandibula-inferior",
+        "x": 306,
+        "y": 770,
+        "w": 407,
+        "h": 244,
+        "pivot": [0.491, 0.516],
+        "file": "mandibula-inferior.png",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "mano-branquial-izquierda",
+        "x": 211,
+        "y": 591,
+        "w": 185,
+        "h": 284,
+        "pivot": [0.589, 0.824],
+        "file": "mano-branquial-izquierda.png",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "mano-branquial-derecha",
+        "x": 638,
+        "y": 649,
+        "w": 176,
+        "h": 264,
+        "pivot": [0.392, 0.845],
+        "file": "mano-branquial-derecha.png",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "barbillas-izquierdas",
+        "x": 16,
+        "y": 382,
+        "w": 627,
+        "h": 794,
+        "pivot": [0.458, 0.065],
+        "file": "barbillas-izquierdas.png",
+        "sway": 1,
+        "beat": 1.7
+      },
+      {
+        "id": "barbillas-derechas",
+        "x": 668,
+        "y": 434,
+        "w": 552,
+        "h": 784,
+        "pivot": [0.054, 0.032],
+        "file": "barbillas-derechas.png",
+        "sway": 1,
+        "beat": 2.1
       }
     ]
   },
@@ -338,7 +451,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-cabeza-manto.webp",
+        "file": "solape-cabeza-manto.png",
         "follows": ["cabeza-manto"]
       },
       {
@@ -348,7 +461,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-superior.webp",
+        "file": "solape-aleta-superior.png",
         "follows": ["cabeza-manto", "aleta-superior"]
       },
       {
@@ -358,7 +471,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-lateral.webp",
+        "file": "solape-aleta-lateral.png",
         "follows": ["cabeza-manto", "aleta-lateral"]
       },
       {
@@ -368,7 +481,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-inferior.webp",
+        "file": "solape-aleta-inferior.png",
         "follows": ["cabeza-manto", "aleta-inferior"]
       },
       {
@@ -378,7 +491,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-tentaculo-izquierdo.webp",
+        "file": "solape-tentaculo-izquierdo.png",
         "follows": ["tentaculo-izquierdo"]
       },
       {
@@ -388,7 +501,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-tentaculo-derecho.webp",
+        "file": "solape-tentaculo-derecho.png",
         "follows": ["tentaculo-derecho"]
       },
       {
@@ -398,7 +511,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-bucle-izquierdo.webp",
+        "file": "solape-bucle-izquierdo.png",
         "follows": ["bucle-izquierdo"]
       },
       {
@@ -408,7 +521,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-punta-izquierda.webp",
+        "file": "solape-punta-izquierda.png",
         "follows": ["punta-izquierda"]
       },
       {
@@ -418,7 +531,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-rizo-inferior.webp",
+        "file": "solape-rizo-inferior.png",
         "follows": ["rizo-inferior"]
       },
       {
@@ -428,7 +541,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-punta-derecha.webp",
+        "file": "solape-punta-derecha.png",
         "follows": ["punta-derecha"]
       },
       {
@@ -438,7 +551,7 @@
         "w": 142,
         "h": 142,
         "pivot": [0.796, 0.021],
-        "file": "punta-derecha.webp",
+        "file": "punta-derecha.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -449,7 +562,7 @@
         "w": 233,
         "h": 369,
         "pivot": [0.348, 0.092],
-        "file": "rizo-inferior.webp",
+        "file": "rizo-inferior.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -460,7 +573,7 @@
         "w": 118,
         "h": 227,
         "pivot": [0.237, 0.167],
-        "file": "punta-izquierda.webp",
+        "file": "punta-izquierda.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -471,7 +584,7 @@
         "w": 156,
         "h": 225,
         "pivot": [0.788, 0.191],
-        "file": "bucle-izquierdo.webp",
+        "file": "bucle-izquierdo.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -482,7 +595,7 @@
         "w": 170,
         "h": 255,
         "pivot": [0.147, 0.216],
-        "file": "tentaculo-derecho.webp",
+        "file": "tentaculo-derecho.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -493,7 +606,7 @@
         "w": 391,
         "h": 230,
         "pivot": [0.954, 0.483],
-        "file": "tentaculo-izquierdo.webp",
+        "file": "tentaculo-izquierdo.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -504,7 +617,7 @@
         "w": 223,
         "h": 160,
         "pivot": [0.52, 0.744],
-        "file": "aleta-inferior.webp",
+        "file": "aleta-inferior.png",
         "sway": 3,
         "beat": 1.7,
         "follows": ["cabeza-manto"]
@@ -516,7 +629,7 @@
         "w": 100,
         "h": 299,
         "pivot": [0.53, 0.278],
-        "file": "aleta-lateral.webp",
+        "file": "aleta-lateral.png",
         "sway": 3,
         "beat": 2.9,
         "follows": ["cabeza-manto"]
@@ -528,7 +641,7 @@
         "w": 318,
         "h": 138,
         "pivot": [0.541, 0.623],
-        "file": "aleta-superior.webp",
+        "file": "aleta-superior.png",
         "sway": 3,
         "beat": 2.5,
         "follows": ["cabeza-manto"]
@@ -540,7 +653,7 @@
         "w": 491,
         "h": 485,
         "pivot": [0.124, 0.887],
-        "file": "cabeza-manto.webp",
+        "file": "cabeza-manto.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -551,7 +664,7 @@
         "w": 1134,
         "h": 1185,
         "pivot": null,
-        "file": "ancla-nucleo.webp"
+        "file": "ancla-nucleo.png"
       }
     ]
   },
@@ -565,7 +678,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-pata-izq-posterior.webp",
+        "file": "solape-pata-izq-posterior.png",
         "follows": ["pata-izq-posterior"]
       },
       {
@@ -575,7 +688,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-pata-izq-media.webp",
+        "file": "solape-pata-izq-media.png",
         "follows": ["pata-izq-media"]
       },
       {
@@ -585,7 +698,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-pata-izq-anterior.webp",
+        "file": "solape-pata-izq-anterior.png",
         "follows": ["pata-izq-anterior"]
       },
       {
@@ -595,7 +708,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-pata-der-posterior.webp",
+        "file": "solape-pata-der-posterior.png",
         "follows": ["pata-der-posterior"]
       },
       {
@@ -605,7 +718,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-pata-der-media.webp",
+        "file": "solape-pata-der-media.png",
         "follows": ["pata-der-media"]
       },
       {
@@ -615,7 +728,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-pata-der-oculta.webp",
+        "file": "solape-pata-der-oculta.png",
         "follows": ["pata-der-oculta"]
       },
       {
@@ -625,7 +738,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-pinza-izq.webp",
+        "file": "solape-pinza-izq.png",
         "follows": ["pinza-izq"]
       },
       {
@@ -635,7 +748,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-dedo-pinza-izq.webp",
+        "file": "solape-dedo-pinza-izq.png",
         "follows": ["pinza-izq", "dedo-pinza-izq"]
       },
       {
@@ -645,7 +758,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-pinza-der.webp",
+        "file": "solape-pinza-der.png",
         "follows": ["pinza-der"]
       },
       {
@@ -655,7 +768,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-dedo-pinza-der.webp",
+        "file": "solape-dedo-pinza-der.png",
         "follows": ["pinza-der", "dedo-pinza-der"]
       },
       {
@@ -665,7 +778,7 @@
         "w": 148,
         "h": 157,
         "pivot": [0.169, 0.656],
-        "file": "pata-der-oculta.webp",
+        "file": "pata-der-oculta.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -676,7 +789,7 @@
         "w": 323,
         "h": 393,
         "pivot": [0.043, 0.191],
-        "file": "pata-der-media.webp",
+        "file": "pata-der-media.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -687,7 +800,7 @@
         "w": 353,
         "h": 323,
         "pivot": [0.037, 0.443],
-        "file": "pata-der-posterior.webp",
+        "file": "pata-der-posterior.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -698,7 +811,7 @@
         "w": 283,
         "h": 433,
         "pivot": [0.82, 0.081],
-        "file": "pata-izq-anterior.webp",
+        "file": "pata-izq-anterior.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -709,7 +822,7 @@
         "w": 336,
         "h": 401,
         "pivot": [0.967, 0.155],
-        "file": "pata-izq-media.webp",
+        "file": "pata-izq-media.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -720,7 +833,7 @@
         "w": 375,
         "h": 426,
         "pivot": [0.896, 0.563],
-        "file": "pata-izq-posterior.webp",
+        "file": "pata-izq-posterior.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -731,7 +844,7 @@
         "w": 131,
         "h": 178,
         "pivot": [0.87, 0.157],
-        "file": "dedo-pinza-der.webp",
+        "file": "dedo-pinza-der.png",
         "sway": 3,
         "beat": 2.5,
         "follows": ["pinza-der"]
@@ -743,7 +856,7 @@
         "w": 274,
         "h": 454,
         "pivot": [0.343, 0.104],
-        "file": "pinza-der.webp",
+        "file": "pinza-der.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -754,7 +867,7 @@
         "w": 145,
         "h": 203,
         "pivot": [0.09, 0.113],
-        "file": "dedo-pinza-izq.webp",
+        "file": "dedo-pinza-izq.png",
         "sway": 3,
         "beat": 1.7,
         "follows": ["pinza-izq"]
@@ -766,7 +879,7 @@
         "w": 365,
         "h": 421,
         "pivot": [0.342, 0.109],
-        "file": "pinza-izq.webp",
+        "file": "pinza-izq.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -777,7 +890,7 @@
         "w": 564,
         "h": 661,
         "pivot": null,
-        "file": "cuerpo.webp"
+        "file": "cuerpo.png"
       }
     ]
   },
@@ -791,7 +904,7 @@
         "w": 1080,
         "h": 572,
         "pivot": null,
-        "file": "cuerpo.webp"
+        "file": "cuerpo.png"
       },
       {
         "id": "aleta-pectoral-lejana",
@@ -800,7 +913,7 @@
         "w": 165,
         "h": 173,
         "pivot": [0.121, 0.064],
-        "file": "aleta-pectoral-lejana.webp",
+        "file": "aleta-pectoral-lejana.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -811,7 +924,7 @@
         "w": 236,
         "h": 160,
         "pivot": [0.208, 0.3],
-        "file": "aleta-ventral-media.webp",
+        "file": "aleta-ventral-media.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -822,7 +935,7 @@
         "w": 186,
         "h": 189,
         "pivot": [0.231, 0.36],
-        "file": "aleta-rear-lejana.webp",
+        "file": "aleta-rear-lejana.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -833,7 +946,7 @@
         "w": 447,
         "h": 550,
         "pivot": [0.38, 0.16],
-        "file": "aleta-rear-cercana.webp",
+        "file": "aleta-rear-cercana.png",
         "sway": 1,
         "beat": 1.7
       },
@@ -844,7 +957,7 @@
         "w": 138,
         "h": 218,
         "pivot": [0.391, 0.908],
-        "file": "aleta-superior-posterior.webp",
+        "file": "aleta-superior-posterior.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -855,7 +968,7 @@
         "w": 369,
         "h": 603,
         "pivot": [0.572, 0.567],
-        "file": "aleta-caudal.webp",
+        "file": "aleta-caudal.png",
         "sway": 1,
         "beat": 2.5
       },
@@ -866,7 +979,7 @@
         "w": 943,
         "h": 705,
         "pivot": [0.68, 0.599],
-        "file": "cresta-dorsal.webp",
+        "file": "cresta-dorsal.png",
         "sway": 1,
         "beat": 2.9
       },
@@ -877,7 +990,7 @@
         "w": 630,
         "h": 602,
         "pivot": [0.086, 0.267],
-        "file": "aleta-pectoral-cercana.webp",
+        "file": "aleta-pectoral-cercana.png",
         "sway": 1,
         "beat": 1.7
       },
@@ -888,7 +1001,7 @@
         "w": 321,
         "h": 430,
         "pivot": [0.196, 0.049],
-        "file": "barbillones.webp",
+        "file": "barbillones.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -899,7 +1012,7 @@
         "w": 381,
         "h": 379,
         "pivot": [0.919, 0.261],
-        "file": "mandibula.webp",
+        "file": "mandibula.png",
         "sway": 3,
         "beat": 2.5
       }
@@ -915,7 +1028,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-cola.webp",
+        "file": "solape-cola.png",
         "follows": ["cola"]
       },
       {
@@ -925,7 +1038,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-lejana.webp",
+        "file": "solape-aleta-lejana.png",
         "follows": ["aleta-lejana"]
       },
       {
@@ -935,7 +1048,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-cercana.webp",
+        "file": "solape-aleta-cercana.png",
         "follows": ["aleta-cercana"]
       },
       {
@@ -945,7 +1058,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-ceja-izquierda.webp",
+        "file": "solape-ceja-izquierda.png",
         "follows": ["ceja-izquierda"]
       },
       {
@@ -955,7 +1068,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-ceja-derecha.webp",
+        "file": "solape-ceja-derecha.png",
         "follows": ["ceja-derecha"]
       },
       {
@@ -965,7 +1078,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-boca.webp",
+        "file": "solape-boca.png",
         "follows": ["boca"]
       },
       {
@@ -975,7 +1088,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-campana.webp",
+        "file": "solape-campana.png",
         "follows": ["campana"]
       },
       {
@@ -985,7 +1098,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-badajo.webp",
+        "file": "solape-badajo.png",
         "follows": ["campana", "badajo"]
       },
       {
@@ -995,7 +1108,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "relleno-bajo-aleta-cercana.webp"
+        "file": "relleno-bajo-aleta-cercana.png"
       },
       {
         "id": "relleno-bajo-ceja-izquierda",
@@ -1004,7 +1117,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "relleno-bajo-ceja-izquierda.webp"
+        "file": "relleno-bajo-ceja-izquierda.png"
       },
       {
         "id": "relleno-bajo-ceja-derecha",
@@ -1013,7 +1126,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "relleno-bajo-ceja-derecha.webp"
+        "file": "relleno-bajo-ceja-derecha.png"
       },
       {
         "id": "relleno-bajo-boca",
@@ -1022,7 +1135,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "relleno-bajo-boca.webp"
+        "file": "relleno-bajo-boca.png"
       },
       {
         "id": "relleno-bajo-badajo",
@@ -1031,7 +1144,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "relleno-bajo-badajo.webp",
+        "file": "relleno-bajo-badajo.png",
         "follows": ["campana"]
       },
       {
@@ -1041,7 +1154,7 @@
         "w": 48,
         "h": 53,
         "pivot": [0.521, 0.245],
-        "file": "badajo.webp",
+        "file": "badajo.png",
         "sway": 3,
         "beat": 1.7,
         "follows": ["campana"]
@@ -1053,7 +1166,7 @@
         "w": 170,
         "h": 221,
         "pivot": [0.547, 0.063],
-        "file": "campana.webp",
+        "file": "campana.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -1064,7 +1177,7 @@
         "w": 178,
         "h": 131,
         "pivot": [0.5, 0.504],
-        "file": "boca.webp",
+        "file": "boca.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -1075,7 +1188,7 @@
         "w": 225,
         "h": 105,
         "pivot": [0.28, 0.638],
-        "file": "ceja-derecha.webp",
+        "file": "ceja-derecha.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -1086,7 +1199,7 @@
         "w": 138,
         "h": 97,
         "pivot": [0.645, 0.608],
-        "file": "ceja-izquierda.webp",
+        "file": "ceja-izquierda.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -1097,7 +1210,7 @@
         "w": 233,
         "h": 244,
         "pivot": [0.077, 0.164],
-        "file": "aleta-cercana.webp",
+        "file": "aleta-cercana.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -1108,7 +1221,7 @@
         "w": 125,
         "h": 219,
         "pivot": [0.904, 0.269],
-        "file": "aleta-lejana.webp",
+        "file": "aleta-lejana.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -1119,7 +1232,7 @@
         "w": 186,
         "h": 415,
         "pivot": [0.091, 0.472],
-        "file": "cola.webp",
+        "file": "cola.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -1130,7 +1243,7 @@
         "w": 947,
         "h": 962,
         "pivot": null,
-        "file": "cuerpo.webp"
+        "file": "cuerpo.png"
       }
     ]
   },
@@ -1144,7 +1257,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-mandibula.webp",
+        "file": "solape-mandibula.png",
         "follows": ["mandibula"]
       },
       {
@@ -1154,7 +1267,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-senuelo.webp",
+        "file": "solape-senuelo.png",
         "follows": ["senuelo"]
       },
       {
@@ -1164,7 +1277,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-branquias.webp",
+        "file": "solape-branquias.png",
         "follows": ["branquias"]
       },
       {
@@ -1174,7 +1287,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-cresta-dorsal.webp",
+        "file": "solape-cresta-dorsal.png",
         "follows": ["cresta-dorsal"]
       },
       {
@@ -1184,7 +1297,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-lejana.webp",
+        "file": "solape-aleta-lejana.png",
         "follows": ["aleta-lejana"]
       },
       {
@@ -1194,7 +1307,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-cercana.webp",
+        "file": "solape-aleta-cercana.png",
         "follows": ["aleta-cercana"]
       },
       {
@@ -1204,7 +1317,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-ventral.webp",
+        "file": "solape-aleta-ventral.png",
         "follows": ["aleta-ventral"]
       },
       {
@@ -1214,7 +1327,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-posterior.webp",
+        "file": "solape-aleta-posterior.png",
         "follows": ["aleta-posterior"]
       },
       {
@@ -1224,7 +1337,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-cola.webp",
+        "file": "solape-cola.png",
         "follows": ["cola"]
       },
       {
@@ -1234,7 +1347,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "relleno-boca-oscura.webp"
+        "file": "relleno-boca-oscura.png"
       },
       {
         "id": "relleno-papel-bajo-branquias",
@@ -1243,7 +1356,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "relleno-papel-bajo-branquias.webp"
+        "file": "relleno-papel-bajo-branquias.png"
       },
       {
         "id": "cola",
@@ -1252,7 +1365,7 @@
         "w": 419,
         "h": 429,
         "pivot": [0.544, 0.068],
-        "file": "cola.webp",
+        "file": "cola.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -1263,7 +1376,7 @@
         "w": 113,
         "h": 155,
         "pivot": [0.239, 0.161],
-        "file": "aleta-posterior.webp",
+        "file": "aleta-posterior.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -1274,7 +1387,7 @@
         "w": 94,
         "h": 143,
         "pivot": [0.383, 0.119],
-        "file": "aleta-ventral.webp",
+        "file": "aleta-ventral.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -1285,7 +1398,7 @@
         "w": 203,
         "h": 294,
         "pivot": [0.079, 0.068],
-        "file": "aleta-cercana.webp",
+        "file": "aleta-cercana.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -1296,7 +1409,7 @@
         "w": 117,
         "h": 181,
         "pivot": [0.248, 0.099],
-        "file": "aleta-lejana.webp",
+        "file": "aleta-lejana.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -1307,7 +1420,7 @@
         "w": 577,
         "h": 380,
         "pivot": [0.56, 0.345],
-        "file": "cresta-dorsal.webp",
+        "file": "cresta-dorsal.png",
         "sway": 1,
         "beat": 1.7
       },
@@ -1318,7 +1431,7 @@
         "w": 176,
         "h": 223,
         "pivot": [0.244, 0.278],
-        "file": "branquias.webp",
+        "file": "branquias.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -1329,7 +1442,7 @@
         "w": 393,
         "h": 398,
         "pivot": [0.891, 0.354],
-        "file": "senuelo.webp",
+        "file": "senuelo.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -1340,7 +1453,7 @@
         "w": 218,
         "h": 115,
         "pivot": [0.945, 0.696],
-        "file": "mandibula.webp",
+        "file": "mandibula.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -1351,7 +1464,7 @@
         "w": 883,
         "h": 598,
         "pivot": null,
-        "file": "cuerpo.webp"
+        "file": "cuerpo.png"
       }
     ]
   },
@@ -1365,7 +1478,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-mandibula.webp",
+        "file": "solape-mandibula.png",
         "follows": ["mandibula"]
       },
       {
@@ -1375,7 +1488,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-branquia-anterior.webp",
+        "file": "solape-branquia-anterior.png",
         "follows": ["branquia-anterior"]
       },
       {
@@ -1385,7 +1498,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-branquia-media.webp",
+        "file": "solape-branquia-media.png",
         "follows": ["branquia-media"]
       },
       {
@@ -1395,7 +1508,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-branquia-posterior.webp",
+        "file": "solape-branquia-posterior.png",
         "follows": ["branquia-posterior"]
       },
       {
@@ -1405,7 +1518,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-lejana.webp",
+        "file": "solape-aleta-lejana.png",
         "follows": ["aleta-lejana"]
       },
       {
@@ -1415,7 +1528,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-cercana.webp",
+        "file": "solape-aleta-cercana.png",
         "follows": ["aleta-cercana"]
       },
       {
@@ -1425,7 +1538,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-ventral.webp",
+        "file": "solape-aleta-ventral.png",
         "follows": ["aleta-ventral"]
       },
       {
@@ -1435,7 +1548,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-dorsal.webp",
+        "file": "solape-aleta-dorsal.png",
         "follows": ["aleta-dorsal"]
       },
       {
@@ -1445,7 +1558,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-curva-inferior.webp",
+        "file": "solape-aleta-curva-inferior.png",
         "follows": ["aleta-curva-inferior"]
       },
       {
@@ -1455,7 +1568,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-cola.webp",
+        "file": "solape-cola.png",
         "follows": ["cola"]
       },
       {
@@ -1465,7 +1578,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-interior.webp",
+        "file": "solape-aleta-interior.png",
         "follows": ["aleta-interior"]
       },
       {
@@ -1475,7 +1588,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "relleno-boca-oscura.webp"
+        "file": "relleno-boca-oscura.png"
       },
       {
         "id": "relleno-piel-branquia-2",
@@ -1484,7 +1597,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "relleno-piel-branquia-2.webp"
+        "file": "relleno-piel-branquia-2.png"
       },
       {
         "id": "relleno-piel-branquia-3",
@@ -1493,7 +1606,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "relleno-piel-branquia-3.webp"
+        "file": "relleno-piel-branquia-3.png"
       },
       {
         "id": "relleno-piel-branquia-4",
@@ -1502,7 +1615,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "relleno-piel-branquia-4.webp"
+        "file": "relleno-piel-branquia-4.png"
       },
       {
         "id": "aleta-interior",
@@ -1511,7 +1624,7 @@
         "w": 213,
         "h": 78,
         "pivot": [0.465, 0.692],
-        "file": "aleta-interior.webp",
+        "file": "aleta-interior.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -1522,7 +1635,7 @@
         "w": 324,
         "h": 235,
         "pivot": [0.077, 0.328],
-        "file": "cola.webp",
+        "file": "cola.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -1533,7 +1646,7 @@
         "w": 231,
         "h": 391,
         "pivot": [0.641, 0.307],
-        "file": "aleta-curva-inferior.webp",
+        "file": "aleta-curva-inferior.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -1544,7 +1657,7 @@
         "w": 495,
         "h": 824,
         "pivot": [0.665, 0.182],
-        "file": "aleta-dorsal.webp",
+        "file": "aleta-dorsal.png",
         "sway": 1,
         "beat": 1.7
       },
@@ -1555,7 +1668,7 @@
         "w": 133,
         "h": 129,
         "pivot": [0.368, 0.093],
-        "file": "aleta-ventral.webp",
+        "file": "aleta-ventral.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -1566,7 +1679,7 @@
         "w": 186,
         "h": 184,
         "pivot": [0.07, 0.082],
-        "file": "aleta-cercana.webp",
+        "file": "aleta-cercana.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -1577,7 +1690,7 @@
         "w": 89,
         "h": 174,
         "pivot": [0.416, 0.063],
-        "file": "aleta-lejana.webp",
+        "file": "aleta-lejana.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -1588,7 +1701,7 @@
         "w": 94,
         "h": 134,
         "pivot": [0.649, 0.172],
-        "file": "branquia-posterior.webp",
+        "file": "branquia-posterior.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -1599,7 +1712,7 @@
         "w": 93,
         "h": 147,
         "pivot": [0.753, 0.122],
-        "file": "branquia-media.webp",
+        "file": "branquia-media.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -1610,7 +1723,7 @@
         "w": 106,
         "h": 153,
         "pivot": [0.764, 0.092],
-        "file": "branquia-anterior.webp",
+        "file": "branquia-anterior.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -1621,7 +1734,7 @@
         "w": 424,
         "h": 211,
         "pivot": [0.823, 0.735],
-        "file": "mandibula.webp",
+        "file": "mandibula.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -1632,7 +1745,7 @@
         "w": 1115,
         "h": 950,
         "pivot": null,
-        "file": "cuerpo.webp"
+        "file": "cuerpo.png"
       }
     ]
   },
@@ -1646,7 +1759,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-badajo.webp",
+        "file": "solape-badajo.png",
         "follows": ["badajo"]
       },
       {
@@ -1656,7 +1769,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-cuerda-izquierda.webp",
+        "file": "solape-cuerda-izquierda.png",
         "follows": ["cuerda-izquierda"]
       },
       {
@@ -1666,7 +1779,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-cuerda-izquierda-larga.webp",
+        "file": "solape-cuerda-izquierda-larga.png",
         "follows": ["cuerda-izquierda-larga"]
       },
       {
@@ -1676,7 +1789,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-cuerda-central.webp",
+        "file": "solape-cuerda-central.png",
         "follows": ["cuerda-central"]
       },
       {
@@ -1686,7 +1799,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-cuerda-diagonal.webp",
+        "file": "solape-cuerda-diagonal.png",
         "follows": ["cuerda-diagonal"]
       },
       {
@@ -1696,7 +1809,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-cuerda-nudo.webp",
+        "file": "solape-cuerda-nudo.png",
         "follows": ["cuerda-nudo"]
       },
       {
@@ -1706,7 +1819,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-cuerda-derecha.webp",
+        "file": "solape-cuerda-derecha.png",
         "follows": ["cuerda-derecha"]
       },
       {
@@ -1716,7 +1829,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "relleno-interior-campana.webp"
+        "file": "relleno-interior-campana.png"
       },
       {
         "id": "badajo",
@@ -1725,7 +1838,7 @@
         "w": 72,
         "h": 139,
         "pivot": [0.264, 0.043],
-        "file": "badajo.webp",
+        "file": "badajo.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -1736,7 +1849,7 @@
         "w": 358,
         "h": 239,
         "pivot": [0.939, 0.121],
-        "file": "cuerda-izquierda.webp",
+        "file": "cuerda-izquierda.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -1747,7 +1860,7 @@
         "w": 207,
         "h": 432,
         "pivot": [0.671, 0.025],
-        "file": "cuerda-central.webp",
+        "file": "cuerda-central.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -1758,7 +1871,7 @@
         "w": 483,
         "h": 549,
         "pivot": [0.041, 0.058],
-        "file": "cuerda-nudo.webp",
+        "file": "cuerda-nudo.png",
         "sway": 1,
         "beat": 2.5
       },
@@ -1769,7 +1882,7 @@
         "w": 376,
         "h": 237,
         "pivot": [0.12, 0.097],
-        "file": "cuerda-derecha.webp",
+        "file": "cuerda-derecha.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -1780,7 +1893,7 @@
         "w": 361,
         "h": 475,
         "pivot": [0.886, 0.021],
-        "file": "cuerda-izquierda-larga.webp",
+        "file": "cuerda-izquierda-larga.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -1791,7 +1904,7 @@
         "w": 342,
         "h": 561,
         "pivot": [0.058, 0.036],
-        "file": "cuerda-diagonal.webp",
+        "file": "cuerda-diagonal.png",
         "sway": 1,
         "beat": 2.1
       },
@@ -1802,7 +1915,7 @@
         "w": 630,
         "h": 671,
         "pivot": null,
-        "file": "campana.webp"
+        "file": "campana.png"
       }
     ]
   },
@@ -1816,7 +1929,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-tubo-01.webp",
+        "file": "solape-tubo-01.png",
         "follows": ["tubo-01"]
       },
       {
@@ -1826,7 +1939,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-tubo-02.webp",
+        "file": "solape-tubo-02.png",
         "follows": ["tubo-02"]
       },
       {
@@ -1836,7 +1949,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-tubo-03.webp",
+        "file": "solape-tubo-03.png",
         "follows": ["tubo-03"]
       },
       {
@@ -1846,7 +1959,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-tubo-04.webp",
+        "file": "solape-tubo-04.png",
         "follows": ["tubo-04"]
       },
       {
@@ -1856,7 +1969,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-tubo-05.webp",
+        "file": "solape-tubo-05.png",
         "follows": ["tubo-05"]
       },
       {
@@ -1866,7 +1979,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-tubo-06.webp",
+        "file": "solape-tubo-06.png",
         "follows": ["tubo-06"]
       },
       {
@@ -1876,7 +1989,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-pectoral.webp",
+        "file": "solape-aleta-pectoral.png",
         "follows": ["aleta-pectoral"]
       },
       {
@@ -1886,7 +1999,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-ventral-anterior.webp",
+        "file": "solape-aleta-ventral-anterior.png",
         "follows": ["aleta-ventral-anterior"]
       },
       {
@@ -1896,7 +2009,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aletas-ventrales-pequenas.webp",
+        "file": "solape-aletas-ventrales-pequenas.png",
         "follows": ["aletas-ventrales-pequenas"]
       },
       {
@@ -1906,7 +2019,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-anal.webp",
+        "file": "solape-aleta-anal.png",
         "follows": ["aleta-anal"]
       },
       {
@@ -1916,7 +2029,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-caudal.webp",
+        "file": "solape-aleta-caudal.png",
         "follows": ["aleta-caudal"]
       },
       {
@@ -1926,7 +2039,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-mandibula-inferior.webp",
+        "file": "solape-mandibula-inferior.png",
         "follows": ["mandibula-inferior"]
       },
       {
@@ -1936,7 +2049,7 @@
         "w": 1028,
         "h": 1012,
         "pivot": null,
-        "file": "cuerpo.webp"
+        "file": "cuerpo.png"
       },
       {
         "id": "tubo-01",
@@ -1945,7 +2058,7 @@
         "w": 173,
         "h": 283,
         "pivot": [0.393, 0.77],
-        "file": "tubo-01.webp",
+        "file": "tubo-01.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -1956,7 +2069,7 @@
         "w": 156,
         "h": 247,
         "pivot": [0.378, 0.753],
-        "file": "tubo-02.webp",
+        "file": "tubo-02.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -1967,7 +2080,7 @@
         "w": 146,
         "h": 239,
         "pivot": [0.349, 0.715],
-        "file": "tubo-03.webp",
+        "file": "tubo-03.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -1978,7 +2091,7 @@
         "w": 130,
         "h": 209,
         "pivot": [0.346, 0.675],
-        "file": "tubo-04.webp",
+        "file": "tubo-04.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -1989,7 +2102,7 @@
         "w": 123,
         "h": 175,
         "pivot": [0.398, 0.663],
-        "file": "tubo-05.webp",
+        "file": "tubo-05.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -2000,7 +2113,7 @@
         "w": 110,
         "h": 181,
         "pivot": [0.473, 0.586],
-        "file": "tubo-06.webp",
+        "file": "tubo-06.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -2011,7 +2124,7 @@
         "w": 261,
         "h": 243,
         "pivot": [0.126, 0.189],
-        "file": "aleta-pectoral.webp",
+        "file": "aleta-pectoral.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -2022,7 +2135,7 @@
         "w": 176,
         "h": 109,
         "pivot": [0.193, 0.009],
-        "file": "aleta-ventral-anterior.webp",
+        "file": "aleta-ventral-anterior.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -2033,7 +2146,7 @@
         "w": 379,
         "h": 315,
         "pivot": [0.47, 0.511],
-        "file": "aletas-ventrales-pequenas.webp",
+        "file": "aletas-ventrales-pequenas.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -2044,7 +2157,7 @@
         "w": 232,
         "h": 210,
         "pivot": [0.323, 0.371],
-        "file": "aleta-anal.webp",
+        "file": "aleta-anal.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -2055,7 +2168,7 @@
         "w": 214,
         "h": 354,
         "pivot": [0.369, 0.46],
-        "file": "aleta-caudal.webp",
+        "file": "aleta-caudal.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -2066,9 +2179,283 @@
         "w": 551,
         "h": 494,
         "pivot": [0.938, 0.739],
-        "file": "mandibula-inferior.webp",
+        "file": "mandibula-inferior.png",
         "sway": 1,
         "beat": 1.7
+      }
+    ]
+  },
+  "raya": {
+    "size": [1254, 1254],
+    "pieces": [
+      {
+        "id": "cuerpo",
+        "x": 365,
+        "y": 21,
+        "w": 867,
+        "h": 901,
+        "pivot": null,
+        "file": "cuerpo.png"
+      },
+      {
+        "id": "ala-izquierda",
+        "x": 27,
+        "y": 27,
+        "w": 466,
+        "h": 664,
+        "pivot": [0.884, 0.607],
+        "file": "ala-izquierda.png",
+        "sway": 1,
+        "beat": 2.1
+      },
+      {
+        "id": "ala-derecha",
+        "x": 668,
+        "y": 355,
+        "w": 571,
+        "h": 594,
+        "pivot": [0.473, 0.283],
+        "file": "ala-derecha.png",
+        "sway": 1,
+        "beat": 2.5
+      },
+      {
+        "id": "cola",
+        "x": 41,
+        "y": 677,
+        "w": 1127,
+        "h": 577,
+        "pivot": [0.446, 0.099],
+        "file": "cola.png",
+        "sway": 1,
+        "beat": 2.9
+      },
+      {
+        "id": "palpos-izquierdos",
+        "x": 430,
+        "y": 410,
+        "w": 184,
+        "h": 336,
+        "pivot": [0.707, 0.185],
+        "file": "palpos-izquierdos.png",
+        "sway": 3,
+        "beat": 1.7
+      },
+      {
+        "id": "palpos-derechos",
+        "x": 725,
+        "y": 497,
+        "w": 176,
+        "h": 282,
+        "pivot": [0.415, 0.17],
+        "file": "palpos-derechos.png",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "mandibula-superior-izquierda",
+        "x": 555,
+        "y": 240,
+        "w": 187,
+        "h": 262,
+        "pivot": [0.39, 0.573],
+        "file": "mandibula-superior-izquierda.png",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "mandibula-superior-derecha",
+        "x": 716,
+        "y": 253,
+        "w": 115,
+        "h": 249,
+        "pivot": [0.661, 0.594],
+        "file": "mandibula-superior-derecha.png",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "mandibula-inferior-izquierda",
+        "x": 531,
+        "y": 502,
+        "w": 137,
+        "h": 270,
+        "pivot": [0.38, 0.433],
+        "file": "mandibula-inferior-izquierda.png",
+        "sway": 3,
+        "beat": 1.7
+      },
+      {
+        "id": "mandibula-inferior-derecha",
+        "x": 591,
+        "y": 502,
+        "w": 233,
+        "h": 293,
+        "pivot": [0.614, 0.454],
+        "file": "mandibula-inferior-derecha.png",
+        "sway": 3,
+        "beat": 2.1
+      }
+    ]
+  },
+  "sifonoforo": {
+    "size": [1254, 1254],
+    "pieces": [
+      {
+        "id": "solape-camara-mayor",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-camara-mayor.png",
+        "follows": ["camara-mayor"]
+      },
+      {
+        "id": "solape-camara-02",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-camara-02.png",
+        "follows": ["camara-02"]
+      },
+      {
+        "id": "solape-camara-03",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-camara-03.png",
+        "follows": ["camara-03"]
+      },
+      {
+        "id": "solape-camara-04",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-camara-04.png",
+        "follows": ["camara-04"]
+      },
+      {
+        "id": "solape-camara-05",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-camara-05.png",
+        "follows": ["camara-05"]
+      },
+      {
+        "id": "solape-camara-06",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-camara-06.png",
+        "follows": ["camara-06"]
+      },
+      {
+        "id": "solape-camara-07",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-camara-07.png",
+        "follows": ["camara-07"]
+      },
+      {
+        "id": "camara-07",
+        "x": 217,
+        "y": 929,
+        "w": 417,
+        "h": 298,
+        "pivot": [0.885, 0.225],
+        "file": "camara-07.png",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "camara-06",
+        "x": 561,
+        "y": 926,
+        "w": 306,
+        "h": 305,
+        "pivot": [0.82, 0.039],
+        "file": "camara-06.png",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "camara-05",
+        "x": 603,
+        "y": 712,
+        "w": 406,
+        "h": 432,
+        "pivot": [0.266, 0.079],
+        "file": "camara-05.png",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "camara-04",
+        "x": 435,
+        "y": 553,
+        "w": 374,
+        "h": 315,
+        "pivot": [0.19, 0.092],
+        "file": "camara-04.png",
+        "sway": 3,
+        "beat": 1.7
+      },
+      {
+        "id": "camara-03",
+        "x": 164,
+        "y": 368,
+        "w": 508,
+        "h": 447,
+        "pivot": [0.557, 0.065],
+        "file": "camara-03.png",
+        "sway": 1,
+        "beat": 2.9
+      },
+      {
+        "id": "camara-02",
+        "x": 273,
+        "y": 178,
+        "w": 386,
+        "h": 311,
+        "pivot": [0.873, 0.106],
+        "file": "camara-02.png",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "camara-mayor",
+        "x": 281,
+        "y": 13,
+        "w": 900,
+        "h": 679,
+        "pivot": [0.454, 0.264],
+        "file": "camara-mayor.png",
+        "sway": 1,
+        "beat": 2.1
+      },
+      {
+        "id": "cuerpo",
+        "x": 399,
+        "y": 152,
+        "w": 435,
+        "h": 897,
+        "pivot": null,
+        "file": "cuerpo.png"
       }
     ]
   },
@@ -2082,7 +2469,7 @@
         "w": 115,
         "h": 127,
         "pivot": [0.53, 0.551],
-        "file": "grupo-27.webp",
+        "file": "grupo-27.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -2093,7 +2480,7 @@
         "w": 106,
         "h": 87,
         "pivot": [0.509, 0.552],
-        "file": "grupo-26.webp",
+        "file": "grupo-26.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -2104,7 +2491,7 @@
         "w": 93,
         "h": 105,
         "pivot": [0.538, 0.543],
-        "file": "grupo-25.webp",
+        "file": "grupo-25.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -2115,7 +2502,7 @@
         "w": 96,
         "h": 86,
         "pivot": [0.458, 0.43],
-        "file": "grupo-24.webp",
+        "file": "grupo-24.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -2126,7 +2513,7 @@
         "w": 75,
         "h": 86,
         "pivot": [0.533, 0.547],
-        "file": "grupo-23.webp",
+        "file": "grupo-23.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -2137,7 +2524,7 @@
         "w": 112,
         "h": 118,
         "pivot": [0.446, 0.441],
-        "file": "grupo-22.webp",
+        "file": "grupo-22.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -2148,7 +2535,7 @@
         "w": 99,
         "h": 104,
         "pivot": [0.556, 0.481],
-        "file": "grupo-21.webp",
+        "file": "grupo-21.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -2159,7 +2546,7 @@
         "w": 65,
         "h": 83,
         "pivot": [0.538, 0.458],
-        "file": "grupo-20.webp",
+        "file": "grupo-20.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -2170,7 +2557,7 @@
         "w": 64,
         "h": 78,
         "pivot": [0.563, 0.487],
-        "file": "grupo-19.webp",
+        "file": "grupo-19.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -2181,7 +2568,7 @@
         "w": 124,
         "h": 90,
         "pivot": [0.524, 0.433],
-        "file": "grupo-18.webp",
+        "file": "grupo-18.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -2192,7 +2579,7 @@
         "w": 120,
         "h": 118,
         "pivot": [0.442, 0.542],
-        "file": "grupo-17.webp",
+        "file": "grupo-17.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -2203,7 +2590,7 @@
         "w": 81,
         "h": 106,
         "pivot": [0.444, 0.566],
-        "file": "grupo-16.webp",
+        "file": "grupo-16.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -2214,7 +2601,7 @@
         "w": 45,
         "h": 132,
         "pivot": [0.489, 0.538],
-        "file": "grupo-15.webp",
+        "file": "grupo-15.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -2225,7 +2612,7 @@
         "w": 77,
         "h": 100,
         "pivot": [0.558, 0.56],
-        "file": "grupo-14.webp",
+        "file": "grupo-14.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -2236,7 +2623,7 @@
         "w": 49,
         "h": 139,
         "pivot": [0.469, 0.532],
-        "file": "grupo-13.webp",
+        "file": "grupo-13.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -2247,7 +2634,7 @@
         "w": 70,
         "h": 112,
         "pivot": [0.557, 0.545],
-        "file": "grupo-12.webp",
+        "file": "grupo-12.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -2258,7 +2645,7 @@
         "w": 104,
         "h": 92,
         "pivot": [0.529, 0.522],
-        "file": "grupo-11.webp",
+        "file": "grupo-11.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -2269,7 +2656,7 @@
         "w": 139,
         "h": 181,
         "pivot": [0.547, 0.409],
-        "file": "grupo-10.webp",
+        "file": "grupo-10.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -2280,7 +2667,7 @@
         "w": 78,
         "h": 69,
         "pivot": [0.526, 0.551],
-        "file": "grupo-09.webp",
+        "file": "grupo-09.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -2291,7 +2678,7 @@
         "w": 83,
         "h": 56,
         "pivot": [0.554, 0.482],
-        "file": "grupo-08.webp",
+        "file": "grupo-08.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -2302,7 +2689,7 @@
         "w": 112,
         "h": 80,
         "pivot": [0.438, 0.537],
-        "file": "grupo-07.webp",
+        "file": "grupo-07.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -2313,7 +2700,7 @@
         "w": 102,
         "h": 84,
         "pivot": [0.5, 0.524],
-        "file": "grupo-06.webp",
+        "file": "grupo-06.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -2324,7 +2711,7 @@
         "w": 50,
         "h": 80,
         "pivot": [0.44, 0.537],
-        "file": "grupo-05.webp",
+        "file": "grupo-05.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -2335,7 +2722,7 @@
         "w": 71,
         "h": 77,
         "pivot": [0.493, 0.39],
-        "file": "grupo-04.webp",
+        "file": "grupo-04.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -2346,7 +2733,7 @@
         "w": 86,
         "h": 93,
         "pivot": [0.442, 0.538],
-        "file": "grupo-03.webp",
+        "file": "grupo-03.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -2357,7 +2744,7 @@
         "w": 38,
         "h": 92,
         "pivot": [0.447, 0.522],
-        "file": "grupo-02.webp",
+        "file": "grupo-02.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -2368,7 +2755,7 @@
         "w": 127,
         "h": 207,
         "pivot": [0.543, 0.454],
-        "file": "grupo-01.webp",
+        "file": "grupo-01.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -2379,7 +2766,7 @@
         "w": 921,
         "h": 1205,
         "pivot": null,
-        "file": "cuerpo.webp"
+        "file": "cuerpo.png"
       }
     ]
   },
@@ -2393,7 +2780,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-collar-izquierdo.webp",
+        "file": "solape-collar-izquierdo.png",
         "follows": ["collar-izquierdo"]
       },
       {
@@ -2403,7 +2790,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-collar-derecho.webp",
+        "file": "solape-collar-derecho.png",
         "follows": ["collar-derecho"]
       },
       {
@@ -2413,7 +2800,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-alga-superior.webp",
+        "file": "solape-alga-superior.png",
         "follows": ["alga-superior"]
       },
       {
@@ -2423,7 +2810,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-alga-arco-izquierdo.webp",
+        "file": "solape-alga-arco-izquierdo.png",
         "follows": ["alga-arco-izquierdo"]
       },
       {
@@ -2433,7 +2820,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-alga-rizo-izquierdo.webp",
+        "file": "solape-alga-rizo-izquierdo.png",
         "follows": ["alga-rizo-izquierdo"]
       },
       {
@@ -2443,7 +2830,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-alga-arco-derecho.webp",
+        "file": "solape-alga-arco-derecho.png",
         "follows": ["alga-arco-derecho"]
       },
       {
@@ -2453,7 +2840,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-cabello-derecho-largo.webp",
+        "file": "solape-cabello-derecho-largo.png",
         "follows": ["cabello-derecho-largo"]
       },
       {
@@ -2463,7 +2850,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-alga-exterior-derecha.webp",
+        "file": "solape-alga-exterior-derecha.png",
         "follows": ["alga-exterior-derecha"]
       },
       {
@@ -2473,7 +2860,7 @@
         "w": 70,
         "h": 194,
         "pivot": [0.2, 0.072],
-        "file": "alga-exterior-derecha.webp",
+        "file": "alga-exterior-derecha.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -2484,7 +2871,7 @@
         "w": 135,
         "h": 545,
         "pivot": [0.415, 0.039],
-        "file": "cabello-derecho-largo.webp",
+        "file": "cabello-derecho-largo.png",
         "sway": 1,
         "beat": 2.9
       },
@@ -2495,7 +2882,7 @@
         "w": 217,
         "h": 296,
         "pivot": [0.111, 0.118],
-        "file": "alga-arco-derecho.webp",
+        "file": "alga-arco-derecho.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -2506,7 +2893,7 @@
         "w": 291,
         "h": 119,
         "pivot": [0.955, 0.311],
-        "file": "alga-rizo-izquierdo.webp",
+        "file": "alga-rizo-izquierdo.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -2517,7 +2904,7 @@
         "w": 276,
         "h": 168,
         "pivot": [0.938, 0.107],
-        "file": "alga-arco-izquierdo.webp",
+        "file": "alga-arco-izquierdo.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -2528,7 +2915,7 @@
         "w": 183,
         "h": 116,
         "pivot": [0.902, 0.819],
-        "file": "alga-superior.webp",
+        "file": "alga-superior.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -2539,7 +2926,7 @@
         "w": 65,
         "h": 120,
         "pivot": [0.185, 0.4],
-        "file": "collar-derecho.webp",
+        "file": "collar-derecho.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -2550,7 +2937,7 @@
         "w": 136,
         "h": 273,
         "pivot": [0.809, 0.326],
-        "file": "collar-izquierdo.webp",
+        "file": "collar-izquierdo.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -2561,7 +2948,7 @@
         "w": 1132,
         "h": 1081,
         "pivot": null,
-        "file": "cuerpo-concha.webp"
+        "file": "cuerpo-concha.png"
       }
     ]
   },
@@ -2575,7 +2962,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-mandibula.webp",
+        "file": "solape-mandibula.png",
         "follows": ["mandibula"]
       },
       {
@@ -2585,7 +2972,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-quilla-dorsal.webp",
+        "file": "solape-quilla-dorsal.png",
         "follows": ["quilla-dorsal"]
       },
       {
@@ -2595,7 +2982,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-lejana.webp",
+        "file": "solape-aleta-lejana.png",
         "follows": ["aleta-lejana"]
       },
       {
@@ -2605,7 +2992,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-cercana.webp",
+        "file": "solape-aleta-cercana.png",
         "follows": ["aleta-cercana"]
       },
       {
@@ -2615,7 +3002,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-ventral.webp",
+        "file": "solape-aleta-ventral.png",
         "follows": ["aleta-ventral"]
       },
       {
@@ -2625,7 +3012,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-cola.webp",
+        "file": "solape-cola.png",
         "follows": ["cola"]
       },
       {
@@ -2635,7 +3022,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-dorsal-posterior.webp",
+        "file": "solape-dorsal-posterior.png",
         "follows": ["dorsal-posterior"]
       },
       {
@@ -2645,7 +3032,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-dorsal-caudal.webp",
+        "file": "solape-dorsal-caudal.png",
         "follows": ["dorsal-caudal"]
       },
       {
@@ -2655,7 +3042,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-helice.webp",
+        "file": "solape-helice.png",
         "follows": ["helice"]
       },
       {
@@ -2665,7 +3052,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-branquias.webp",
+        "file": "solape-branquias.png",
         "follows": ["branquias"]
       },
       {
@@ -2675,7 +3062,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "relleno-boca-oscura.webp"
+        "file": "relleno-boca-oscura.png"
       },
       {
         "id": "relleno-cavidad-helice",
@@ -2684,7 +3071,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "relleno-cavidad-helice.webp"
+        "file": "relleno-cavidad-helice.png"
       },
       {
         "id": "relleno-piel-branquias",
@@ -2693,7 +3080,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "relleno-piel-branquias.webp"
+        "file": "relleno-piel-branquias.png"
       },
       {
         "id": "branquias",
@@ -2702,7 +3089,7 @@
         "w": 182,
         "h": 214,
         "pivot": [0.451, 0.491],
-        "file": "branquias.webp",
+        "file": "branquias.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -2713,7 +3100,7 @@
         "w": 153,
         "h": 134,
         "pivot": [0.601, 0.373],
-        "file": "helice.webp",
+        "file": "helice.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -2724,7 +3111,7 @@
         "w": 95,
         "h": 103,
         "pivot": [0.368, 0.388],
-        "file": "dorsal-caudal.webp",
+        "file": "dorsal-caudal.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -2735,7 +3122,7 @@
         "w": 134,
         "h": 119,
         "pivot": [0.328, 0.395],
-        "file": "dorsal-posterior.webp",
+        "file": "dorsal-posterior.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -2746,7 +3133,7 @@
         "w": 300,
         "h": 712,
         "pivot": [0.533, 0.397],
-        "file": "cola.webp",
+        "file": "cola.png",
         "sway": 1,
         "beat": 2.5
       },
@@ -2757,7 +3144,7 @@
         "w": 138,
         "h": 145,
         "pivot": [0.449, 0.145],
-        "file": "aleta-ventral.webp",
+        "file": "aleta-ventral.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -2768,7 +3155,7 @@
         "w": 355,
         "h": 390,
         "pivot": [0.127, 0.121],
-        "file": "aleta-cercana.webp",
+        "file": "aleta-cercana.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -2779,7 +3166,7 @@
         "w": 218,
         "h": 281,
         "pivot": [0.615, 0.114],
-        "file": "aleta-lejana.webp",
+        "file": "aleta-lejana.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -2790,7 +3177,7 @@
         "w": 390,
         "h": 358,
         "pivot": [0.438, 0.737],
-        "file": "quilla-dorsal.webp",
+        "file": "quilla-dorsal.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -2801,7 +3188,7 @@
         "w": 293,
         "h": 120,
         "pivot": [0.792, 0.6],
-        "file": "mandibula.webp",
+        "file": "mandibula.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -2812,7 +3199,7 @@
         "w": 1030,
         "h": 562,
         "pivot": null,
-        "file": "cuerpo.webp"
+        "file": "cuerpo.png"
       }
     ]
   },
@@ -2826,7 +3213,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-pata-anterior.webp",
+        "file": "solape-pata-anterior.png",
         "follows": ["pata-anterior"]
       },
       {
@@ -2836,7 +3223,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-pata-central.webp",
+        "file": "solape-pata-central.png",
         "follows": ["pata-central"]
       },
       {
@@ -2846,7 +3233,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-pata-posterior.webp",
+        "file": "solape-pata-posterior.png",
         "follows": ["pata-posterior"]
       },
       {
@@ -2856,7 +3243,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-mano-anterior.webp",
+        "file": "solape-mano-anterior.png",
         "follows": ["pata-anterior", "mano-anterior"]
       },
       {
@@ -2866,7 +3253,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-mano-central.webp",
+        "file": "solape-mano-central.png",
         "follows": ["pata-central", "mano-central"]
       },
       {
@@ -2876,7 +3263,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-mano-posterior.webp",
+        "file": "solape-mano-posterior.png",
         "follows": ["pata-posterior", "mano-posterior"]
       },
       {
@@ -2886,7 +3273,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-dorsal-anterior.webp",
+        "file": "solape-dorsal-anterior.png",
         "follows": ["dorsal-anterior"]
       },
       {
@@ -2896,7 +3283,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-dorsal-posterior.webp",
+        "file": "solape-dorsal-posterior.png",
         "follows": ["dorsal-posterior"]
       },
       {
@@ -2906,7 +3293,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-cola.webp",
+        "file": "solape-cola.png",
         "follows": ["cola"]
       },
       {
@@ -2916,7 +3303,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-anterior.webp",
+        "file": "solape-aleta-anterior.png",
         "follows": ["aleta-anterior"]
       },
       {
@@ -2926,7 +3313,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-central.webp",
+        "file": "solape-aleta-central.png",
         "follows": ["aleta-central"]
       },
       {
@@ -2936,7 +3323,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-aleta-posterior.webp",
+        "file": "solape-aleta-posterior.png",
         "follows": ["aleta-posterior"]
       },
       {
@@ -2946,7 +3333,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-barbas-anteriores.webp",
+        "file": "solape-barbas-anteriores.png",
         "follows": ["barbas-anteriores"]
       },
       {
@@ -2956,7 +3343,7 @@
         "w": 1254,
         "h": 1254,
         "pivot": null,
-        "file": "solape-barbas-centrales.webp",
+        "file": "solape-barbas-centrales.png",
         "follows": ["barbas-centrales"]
       },
       {
@@ -2966,7 +3353,7 @@
         "w": 1205,
         "h": 108,
         "pivot": null,
-        "file": "suelo.webp"
+        "file": "suelo.png"
       },
       {
         "id": "mano-posterior",
@@ -2975,7 +3362,7 @@
         "w": 209,
         "h": 194,
         "pivot": [0.507, 0.129],
-        "file": "mano-posterior.webp",
+        "file": "mano-posterior.png",
         "sway": 3,
         "beat": 2.9,
         "follows": ["pata-posterior"]
@@ -2987,7 +3374,7 @@
         "w": 243,
         "h": 194,
         "pivot": [0.477, 0.103],
-        "file": "mano-central.webp",
+        "file": "mano-central.png",
         "sway": 3,
         "beat": 2.5,
         "follows": ["pata-central"]
@@ -2999,7 +3386,7 @@
         "w": 210,
         "h": 197,
         "pivot": [0.671, 0.122],
-        "file": "mano-anterior.webp",
+        "file": "mano-anterior.png",
         "sway": 3,
         "beat": 2.1,
         "follows": ["pata-anterior"]
@@ -3011,7 +3398,7 @@
         "w": 468,
         "h": 603,
         "pivot": [0.374, 0.038],
-        "file": "pata-posterior.webp",
+        "file": "pata-posterior.png",
         "sway": 1,
         "beat": 1.7
       },
@@ -3022,7 +3409,7 @@
         "w": 240,
         "h": 664,
         "pivot": [0.325, 0.074],
-        "file": "pata-central.webp",
+        "file": "pata-central.png",
         "sway": 1,
         "beat": 2.9
       },
@@ -3033,7 +3420,7 @@
         "w": 196,
         "h": 656,
         "pivot": [0.73, 0.032],
-        "file": "pata-anterior.webp",
+        "file": "pata-anterior.png",
         "sway": 1,
         "beat": 2.5
       },
@@ -3044,7 +3431,7 @@
         "w": 117,
         "h": 235,
         "pivot": [0.658, 0.038],
-        "file": "barbas-centrales.webp",
+        "file": "barbas-centrales.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -3055,7 +3442,7 @@
         "w": 94,
         "h": 222,
         "pivot": [0.745, 0.126],
-        "file": "barbas-anteriores.webp",
+        "file": "barbas-anteriores.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -3066,7 +3453,7 @@
         "w": 138,
         "h": 184,
         "pivot": [0.297, 0.13],
-        "file": "aleta-posterior.webp",
+        "file": "aleta-posterior.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -3077,7 +3464,7 @@
         "w": 175,
         "h": 165,
         "pivot": [0.126, 0.164],
-        "file": "aleta-central.webp",
+        "file": "aleta-central.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -3088,7 +3475,7 @@
         "w": 299,
         "h": 178,
         "pivot": [0.615, 0.152],
-        "file": "aleta-anterior.webp",
+        "file": "aleta-anterior.png",
         "sway": 3,
         "beat": 2.9
       },
@@ -3099,7 +3486,7 @@
         "w": 286,
         "h": 333,
         "pivot": [0.143, 0.468],
-        "file": "cola.webp",
+        "file": "cola.png",
         "sway": 3,
         "beat": 2.5
       },
@@ -3110,7 +3497,7 @@
         "w": 227,
         "h": 77,
         "pivot": [0.41, 0.506],
-        "file": "dorsal-posterior.webp",
+        "file": "dorsal-posterior.png",
         "sway": 3,
         "beat": 2.1
       },
@@ -3121,7 +3508,7 @@
         "w": 307,
         "h": 172,
         "pivot": [0.42, 0.767],
-        "file": "dorsal-anterior.webp",
+        "file": "dorsal-anterior.png",
         "sway": 3,
         "beat": 1.7
       },
@@ -3132,7 +3519,199 @@
         "w": 937,
         "h": 244,
         "pivot": null,
-        "file": "cuerpo.webp"
+        "file": "cuerpo.png"
+      }
+    ]
+  },
+  "vibora": {
+    "size": [1254, 1254],
+    "pieces": [
+      {
+        "id": "solape-cresta-dorsal",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-cresta-dorsal.png",
+        "follows": ["cresta-dorsal"]
+      },
+      {
+        "id": "solape-cresta-ventral",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-cresta-ventral.png",
+        "follows": ["cresta-ventral"]
+      },
+      {
+        "id": "solape-aleta-pectoral",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-pectoral.png",
+        "follows": ["aleta-pectoral"]
+      },
+      {
+        "id": "solape-aleta-caudal",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-caudal.png",
+        "follows": ["aleta-caudal"]
+      },
+      {
+        "id": "solape-branquia-lateral",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-branquia-lateral.png",
+        "follows": ["branquia-lateral"]
+      },
+      {
+        "id": "solape-mandibula-inferior",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-mandibula-inferior.png",
+        "follows": ["mandibula-inferior"]
+      },
+      {
+        "id": "solape-rostro-interior",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-rostro-interior.png",
+        "follows": ["rostro-interior"]
+      },
+      {
+        "id": "solape-arco-dental-derecho",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-arco-dental-derecho.png",
+        "follows": ["arco-dental-derecho"]
+      },
+      {
+        "id": "relleno-detras-rostro",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "relleno-detras-rostro.png",
+        "follows": ["rostro-interior"]
+      },
+      {
+        "id": "cuerpo",
+        "x": 62,
+        "y": 44,
+        "w": 1136,
+        "h": 1020,
+        "pivot": null,
+        "file": "cuerpo.png"
+      },
+      {
+        "id": "cresta-dorsal",
+        "x": 437,
+        "y": 179,
+        "w": 590,
+        "h": 228,
+        "pivot": [0.5, 0.61],
+        "file": "cresta-dorsal.png",
+        "sway": 1,
+        "beat": 2.1
+      },
+      {
+        "id": "cresta-ventral",
+        "x": 794,
+        "y": 424,
+        "w": 298,
+        "h": 204,
+        "pivot": [0.436, 0.657],
+        "file": "cresta-ventral.png",
+        "sway": 3,
+        "beat": 2.5
+      },
+      {
+        "id": "aleta-pectoral",
+        "x": 766,
+        "y": 608,
+        "w": 227,
+        "h": 338,
+        "pivot": [0.167, 0.183],
+        "file": "aleta-pectoral.png",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "aleta-caudal",
+        "x": 1030,
+        "y": 34,
+        "w": 205,
+        "h": 429,
+        "pivot": [0.215, 0.739],
+        "file": "aleta-caudal.png",
+        "sway": 3,
+        "beat": 1.7
+      },
+      {
+        "id": "branquia-lateral",
+        "x": 593,
+        "y": 405,
+        "w": 197,
+        "h": 470,
+        "pivot": [0.188, 0.164],
+        "file": "branquia-lateral.png",
+        "sway": 3,
+        "beat": 2.1
+      },
+      {
+        "id": "mandibula-inferior",
+        "x": 50,
+        "y": 630,
+        "w": 617,
+        "h": 539,
+        "pivot": [0.919, 0.291],
+        "file": "mandibula-inferior.png",
+        "sway": 1,
+        "beat": 2.5
+      },
+      {
+        "id": "rostro-interior",
+        "x": 327,
+        "y": 526,
+        "w": 131,
+        "h": 314,
+        "pivot": [0.519, 0.248],
+        "file": "rostro-interior.png",
+        "sway": 3,
+        "beat": 2.9
+      },
+      {
+        "id": "arco-dental-derecho",
+        "x": 427,
+        "y": 484,
+        "w": 174,
+        "h": 450,
+        "pivot": [0.822, 0.147],
+        "file": "arco-dental-derecho.png",
+        "sway": 3,
+        "beat": 1.7
       }
     ]
   }

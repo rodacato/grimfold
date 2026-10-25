@@ -6,7 +6,7 @@ the story; the image generator invents the shape. Names stay in Spanish because 
 Background story every piece hints at, never states: the town voted to switch off the lighthouse,
 because in the dark the fish come on their own, and the lighthouse keeper went into the sea.
 
-Save each Codex original as `assets/<folder>/<id>.png`, add its prompt to that folder's
+Save each Codex original as `assets/raw/<folder>/<id>.png` (gitignored), add its prompt to that folder's
 `prompts.json` and tick it here ([assets/README.md](assets/README.md)). How each kind is requested, cut and animated (puppet sheets, item sheets, layers) is
 in [docs/art-pipeline.md](docs/art-pipeline.md).
 
@@ -20,7 +20,7 @@ below, the entry's text, and its format (still, puppet sheet, item sheet or laye
 |---|---|---|---|---|
 | 1 | Week 1, during the skeleton | **Pipeline test:** one loot item sheet (`luz`, `mecha`, `pinza`, `espina`, `red`), `mar-abierto` base and layer sheet (card backs done) | 3 | 3, 4 |
 | 2 | Week 1–2 | **Story:** the dock's layer sheet; the Arponera's base, sheet and stage 4; the Farolero's guardian pieces (townspeople, town panels and `faro-lampara` done; pick v1 or v2 of each portrait) | 5 | 1, 5 |
-| 3 | Week 2 | **Horrors:** the 18 are done on petrol; left: `farolero-persigue`, and magenta versions only for a creature that must sit over a location | 1+ | 3, 4 |
+| 3 | Week 2 | **Horrors:** the 22 are done on petrol; left: `farolero-persigue`, and magenta versions only for a creature that must sit over a location | 1+ | 3, 4 |
 | 4 | Week 2 | **Objects:** the rest of the loot in two sheets, the equipment in one | 3 sheets | 1, 4 |
 | 5 | Week 2–3 | **Places:** the horizontal ones are done; left: a 9:16 base of each, and a layer sheet for those marked (moves) | ~18 | 2, 3, 5 |
 
@@ -30,8 +30,8 @@ the Arponera's puppet is the second cut in the brief: her four stages stay as st
 
 ## Style lock (paste with every request)
 
-Attach the three style references with every request: `assets/horrors/farolero.png`,
-`assets/characters/profundo.png` and `assets/objects/farol.png`. They override any other image
+Attach the three style references with every request: `assets/raw/horrors/farolero.png`,
+`assets/raw/characters/profundo.png` and `assets/raw/objects/farol.png`. They override any other image
 attached, and any older asset that does not look like them.
 
 ```
@@ -51,7 +51,7 @@ No text, labels or frames.
 - Entries marked **(moves)** get a sheet in the MVP. The rest are stills.
 - Lovecraft is hinted, never shown or named: no full-body gods.
 
-**Redo before anything new:** what is in `assets/redo/` was delivered but does not match the style
+**Redo before anything new:** what is in `assets/raw/redo/` was delivered but does not match the style
 references. Unticked below until redone; attach the three references plus the old image as content
 only.
 
@@ -90,6 +90,8 @@ Odd, not muscular: the horror is the detail that should not be there.
 - [x] `anguila` — **Anguila de faro apagado.** Long thin eel with a burnt lamp wick on its forehead, coiling in search of a light that no longer exists. Puppet: exact cuts with overlaps, 9 layers; faint seams show between its body segments.
 - [x] `cangrejo` — **Cangrejo de los ahogados.** Wedding rings threaded on its legs, shell shaped like a small tombstone. Puppet: exact cuts with overlaps, 11 layers.
 - [x] `globo` — **Pez globo resentido.** Puffed up, offended face, a little bell hanging from it that does not ring. Puppet: exact cuts with overlaps, 9 layers.
+- [x] `bagre` — **Vástago del Cauce Negro.** A catfish with an oversized head and a vertical mouth; two gill growths like hands hold its jaw open, its barbels feel the water like roots. Río, from a Codex candidate. Puppet: exact cuts, 10 layers.
+- [x] `raya` — **El Manto del Estero** (provisional name). A river ray whose belly is an ancient face: welded eyelids, four jaw plates, short palps around a vertical throat. Río, from a Codex candidate. Puppet: exact cuts, 10 layers.
 - [x] `sinojos` — **Banco de peces sin ojos.** Hundreds of small silver fish with empty sockets that together form the outline of a face. Puppet: exact cuts, 28 layers: the face and 27 floating groups, no overlaps.
 - [x] `ajolote` — **Larva de la Puerta.** A pale axolotl with legs too long and a hollow skull; its six branching gills end in black globes. Lago, from a Codex candidate. Puppet: exact cuts, 12 layers.
 - [x] `esturion` — **El Arzobispo del Limo.** An armored sturgeon with an eyeless bone mask, snout split into vertical jaws, a fossil of itself in its side. Lago, from a Codex candidate. Puppet: exact cuts, 11 layers; a faint seam shows at the jaw.
@@ -102,6 +104,8 @@ Odd, not muscular: the horror is the detail that should not be there.
 - [x] `tiburon` — **Tiburón de quilla.** Its dorsal fin is a launch's keel; a propeller shows through a stitched seam in its belly. Puppet: exact cuts with overlaps, 11 layers.
 - [x] `calamar` — **Calamar del ancla.** Coiled around a rusty anchor that has gills. The anchor is what breathes. Puppet: exact cuts with overlaps, 11 layers.
 - [x] `reina` — **Reina de los percebes.** A mound of barnacles on a rock forming a crown and the worn face of a town woman.
+- [x] `vibora` — **La Garganta que Mira.** A viperfish whose jaw opens too far back; inside its throat, one bony face set at an angle the body cannot have. Profundo, from a Codex candidate. Puppet: exact cuts with overlaps, 9 layers.
+- [x] `sifonoforo` — **El Coro sin Cabeza.** A twisted column through seven chambers, each holding an unfinished face; the last is empty. Profundo, from a Codex candidate. Puppet: exact cuts with overlaps, 8 layers.
 - [x] `duerme` — **Lo que duerme bajo el ancla.** Never whole: a closed eyelid the size of a house under the water, an anchor chain going into it.
 - [x] `gaviota` — **Gaviota con dientes** (wanderer). A gull with a human smile, teeth too even and too white.
 - [x] `mascaron` — **Mascarón de proa despierto** (wanderer). A ship's figurehead carved with the keeper's face, wooden eyes just opened.
@@ -141,7 +145,7 @@ Bust portraits, like old photos cut out of paper.
 
 ## Loot
 
-Transparent 1254×1254 in `assets/loot/`. The game shows each beside its name; one without art
+Transparent 1254×1254 in `assets/raw/loot/`. The game shows each beside its name; one without art
 shows only the name.
 
 - [x] `luz` — **La luz del faro.** The object you steal: a small lens with fire inside, wrapped in a rag.
@@ -163,7 +167,7 @@ shows only the name.
 - [ ] `mano` — **Mano al revés.** A hand with its fingers bent the wrong way.
 - [x] `pluma` — **Pluma con sal.**
 - [x] `ojo-madera` — **Ojo de madera.** The figurehead's eye.
-- [x] `idolo` — **Ídolo de algo que duerme.** A faceless figure with closed eyes carved all over its body. Redone; the first one, which showed Cthulhu, is `candidates/objects/idolo-primero.png`.
+- [x] `idolo` — **Ídolo de algo que duerme.** A faceless figure with closed eyes carved all over its body. Redone; the first one, which showed Cthulhu, is `raw/candidates/objects/idolo-primero.png`.
 
 ## Cards
 

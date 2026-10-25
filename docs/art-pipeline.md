@@ -15,9 +15,13 @@ Every asset is one Codex chat with at most two requests:
 1. **Base.** The style lock, the entry's description from ASSETS.md and the format line for its kind
    (below). Attach the three style references named in ASSETS.md, so forty separate chats still
    look like one game; an older asset attached for its content never overrides them. Iterate in the same chat until it is right, then save it as
-   `assets/<folder>/<id>.png`, with its prompt in that folder's `prompts.json`.
+   `assets/raw/<folder>/<id>.png`, with its prompt in that folder's `prompts.json`.
 2. **Sheet.** Only for what moves. In the same chat, attach the base and paste the sheet prompt for
-   its kind. Save as `assets/<folder>/<id>/sheet.png`.
+   its kind. Save as `assets/raw/<folder>/<id>/sheet.png`.
+
+`assets/raw/` is gitignored; the game ships only `assets/web/`, which `node --env-file=.env
+tools/art/web_art.mjs` rebuilds from it ([assets/README.md](../assets/README.md)). Rerun it after
+any delivery.
 
 What does not move stops at step 1: the base is drawn on `#FF00FF`, so `cut_sheet.py` turns it into a
 transparent PNG like any sheet. Because the base is kept, a sheet can be requested later, when an
@@ -141,10 +145,10 @@ Setup once (Python 3):
 python3 -m venv .venv && .venv/bin/pip install numpy pillow scipy
 ```
 
-**Horrors with exact cuts skip all of this.** Their folder `assets/horrors/<id>/` holds the
+**Horrors with exact cuts skip all of this.** Their folder `assets/raw/horrors/<id>/` holds the
 numbered layers, `armado.png` (the base), `cortes.json` and, when delivered, `solapes.json` with its
-overlaps; `node tools/art/web_art.mjs` crops each layer to its bbox without scaling and writes the
-rig to `src/content/bay/puppets.json`. The first layer, and any marked `sin_solape` without `movimiento` (a floor), stays still; a
+overlaps; `web_art.mjs` crops each layer to its bbox without scaling and writes the rig to
+`src/content/bay/puppets.json`. The first layer, and any marked `sin_solape` without `movimiento` (a floor), stays still; a
 floating piece (`movimiento`, like the groups of a school) turns around its own center;
 the rest drift 3°, or 1° when wider than 40% of the canvas, and a piece with a parent also follows
 its parent's motion (`follows`). Overlaps go at the back and follow their piece. The game uses

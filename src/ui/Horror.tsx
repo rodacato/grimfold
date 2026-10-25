@@ -14,7 +14,7 @@ export function Horror({ c, shadow = false }: { c: Creature; shadow?: boolean })
     <div className={className}>
       <Puppet
         name={name}
-        dir={`web/horrors/${c.id}`}
+        dir={`horrors/${c.id}`}
         size={rig.size}
         pieces={rig.pieces}
         width="100%"

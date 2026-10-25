@@ -3,7 +3,7 @@ import { type Piece, Puppet } from "./Puppet";
 
 const SCALE = 1.14;
 
-/** Cut from horrors/farolero/sheet.png. */
+/** Cut from assets/raw/horrors/farolero/sheet.png. */
 const PIECES: Piece[] = [
   { id: "senuelo", x: 4, y: 2, w: 271 * SCALE, pivot: [0.93, 0.98] },
   { id: "aleta-dorsal", x: 224, y: 0, w: 331 * SCALE, pivot: [0.15, 0.95] },

@@ -4,8 +4,8 @@ import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   base: "/grimfold/",
-  // The Codex originals are served as-is until the build stage generates web copies.
-  publicDir: "assets",
+  // Only the copies built by tools/art/web_art.mjs ship; the originals and candidates never do.
+  publicDir: "assets/web",
   plugins: [
     react(),
     VitePWA({
@@ -26,7 +26,7 @@ export default defineConfig({
           {
             urlPattern: ({ request }) => request.destination === "image",
             handler: "CacheFirst",
-            options: { cacheName: "art", expiration: { maxEntries: 200 } },
+            options: { cacheName: "art", expiration: { maxEntries: 800 } },
           },
         ],
       },

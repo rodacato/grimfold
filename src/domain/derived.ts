@@ -36,6 +36,24 @@ export const activeRequests = (place: Place, c: Campaign): Request[] =>
 export const requestWanting = (place: Place, c: Campaign, lootId: string): Request | undefined =>
   activeRequests(place, c).find((r) => r.wants === lootId);
 
+/** What the town is asking for right now: the open Encargos and the Capítulo's piece. */
+export function wantedLoot(place: Place, c: Campaign): string[] {
+  const chapter = c.chapterPiece ? [] : (place.chapters[c.chapter]?.wants ?? []);
+  return [...activeRequests(place, c).map((r) => r.wants), ...chapter];
+}
+
+/** The first Botín on the shelf nobody is asking for: the only kind a cebo may spend. */
+export const spareLoot = (place: Place, c: Campaign): number => {
+  const wanted = wantedLoot(place, c);
+  return c.shelf.findIndex((s) => !wanted.includes(s));
+};
+
+/** Cartas a cebo can call: the fishable ones that drop something the town wants. */
+export const baitable = (place: Place, c: Campaign): Creature[] =>
+  place.creatures.filter(
+    (cr) => cr.water !== null && !cr.unfishable && wantedLoot(place, c).includes(cr.loot),
+  );
+
 export function chapterReady(place: Place, c: Campaign): boolean {
   const chapter = place.chapters[c.chapter];
   if (!chapter) return false;

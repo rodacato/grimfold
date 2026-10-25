@@ -64,7 +64,7 @@ export function TideSheet({ place }: { place: Place }) {
         </tbody>
       </table>
       <ol className="rules">
-        {["descend", "fight", "bleed", "sanity", "wanderers", "farolero"].map((rule) => (
+        {["descend", "fight", "bleed", "sanity", "wanderers", "farolero", "bait"].map((rule) => (
           <li key={rule}>{t(`print.rule.${rule}`)}</li>
         ))}
       </ol>

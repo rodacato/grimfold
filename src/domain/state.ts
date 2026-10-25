@@ -1,6 +1,6 @@
 import type { EventId, GearPiece, IslandId, RoomKind, Shadow, WaterType, WreckId } from "./content";
 
-export const SAVE_VERSION = 6;
+export const SAVE_VERSION = 7;
 export const MAX_SCARS = 3;
 export const BASE_SANITY = 6;
 export const ROOMS_PER_SANITY = 3;
@@ -74,6 +74,8 @@ export interface Tide {
   hold: string[];
   /** Cartas that bit this Marea, so the next cast prefers another. */
   drawn: string[];
+  /** Bites first wherever it can, then is spent. */
+  bait: string | null;
   mutations: Mutation[];
   bite: { creature: string; shadow: Shadow } | null;
   fight: Fight | null;
@@ -92,6 +94,8 @@ export interface Campaign {
   chapterPiece: boolean;
   /** Cordura above the ceiling for the next Marea only, from handing back a Capítulo's piece. */
   solace: number;
+  /** The Carta a cebo calls on the next Marea. */
+  bait: string | null;
   scars: number;
   ending: null | "choose" | "faro" | "bajar";
   shelf: string[];
@@ -136,6 +140,7 @@ export function newCampaign(number: number): Campaign {
     chapterLight: false,
     chapterPiece: false,
     solace: 0,
+    bait: null,
     scars: 0,
     ending: null,
     shelf: [],

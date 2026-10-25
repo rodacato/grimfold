@@ -1,11 +1,13 @@
 import {
   activeRequests,
+  baitable,
   type Ctx,
   campaignLost,
   campaignMutations,
   chapterReady,
   maxHp,
   sanityCeiling,
+  spareLoot,
 } from "./derived";
 import { activeTide, newCampaign, type SessionEntry, type TideEnd } from "./state";
 import { createRooms } from "./tide/map";
@@ -21,6 +23,8 @@ export function startTide(ctx: Ctx): void {
   const c = g.campaign;
   const ceiling = sanityCeiling(c) + c.solace;
   c.solace = 0;
+  const bait = c.bait;
+  c.bait = null;
   g.tide = {
     number: c.tides + 1,
     startedAt: at,
@@ -43,6 +47,7 @@ export function startTide(ctx: Ctx): void {
     light: false,
     hold: [],
     drawn: [],
+    bait,
     mutations: campaignMutations(c),
     bite: null,
     fight: null,
@@ -102,6 +107,15 @@ export function giveChapterPiece({ g, place }: Ctx): void {
   c.shelf.splice(c.shelf.indexOf(piece), 1);
   c.chapterPiece = true;
   c.solace = 1;
+}
+
+/** Spends a Botín nobody asked for, so a Carta that drops one somebody did bites first next Marea. */
+export function setBait({ g, place }: Ctx, creatureId: string): void {
+  const c = g.campaign;
+  const spare = spareLoot(place, c);
+  if (g.tide || c.bait || spare < 0 || !baitable(place, c).some((cr) => cr.id === creatureId)) return;
+  c.shelf.splice(spare, 1);
+  c.bait = creatureId;
 }
 
 export function nextChapter({ g, place }: Ctx): void {

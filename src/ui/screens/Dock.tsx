@@ -3,10 +3,13 @@ import { canStartTide } from "../../domain/campaign";
 import type { GearPiece } from "../../domain/content";
 import {
   activeRequests,
+  baitable,
   campaignLost,
   campaignMutations,
   chapterReady,
+  creature,
   sanityCeiling,
+  spareLoot,
 } from "../../domain/derived";
 import { MAX_SCARS } from "../../domain/state";
 import { t } from "../../i18n/t";
@@ -112,6 +115,8 @@ export function Dock() {
   const ready = chapterReady(place, c);
   const piece = !c.chapterPiece && chapter.wants.find((w) => c.shelf.includes(w));
   const requests = activeRequests(place, c).slice(0, 3);
+  const spare = spareLoot(place, c);
+  const baits = baitable(place, c);
   const check = (done: boolean, text: string) => (
     <li className={done ? "done" : ""}>
       {done ? "✓" : "○"} {text}
@@ -211,6 +216,30 @@ export function Dock() {
         )}
       </section>
 
+      {(c.bait || (spare >= 0 && baits.length > 0)) && (
+        <section className="paper">
+          <h3>{t("dock.bait")}</h3>
+          {c.bait ? (
+            <p className="small">{t("dock.bait.set", { item: creature(place, c.bait).loot })}</p>
+          ) : (
+            <>
+              <p className="small">{t("dock.bait.how", { item: c.shelf[spare] as string })}</p>
+              <div className="actions">
+                {baits.map((cr) => (
+                  <Btn
+                    key={cr.id}
+                    sub={t(`water.${cr.water}`)}
+                    onClick={() => send({ type: "setBait", creature: cr.id })}
+                  >
+                    {t("dock.bait.for", { item: cr.loot })}
+                  </Btn>
+                ))}
+              </div>
+            </>
+          )}
+        </section>
+      )}
+
       <section className="paper dark crew">
         <ArponeraPuppet mutations={campaignMutations(c)} width={104} />
         <div>
@@ -248,7 +277,7 @@ export function Dock() {
       {canStartTide(ctx) && (
         <Btn
           kind="primary"
-          sub={t("dock.descend.sub", { sanity: sanityCeiling(c) })}
+          sub={t("dock.descend.sub", { sanity: sanityCeiling(c) + c.solace })}
           onClick={() => send({ type: "startTide" })}
         >
           {t("dock.descend")}

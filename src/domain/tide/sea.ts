@@ -124,7 +124,9 @@ export function drawPool(place: Place, water: WaterType, depth: number, drawn: s
 function drawCard({ g, place }: Ctx): Creature {
   const tide = activeTide(g);
   const water = (tide.rooms[tide.room] as Room).water;
-  const card = pick(g, drawPool(place, water, tide.depth, tide.drawn));
+  const baited = castPool(place, water, tide.depth).find((c) => c.id === tide.bait);
+  if (baited) tide.bait = null;
+  const card = baited ?? pick(g, drawPool(place, water, tide.depth, tide.drawn));
   tide.drawn.push(card.id);
   return card;
 }

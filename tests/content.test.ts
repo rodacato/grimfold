@@ -15,7 +15,6 @@ describe("the bay's content holds together", () => {
       ...bay.requests.map((r) => r.wants),
       ...bay.chapters.flatMap((c) => c.wants),
       bay.wreckLoot,
-      bay.abyssLoot,
     ];
     expect(named.filter((id) => !lootIds.has(id))).toEqual([]);
   });

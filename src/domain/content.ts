@@ -74,6 +74,4 @@ export interface Place {
   events: EventId[];
   /** Found while diving a wreck. */
   wreckLoot: string;
-  /** Brought up from the creature that cannot be fished. */
-  abyssLoot: string;
 }

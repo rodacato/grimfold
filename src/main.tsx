@@ -6,6 +6,7 @@ import { bay } from "./content/bay";
 import { indexedDbStorage } from "./infra/indexeddb";
 import { App } from "./ui/App";
 import { StoreContext } from "./ui/game";
+import { Rescue } from "./ui/Rescue";
 import "./ui/styles.css";
 
 registerSW({ immediate: true });
@@ -17,7 +18,9 @@ const store = await createStore(indexedDbStorage(), bay, { seed });
 createRoot(document.getElementById("root") as HTMLElement).render(
   <StrictMode>
     <StoreContext.Provider value={{ store, place: bay }}>
-      <App />
+      <Rescue store={store}>
+        <App />
+      </Rescue>
     </StoreContext.Provider>
   </StrictMode>,
 );

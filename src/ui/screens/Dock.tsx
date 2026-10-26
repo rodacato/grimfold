@@ -114,7 +114,7 @@ export function Dock() {
   if (!chapter) return null;
   const ready = chapterReady(place, c);
   const piece = !c.chapterPiece && chapter.wants.find((w) => c.shelf.includes(w));
-  const requests = activeRequests(place, c).slice(0, 3);
+  const requests = activeRequests(place, c);
   const spare = spareLoot(place, c);
   const baits = baitable(place, c);
   const check = (done: boolean, text: string) => (

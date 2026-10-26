@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { ItemUse } from "../domain/content";
-import { chapterReady, loot, maxHp, requestWanting } from "../domain/derived";
+import { loot, maxHp, requestWanting } from "../domain/derived";
 import { BASE_SANITY, HOLD_SIZE, type Tide } from "../domain/state";
 import { distance } from "../domain/tide/map";
 import { t } from "../i18n/t";
@@ -114,7 +114,7 @@ function HoldGuide({ tide }: { tide: Tide }) {
       {tide.hold.map((id, i) => {
         const use = loot(place, id).use;
         const request = requestWanting(place, c, id);
-        const forChapter = chapter?.wants.includes(id) && !chapterReady(place, c);
+        const forChapter = chapter?.wants.includes(id) && !c.chapterPiece;
         return (
           <li key={`${id}-${i}`}>
             <b className="named">

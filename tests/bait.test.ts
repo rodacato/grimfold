@@ -10,7 +10,8 @@ const send = (game: Game, command: Command): Game => reduce(game, { ...command, 
 function atTheActa(): Game {
   const game = newGame(3, bay.id);
   game.campaign.chapter = 1;
-  const spare = bay.loot.find((l) => !wantedLoot(bay, game.campaign).includes(l.id));
+  const asked = [...bay.requests.map((r) => r.wants), ...bay.chapters.flatMap((c) => c.wants)];
+  const spare = bay.loot.find((l) => !asked.includes(l.id));
   game.campaign.shelf = [spare?.id as string];
   return game;
 }

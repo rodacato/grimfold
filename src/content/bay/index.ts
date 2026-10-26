@@ -307,5 +307,4 @@ export const bay: Place = {
   islands: ["fogata", "observatorio"],
   events: ["boya", "nombre", "sal", "sirena"],
   wreckLoot: "brujula",
-  abyssLoot: "idolo",
 };

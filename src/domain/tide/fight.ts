@@ -115,13 +115,13 @@ export function cut(ctx: Ctx): void {
     return;
   }
   const fight = activeFight(ctx);
-  if (!fight) return;
+  if (!fight || creature(ctx.place, fight.creature).unfishable) return;
   if (fight.wanderer && changeHp(ctx, -1, "fight.rowAway")) return;
   tide.fight = null;
   tide.phase = "room";
 }
 
-/** What cannot be fished: cut and lose 1 Cordura, or hold on, lose 2 and bring something up. */
+/** What cannot be fished: cut and lose 1 Cordura, or hold on, lose 2 and land what it holds like any Botín. */
 export function endure(ctx: Ctx, holdOn: boolean): void {
   const fight = activeFight(ctx);
   if (!fight || !creature(ctx.place, fight.creature).unfishable) return;
@@ -134,32 +134,33 @@ export function endure(ctx: Ctx, holdOn: boolean): void {
     return;
   }
   if (loseSanity(ctx, 2, "abyss", "abyss.hold")) return;
-  if (tide.hold.length < HOLD_SIZE) tide.hold.push(ctx.place.abyssLoot);
-  note(ctx.g, "abyss.loot");
+  tide.loot = { creature: fight.creature, recorded: false };
+  tide.phase = "loot";
 }
 
 export function useItem(ctx: Ctx, index: number): void {
   const tide = activeTide(ctx.g);
   const id = tide.hold[index];
-  if (id === undefined) return;
+  if (id === undefined || tide.end) return;
   const use = loot(ctx.place, id).use;
   const fight = activeFight(ctx);
+  if (fight && creature(ctx.place, fight.creature).unfishable) return;
   const consume = () => tide.hold.splice(index, 1);
   if (use === "golpe" && fight) {
     consume();
     fight.damage += 2;
     fight.last = { key: "item.golpe", params: { item: id } };
     settle(ctx, fight);
-  } else if (use === "nudo" && fight) {
+  } else if (use === "nudo" && fight && fight.line < fight.knots) {
     consume();
-    fight.line = Math.min(fight.knots + 1, fight.line + 1);
+    fight.line++;
     fight.last = { key: "item.nudo", params: { item: id } };
   } else if (use === "ojo" && fight) {
     consume();
     fight.sees = true;
     fight.bonus++;
     fight.last = { key: "item.ojo", params: { item: id } };
-  } else if (use === "calma") {
+  } else if (use === "calma" && tide.sanity < tide.ceiling) {
     consume();
     gainSanity(ctx, 1, "item.calma");
   } else if (use === "huida" && tide.farolero !== null) {
@@ -173,10 +174,15 @@ export function useItem(ctx: Ctx, index: number): void {
   }
 }
 
-/** Writing a creature down costs Cordura ceiling for this Marea and helps forever. */
+/** Writing a creature down costs Cordura ceiling for this Marea and helps forever; never the last point. */
+export const canRecord = (g: Game): boolean => {
+  const tide = g.tide;
+  return tide?.phase === "loot" && !!tide.loot && !known(g, tide.loot.creature) && tide.ceiling > 1;
+};
+
 export function record(ctx: Ctx): void {
   const tide = activeTide(ctx.g);
-  if (tide.phase !== "loot" || !tide.loot || known(ctx.g, tide.loot.creature)) return;
+  if (!canRecord(ctx.g) || !tide.loot) return;
   ctx.g.bestiary.push(tide.loot.creature);
   tide.loot.recorded = true;
   tide.ceiling--;
@@ -190,6 +196,9 @@ export function stow(ctx: Ctx, choice: Stow): void {
   const tide = activeTide(ctx.g);
   if (tide.phase !== "loot" || !tide.loot) return;
   const item = creature(ctx.place, tide.loot.creature).loot;
+  const full = tide.hold.length >= HOLD_SIZE;
+  if (choice.to === "swap" && (!full || !(choice.drop >= 0 && choice.drop < tide.hold.length))) return;
+  if (choice.to === "hold" && full) return;
   if (choice.to === "swap") tide.hold.splice(choice.drop, 1);
   if (choice.to !== "sea" && tide.hold.length < HOLD_SIZE) tide.hold.push(item);
   tide.loot = null;

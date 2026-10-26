@@ -94,7 +94,7 @@ export function deliverRequest({ g, place }: Ctx, requestId: string): void {
   const c = g.campaign;
   const request = activeRequests(place, c).find((r) => r.id === requestId);
   const index = request ? c.shelf.indexOf(request.wants) : -1;
-  if (!request || index < 0) return;
+  if (g.tide || !request || index < 0) return;
   c.shelf.splice(index, 1);
   c.requestsDone.push(request.id);
   c.gear[request.gear] = Math.max(c.gear[request.gear], request.level);
@@ -103,13 +103,13 @@ export function deliverRequest({ g, place }: Ctx, requestId: string): void {
 export function giveChapterPiece({ g, place }: Ctx): void {
   const c = g.campaign;
   const piece = place.chapters[c.chapter]?.wants.find((w) => c.shelf.includes(w));
-  if (!piece || c.chapterPiece) return;
+  if (g.tide || !piece || c.chapterPiece) return;
   c.shelf.splice(c.shelf.indexOf(piece), 1);
   c.chapterPiece = true;
   c.solace = 1;
 }
 
-/** Spends a Botín nobody asked for, so a Carta that drops one somebody did bites first next Marea. */
+/** Spends a Botín nobody will ask for, so a Carta that drops one somebody did bites first next Marea. */
 export function setBait({ g, place }: Ctx, creatureId: string): void {
   const c = g.campaign;
   const spare = spareLoot(place, c);

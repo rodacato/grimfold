@@ -78,9 +78,10 @@ const handlers: Handlers = {
 };
 
 export function reduce(game: Game, action: Action, place: Place): Game {
+  const handle = handlers[action.type] as ((ctx: Ctx, command: Command) => void) | undefined;
+  if (!handle) return game;
   const g = structuredClone(game);
   g.notes = [];
-  const handle = handlers[action.type] as (ctx: Ctx, command: Command) => void;
   handle({ g, place, at: action.at }, action);
   return g;
 }

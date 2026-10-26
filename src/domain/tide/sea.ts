@@ -54,14 +54,14 @@ export function navigate(ctx: Ctx, destination: number): void {
   if (!tide.visited.includes(destination)) tide.visited.push(destination);
   assignContent(ctx, target);
   tide.turn++;
-  if (tide.turn % ROOMS_PER_SANITY === 0 && loseSanity(ctx, 1, "time", "sanity.time")) return;
-  if (g.campaign.chapter === place.chapters.length - 1 && tide.turn === 3 && tide.farolero === null) {
-    tide.farolero = place.map.lighthouse;
-    note(g, "farolero.wakesAlone", undefined, true);
-  }
   if (destination === place.map.dock) {
     endTide(ctx, "dock");
     return;
+  }
+  if (tide.turn % ROOMS_PER_SANITY === 0 && loseSanity(ctx, 1, "time", "sanity.time")) return;
+  if (g.campaign.chapter === place.chapters.length - 1 && tide.turn >= 3 && tide.farolero === null) {
+    tide.farolero = place.map.lighthouse;
+    note(g, "farolero.wakesAlone", undefined, true);
   }
   if (timePasses(ctx)) return;
   const threshold = tide.light ? WANDERER_SANITY_LIT : WANDERER_SANITY;
@@ -174,8 +174,9 @@ export function decide(ctx: Ctx, yes: boolean): void {
       if (!yes) break;
       const roll = d6(g);
       tide.lastRoll = [roll];
-      if (roll >= 5) {
-        if (tide.hold.length < HOLD_SIZE) tide.hold.push(place.wreckLoot);
+      if (roll >= 5 && tide.hold.length >= HOLD_SIZE) note(g, "wreck.bodega.full", { roll });
+      else if (roll >= 5) {
+        tide.hold.push(place.wreckLoot);
         note(g, "wreck.bodega.found", { roll });
       } else if (roll === 1) {
         if (changeHp(ctx, -2, "wreck.bodega.trapped")) return;

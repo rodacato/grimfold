@@ -1,8 +1,8 @@
 import { bayArt } from "../../content/bay/art";
 import type { Creature } from "../../domain/content";
-import { chapterReady, creature, known, loot, requestWanting } from "../../domain/derived";
+import { creature, known, loot, requestWanting } from "../../domain/derived";
 import { HOLD_SIZE, type Tide } from "../../domain/state";
-import { seesHp, targetFor } from "../../domain/tide/fight";
+import { canRecord, seesHp, targetFor } from "../../domain/tide/fight";
 import { t } from "../../i18n/t";
 import { Art, LootIcon } from "../Art";
 import { useGame } from "../game";
@@ -147,7 +147,7 @@ export function LootView() {
   const item = loot(place, c.loot);
   const full = tide.hold.length >= HOLD_SIZE;
   const chapter = place.chapters[game.campaign.chapter];
-  const forChapter = chapter?.wants.includes(item.id) && !chapterReady(place, game.campaign);
+  const forChapter = chapter?.wants.includes(item.id) && !game.campaign.chapterPiece;
   const request = requestWanting(place, game.campaign, item.id);
   const isKnown = known(game, c.id);
   const name = t(`creature.${c.id}`);
@@ -167,7 +167,7 @@ export function LootView() {
           <div className="face">
             <h2>{name}</h2>
             <p>
-              <span>{t("loot.hp", { n: c.hp })}</span>
+              {!c.unfishable && <span>{t("loot.hp", { n: c.hp })}</span>}
               <span>{t(`rarity.${c.rarity}`)}</span>
             </p>
           </div>
@@ -207,7 +207,11 @@ export function LootView() {
           </div>
         </section>
       ) : (
-        <Btn sub={t("loot.record.sub")} onClick={() => send({ type: "record" })}>
+        <Btn
+          sub={canRecord(game) ? t("loot.record.sub") : t("loot.record.tooFar")}
+          disabled={!canRecord(game)}
+          onClick={() => send({ type: "record" })}
+        >
           {t("loot.record")}
         </Btn>
       )}

@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { bay } from "../src/content/bay";
 import { reduce } from "../src/domain/actions";
 import { sanityCeiling } from "../src/domain/derived";
-import { newGame, WANDERER_SANITY } from "../src/domain/state";
+import { newGame, WANDERER_SANITY, WANDERER_SANITY_LIT } from "../src/domain/state";
 import { nextCommand } from "./support/bot";
 
 describe("losing Cordura says what it costs", () => {
@@ -17,8 +17,8 @@ describe("losing Cordura says what it costs", () => {
         game = reduce(game, { ...command, at: step * 15_000 }, bay);
         const after = game.tide;
         const sameTide = before && after && before.number === after.number;
-        const crossed =
-          sameTide && before.sanity > WANDERER_SANITY && after.sanity <= WANDERER_SANITY && after.sanity > 0;
+        const line = after?.light ? WANDERER_SANITY_LIT : WANDERER_SANITY;
+        const crossed = sameTide && before.sanity > line && after.sanity <= line && after.sanity > 0;
         const warned = game.notes.some((n) => n.key === "sanity.hunted");
         if (sameTide) expect(warned, `seed ${seed} step ${step}`).toBe(Boolean(crossed));
         if (crossed) crossings++;

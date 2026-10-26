@@ -1,10 +1,28 @@
 import type { GearPiece, Place } from "../domain/content";
+import { loot } from "../domain/derived";
 import { BASE_SANITY, CASTS_PER_ROOM, HOLD_SIZE, MAX_SCARS } from "../domain/state";
 import { t } from "../i18n/t";
-import { tideSheetRows } from "./d66";
+import { bitesByWater, tideSheetRows } from "./d66";
 
 const boxes = (n: number) => "☐ ".repeat(n).trim();
 const GEAR: GearPiece[] = ["cana", "sedal", "farol", "motor", "casco"];
+const MAX_HP = 15;
+const MAP_RULES = ["map", "wreck", "island", "event", "time"];
+const SEA_RULES = [
+  "descend",
+  "fight",
+  "bleed",
+  "line",
+  "loot",
+  "duerme",
+  "sanity",
+  "wanderers",
+  "light",
+  "farolero",
+  "wakesAlone",
+  "bait",
+];
+const CAMPAIGN_RULES = ["home", "lost"];
 
 export function TideSheet({ place }: { place: Place }) {
   const { nodes, size } = place.map;
@@ -35,12 +53,34 @@ export function TideSheet({ place }: { place: Place }) {
         ))}
       </svg>
       <p>
-        {t("print.tide.hp")} {boxes(12)} · {t("print.tide.sanity")} {boxes(BASE_SANITY)}
+        {t("print.tide.hp")} {boxes(MAX_HP)} <small>{t("print.tide.hpNote")}</small> ·{" "}
+        {t("print.tide.sanity")} {boxes(BASE_SANITY)}
       </p>
       <p>
         {t("print.tide.hold")} {boxes(HOLD_SIZE)} · {t("print.tide.rooms")} {boxes(12)} ·{" "}
         {t("print.tide.casts", { n: CASTS_PER_ROOM })}
       </p>
+      <ol className="rules">
+        {MAP_RULES.map((rule) => (
+          <li key={rule}>{t(`print.rule.${rule}`)}</li>
+        ))}
+      </ol>
+      <h2>{t("print.bites.title")}</h2>
+      <p>{t("print.bites.how")}</p>
+      <ul className="bites" data-testid="bites">
+        {bitesByWater(place).map(([water, cards]) => (
+          <li key={water} data-water={water}>
+            <b>
+              {t(`water.${water}`)} ({t("print.bites.max", { n: place.maxDepth[water] })}):
+            </b>{" "}
+            {cards.map((c, i) => (
+              <span key={c.id} data-creature={c.id}>
+                {i + 1}. {t(`creature.${c.id}`)} ({c.depth}){" "}
+              </span>
+            ))}
+          </li>
+        ))}
+      </ul>
       <table className="d66" data-testid="d66">
         <thead>
           <tr>
@@ -49,22 +89,27 @@ export function TideSheet({ place }: { place: Place }) {
             <th>{t("print.col.where")}</th>
             <th>{t("print.col.hp")}</th>
             <th>{t("print.col.loot")}</th>
+            <th>{t("print.col.use")}</th>
           </tr>
         </thead>
         <tbody>
-          {tideSheetRows(place).map(({ d66, creature: c }) => (
-            <tr key={d66} data-d66={d66}>
-              <td>{d66}</td>
-              <td>{t(`creature.${c.id}`)}</td>
-              <td>{c.water ? `${t(`water.${c.water}`)} ${c.depth}` : t("fight.wanderer")}</td>
-              <td>{c.unfishable ? "—" : c.hp}</td>
-              <td>{t(`loot.${c.loot}`)}</td>
-            </tr>
-          ))}
+          {tideSheetRows(place).map(({ d66, creature: c }) => {
+            const use = loot(place, c.loot).use;
+            return (
+              <tr key={d66} data-d66={d66}>
+                <td>{d66}</td>
+                <td>{t(`creature.${c.id}`)}</td>
+                <td>{c.water ? `${t(`water.${c.water}`)} ${c.depth}` : t("fight.wanderer")}</td>
+                <td>{c.unfishable ? "—" : c.hp}</td>
+                <td>{t(`loot.${c.loot}`)}</td>
+                <td>{use ? t(`use.${use}`) : t("use.none")}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
       <ol className="rules">
-        {["descend", "fight", "bleed", "sanity", "wanderers", "farolero", "bait"].map((rule) => (
+        {SEA_RULES.map((rule) => (
           <li key={rule}>{t(`print.rule.${rule}`)}</li>
         ))}
       </ol>
@@ -88,13 +133,26 @@ export function CampaignSheet({ place }: { place: Place }) {
         {t("print.campaign.scars", { max: MAX_SCARS })} {boxes(MAX_SCARS)}
       </p>
       <h2>{t("print.campaign.chapters")}</h2>
-      <p>{t("dock.givePiece.sub")}</p>
-      <ol>
+      <ol className="chapters">
         {place.chapters.map((c) => (
           <li key={c.id}>
-            ☐ {t(`chapter.${c.id}.title`)} — {t("dock.needsLight")}
-            {c.wants.length > 0 && ` + ${c.wants.map((w) => t(`loot.${w}`)).join(t("dock.or"))}`}
+            <p>
+              ☐ <b>{t(`chapter.${c.id}.title`)}</b> — {t("dock.needsLight")}
+              {c.wants.length > 0 && ` + ${c.wants.map((w) => t(`loot.${w}`)).join(t("dock.or"))}`}
+            </p>
+            <p className="voice">
+              “{t(`chapter.${c.id}.says`)}” — {t(`person.${c.by}`)}
+            </p>
+            <p>{t(`chapter.${c.id}.hint`)}</p>
+            <p className="upside-down">
+              <small>{t("print.campaign.fold")}</small> {t(`chapter.${c.id}.reveals`)}
+            </p>
           </li>
+        ))}
+      </ol>
+      <ol className="rules">
+        {CAMPAIGN_RULES.map((rule) => (
+          <li key={rule}>{t(`print.rule.${rule}`)}</li>
         ))}
       </ol>
       <h2>{t("print.campaign.requests")}</h2>
@@ -118,7 +176,7 @@ export function PrintPage({ place }: { place: Place }) {
   return (
     <div className="print">
       <nav className="no-print">
-        <a href="#/">{t("nav.back")}</a> ·{" "}
+        <a href="#/">{t("nav.back")}</a>
         <button type="button" onClick={() => window.print()}>
           {t("print.go")}
         </button>

@@ -1,8 +1,9 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import { bay } from "../../src/content/bay";
+import { castPool } from "../../src/domain/tide/sea";
 import { t } from "../../src/i18n/t";
-import { isD66 } from "../../src/print/d66";
+import { bitesByWater, isD66 } from "../../src/print/d66";
 import { TideSheet } from "../../src/print/Sheets";
 
 const rowsOf = (html: string) =>
@@ -30,5 +31,30 @@ describe("N3b: the Hoja de marea carries the same Mazo as the app", () => {
       expect(row?.html, c.id).toContain(t(`loot.${c.loot}`));
       if (!c.unfishable) expect(row?.html, c.id).toContain(`<td>${c.hp}</td>`);
     }
+  });
+
+  it("lists, per water, the Cartas a cast can draw, the ones that fit a depth always first", () => {
+    for (const [water, cards] of bitesByWater(bay)) {
+      for (let depth = 1; depth <= bay.maxDepth[water]; depth++) {
+        const pool = castPool(bay, water, depth);
+        const fits = cards.filter((c) => c.depth <= depth);
+        const onPaper = fits.length ? fits : cards.filter((c) => c.depth === cards[0]?.depth);
+        expect(
+          onPaper.map((c) => c.id),
+          `${water} ${depth}`,
+        ).toEqual(cards.slice(0, pool.length).map((c) => c.id));
+        expect(new Set(onPaper.map((c) => c.id)), `${water} ${depth}`).toEqual(
+          new Set(pool.map((c) => c.id)),
+        );
+      }
+    }
+    const html = renderToStaticMarkup(<TideSheet place={bay} />);
+    const listed = [...html.matchAll(/data-creature="([^"]+)"/g)].map((m) => m[1]);
+    expect(listed.sort()).toEqual(
+      bay.creatures
+        .filter((c) => c.water)
+        .map((c) => c.id)
+        .sort(),
+    );
   });
 });

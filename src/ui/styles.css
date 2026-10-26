@@ -1392,12 +1392,40 @@ body::after {
 .sheet-map {
   width: 60%;
 }
+.sheet .rules li + li,
+.sheet .chapters li + li {
+  margin-top: 4px;
+}
+.sheet .bites {
+  list-style: none;
+  padding: 0;
+}
+.sheet .upside-down {
+  padding: 4px 6px;
+  border: 1px dashed black;
+  transform: rotate(180deg);
+}
 .print {
   min-height: 100dvh;
   background: white;
 }
 .print .no-print {
-  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+}
+.print .no-print a,
+.print .no-print button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1.5px solid black;
+  background: white;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
 }
 @media print {
   html,

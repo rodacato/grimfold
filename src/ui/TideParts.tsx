@@ -28,7 +28,7 @@ export function Status({ tide }: { tide: Tide }) {
       ? t("place.dock")
       : tide.room === place.map.lighthouse
         ? t("place.lighthouse")
-        : t("place.room", { n: tide.room, water: t(`water.${room?.water}`) });
+        : t("place.room", { kind: t(`room.${room?.kind}`), water: t(`water.${room?.water}`) });
   const next = nextMark(tide);
   const eye = (i: number) =>
     `${i >= tide.ceiling ? "capped" : i < tide.sanity ? "" : "shut"} ${i === MARK_LINE[next] ? "edge" : ""}`;
@@ -83,10 +83,12 @@ export function Status({ tide }: { tide: Tide }) {
         )}
         {tide.farolero !== null && tide.phase !== "end" && (
           <span className="badge chase">
-            {t("status.farolero", {
-              farolero: farolero.name,
-              n: distance(place.map.nodes, tide.farolero, tide.room),
-            })}
+            {tide.farolero === tide.room
+              ? t("status.farolero.here", { farolero: farolero.name })
+              : t("status.farolero", {
+                  farolero: farolero.name,
+                  n: distance(place.map.nodes, tide.farolero, tide.room),
+                })}
           </span>
         )}
       </div>

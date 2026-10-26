@@ -201,14 +201,7 @@ export function LootView() {
         </ul>
       )}
 
-      {isKnown ? (
-        <section className="paper">
-          <div className="diary">
-            {t(`creature.${c.id}.diary`)}
-            <cite>— {t(`person.${c.diaryBy}`)}</cite>
-          </div>
-        </section>
-      ) : (
+      {!isKnown && (
         <Btn
           sub={canRecord(game) ? t("loot.record.sub") : t("loot.record.tooFar")}
           disabled={!canRecord(game)}
@@ -216,6 +209,28 @@ export function LootView() {
         >
           {t("loot.record")}
         </Btn>
+      )}
+      <div className="actions two">
+        <Btn
+          kind="primary"
+          sub={full ? t("loot.toHold.full") : t("loot.toHold.sub")}
+          disabled={full}
+          onClick={() => send({ type: "stow", choice: { to: "hold" } })}
+        >
+          {t("loot.toHold")}
+        </Btn>
+        <Btn sub={t("loot.toSea.sub")} onClick={() => send({ type: "stow", choice: { to: "sea" } })}>
+          {t("loot.toSea")}
+        </Btn>
+      </div>
+
+      {isKnown && (
+        <section className="paper">
+          <div className="diary">
+            {t(`creature.${c.id}.diary`)}
+            <cite>— {t(`person.${c.diaryBy}`)}</cite>
+          </div>
+        </section>
       )}
 
       <section className="paper">
@@ -249,19 +264,6 @@ export function LootView() {
           })}
         </ul>
       </section>
-      <div className="actions two">
-        <Btn
-          kind="primary"
-          sub={t("loot.toHold.sub")}
-          disabled={full}
-          onClick={() => send({ type: "stow", choice: { to: "hold" } })}
-        >
-          {t("loot.toHold")}
-        </Btn>
-        <Btn sub={t("loot.toSea.sub")} onClick={() => send({ type: "stow", choice: { to: "sea" } })}>
-          {t("loot.toSea")}
-        </Btn>
-      </div>
     </Screen>
   );
 }

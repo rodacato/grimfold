@@ -203,7 +203,16 @@ export function SeaMap() {
           </Btn>
         </section>
       )}
-      {!target && canStay && <Btn onClick={() => send({ type: "stayHere" })}>{t("map.stay")}</Btn>}
+      {!target && tide.light && <p className="warn">{t("map.flee")}</p>}
+      {!target &&
+        canStay &&
+        (tide.light ? (
+          <button type="button" className="link" onClick={() => send({ type: "stayHere" })}>
+            {t("map.stay")}
+          </button>
+        ) : (
+          <Btn onClick={() => send({ type: "stayHere" })}>{t("map.stay")}</Btn>
+        ))}
       <Items when="map" />
     </Screen>
   );

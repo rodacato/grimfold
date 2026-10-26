@@ -39,7 +39,7 @@ export function App() {
   const Phase = PHASES[game.tide.phase];
   return (
     <>
-      <Status tide={game.tide} />
+      {game.tide.phase !== "end" && <Status tide={game.tide} />}
       <Phase />
     </>
   );

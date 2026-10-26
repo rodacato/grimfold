@@ -485,6 +485,67 @@ body::after {
   inset: 0 0 auto;
   pointer-events: none;
 }
+.town.compact .art {
+  height: 170px;
+}
+.town.compact .title {
+  padding-top: 10px;
+}
+.town.compact .title h1 {
+  font-size: 40px;
+}
+
+.go {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  margin: 0 -14px;
+  padding: 10px 14px max(12px, env(safe-area-inset-bottom));
+  background: linear-gradient(transparent, var(--night) 22%);
+}
+
+.bait summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  min-height: 44px;
+  list-style: none;
+  cursor: pointer;
+}
+.bait summary::-webkit-details-marker {
+  display: none;
+}
+.bait summary::after {
+  content: "▸";
+  margin-left: auto;
+}
+.bait[open] summary::after {
+  content: "▾";
+}
+.bait-options {
+  display: grid;
+  gap: 6px;
+  padding: 0;
+  list-style: none;
+}
+.bait-options button {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+.bait-options small {
+  font-weight: 800;
+  color: var(--muted);
+}
 
 .chapter {
   display: grid;
@@ -659,7 +720,7 @@ body::after {
 }
 .footer-nav a {
   display: inline-block;
-  padding: 10px 6px;
+  padding: 14px 6px;
   font-weight: 800;
   text-underline-offset: 3px;
 }

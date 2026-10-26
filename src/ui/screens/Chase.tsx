@@ -83,13 +83,21 @@ export function TideEndView() {
       n: game.bestiary.length,
       of: place.creatures.length,
     }),
-    t("end.keeps.gear"),
-    how === "dock" ? t("end.keeps.shelf", { n: tide.hold.length }) : t("end.keeps.holdLost"),
   ];
+  const lostThings: string[] = [];
+  if (lost) lostThings.push(t("end.loses.campaign"));
+  else kept.push(t("end.keeps.gear"));
+  if (how === "dock") {
+    if (tide.light) kept.push(t("end.keeps.light"));
+    if (tide.hold.length > 0) kept.push(t("end.keeps.shelf", { n: tide.hold.length }));
+  } else {
+    if (tide.light) lostThings.push(t("end.loses.light"));
+    if (!lost && tide.hold.length > 0) lostThings.push(t("end.loses.hold", { n: tide.hold.length }));
+  }
   if (how === "transformed" && !lost) {
     const latest = campaignMutations(c).at(-1);
     if (latest) kept.push(t("end.keeps.mutation", { mutation: t(`mutation.${latest}.short`) }));
-    kept.push(t("end.keeps.ceiling", { n: sanityCeiling(c) }));
+    lostThings.push(t("end.loses.ceiling", { n: sanityCeiling(c) }));
   }
   const marked = how === "transformed" ? campaignMutations(c) : tide.mutations;
   return (
@@ -116,6 +124,16 @@ export function TideEndView() {
             <li key={k}>{k}</li>
           ))}
         </ul>
+        {lostThings.length > 0 && (
+          <>
+            <h3>{t("end.loses")}</h3>
+            <ul className="keeps lost">
+              {lostThings.map((k) => (
+                <li key={k}>{k}</li>
+              ))}
+            </ul>
+          </>
+        )}
       </section>
       {how === "dock" && tide.light ? (
         <Btn kind="primary" onClick={() => setDawn(true)}>

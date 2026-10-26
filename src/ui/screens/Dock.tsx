@@ -125,7 +125,7 @@ export function Dock() {
 
   return (
     <Screen>
-      <div className="town">
+      <div className={`town ${c.tides > 0 ? "compact" : ""}`}>
         <div className="panels">
           {bayArt.town.map((src) => (
             <Art key={src} src={src} alt={t("dock.town")} />
@@ -216,28 +216,30 @@ export function Dock() {
         )}
       </section>
 
-      {(c.bait || (spare >= 0 && baits.length > 0)) && (
+      {c.bait && (
         <section className="paper">
           <h3>{t("dock.bait")}</h3>
-          {c.bait ? (
-            <p className="small">{t("dock.bait.set", { item: creature(place, c.bait).loot })}</p>
-          ) : (
-            <>
-              <p className="small">{t("dock.bait.how", { item: c.shelf[spare] as string })}</p>
-              <div className="actions">
-                {baits.map((cr) => (
-                  <Btn
-                    key={cr.id}
-                    sub={t("dock.bait.where", { water: t(`water.${cr.water}`), depth: cr.depth })}
-                    onClick={() => send({ type: "setBait", creature: cr.id })}
-                  >
-                    {t("dock.bait.for", { item: cr.loot })}
-                  </Btn>
-                ))}
-              </div>
-            </>
-          )}
+          <p className="small">{t("dock.bait.set", { item: creature(place, c.bait).loot })}</p>
         </section>
+      )}
+      {!c.bait && spare >= 0 && baits.length > 0 && (
+        <details className="paper bait">
+          <summary>
+            <h3>{t("dock.bait")}</h3>
+            <span className="small">{t("dock.bait.summary", { item: c.shelf[spare] as string })}</span>
+          </summary>
+          <p className="small">{t("dock.bait.how")}</p>
+          <ul className="bait-options">
+            {baits.map((cr) => (
+              <li key={cr.id}>
+                <button type="button" onClick={() => send({ type: "setBait", creature: cr.id })}>
+                  <b>{t(`loot.${cr.loot}`)}</b>
+                  <small>{t("dock.bait.where", { water: t(`water.${cr.water}`), depth: cr.depth })}</small>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </details>
       )}
 
       <section className="paper dark crew">
@@ -276,13 +278,15 @@ export function Dock() {
       </section>
 
       {canStartTide(ctx) && (
-        <Btn
-          kind="primary"
-          sub={t("dock.descend.sub", { sanity: sanityCeiling(c) + c.solace })}
-          onClick={() => send({ type: "startTide" })}
-        >
-          {t("dock.descend")}
-        </Btn>
+        <div className="go">
+          <Btn
+            kind="primary"
+            sub={t("dock.descend.sub", { sanity: sanityCeiling(c) + c.solace })}
+            onClick={() => send({ type: "startTide" })}
+          >
+            {t("dock.descend")}
+          </Btn>
+        </div>
       )}
 
       <nav className="footer-nav">

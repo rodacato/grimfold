@@ -24,4 +24,21 @@ describe("every Sala you stand in has something in it", () => {
     }
     expect(wanderersOnArrival).toBeGreaterThan(0);
   });
+
+  it("puts the mar profundo on open water, so Capítulo 3 can be fished and the wreck is never behind it", () => {
+    for (let seed = 1; seed <= 200; seed++) {
+      let game = newGame(seed, bay.id);
+      game = reduce(game, { type: "startTide", at: 0 }, bay);
+      const rooms = game.tide?.rooms ?? [];
+      const deep = rooms.filter((r) => r.water === "profundo");
+      expect(
+        deep.map((r) => r.kind),
+        `seed ${seed}`,
+      ).toEqual(["water"]);
+      expect(
+        rooms.filter((r) => r.kind === "wreck"),
+        `seed ${seed}`,
+      ).toHaveLength(1);
+    }
+  });
 });

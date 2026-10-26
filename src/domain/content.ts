@@ -64,9 +64,9 @@ export interface Place {
     lighthouse: number;
     /** Per node, the water types it may roll; the dock and the lighthouse are fixed. */
     waters: WaterType[][];
-    /** One of these nodes becomes mar profundo. */
+    /** One of these nodes becomes mar profundo, always open water. */
     deepAt: number[];
-    /** Shuffled over the nodes that are neither the dock nor the lighthouse. */
+    /** Shuffled over the other nodes that are neither the dock nor the lighthouse. */
     rooms: RoomKind[];
   };
   wrecks: WreckId[];

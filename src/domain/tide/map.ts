@@ -59,6 +59,7 @@ export function createRooms({ g, place }: Ctx): Room[] {
     const water: WaterType = i === deep ? "profundo" : choices.length ? pick(g, choices) : "rio";
     if (i === map.dock) return room("dock", "rio", true);
     if (i === map.lighthouse) return room("lighthouse", "mar", false);
+    if (i === deep) return room("water", water, false);
     return room(kinds[next++] ?? "water", water, false);
   });
 }

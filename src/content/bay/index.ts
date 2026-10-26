@@ -301,7 +301,7 @@ export const bay: Place = {
     lighthouse: 7,
     waters: [[], ["rio"], ["rio", "lago"], ["lago", "mar"], ["mar"], ["mar"], ["mar"], []],
     deepAt: [4, 5],
-    rooms: ["water", "water", "water", "wreck", "island", "event"],
+    rooms: ["water", "water", "wreck", "island", "event"],
   },
   wrecks: ["cofre", "bodega"],
   islands: ["fogata", "observatorio"],

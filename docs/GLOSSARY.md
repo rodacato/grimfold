@@ -13,7 +13,7 @@
 
 | Term | Means | Not to confuse with | In code |
 |---|---|---|---|
-| Arponera | The only Personaje: the lighthouse keeper's daughter. Persists across Mareas | Farolero: her father, changed | `Hero` |
+| Arponera | The only Personaje: the lighthouse keeper's daughter. Persists across Mareas | Farolero: what keeps her father's watch in the tower | `Hero` |
 | Muelle | The town's dock: the screen between Mareas, where the Capítulo, the Encargos and the Equipo live | Mapa's starting Sala, which is also the Muelle | `Dock` |
 | Campaña | One playthrough of the Historia, from the first Capítulo to a Final or to the third Marca | Marea: one outing inside it | `Campaign` |
 | Marea | One outing to sea: from Bajar to coming back (or not). Playable in ≤10 min | Campaña | `Tide` |
@@ -23,7 +23,7 @@
 | Final | One of the two endings, chosen after the third Capítulo: light the lighthouse or go down to him | — | `Ending` |
 | Encargo | A townsperson asks for a specific Botín; delivering it raises one Equipo piece a level | Capítulo | `Request` |
 | Repisa | Where the Botín brought home is kept between Mareas, waiting for an Encargo or a Capítulo | Bodega: what you carry at sea | `Shelf` |
-| Cebo | A Botín nobody asked for, spent at the Muelle so a Carta that drops something wanted is the first bite in its water next Marea | Encargo: a trade for Equipo | `bait` |
+| Cebo | A Botín nobody asked for, spent at the Muelle so a Carta that drops something wanted is the first bite next Marea, when you cast in its water as deep as it lives | Encargo: a trade for Equipo | `bait` |
 | Marca | What a transformation leaves: the Cordura maximum drops 1 for the rest of the Campaña and the Mutación stays. The third Marca loses the Campaña | Mutación: the power a Marca brings | `Scar` |
 | Mutación | A power gained by losing Cordura: Ojos de bruma (see Vida), Brazo de ventosas (+1 damage). Temporary within a Marea, permanent once it comes with a Marca | Equipo | `Mutation` |
 | Bestiario | The record of the creatures you chose to write down. Writing one costs Cordura maximum for that Marea; it survives across Campañas | Mazo | `Bestiary` |

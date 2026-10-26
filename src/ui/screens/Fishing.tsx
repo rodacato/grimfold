@@ -42,7 +42,9 @@ export function Bite() {
         <Btn kind="primary" onClick={() => send({ type: "pull" })}>
           {t("bite.pull")}
         </Btn>
-        <Btn onClick={() => send({ type: "cut" })}>{t("bite.cut")}</Btn>
+        <Btn sub={t("bite.cut.sub")} onClick={() => send({ type: "cut" })}>
+          {t("bite.cut")}
+        </Btn>
       </div>
     </Screen>
   );

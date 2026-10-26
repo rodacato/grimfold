@@ -228,7 +228,7 @@ export function Dock() {
                 {baits.map((cr) => (
                   <Btn
                     key={cr.id}
-                    sub={t(`water.${cr.water}`)}
+                    sub={t("dock.bait.where", { water: t(`water.${cr.water}`), depth: cr.depth })}
                     onClick={() => send({ type: "setBait", creature: cr.id })}
                   >
                     {t("dock.bait.for", { item: cr.loot })}
@@ -248,7 +248,7 @@ export function Dock() {
             <p className="small">
               <b>{t("dock.scars", { n: c.scars, max: MAX_SCARS, sanity: sanityCeiling(c) })}</b>{" "}
               {campaignMutations(c)
-                .map((m) => t(`mutation.${m}`))
+                .map((m) => t(`mutation.${m}.short`))
                 .join(" ")}
             </p>
           ) : (

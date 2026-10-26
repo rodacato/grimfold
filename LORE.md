@@ -166,9 +166,9 @@ fragments to come.
 |---|---|
 | Chela closed the door | anguila diary · Cap. 3 » *"Yo cerré la puerta"* · her key ring (portrait, pending) |
 | Chela took the page | e2 (the archive's rat) · Cap. 2 » *"Falta una página"* · Tomás's torn book (portrait, pending) |
-| The keeper switched it off himself | anguila » *"Yo no lo apagué"* · linterna diary · the lamp room's empty chair (art) |
-| Marta went to the fire | the rebozo (fogata art and text) · lucio diary · her rebozo (portrait, pending) |
-| Marta's daughter had his eyes | e9 » *"No preguntes de quién"* · lucio diary |
+| The keeper switched it off himself | anguila » *"Yo no lo apagué"* · linterna » *"La última noche subió solo a la torre"* · the lamp room's empty chair (art) |
+| Marta went to the fire | the rebozo (fogata art and text) · e4 » *"yo ya no tengo rebozo"* · her rebozo (portrait, pending) |
+| Marta's daughter had his eyes | e9 » *"No preguntes de quién"* · lucio » *"Para los ojos no hay costumbre"* |
 | The Ruelas son | cangrejo » *"Faltan los de los Ruelas"* · tiburón · naufragio-ruelas |
 | The sea learns her | reina diary · evento nombre · the Marcas |
 | It has happened before | esturión diary (1911) · ajolote diary · lago-campanario |

@@ -3,7 +3,7 @@ import type { EventId, IslandId, WreckId } from "../../domain/content";
 import type { Room, Tide } from "../../domain/state";
 import { CASTS_PER_ROOM } from "../../domain/state";
 import { castsLeft } from "../../domain/tide/sea";
-import { t } from "../../i18n/t";
+import { hasString, t } from "../../i18n/t";
 import { Art } from "../Art";
 import { FaroleroPuppet, useFarolero } from "../Farolero";
 import { useGame } from "../game";
@@ -11,6 +11,8 @@ import { Btn, Roll, Screen } from "../Paper";
 import { Items } from "../TideParts";
 
 const DEPTHS = [1, 2, 3, 4];
+
+const sub = (key: string): string | undefined => (hasString(`${key}.sub`) ? t(`${key}.sub`) : undefined);
 
 function Hook({ used }: { used: boolean }) {
   return (
@@ -172,7 +174,7 @@ export function RoomView() {
           <h2>{t(`island.${id}.text`)}</h2>
         </section>
         <div className="actions">
-          <Btn kind="primary" onClick={() => send({ type: "explore" })}>
+          <Btn kind="primary" sub={sub(`island.${id}.yes`)} onClick={() => send({ type: "explore" })}>
             {t(`island.${id}.yes`)}
           </Btn>
           {back}
@@ -192,10 +194,16 @@ export function RoomView() {
         <h2>{t(`${prefix}.${id}.text`)}</h2>
       </section>
       <div className="actions two">
-        <Btn kind="primary" onClick={() => send({ type: "decide", yes: true })}>
+        <Btn
+          kind="primary"
+          sub={sub(`${prefix}.${id}.yes`)}
+          onClick={() => send({ type: "decide", yes: true })}
+        >
           {t(`${prefix}.${id}.yes`)}
         </Btn>
-        <Btn onClick={() => send({ type: "decide", yes: false })}>{t(`${prefix}.${id}.no`)}</Btn>
+        <Btn sub={sub(`${prefix}.${id}.no`)} onClick={() => send({ type: "decide", yes: false })}>
+          {t(`${prefix}.${id}.no`)}
+        </Btn>
       </div>
     </Screen>
   );

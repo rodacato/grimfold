@@ -32,7 +32,7 @@ async function press(command: Command): Promise<void> {
     case "stayHere":
       return button(t("map.stay")).click();
     case "descend":
-      return button(/^Bajar a/).click();
+      return button(/^Más hondo/).click();
     case "cast":
       return button(/^LANZAR/).click();
     case "pull":

@@ -88,7 +88,7 @@ export function TideEndView() {
   ];
   if (how === "transformed" && !lost) {
     const latest = campaignMutations(c).at(-1);
-    if (latest) kept.push(t("end.keeps.mutation", { mutation: t(`mutation.${latest}`) }));
+    if (latest) kept.push(t("end.keeps.mutation", { mutation: t(`mutation.${latest}.short`) }));
     kept.push(t("end.keeps.ceiling", { n: sanityCeiling(c) }));
   }
   const marked = how === "transformed" ? campaignMutations(c) : tide.mutations;

@@ -5,9 +5,9 @@ const strings: Record<string, string> = { ...ui, ...bay };
 
 export type Params = Record<string, string | number>;
 
-/** `item` params are loot ids, translated in place. */
+/** `item` params are loot ids, translated in place. A `<key>.one` string, when present, is used for n = 1. */
 export function t(key: string, params?: Params): string {
-  const template = strings[key];
+  const template = (params?.n === 1 && strings[`${key}.one`]) || strings[key];
   if (template === undefined) {
     if (import.meta.env?.DEV) console.warn(`missing string ${key}`);
     return key;

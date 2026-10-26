@@ -3,7 +3,7 @@ import { bay } from "../src/content/bay";
 import { bayArt, type Rig } from "../src/content/bay/art";
 import rigs from "../src/content/bay/puppets.json";
 import { castPool, drawPool } from "../src/domain/tide/sea";
-import { hasString } from "../src/i18n/t";
+import { hasString, t } from "../src/i18n/t";
 
 const lootIds = new Set(bay.loot.map((l) => l.id));
 const WATERS = ["rio", "lago", "mar", "profundo"] as const;
@@ -98,5 +98,17 @@ describe("the bay's content holds together", () => {
       ]),
     ];
     expect(keys.filter((k) => !hasString(k))).toEqual([]);
+  });
+});
+
+describe("the locale", () => {
+  it("speaks of one thing in the singular", () => {
+    expect(t("bestiary.caught", { n: 1 })).toMatch(/^1 pescada\./);
+    expect(t("bestiary.caught", { n: 2 })).toMatch(/^2 pescadas\./);
+    expect(t("status.farolero", { farolero: "Algo", n: 1 })).toBe("Algo a 1 Sala");
+  });
+
+  it("every mutation has a line that holds outside the sea", () => {
+    expect(["ojos", "brazo"].filter((m) => !hasString(`mutation.${m}.short`))).toEqual([]);
   });
 });

@@ -40,7 +40,9 @@ function Entry({ c, isKnown }: { c: Creature; isKnown: boolean }) {
           <cite>— {t(`person.${c.diaryBy}`)}</cite>
         </div>
       ) : (
-        <p className="small voice">{t("bestiary.notRecorded")}</p>
+        <p className="small voice">
+          {t(c.unfishable ? "bestiary.notRecorded.unfishable" : "bestiary.notRecorded")}
+        </p>
       )}
     </div>
   );

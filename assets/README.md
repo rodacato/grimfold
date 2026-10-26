@@ -10,9 +10,13 @@ Two halves, and only one is in git:
   them `web/` cannot be rebuilt.
 - **`web/`, tracked and generated, never edited:** the copies the game loads and the site publishes
   (`publicDir`). `node --env-file=.env tools/art/web_art.mjs` builds it from `raw/`: horrors keyed out
-  of their petrol and scaled to 900 px, puppet layers cropped to their bbox, everything as PNG, and
-  every PNG over 20 KB compressed with TinyPNG when `TINYPNG` is set. `tinify.json` records what was
-  already compressed, so a rerun spends no quota on unchanged files. Card backs ship scaled to 600 px.
+  of their petrol and scaled to 900 px, puppet layers and overlaps cropped to their bbox, everything as
+  PNG, and every PNG over 20 KB compressed with TinyPNG when `TINYPNG` is set. `tinify.json` records
+  what was already compressed, so a rerun spends no quota on unchanged files. Card backs ship at
+  600 px, portraits at 384 px, Botín and Equipo icons at 192 px: they are drawn far smaller than
+  delivered, and a phone decodes every pixel. The run also writes `src/ui/art-versions.json`, a hash
+  per file that the game adds to each URL, because a redrawn file keeps its name and an installed
+  game would otherwise keep the old one in its cache.
 
 New deliveries from Codex go to `raw/pending/`.
 

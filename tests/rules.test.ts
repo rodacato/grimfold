@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { bay } from "../src/content/bay";
 import { type Command, reduce } from "../src/domain/actions";
 import { spareLoot } from "../src/domain/derived";
-import { type Game, HOLD_SIZE, newGame, type Room, type Tide } from "../src/domain/state";
+import { type Game, HOLD_SIZE, newGame, type Tide } from "../src/domain/state";
 import { startFight } from "../src/domain/tide/fight";
 
 const send = (game: Game, command: Command): Game => reduce(game, { ...command, at: 0 }, bay);

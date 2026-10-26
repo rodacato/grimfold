@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Art } from "./Art";
+import { Art, artUrl } from "./Art";
 
 export interface Piece {
   id: string;
@@ -36,8 +36,8 @@ const motion = (p: Piece) =>
   (p.sway ? { "--sway": `${p.sway}deg`, "--beat": `${p.beat}s` } : {}) as React.CSSProperties;
 
 export function Puppet({ name, dir, size: [w, h], pieces, width, className = "", children }: Props) {
-  const [missing, setMissing] = useState(false);
-  if (missing) return <Art src={null} alt={name} className="art" />;
+  const [failed, setFailed] = useState<string | null>(null);
+  if (failed === dir) return <Art src={null} alt={name} className="art" />;
   const byId = new Map(pieces.map((p) => [p.id, p]));
 
   // Full-canvas wrappers turning around an ancestor's pivot keep every piece a sibling, so stacking holds.
@@ -65,9 +65,10 @@ export function Puppet({ name, dir, size: [w, h], pieces, width, className = "",
           <img
             key={p.id}
             className={`piece ${p.id}`}
-            src={`${import.meta.env.BASE_URL}${dir}/${p.file ?? `${p.id}.png`}`}
+            src={artUrl(`${dir}/${p.file ?? `${p.id}.png`}`)}
+            decoding="async"
             alt=""
-            onError={() => setMissing(true)}
+            onError={() => setFailed(dir)}
             style={{
               left: pct(p.x, w),
               top: pct(p.y, h),

@@ -1,5 +1,18 @@
 import { type ReactNode, useState } from "react";
 import { bayArt } from "../content/bay/art";
+import versions from "./art-versions.json";
+
+/** The published URL of a file in assets/web, versioned so a redrawn file is never served from an old cache. */
+export function artUrl(rel: string): string {
+  const version = (versions as Record<string, string>)[rel];
+  return `${import.meta.env.BASE_URL}${rel}${version ? `?v=${version}` : ""}`;
+}
+
+/** Remembers which source failed, so a new source gets its own chance. */
+function useMissing(src: string | null) {
+  const [failed, setFailed] = useState<string | null>(null);
+  return [src !== null && failed === src, () => setFailed(src)] as const;
+}
 
 /** A Botín's picture beside its name; one without art yet shows only the name. */
 export function LootIcon({
@@ -11,14 +24,17 @@ export function LootIcon({
   big?: boolean;
   fallback?: ReactNode;
 }) {
-  const [missing, setMissing] = useState(false);
+  const src = bayArt.loot(id);
+  const [missing, miss] = useMissing(src);
   if (missing) return fallback;
   return (
     <img
       className={`loot-icon ${big ? "big" : ""}`}
-      src={`${import.meta.env.BASE_URL}${bayArt.loot(id)}`}
+      src={artUrl(src)}
       alt=""
-      onError={() => setMissing(true)}
+      loading="lazy"
+      decoding="async"
+      onError={miss}
     />
   );
 }
@@ -31,7 +47,7 @@ interface Props {
 
 /** Codex art when the file exists; otherwise a paper silhouette, so art never blocks a screen. */
 export function Art({ src, alt, className = "art" }: Props) {
-  const [missing, setMissing] = useState(false);
+  const [missing, miss] = useMissing(src);
   if (!src || missing) {
     return (
       <div className={`${className} silhouette`} role="img" aria-label={alt}>
@@ -40,11 +56,6 @@ export function Art({ src, alt, className = "art" }: Props) {
     );
   }
   return (
-    <img
-      className={className}
-      src={`${import.meta.env.BASE_URL}${src}`}
-      alt={alt}
-      onError={() => setMissing(true)}
-    />
+    <img className={className} src={artUrl(src)} alt={alt} loading="lazy" decoding="async" onError={miss} />
   );
 }

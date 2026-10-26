@@ -5,6 +5,7 @@ import type { Room, Tide } from "../../domain/state";
 import { blocked, isNeighbor, visible } from "../../domain/tide/map";
 import { castsLeft } from "../../domain/tide/sea";
 import { t } from "../../i18n/t";
+import { artUrl } from "../Art";
 import { useFarolero } from "../Farolero";
 import { useGame } from "../game";
 import { Btn, Screen } from "../Paper";
@@ -107,7 +108,7 @@ export function SeaMap() {
         <svg viewBox={`0 0 ${size.width} ${size.height}`} role="img" aria-label={t("map.title")}>
           <rect width={size.width} height={size.height} fill="var(--sea)" />
           <image
-            href={`${import.meta.env.BASE_URL}${bayArt.chart}`}
+            href={artUrl(bayArt.chart)}
             width={size.width}
             height={size.height}
             preserveAspectRatio="xMidYMid slice"

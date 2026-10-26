@@ -83,8 +83,9 @@ made from its own edge pixels and covered by its parent at rest.
 
 From batch 3 on, Codex delivers this without generating images: `cortes.json` carries `parent` and
 `orden_superior_a_inferior`, and `solapes.json` lists the overlaps (`solape-*`) and any cavity fill
-(`relleno-*`). Batches 1–2 have no overlaps, so their large pieces (a sturgeon's crest) show seams
-past 1–2°; the rig turns them less (below).
+(`relleno-*`). Batches 1–2 came without overlaps and showed cracks as their pieces turned;
+`tools/art/overlaps.py <horror dir>` derives them from the cuts: each moving piece's solid edge
+pixels, grown up to 14 px under paper that never moves, so no other piece can uncover them.
 
 **What a good sheet looks like:** each moving piece carries a small rectangular tab at its joint
 (that tab is where the pivot goes), and the body has a dark fill wherever a piece used to cover it.

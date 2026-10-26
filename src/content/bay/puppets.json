@@ -3,6 +3,116 @@
     "size": [1254, 1254],
     "pieces": [
       {
+        "id": "solape-pata-posterior-izquierda",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-pata-posterior-izquierda.png",
+        "follows": ["pata-posterior-izquierda"]
+      },
+      {
+        "id": "solape-cola",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-cola.png",
+        "follows": ["cola"]
+      },
+      {
+        "id": "solape-pata-posterior-derecha",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-pata-posterior-derecha.png",
+        "follows": ["pata-posterior-derecha"]
+      },
+      {
+        "id": "solape-brazo-izquierdo",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-brazo-izquierdo.png",
+        "follows": ["brazo-izquierdo"]
+      },
+      {
+        "id": "solape-brazo-derecho",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-brazo-derecho.png",
+        "follows": ["brazo-derecho"]
+      },
+      {
+        "id": "solape-branquia-izquierda-alta",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-branquia-izquierda-alta.png",
+        "follows": ["branquia-izquierda-alta"]
+      },
+      {
+        "id": "solape-branquia-izquierda-media",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-branquia-izquierda-media.png",
+        "follows": ["branquia-izquierda-media"]
+      },
+      {
+        "id": "solape-branquia-izquierda-baja",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-branquia-izquierda-baja.png",
+        "follows": ["branquia-izquierda-baja"]
+      },
+      {
+        "id": "solape-branquia-derecha-alta",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-branquia-derecha-alta.png",
+        "follows": ["branquia-derecha-alta"]
+      },
+      {
+        "id": "solape-branquia-derecha-media",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-branquia-derecha-media.png",
+        "follows": ["branquia-derecha-media"]
+      },
+      {
+        "id": "solape-branquia-derecha-baja",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-branquia-derecha-baja.png",
+        "follows": ["branquia-derecha-baja"]
+      },
+      {
         "id": "cuerpo",
         "x": 307,
         "y": 238,
@@ -331,6 +441,96 @@
   "bagre": {
     "size": [1254, 1254],
     "pieces": [
+      {
+        "id": "solape-aleta-dorsal",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-dorsal.png",
+        "follows": ["aleta-dorsal"]
+      },
+      {
+        "id": "solape-aleta-pectoral-izquierda",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-pectoral-izquierda.png",
+        "follows": ["aleta-pectoral-izquierda"]
+      },
+      {
+        "id": "solape-aleta-pectoral-derecha",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-pectoral-derecha.png",
+        "follows": ["aleta-pectoral-derecha"]
+      },
+      {
+        "id": "solape-aleta-caudal",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-caudal.png",
+        "follows": ["aleta-caudal"]
+      },
+      {
+        "id": "solape-mandibula-inferior",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-mandibula-inferior.png",
+        "follows": ["mandibula-inferior"]
+      },
+      {
+        "id": "solape-mano-branquial-izquierda",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-mano-branquial-izquierda.png",
+        "follows": ["mano-branquial-izquierda"]
+      },
+      {
+        "id": "solape-mano-branquial-derecha",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-mano-branquial-derecha.png",
+        "follows": ["mano-branquial-derecha"]
+      },
+      {
+        "id": "solape-barbillas-izquierdas",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-barbillas-izquierdas.png",
+        "follows": ["barbillas-izquierdas"]
+      },
+      {
+        "id": "solape-barbillas-derechas",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-barbillas-derechas.png",
+        "follows": ["barbillas-derechas"]
+      },
       {
         "id": "cuerpo",
         "x": 0,
@@ -1010,6 +1210,106 @@
   "esturion": {
     "size": [1254, 1254],
     "pieces": [
+      {
+        "id": "solape-aleta-pectoral-lejana",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-pectoral-lejana.png",
+        "follows": ["aleta-pectoral-lejana"]
+      },
+      {
+        "id": "solape-aleta-ventral-media",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-ventral-media.png",
+        "follows": ["aleta-ventral-media"]
+      },
+      {
+        "id": "solape-aleta-rear-lejana",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-rear-lejana.png",
+        "follows": ["aleta-rear-lejana"]
+      },
+      {
+        "id": "solape-aleta-rear-cercana",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-rear-cercana.png",
+        "follows": ["aleta-rear-cercana"]
+      },
+      {
+        "id": "solape-aleta-superior-posterior",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-superior-posterior.png",
+        "follows": ["aleta-superior-posterior"]
+      },
+      {
+        "id": "solape-aleta-caudal",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-caudal.png",
+        "follows": ["aleta-caudal"]
+      },
+      {
+        "id": "solape-cresta-dorsal",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-cresta-dorsal.png",
+        "follows": ["cresta-dorsal"]
+      },
+      {
+        "id": "solape-aleta-pectoral-cercana",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-aleta-pectoral-cercana.png",
+        "follows": ["aleta-pectoral-cercana"]
+      },
+      {
+        "id": "solape-barbillones",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-barbillones.png",
+        "follows": ["barbillones"]
+      },
+      {
+        "id": "solape-mandibula",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-mandibula.png",
+        "follows": ["mandibula"]
+      },
       {
         "id": "cuerpo",
         "x": 93,
@@ -3263,6 +3563,96 @@
   "raya": {
     "size": [1254, 1254],
     "pieces": [
+      {
+        "id": "solape-ala-izquierda",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-ala-izquierda.png",
+        "follows": ["ala-izquierda"]
+      },
+      {
+        "id": "solape-ala-derecha",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-ala-derecha.png",
+        "follows": ["ala-derecha"]
+      },
+      {
+        "id": "solape-cola",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-cola.png",
+        "follows": ["cola"]
+      },
+      {
+        "id": "solape-palpos-izquierdos",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-palpos-izquierdos.png",
+        "follows": ["palpos-izquierdos"]
+      },
+      {
+        "id": "solape-palpos-derechos",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-palpos-derechos.png",
+        "follows": ["palpos-derechos"]
+      },
+      {
+        "id": "solape-mandibula-superior-izquierda",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-mandibula-superior-izquierda.png",
+        "follows": ["mandibula-superior-izquierda"]
+      },
+      {
+        "id": "solape-mandibula-superior-derecha",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-mandibula-superior-derecha.png",
+        "follows": ["mandibula-superior-derecha"]
+      },
+      {
+        "id": "solape-mandibula-inferior-izquierda",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-mandibula-inferior-izquierda.png",
+        "follows": ["mandibula-inferior-izquierda"]
+      },
+      {
+        "id": "solape-mandibula-inferior-derecha",
+        "x": 0,
+        "y": 0,
+        "w": 1254,
+        "h": 1254,
+        "pivot": null,
+        "file": "solape-mandibula-inferior-derecha.png",
+        "follows": ["mandibula-inferior-derecha"]
+      },
       {
         "id": "cuerpo",
         "x": 365,

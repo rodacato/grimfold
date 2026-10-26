@@ -2350,5 +2350,161 @@
  "people/tomas.png": {
   "source": "80a8ca9dc9474072d8e276c60b6ec88badd56e552e616f93b1a3b0c4b64da065",
   "tiny": true
+ },
+ "horrors/ajolote/solape-pata-posterior-izquierda.png": {
+  "source": "c97781a97ad651d190806465834e06551c54e070f73a9198bd012c8f20233659",
+  "tiny": false
+ },
+ "horrors/ajolote/solape-cola.png": {
+  "source": "032011bc09558e79535e8c3f1b101b60b7c897bcd96ba8835d92302b1c50ff07",
+  "tiny": false
+ },
+ "horrors/ajolote/solape-pata-posterior-derecha.png": {
+  "source": "aa5a798c6e10d4f13a45e0a8b117a12e771c0669d40fead842a56ef8af78d8ef",
+  "tiny": false
+ },
+ "horrors/ajolote/solape-brazo-izquierdo.png": {
+  "source": "3340dc311957fe4c334f9c2cdc57aa7570a0629975e869d4ed55b0b65527622e",
+  "tiny": false
+ },
+ "horrors/ajolote/solape-brazo-derecho.png": {
+  "source": "ad0e0b72fb744f1aa6d63af8506bfa509e06a3c6ba2d1adb387f9063d9be269e",
+  "tiny": false
+ },
+ "horrors/ajolote/solape-branquia-izquierda-alta.png": {
+  "source": "24adfb81e92a9371ff2678886843238675417de0cbe106148cb0450721c474e3",
+  "tiny": false
+ },
+ "horrors/ajolote/solape-branquia-izquierda-media.png": {
+  "source": "79283b8516517c9f1da982a35955ba6e6ee6d26b669db6b30d78e2b094791ad6",
+  "tiny": false
+ },
+ "horrors/ajolote/solape-branquia-izquierda-baja.png": {
+  "source": "bf006e35917e52a1eb1133d1d38760b17e5b4da36bb8107679ad07dca4462225",
+  "tiny": false
+ },
+ "horrors/ajolote/solape-branquia-derecha-alta.png": {
+  "source": "096e4590cf3fb178ade84d943d74d5b00083c614576c42b38fd61dc8a80bf339",
+  "tiny": false
+ },
+ "horrors/ajolote/solape-branquia-derecha-media.png": {
+  "source": "05ba53319af797c5a0444bd0490fb8328e23ab8963ce0ea90f72ed5f162bf100",
+  "tiny": false
+ },
+ "horrors/ajolote/solape-branquia-derecha-baja.png": {
+  "source": "3eb635a428dabf1ade6b2089d1bf42041361e40cd0dd611f5d7a93a2a2573d28",
+  "tiny": false
+ },
+ "horrors/bagre/solape-aleta-dorsal.png": {
+  "source": "d6f02dde982b7a79292fa0b2b9355a0a7a71aeb36574282542d5b464316c52bd",
+  "tiny": false
+ },
+ "horrors/bagre/solape-aleta-pectoral-izquierda.png": {
+  "source": "65b9744da67140555f2a3e275b821be40c67a484878a9876c9e342707295ad55",
+  "tiny": false
+ },
+ "horrors/bagre/solape-aleta-pectoral-derecha.png": {
+  "source": "51888ed5e0aabaca097d443b0c5f6b4eaf25b41a0208d581d3446a47d57bfb21",
+  "tiny": false
+ },
+ "horrors/bagre/solape-aleta-caudal.png": {
+  "source": "5f31773099e13a72bb9065ec35068fab2f098f5b35f7471006c614f8199793e9",
+  "tiny": false
+ },
+ "horrors/bagre/solape-mandibula-inferior.png": {
+  "source": "481099e8d5d43def52006d0912471a081f18ae6ae7f814dc52cf37ef56aec0c1",
+  "tiny": false
+ },
+ "horrors/bagre/solape-mano-branquial-izquierda.png": {
+  "source": "15e57f58de926b1e0c5cdc542f79dfb1a2d038c52ece736407dee8a981be9f05",
+  "tiny": false
+ },
+ "horrors/bagre/solape-mano-branquial-derecha.png": {
+  "source": "60aa9f3a9c5fb554e6cf60a67156c705791fff4dbe09d0e1e03ca9d2ef684575",
+  "tiny": false
+ },
+ "horrors/bagre/solape-barbillas-izquierdas.png": {
+  "source": "a6312be2420da7eae5a54a928073a1e8c72a000c142d627c9dee9111d00556bf",
+  "tiny": false
+ },
+ "horrors/bagre/solape-barbillas-derechas.png": {
+  "source": "97b217c5f9769ce12cd06d088e9cfa4a813eb2b04d324723cc031f950df845fd",
+  "tiny": true
+ },
+ "horrors/esturion/solape-aleta-pectoral-lejana.png": {
+  "source": "4475bce053b14659e8bf2ebc3156546428714353c91ee168df50115a70369cb0",
+  "tiny": false
+ },
+ "horrors/esturion/solape-aleta-ventral-media.png": {
+  "source": "3102eb7b52cc51486bb605be9c08d0111457ec866b38d16e8805e97dc9d54872",
+  "tiny": false
+ },
+ "horrors/esturion/solape-aleta-rear-lejana.png": {
+  "source": "4fecc9adf98f0f7e867dcafcc620ac7e745e32fa2175a05ee6e9dd454b8d90c3",
+  "tiny": false
+ },
+ "horrors/esturion/solape-aleta-rear-cercana.png": {
+  "source": "d4a1739e856fe09d010cf49ed2e066ecdb8410052d0e7b2bf78c6eb840f0a592",
+  "tiny": false
+ },
+ "horrors/esturion/solape-aleta-superior-posterior.png": {
+  "source": "6b1b14c8ed16ddf900524d2e972a35cf659deca23615aedfc39fb454d730e790",
+  "tiny": false
+ },
+ "horrors/esturion/solape-aleta-caudal.png": {
+  "source": "4cbecd6342cc94e833b18a9288ab2fcb505576ee94f9ee7d2b45e73605f0dc7a",
+  "tiny": false
+ },
+ "horrors/esturion/solape-cresta-dorsal.png": {
+  "source": "d42202e1b120ccd0491de4e644574298970e4103bb6b01285a45b94164cb7c68",
+  "tiny": true
+ },
+ "horrors/esturion/solape-aleta-pectoral-cercana.png": {
+  "source": "fd2bf91a4f9b643286941142cb2e6a8f608fd7a4c8d967a92be736b4212f538b",
+  "tiny": false
+ },
+ "horrors/esturion/solape-barbillones.png": {
+  "source": "f7b581bac10046846046aedc9ac3e506d715eaf11aba70e45b7038e0bc1ef4c2",
+  "tiny": false
+ },
+ "horrors/esturion/solape-mandibula.png": {
+  "source": "224ac19bd9924c793d69f414dc029a84bce9308a74fdb9255b9f0e6f3aad36cd",
+  "tiny": true
+ },
+ "horrors/raya/solape-ala-izquierda.png": {
+  "source": "fb967a0516c9c7523732bd762e1d707fe33fe7161c7c2c816d8bff1cc36040c8",
+  "tiny": false
+ },
+ "horrors/raya/solape-ala-derecha.png": {
+  "source": "17d8e4c1dd977bf67e1524ecc95a08624bde9173989d28ab4edb33f51abc5e5f",
+  "tiny": false
+ },
+ "horrors/raya/solape-cola.png": {
+  "source": "68022cf7034e4d2493949c16507188a07f89ef03c61e5a41307fed3442d263b5",
+  "tiny": false
+ },
+ "horrors/raya/solape-palpos-izquierdos.png": {
+  "source": "4c69e1dc817ea8318e6dc8e15bdb8f9f78e5ae5f788e9619346a405dce9083cb",
+  "tiny": false
+ },
+ "horrors/raya/solape-palpos-derechos.png": {
+  "source": "84b994f41ee998c0b43657fd8ebc5472455a87352e0945a49c52116b30040aab",
+  "tiny": false
+ },
+ "horrors/raya/solape-mandibula-superior-izquierda.png": {
+  "source": "4d0321875ad1e363b163cebcd20abbda3ff38cba42a4b5176eb08b70db22094c",
+  "tiny": false
+ },
+ "horrors/raya/solape-mandibula-superior-derecha.png": {
+  "source": "b7447babff803109748679c9470a33a8a763719efa6c224aaaa49f8741577434",
+  "tiny": false
+ },
+ "horrors/raya/solape-mandibula-inferior-izquierda.png": {
+  "source": "9def972f5a2293a14102e48c0a19bb827d030193f482596d3f0c1fe134bcaf6e",
+  "tiny": false
+ },
+ "horrors/raya/solape-mandibula-inferior-derecha.png": {
+  "source": "1851bce4b117d459687f46ee1a79079add4cbeaf7740777d0a0a3baeaca9d959",
+  "tiny": true
  }
 }

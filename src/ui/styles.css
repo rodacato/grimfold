@@ -500,6 +500,7 @@ body::after {
   height: 96px;
   object-fit: cover;
   object-position: 50% 20%;
+  background: var(--abyss);
   transform: rotate(-2deg);
   box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.4);
 }

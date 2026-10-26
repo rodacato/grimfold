@@ -16,7 +16,7 @@ export const bayArt = {
   learned: { reina: "reina-retazo" } as Record<string, string>,
   /** What a bite shows before the Carta surfaces: only its size. */
   cardBack: (shadow: Shadow) => `cards/dorso-${shadow}.png`,
-  person: (id: string) => `redo/${id}.png`,
+  person: (id: string) => `people/${id}.png`,
   loot: (id: string) => `loot/${id}.png`,
   gear: (piece: GearPiece, level: number) =>
     `gear/${piece === "casco" ? (level >= 2 ? "casco-reforzado" : "casco-madera") : piece}.png`,

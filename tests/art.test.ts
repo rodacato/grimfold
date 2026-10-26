@@ -22,6 +22,11 @@ describe("the art the game asks for is in assets/web", () => {
     expect(scenes.filter((p) => !shipped(p))).toEqual([]);
   });
 
+  it("a portrait for everyone who asks for a Capítulo", () => {
+    const portraits = bay.chapters.map((c) => bayArt.person(c.by));
+    expect(portraits.filter((p) => !shipped(p))).toEqual([]);
+  });
+
   it("every Botín, and every Equipo piece at each level", () => {
     const loot = bay.loot.map((l) => bayArt.loot(l.id));
     const gear = (["cana", "sedal", "farol", "motor", "casco"] as const).flatMap((g) =>

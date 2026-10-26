@@ -31,9 +31,10 @@ asset earns motion, without redrawing anything.
 |---|---|---|---|
 | Horrors | One creature on `#FF00FF` | Puppet sheet, then exact cuts | A puppet once its exact cuts arrive; a still until then |
 | The Arponera | Stage 1 on `#FF00FF` | Puppet sheet **plus mutation pieces** | Sheet; stage 4 is a separate base |
-| Locations | Vertical 9:16 scene | Layer sheet | Sheet only where the player stays: the four waters, the lighthouse, the Muelle |
-| Townspeople | One bust on `#FF00FF` | — | Stills |
-| Objects, loot, card backs | An item sheet, up to 9 | — | Stills |
+| Locations | Horizontal 1536×1024 scene; town panels 9:16 | Layer sheet | Stills; a sheet only for `pueblo-muelle` first, as a probe |
+| Townspeople | One transparent bust, built like the Arponera | — | Stills |
+| Objects, loot, Equipo | One transparent item each | — | Stills |
+| Card backs | One opaque 5:7 card per Sombra | — | Stills |
 
 Every sheet uses a flat `#FF00FF` background: it is the color the scripts remove, and nothing in
 the palette is close to it.
@@ -41,9 +42,8 @@ the palette is close to it.
 ### Format lines for step 1
 
 - **Creature or person:** `Isolated, centered, complete, on a plain flat #FF00FF background. No text.`
-- **Location:** `A vertical 9:16 portrait scene for a phone. Sky and far background in the top third,
-  the main subject in the middle, water across the bottom third. Keep the bottom fifth calm and
-  uncluttered: the game draws buttons there. No people, no text.`
+- **Location:** `A wide horizontal 1536x1024 scene. The main subject in the middle third; the game
+  shows it in a short wide strip, so nothing important at the very top or bottom. No people, no text.`
 
 ## 1. Puppet sheet (horrors and the Arponera)
 

@@ -24,13 +24,11 @@ text, and its format (still, puppet sheet, item sheet or layers).
 | Equipment | All five pieces, both cascos, the boat | — |
 | Cards | The three card backs, on the bite screen | The printed deck's layout |
 | Locations | Every Sala and Evento, the lamp room, the chart, the three town panels | Layer sheets for what moves |
-| Townspeople | Five portraits, shown in the Capítulos | All five are in `redo/`: off-style, to redraw |
+| Townspeople | Five portraits, in style, shown in the Capítulos | — |
 
 **Next, in order:**
 
-1. **Townspeople redrawn.** They are the face of every Capítulo and the only art still off-style;
-   what is wrong, what to attach and the prompt are under *Townspeople*.
-2. **One layer sheet, `pueblo-muelle`, as a probe.** If it changes how the Muelle feels, then
+1. **One layer sheet, `pueblo-muelle`, as a probe.** If it changes how the Muelle feels, then
    `faro-lampara`; the other (moves) marks wait for that answer.
 
 ## Style lock (paste with every request)
@@ -57,9 +55,7 @@ No text, labels or frames.
 - Entries marked **(moves)** get a sheet in the MVP. The rest are stills.
 - Lovecraft is hinted, never shown or named: no full-body gods.
 
-**Redo before anything new:** what is in `assets/raw/redo/` was delivered but does not match the style
-references. Unticked below until redone; attach the three references plus the old image as content
-only.
+**Off-style art** is kept as a content reference only, never shipped, next to what replaced it (`v1/` folders).
 
 ## Locations
 
@@ -134,41 +130,21 @@ images of their own.
 
 ## Townspeople (bestiary diary)
 
-Bust portraits, shown beside each Capítulo and diary page. The current five are in `raw/redo/`
-(their v2 poses in `raw/candidates/characters/` have the same problem): they ship, but stay unticked
-until redrawn.
+Bust portraits, transparent 1254×1254 in `assets/raw/people/`, shown beside each Capítulo. Built
+like the Arponera: a face of a few flat planes, simple eyes, one triangle nose, blocky hands. The
+first, painted ones are in `raw/people/v1/` as content references only; their v2 poses in
+`raw/candidates/characters/` were never used.
 
-**What is wrong with them.** They are painted, not cut: faces modeled with soft volume and
-wrinkles, realistic hands with every finger shaded, hundreds of small torn flakes, fine fiber
-texture everywhere. Next to the Arponera they look like another game. Keep who they are (face, age,
-hair, clothes, props, the gesture); change only how they are made.
+To request another person, attach `characters/arponera.png` (how to build a human),
+`horrors/farolero.png` and `objects/farol.png` (paper and palette), and any earlier image of them as
+content only; the prompts that worked are in `raw/people/prompts.json`.
 
-**Attach, in this order:**
-
-1. `assets/raw/characters/arponera.png` — the only person already in style: the face is a few flat
-   planes, eyes are simple shapes, the nose is one paper triangle, hands are blocky.
-2. `assets/raw/horrors/farolero.png` and `assets/raw/objects/farol.png` — the paper and the palette.
-3. The person's old portrait from `raw/redo/<id>.png` — **content only**: who they are and what they
-   hold, never how it is drawn.
-
-**One request per person**, this text after the style lock:
-
-```
-Townspeople bust portrait for the same game. Image 1 (the harpooner) is the style for people:
-redraw the person in the LAST image the way image 1 is made. Keep their identity, age, hair,
-clothes, props and gesture from the last image; throw away its rendering. Face built from 5–8 flat
-paper planes, simple shape eyes, a single triangle nose, no wrinkles drawn with shading; hands as
-a few blocky pieces; clothes as large flat shapes with one or two tears. Head to upper waist,
-centered, irregular hand-cut bottom edge, generous margin. Square 1254x1254 on flat petrol #123f45,
-no scenery, no other people, no text.
-```
-
-- [ ] `chela` — **Chela, la del muelle.** Apron, a huge key ring, looks sideways like someone who knows.
-- [ ] `tomas` — **don Tomás, el del registro.** Glasses, a record book under his arm with a page torn out.
-- [ ] `nico` — **Nico, nueve años.** Slingshot and a small bell around his neck; the only one looking straight ahead.
-- [ ] `marta` — **Marta.** Rebozo, a jar of baby teeth pressed to her chest.
-- [ ] `ruelas` — **Ruelas padre.** Old fisherman with a cap; the mark of a missing ring on his finger.
-- [ ] `marta-mayor` — **Marta, years later** (only if the epilogue held in [LORE.md](LORE.md) is made): grey hair, the same rebozo and jar. Attach the new `marta` as content, not the old one.
+- [x] `chela` — **Chela, la del muelle.** Apron, a huge key ring, looks sideways like someone who knows.
+- [x] `tomas` — **don Tomás, el del registro.** Glasses, a record book under his arm with a page torn out.
+- [x] `nico` — **Nico, nueve años.** Slingshot and a small bell around his neck; the only one looking straight ahead.
+- [x] `marta` — **Marta.** About 70, silver braid, rebozo, a jar of baby teeth pressed to her chest.
+- [x] `ruelas` — **Ruelas padre.** Old fisherman with a cap; the mark of a missing ring on his finger.
+- [ ] `marta-mayor` — Not needed while Marta is already old; only if the *Prendes el faro* epilogue in [LORE.md](LORE.md) is made, with the new `marta` as content.
 
 ## Equipment
 

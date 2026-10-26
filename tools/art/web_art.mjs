@@ -51,15 +51,14 @@ const pngs = (dir, skip = []) =>
   readdirSync(join(ASSETS, dir)).filter((f) => f.endsWith(".png") && !skip.some((s) => f.startsWith(s)));
 
 const stage = mkdtempSync(join(tmpdir(), "grimfold-web-"));
-/** Published path → whether it may be compressed; redo/ is redrawn soon, so it ships as delivered. */
-const staged = new Map();
+const staged = new Set();
 
-function put(rel, make, compress = true) {
+function put(rel, make) {
   mkdirSync(dirname(join(stage, rel)), { recursive: true });
   make(join(stage, rel));
-  staged.set(rel, compress);
+  staged.add(rel);
 }
-const copy = (rel, compress = true) => put(rel, (out) => copyFileSync(join(ASSETS, rel), out), compress);
+const copy = (rel) => put(rel, (out) => copyFileSync(join(ASSETS, rel), out));
 const ffmpeg = (src, filter, out) => run("ffmpeg", ["-loglevel", "error", "-y", "-i", src, "-vf", filter, out]);
 
 for (const f of ["pueblo-muelle", "pueblo-centro", "pueblo-loma"]) copy(`town/${f}.png`);
@@ -69,7 +68,7 @@ for (const f of pngs("gear")) copy(`gear/${f}`);
 copy("characters/arponera-del-mar.png");
 for (const f of pngs("characters/arponera", ["sheet", "ojos-bruma-parche"])) copy(`characters/arponera/${f}`);
 copy("objects/bote.png");
-for (const f of pngs("redo")) copy(`redo/${f}`, false);
+for (const f of pngs("people")) copy(`people/${f}`);
 for (const f of pngs("cards")) put(`cards/${f}`, (out) => ffmpeg(join(ASSETS, "cards", f), "scale=600:-1:flags=lanczos", out));
 for (const f of pngs("horrors", ["farolero"])) {
   put(`horrors/${f}`, (out) => ffmpeg(join(ASSETS, "horrors", f), KEY_AND_SIZE, out));
@@ -139,11 +138,11 @@ async function tinify(src) {
 
 let compressed = 0;
 let count = "?";
-for (const [rel, compress] of staged) {
+for (const rel of staged) {
   const src = join(stage, rel);
   const out = join(WEB, rel);
   const source = createHash("sha256").update(readFileSync(src)).digest("hex");
-  const tiny = compress && Boolean(auth) && statSync(src).size > TINY_FROM;
+  const tiny = Boolean(auth) && statSync(src).size > TINY_FROM;
   const done = cache[rel];
   if (existsSync(out) && done?.source === source && (done.tiny || !tiny)) continue;
   mkdirSync(dirname(out), { recursive: true });

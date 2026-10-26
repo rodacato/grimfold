@@ -179,26 +179,6 @@
   "source": "265eded2ea32ab36da5cde45deecf0889bc2472f984d37296c19e2411b33fa02",
   "tiny": true
  },
- "redo/chela.png": {
-  "source": "7396af571c173bdc78734c18e8efe5e7c76921884f5c4ef8ab060d1bae3a075c",
-  "tiny": false
- },
- "redo/marta.png": {
-  "source": "f74fcd28bf5d5ac0290a099398dd83b24a877b931f2058e3c2577a2c8dc7e459",
-  "tiny": false
- },
- "redo/nico.png": {
-  "source": "a42b9bb884db1b190f053898fd1d0a691807b1229d8b926ab3b7162774fb464f",
-  "tiny": false
- },
- "redo/ruelas.png": {
-  "source": "28117f2c8b6823f0bb8e72641c823e5611399883e925d3b554b764f3f68281c7",
-  "tiny": false
- },
- "redo/tomas.png": {
-  "source": "0cb953ae2c48efbfda529d75b5314c037946abded2d1cbf590091762ffe1a501",
-  "tiny": false
- },
  "horrors/ajolote.png": {
   "source": "239b6617a3d15b5d5c6e06bafdae9fc050f80c2f39d80149ec12935b6f997df6",
   "tiny": true
@@ -2349,6 +2329,26 @@
  },
  "gear/sedal.png": {
   "source": "9f6f1c603ad45a562b74678c8612e08ce5a01e9e414683b18b06ffcbb481562a",
+  "tiny": true
+ },
+ "people/chela.png": {
+  "source": "1ca52c32fd7997dcfb9d5722bdfeba83a61f83f56ae6782d4f9622c7e84e7934",
+  "tiny": true
+ },
+ "people/marta.png": {
+  "source": "ca53a515844ea0550306104f95e96d58fb52f8f7114e573ce3568e87e2e3293e",
+  "tiny": true
+ },
+ "people/nico.png": {
+  "source": "07ed131830f944ae67fdf951f798d952dea4bb2ff4e038f6b874e2020016ca96",
+  "tiny": true
+ },
+ "people/ruelas.png": {
+  "source": "6eb57ab733bd910a2fa4ed4d0479ee126cc926bce96974d160ad8add4fb93f66",
+  "tiny": true
+ },
+ "people/tomas.png": {
+  "source": "80a8ca9dc9474072d8e276c60b6ec88badd56e552e616f93b1a3b0c4b64da065",
   "tiny": true
  }
 }

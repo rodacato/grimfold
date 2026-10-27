@@ -26,7 +26,7 @@ export function LootIcon({
 }) {
   const src = bayArt.loot(id);
   const [missing, miss] = useMissing(src);
-  if (missing) return fallback;
+  if (!src || missing) return fallback;
   return (
     <img
       className={`loot-icon ${big ? "big" : ""}`}

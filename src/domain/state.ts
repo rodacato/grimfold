@@ -1,6 +1,6 @@
 import type { EventId, GearPiece, IslandId, RoomKind, Shadow, WaterType, WreckId } from "./content";
 
-export const SAVE_VERSION = 10;
+export const SAVE_VERSION = 11;
 export const MAX_SCARS = 3;
 export const BASE_SANITY = 6;
 export const ROOMS_PER_SANITY = 3;

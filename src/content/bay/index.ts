@@ -44,7 +44,7 @@ export const bay: Place = {
       hp: 6,
       shadow: "enorme",
       rarity: 1,
-      loot: "mano",
+      loot: "colmillo",
       diaryBy: "ruelas",
     },
     {
@@ -55,7 +55,7 @@ export const bay: Place = {
       hp: 4,
       shadow: "mediana",
       rarity: 0,
-      loot: "pluma",
+      loot: "escama",
       diaryBy: "nico",
     },
     {
@@ -209,7 +209,7 @@ export const bay: Place = {
       hp: 7,
       shadow: "enorme",
       rarity: 2,
-      loot: "ancla",
+      loot: "tarareo",
       diaryBy: "chela",
     },
     {
@@ -267,6 +267,9 @@ export const bay: Place = {
     { id: "escudo", use: "nudo", rarity: 1 },
     { id: "flauta", use: "huida", rarity: 0 },
     { id: "mano", use: "golpe", rarity: 1 },
+    { id: "colmillo", use: "golpe", rarity: 1 },
+    { id: "escama", use: "calma", rarity: 0 },
+    { id: "tarareo", use: "huida", rarity: 2 },
   ],
   requests: [
     { id: "e1", by: "chela", wants: "mecha", gear: "farol", level: 2 },
@@ -281,7 +284,7 @@ export const bay: Place = {
   ],
   chapters: [
     { id: "luz", by: "nico", wants: [] },
-    { id: "acta", by: "tomas", wants: ["pinza", "pluma"] },
+    { id: "acta", by: "tomas", wants: ["pinza", "escama"] },
     { id: "duerme", by: "chela", wants: ["corona", "idolo"] },
   ],
   maxDepth: { rio: 1, lago: 2, mar: 3, profundo: 4 },

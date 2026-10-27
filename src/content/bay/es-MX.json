@@ -69,6 +69,9 @@
   "loot.escudo": "Escudo de esturión",
   "loot.flauta": "Flauta de branquia",
   "loot.mano": "Mano al revés",
+  "loot.colmillo": "Colmillo de lado",
+  "loot.escama": "Escama con los ojos cerrados",
+  "loot.tarareo": "Boca que tararea",
 
   "request.e1": "Para la ventana. Por si vuelve.",
   "request.e2": "Para el ratón del archivo. Ya me comió una página.",
@@ -86,7 +89,7 @@
   "chapter.luz.reveals": "En la torre había alguien. Traía puesta la gorra de tu papá.",
   "chapter.acta.title": "El acta",
   "chapter.acta.says": "Te enseño el acta si me traes la luz otra vez. Y algo del río para el archivo.",
-  "chapter.acta.hint": "En el río: la Pinza la suelta el Cangrejo de los ahogados; la Pluma, la Cara de Abajo.",
+  "chapter.acta.hint": "En el río: la Pinza la suelta el Cangrejo de los ahogados; la Escama, la Cara de Abajo.",
   "chapter.acta.reveals": "El acta: once manos alzadas para apagar el faro. La de Chela también. Falta una página.",
   "chapter.duerme.title": "Lo que duerme",
   "chapter.duerme.says": "Yo cerré la puerta. Él quedó afuera. Tráeme algo de donde está él.",

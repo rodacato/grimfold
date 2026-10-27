@@ -180,6 +180,9 @@ shows only the name.
 - [x] `escudo` — **Escudo de esturión.** A bony plate shaped like a monolith's vertebra.
 - [x] `flauta` — **Flauta de branquia.** A twisted gill tube that whistles on its own.
 - [x] `mano` — **Mano al revés.** A hand with its fingers bent the wrong way.
+- [ ] `colmillo` — **Colmillo de lado.** The bagre's tooth, grown sideways out of the root, wet as if it still breathed.
+- [ ] `escama` — **Escama con los ojos cerrados.** A pale scale from the raya's underside with two small closed eyelids on it.
+- [ ] `tarareo` — **Boca que tararea.** A small soft mouth from the sifonóforo's chain, lips parted mid-song, no head around it.
 - [x] `pluma` — **Pluma con sal.**
 - [x] `ojo-madera` — **Ojo de madera.** The figurehead's eye.
 - [x] `idolo` — **Ídolo de algo que duerme.** A faceless figure with closed eyes carved all over its body. Redone; the first one, which showed Cthulhu, is `raw/candidates/objects/idolo-primero.png`.

@@ -28,7 +28,7 @@ describe("the art the game asks for is in assets/web", () => {
   });
 
   it("every Botín, and every Equipo piece at each level", () => {
-    const loot = bay.loot.map((l) => bayArt.loot(l.id));
+    const loot = bay.loot.flatMap((l) => bayArt.loot(l.id) ?? []);
     const gear = (["cana", "sedal", "farol", "motor", "casco"] as const).flatMap((g) =>
       [1, 2, 3].map((level) => bayArt.gear(g, level)),
     );

@@ -43,6 +43,8 @@ const LOCATIONS = [
   "carta-bahia",
   "faro-exterior",
   "faro-lampara",
+  "final-faro",
+  "final-bajar",
 ];
 
 function run(cmd, args) {
@@ -73,6 +75,10 @@ const scaled = (rel, width) =>
 
 for (const f of pngs("loot")) scaled(`loot/${f}`, 192);
 for (const f of pngs("gear")) scaled(`gear/${f}`, 192);
+// 512 and 192 for the manifest, 180 for iOS, which ignores it.
+for (const size of [512, 192, 180]) {
+  put(`app/icono-${size}.png`, (out) => ffmpeg(join(ASSETS, "app/icono.png"), `scale=${size}:-1:flags=lanczos`, out));
+}
 copy("characters/arponera-del-mar.png");
 for (const f of pngs("characters/arponera", ["sheet", "ojos-bruma-parche"])) copy(`characters/arponera/${f}`);
 copy("objects/bote.png");

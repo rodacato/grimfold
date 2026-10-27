@@ -26,13 +26,14 @@ New deliveries from Codex go to `raw/pending/`.
 | `horrors/farolero*/` | The Farolero's three puppets as exact cuts: `farolero` (the ending), `farolero-guardian` (the lighthouse, with `accesorios/` holding the cap, coat and lamp-room lure on their own) and `farolero-persigue` (the chase). `farolero-hoja/` is the first, hand-cut rig, no longer shipped | Layers 1254×1254 transparent, all at 0,0 |
 | `horrors/<id>/` | A horror's puppet as exact cuts: numbered layers back to front, `armado.png` (the transparent base they rebuild), `cortes.json` (bbox, pivot, parent and stack order per layer). From batch 3 on, `solape-*` / `relleno-*` overlaps hidden under the paper at rest, listed in `solapes.json`; batches 1–2 came without them and keep `sheet.png` / `apoyo-cuerpo.png`; their overlaps are derived by `tools/art/overlaps.py` from the cuts themselves. Every horror of the Mazo, plus `reina-retazo`, the Reina's learned face | Layers 1254×1254 transparent, all at 0,0 |
 | `town/` | The Muelle panorama: `pueblo-muelle`, `pueblo-centro`, `pueblo-loma`, left to right, and `pueblo-panorama` | 941×1672 panels; `zones.json` holds the tap areas, normalized 0–1 per panel |
-| `locations/` | The Salas, the lighthouse, the Eventos, and `pueblo-faro` (for a title screen the game does not have; not shipped) | 1536×1024 horizontal |
+| `locations/` | The Salas, the lighthouse, the Eventos, the two Finales, and `pueblo-faro` (for a title screen the game does not have; not shipped) | 1536×1024 horizontal |
 | `objects/` | `farol` (a style reference), `bote` (La Vigilia, transparent) and `bote-fondo`, the boat as first delivered on petrol | 1254×1254 |
 | `gear/` | The Equipo icons: `cana`, `sedal`, `farol`, `motor`, `casco-madera`, `casco-reforzado` | 1254×1254 transparent |
 | `people/` | The five townspeople portraits; `v1/` holds the painted ones they replaced, kept as content references | 1254×1254 transparent |
 | `cards/` | The three card backs, one per Sombra; `v1/` holds the first ones | 1060×1484 opaque |
 | `characters/` | `arponera` and `arponera-del-mar`, her puppet in `arponera/` (sheet and cut pieces), and `profundo`, the reference for her last stage | Arponera 1024×1536 transparent; `profundo` 1254×1254 opaque petrol |
 | `loot/` | The Botines, one per id in ASSETS.md, plus `luz` | 1254×1254 transparent |
+| `app/` | `icono`, shipped at 512, 192 and 180 px for the manifest, the favicon and iOS | 1024×1024 opaque petrol |
 | `candidates/objects/` | `idolo-primero`, the first idol, which showed Cthulhu; kept because the loot prompts used it as a style reference | 1254×1254 |
 | `candidates/characters/` | The painted portraits' second poses and `marta-mayor`, all off-style and unused | 1254×1254 |
 | `candidates/horrors/` | Horrors outside the Mazo: four cosmic ones (`nudo`, `ausencia`, `inquilino`, `desove`), each with its exact-cut puppet in a folder, kept out by LORE.md; and `cthulhu`, which is never used | 1254×1254 |

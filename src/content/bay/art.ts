@@ -7,9 +7,6 @@ export interface Rig {
   pieces: Piece[];
 }
 
-/** Botines requested in ASSETS.md and not yet drawn: shown by name only. */
-const LOOT_PENDING = new Set(["colmillo", "escama", "tarareo"]);
-
 /** Paths inside assets/web/, built by tools/art/web_art.mjs; a missing file falls back to a paper silhouette. */
 export const bayArt = {
   creature: (id: string) => `horrors/${id}.png`,
@@ -20,7 +17,7 @@ export const bayArt = {
   /** What a bite shows before the Carta surfaces: only its size. */
   cardBack: (shadow: Shadow) => `cards/dorso-${shadow}.png`,
   person: (id: string) => `people/${id}.png`,
-  loot: (id: string) => (LOOT_PENDING.has(id) ? null : `loot/${id}.png`),
+  loot: (id: string) => `loot/${id}.png`,
   gear: (piece: GearPiece, level: number) =>
     `gear/${piece === "casco" ? (level >= 2 ? "casco-reforzado" : "casco-madera") : piece}.png`,
   town: ["town/pueblo-muelle.png", "town/pueblo-centro.png", "town/pueblo-loma.png"],
@@ -47,6 +44,10 @@ export const bayArt = {
   chart: "locations/carta-bahia.png",
   lighthouse: "locations/faro-exterior.png",
   lamp: "locations/faro-lampara.png",
+  ending: {
+    faro: "locations/final-faro.png",
+    bajar: "locations/final-bajar.png",
+  } satisfies Record<"faro" | "bajar", string>,
   boat: "objects/bote.png",
   arponeraFromSea: "characters/arponera-del-mar.png",
 };

@@ -2506,5 +2506,37 @@
  "horrors/raya/solape-mandibula-inferior-derecha.png": {
   "source": "a96b389793771d0552ce053d9f255e048b3eb0e680638882da78c1f0e5684742",
   "tiny": false
+ },
+ "locations/final-faro.png": {
+  "source": "c2a991d47682f7ca3dbace818deb0615c928644c61abd8f778d8ec572f8aebfc",
+  "tiny": true
+ },
+ "locations/final-bajar.png": {
+  "source": "a6566d0f5b60a74f50d13e407aad45498ea0cea96466378813a57e7de0487fdc",
+  "tiny": true
+ },
+ "loot/colmillo.png": {
+  "source": "af8a39f43e2dfef21986ca4256e0fe888db07b7de0619f2003f1576487f237fb",
+  "tiny": true
+ },
+ "loot/escama.png": {
+  "source": "90aed2aa702acf50cef29c0a040078a5b6d1f04d377127810187007cc1aa876c",
+  "tiny": true
+ },
+ "loot/tarareo.png": {
+  "source": "6d8ae116899a0cd144930d152a5f767b382e763d751bf58e99abdfa6efd55958",
+  "tiny": true
+ },
+ "app/icono-512.png": {
+  "source": "2da8ac3ed8f0a4b7af5a82d459bbcdc9b6059a377ba5b20527db399701dfc500",
+  "tiny": true
+ },
+ "app/icono-192.png": {
+  "source": "eb82347f68db7bec6a8200914065c3316c176082c13cd7303ce0642c223d0d60",
+  "tiny": true
+ },
+ "app/icono-180.png": {
+  "source": "2484494a236808dfc74c1bb5b1eefac79a3363a2bccdf2ca5eae8ccf3e6d3ae4",
+  "tiny": true
  }
 }

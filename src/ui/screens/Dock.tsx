@@ -99,6 +99,9 @@ export function Dock() {
     return (
       <Screen>
         <Title />
+        <div className="scene ending">
+          <Art src={bayArt.ending[c.ending]} alt={t(`ending.${c.ending}.title`)} />
+        </div>
         <section className={`paper ${c.ending === "faro" ? "amber" : "dark"}`}>
           <p className="kicker">{t("dock.end.kicker")}</p>
           <h2>{t(`ending.${c.ending}.title`)}</h2>

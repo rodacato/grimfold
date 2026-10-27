@@ -20,11 +20,13 @@ text, and its format (still, puppet sheet, item sheet or layers).
 |---|---|---|
 | Horrors | All 22 of the Mazo, each a puppet; the Farolero in three poses; the Reina's learned face | — |
 | The Arponera | Base, puppet, Ojos de bruma, Brazo de ventosas, Del mar | — |
-| Loot | All 20 | — |
+| Loot | All 23 | — |
 | Equipment | All five pieces, both cascos, the boat | — |
 | Cards | The three card backs, on the bite screen | The printed deck's layout |
 | Locations | Every Sala and Evento, the lamp room, the chart, the three town panels | Layer sheets for what moves |
 | Townspeople | Five portraits, in style, shown in the Capítulos | — |
+| Finales | Both, above the Final's text | — |
+| App | `icono`, in the manifest and as the favicon | — |
 
 **Next, in order:**
 
@@ -180,9 +182,9 @@ shows only the name.
 - [x] `escudo` — **Escudo de esturión.** A bony plate shaped like a monolith's vertebra.
 - [x] `flauta` — **Flauta de branquia.** A twisted gill tube that whistles on its own.
 - [x] `mano` — **Mano al revés.** A hand with its fingers bent the wrong way.
-- [ ] `colmillo` — **Colmillo de lado.** The bagre's tooth, grown sideways out of the root, wet as if it still breathed.
-- [ ] `escama` — **Escama con los ojos cerrados.** A pale scale from the raya's underside with two small closed eyelids on it.
-- [ ] `tarareo` — **Boca que tararea.** A small soft mouth from the sifonóforo's chain, lips parted mid-song, no head around it.
+- [x] `colmillo` — **Colmillo de lado.** The bagre's tooth, grown sideways out of the root, wet as if it still breathed.
+- [x] `escama` — **Escama con los ojos cerrados.** A pale scale from the raya's underside with two small closed eyelids on it.
+- [x] `tarareo` — **Boca que tararea.** A small soft mouth from the sifonóforo's chain, lips parted mid-song, no head around it.
 - [x] `pluma` — **Pluma con sal.**
 - [x] `ojo-madera` — **Ojo de madera.** The figurehead's eye.
 - [x] `idolo` — **Ídolo de algo que duerme.** A faceless figure with closed eyes carved all over its body. Redone; the first one, which showed Cthulhu, is `raw/candidates/objects/idolo-primero.png`.
@@ -190,6 +192,28 @@ shows only the name.
 ## Cards
 
 - [x] `dorso-chica`, `dorso-mediana`, `dorso-enorme` — Card backs: the creature's shadow seen from above the water, one per size. In `raw/cards/` (v2; the first ones in `cards/v1/`), shown on the bite screen. Not yet in the printed deck.
+
+## Finales
+
+Horizontal 1536×1024 in `assets/raw/locations/`, like the Salas: the last screen of the Campaña,
+above the Final's text ([LORE.md](LORE.md)). Each one is the moment the Campaña ends, not what
+happens after.
+
+- [x] `final-faro` — **Prendes el faro.** The tower lit again, seen from the Muelle. Below, in the
+  water, something going back to sleep, and the father staying down there to watch over it. The
+  town in the dark: from now on it will have to sail far to fill its nets.
+- [x] `final-bajar` — **Bajas con él.** The lighthouse dark; the Arponera walking into the warm
+  water. Someone is waiting for her below. At the dock, the fish keep coming in on their own.
+
+## App
+
+Square 1024×1024 in `assets/raw/app/`, opaque on the petrol background: the phone crops it to a
+circle or a rounded square, so everything that matters sits in the central 80%. It has to read at
+48 px, on a home screen next to other apps.
+
+- [x] `icono` — **La luz robada.** The game in one thing: the lighthouse's light, the one you go out
+  to steal and bring home before the Farolero takes it back. A single object, nothing around it, no
+  creature and no lettering.
 
 ## Not used
 

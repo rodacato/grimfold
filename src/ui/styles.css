@@ -781,6 +781,11 @@ body::after {
 .scene.showcase {
   height: 390px;
 }
+/* Uncropped: the Finales hide what happened in their lowest strip, under the water. */
+.scene.ending {
+  height: auto;
+  aspect-ratio: 3 / 2;
+}
 .showcase .creature {
   top: 56px;
   bottom: auto;

@@ -19,6 +19,11 @@ export default defineConfig({
         background_color: "#123f45",
         display: "standalone",
         orientation: "portrait",
+        icons: [
+          { src: "app/icono-192.png", sizes: "192x192", type: "image/png" },
+          { src: "app/icono-512.png", sizes: "512x512", type: "image/png" },
+          { src: "app/icono-512.png", sizes: "512x512", type: "image/png", purpose: "maskable" },
+        ],
       },
       workbox: {
         globPatterns: ["**/*.{js,css,html,woff2}"],

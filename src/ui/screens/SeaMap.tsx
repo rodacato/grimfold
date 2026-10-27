@@ -42,25 +42,7 @@ function Glyph({ kind, x, y, dark }: { kind: RoomKind; x: number; y: number; dar
 }
 
 function Boat({ x, y }: { x: number; y: number }) {
-  return (
-    <svg
-      className="here"
-      x={x - 22}
-      y={y - 32}
-      width="44"
-      height="26"
-      viewBox="0 0 200 110"
-      aria-hidden="true"
-    >
-      <path d="M60 8H64V70H60Z" fill="#3b2618" />
-      <circle cx="62" cy="27" r="13" fill="var(--lamp)" opacity=".3" />
-      <path d="M55 20H69L70 34H54Z" fill="var(--lamp)" />
-      <path d="M100 30H140V62H100Z" fill="var(--cream)" />
-      <path d="M96 32L120 18L144 32Z" fill="var(--rust)" />
-      <path d="M10 60L192 56L176 96C140 106 60 106 26 96Z" fill="#8a5a3b" />
-      <path d="M10 58L192 54L190 61L12 65Z" fill="#c69a6a" />
-    </svg>
-  );
+  return <image className="here" href={artUrl(bayArt.boat)} x={x - 30} y={y - 50} width="60" height="60" />;
 }
 
 function FaroleroMark({ x, y }: { x: number; y: number }) {
@@ -203,7 +185,7 @@ export function SeaMap() {
           </Btn>
         </section>
       )}
-      {!target && tide.light && <p className="warn">{t("map.flee")}</p>}
+      {!target && <p className={tide.light ? "warn" : "hint"}>{t(tide.light ? "map.flee" : "map.pick")}</p>}
       {!target &&
         canStay &&
         (tide.light ? (

@@ -9,7 +9,7 @@ import {
   sanityCeiling,
   spareLoot,
 } from "./derived";
-import { activeTide, newCampaign, type SessionEntry, type TideEnd } from "./state";
+import { activeTide, HOLD_SIZE, newCampaign, type SessionEntry, type TideEnd } from "./state";
 import { createRooms } from "./tide/map";
 
 export function canStartTide({ g, place }: Ctx): boolean {
@@ -25,6 +25,8 @@ export function startTide(ctx: Ctx): void {
   c.solace = 0;
   const bait = c.bait;
   c.bait = null;
+  const hold = c.packed;
+  c.packed = [];
   g.tide = {
     number: c.tides + 1,
     startedAt: at,
@@ -45,7 +47,7 @@ export function startTide(ctx: Ctx): void {
     farolero: null,
     lead: 0,
     light: false,
-    hold: [],
+    hold,
     drawn: [],
     bait,
     mutations: campaignMutations(c),
@@ -116,6 +118,16 @@ export function setBait({ g, place }: Ctx, creatureId: string): void {
   if (g.tide || c.bait || spare < 0 || !baitable(place, c).some((cr) => cr.id === creatureId)) return;
   c.shelf.splice(spare, 1);
   c.bait = creatureId;
+}
+
+/** Moves a Botín between the Repisa and the Bodega the next Marea starts with. */
+export function pack({ g }: Ctx, item: string, aboard: boolean): void {
+  const c = g.campaign;
+  const [from, to] = aboard ? [c.shelf, c.packed] : [c.packed, c.shelf];
+  const index = from.indexOf(item);
+  if (g.tide || index < 0 || (aboard && to.length >= HOLD_SIZE)) return;
+  from.splice(index, 1);
+  to.push(item);
 }
 
 export function nextChapter({ g, place }: Ctx): void {

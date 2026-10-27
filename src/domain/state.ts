@@ -1,6 +1,6 @@
 import type { EventId, GearPiece, IslandId, RoomKind, Shadow, WaterType, WreckId } from "./content";
 
-export const SAVE_VERSION = 11;
+export const SAVE_VERSION = 12;
 export const MAX_SCARS = 3;
 export const BASE_SANITY = 6;
 export const ROOMS_PER_SANITY = 3;
@@ -99,6 +99,8 @@ export interface Campaign {
   scars: number;
   ending: null | "choose" | "faro" | "bajar";
   shelf: string[];
+  /** Taken off the Repisa to start the next Marea in the Bodega. */
+  packed: string[];
 }
 
 /** One line of the Registro de sesiones: what measures the bet. */
@@ -146,6 +148,7 @@ export function newCampaign(number: number): Campaign {
     scars: 0,
     ending: null,
     shelf: [],
+    packed: [],
   };
 }
 

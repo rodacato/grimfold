@@ -11,7 +11,7 @@ import {
   sanityCeiling,
   spareLoot,
 } from "../../domain/derived";
-import { MAX_SCARS } from "../../domain/state";
+import { HOLD_SIZE, MAX_SCARS } from "../../domain/state";
 import { t } from "../../i18n/t";
 import { ArponeraPuppet } from "../Arponera";
 import { Art, LootIcon } from "../Art";
@@ -191,9 +191,12 @@ export function Dock() {
                 </span>
                 <div>
                   <b>{t("dock.request", { who: t(`person.${r.by}`), item: r.wants })}</b>
-                  <small>
-                    {t("dock.requestGives", { gear: t(`gear.${r.gear}`), level: r.level })}:{" "}
-                    {t(`gear.${r.gear}.${r.level}`)}
+                  <small className="named gives">
+                    <Art src={bayArt.gear(r.gear, r.level)} alt="" className="gear-icon" />
+                    <span>
+                      {t("dock.requestGives", { gear: t(`gear.${r.gear}`), level: r.level })}:{" "}
+                      {t(`gear.${r.gear}.${r.level}`)}
+                    </span>
                   </small>
                   {has && <small className="voice">“{t(`request.${r.id}`)}”</small>}
                 </div>
@@ -210,10 +213,32 @@ export function Dock() {
         {c.shelf.length > 0 && (
           <div className="shelf">
             {c.shelf.map((s, i) => (
-              <span key={`${s}-${i}`} className="named">
+              <button
+                type="button"
+                key={`${s}-${i}`}
+                className="named"
+                disabled={c.packed.length >= HOLD_SIZE}
+                onClick={() => send({ type: "pack", item: s, aboard: true })}
+              >
                 <LootIcon id={s} />
                 {t(`loot.${s}`)}
-              </span>
+              </button>
+            ))}
+          </div>
+        )}
+        {c.packed.length > 0 && <p className="kicker">{t("dock.packedTitle")}</p>}
+        {c.packed.length > 0 && (
+          <div className="shelf packed">
+            {c.packed.map((s, i) => (
+              <button
+                type="button"
+                key={`${s}-${i}`}
+                className="named"
+                onClick={() => send({ type: "pack", item: s, aboard: false })}
+              >
+                <LootIcon id={s} />
+                {t(`loot.${s}`)}
+              </button>
             ))}
           </div>
         )}
@@ -222,7 +247,13 @@ export function Dock() {
       {c.bait && (
         <section className="paper">
           <h3>{t("dock.bait")}</h3>
-          <p className="small">{t("dock.bait.set", { item: creature(place, c.bait).loot })}</p>
+          <p className="small">
+            {t("dock.bait.set", {
+              item: creature(place, c.bait).loot,
+              water: t(`water.${creature(place, c.bait).water}`),
+              depth: creature(place, c.bait).depth,
+            })}
+          </p>
         </section>
       )}
       {!c.bait && spare >= 0 && baits.length > 0 && (

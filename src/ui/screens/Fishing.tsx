@@ -32,7 +32,11 @@ export function Bite() {
       <div className="scene">
         <Waves />
         <div className="line" />
-        <Art src={bayArt.cardBack(bite.shadow)} alt={t(`shadow.${bite.shadow}`)} className="card-back" />
+        <Art
+          src={bayArt.creature(bite.creature)}
+          alt={t(`shadow.${bite.shadow}`)}
+          className={`creature ${bite.shadow} lurking`}
+        />
       </div>
       <section className="paper">
         <p className="kicker">{t("fight.depth", { n: tide.depth })}</p>

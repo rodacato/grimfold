@@ -32,13 +32,16 @@ describe("a cebo", () => {
     game = send(game, { type: "startTide" });
     expect(game.campaign.bait).toBeNull();
 
+    const told = (g: Game) => g.notes.some((n) => n.key === "bait.bit");
     game = castIn(game, "lago");
     expect(game.tide?.bite?.creature).not.toBe("cangrejo");
     expect(game.tide?.bait).toBe("cangrejo");
+    expect(told(game)).toBe(false);
 
     game = castIn(game, "rio");
     expect(game.tide?.bite?.creature).toBe("cangrejo");
     expect(game.tide?.bait).toBeNull();
+    expect(told(game)).toBe(true);
   });
 
   it("is refused for a Carta whose Botín nobody asked for, or with nothing spare to spend", () => {

@@ -190,6 +190,56 @@ describe("the Farolero catching you with the light", () => {
   });
 });
 
+describe("escaping the Farolero", () => {
+  it("leaves you in the Sala you were caught in, so the lighthouse can still be robbed", () => {
+    const outcomes = Array.from({ length: 40 }, (_, i) => {
+      const game = atSea(i + 1);
+      const tide = tideOf(game);
+      tide.room = bay.map.lighthouse;
+      tide.farolero = bay.map.lighthouse;
+      tide.phase = "farolero";
+      return send(game, { type: "flee" });
+    });
+    const escaped = outcomes.find((g) => tideOf(g).encounter?.escapes) as Game;
+    expect(escaped).toBeDefined();
+    const after = send(escaped, { type: "afterEncounter" });
+    expect(tideOf(after).phase).toBe("room");
+    expect(tideOf(send(after, { type: "stealLight" })).light).toBe(true);
+  });
+});
+
+describe("packing the Bodega from the Repisa", () => {
+  it("starts the next Marea with what was packed, and brings it back to the Repisa on returning", () => {
+    const game = newGame(1, bay.id);
+    game.campaign.shelf = ["pluma", "mano"];
+    const packed = send(game, { type: "pack", item: "pluma", aboard: true });
+    expect(packed.campaign.shelf).toEqual(["mano"]);
+    const out = send(packed, { type: "startTide" });
+    expect(tideOf(out).hold).toEqual(["pluma"]);
+    expect(out.campaign.packed).toEqual([]);
+    tideOf(out).room = nextToDock;
+    tideOf(out).phase = "map";
+    const home = send(out, { type: "navigate", room: bay.map.dock });
+    expect(home.campaign.shelf.sort()).toEqual(["mano", "pluma"]);
+  });
+
+  it("never packs more than the Bodega holds, nor at sea, and unpacking puts it back", () => {
+    const game = newGame(1, bay.id);
+    game.campaign.shelf = Array.from({ length: HOLD_SIZE + 1 }, () => "pluma");
+    let g = game;
+    for (let i = 0; i <= HOLD_SIZE; i++) g = send(g, { type: "pack", item: "pluma", aboard: true });
+    expect(g.campaign.packed.length).toBe(HOLD_SIZE);
+    expect(g.campaign.shelf.length).toBe(1);
+    g = send(g, { type: "pack", item: "pluma", aboard: false });
+    expect(g.campaign.packed.length).toBe(HOLD_SIZE - 1);
+
+    const sea = atSea(1, (s) => {
+      s.campaign.shelf = ["mano"];
+    });
+    expect(send(sea, { type: "pack", item: "mano", aboard: true }).campaign.packed).toEqual([]);
+  });
+});
+
 describe("the lighthouse's horn", () => {
   function hearing(yes: boolean): { before: Tide; after: Tide } {
     const game = atSea();

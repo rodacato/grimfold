@@ -1,5 +1,6 @@
 import { bayArt } from "../../content/bay/art";
 import type { EventId, IslandId, WreckId } from "../../domain/content";
+import { creature } from "../../domain/derived";
 import type { Room, Tide } from "../../domain/state";
 import { CASTS_PER_ROOM } from "../../domain/state";
 import { castsLeft } from "../../domain/tide/sea";
@@ -65,7 +66,7 @@ export function RoomView() {
               <FaroleroPuppet
                 pose="farolero-guardian"
                 width={260}
-                look={farolero.stage >= 3 ? "full" : "lure"}
+                look={farolero.stage >= 3 ? "full" : farolero.stage === 2 ? "lured" : "shadow"}
               />
             </div>
           )}
@@ -87,6 +88,8 @@ export function RoomView() {
   if (room.kind === "water") {
     const max = place.maxDepth[room.water];
     const left = castsLeft(room);
+    const bait = tide.bait ? creature(place, tide.bait) : null;
+    const baited = bait?.water === room.water ? bait : null;
     const scene = <PlaceScene src={bayArt.water[room.water]} alt={t(`water.${room.water}`)} />;
     const kicker = (
       <p className="kicker">
@@ -126,6 +129,7 @@ export function RoomView() {
               </i>
             ))}
           </div>
+          {baited && <p className="small voice">{t("water.bait", { n: baited.depth })}</p>}
           {tide.lastRoll && <Roll dice={tide.lastRoll} rollKey={game.rng} />}
         </section>
         <div className="actions">
@@ -152,8 +156,17 @@ export function RoomView() {
   }
 
   if (room.resolved) {
+    const art =
+      room.kind === "island"
+        ? bayArt.island[room.content as IslandId]
+        : room.kind === "wreck"
+          ? bayArt.wreck[room.content as WreckId]
+          : bayArt.event[room.content as EventId];
     return (
       <Screen>
+        <div className="scene place spent">
+          <Art src={art} alt={t(`room.${room.kind}`)} />
+        </div>
         <section className="paper">
           <p className="kicker">{t(`room.${room.kind}`)}</p>
           <h2>{t("room.visited")}</h2>

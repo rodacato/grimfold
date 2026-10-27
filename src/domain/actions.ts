@@ -4,6 +4,7 @@ import {
   deliverRequest,
   giveChapterPiece,
   nextChapter,
+  pack,
   setBait,
   startNewCampaign,
   startTide,
@@ -39,6 +40,7 @@ export type Command =
   | { type: "deliverRequest"; request: string }
   | { type: "giveChapterPiece" }
   | { type: "setBait"; creature: string }
+  | { type: "pack"; item: string; aboard: boolean }
   | { type: "nextChapter" }
   | { type: "chooseEnding"; ending: "faro" | "bajar" }
   | { type: "newCampaign" };
@@ -72,6 +74,7 @@ const handlers: Handlers = {
   deliverRequest: (ctx, c) => deliverRequest(ctx, c.request),
   giveChapterPiece: (ctx) => giveChapterPiece(ctx),
   setBait: (ctx, c) => setBait(ctx, c.creature),
+  pack: (ctx, c) => pack(ctx, c.item, c.aboard),
   nextChapter: (ctx) => nextChapter(ctx),
   chooseEnding: (ctx, c) => chooseEnding(ctx, c.ending),
   newCampaign: (ctx) => startNewCampaign(ctx),

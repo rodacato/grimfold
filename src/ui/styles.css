@@ -115,6 +115,13 @@ p + p {
   font-size: 14px;
   color: var(--rust);
 }
+.hint {
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  color: var(--cream);
+  opacity: 0.8;
+}
 
 .paper {
   padding: 12px 14px 14px;
@@ -662,11 +669,32 @@ body::after {
   flex-wrap: wrap;
   gap: 5px;
 }
-.shelf span {
+.shelf .named {
+  min-height: 34px;
   padding: 3px 7px;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
   font-weight: 800;
   font-size: 12.5px;
+  color: var(--ink);
   background: var(--card);
+}
+.shelf .named:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+.shelf.packed .named {
+  background: var(--lamp);
+}
+.request small.gives {
+  display: flex;
+  gap: 5px;
+  margin-top: 3px;
+}
+.request .gives .gear-icon {
+  width: 26px;
+  height: 26px;
 }
 .crew {
   display: grid;
@@ -781,6 +809,9 @@ body::after {
 .scene.showcase {
   height: 390px;
 }
+.scene.spent > .art {
+  filter: grayscale(0.7) brightness(0.6);
+}
 /* Uncropped: the Finales hide what happened in their lowest strip, under the water. */
 .scene.ending {
   height: auto;
@@ -842,14 +873,10 @@ body::after {
   width: 300px;
   bottom: -40px;
 }
-.card-back {
-  position: absolute;
-  left: 50%;
-  bottom: 14px;
-  width: 150px;
-  aspect-ratio: 5 / 7;
-  border-radius: 6px;
-  box-shadow: 4px 6px 0 rgba(0, 0, 0, 0.35);
+/* Only its size shows: blurred enough that the shape gives nothing away. */
+.creature.lurking {
+  filter: brightness(0) blur(9px);
+  opacity: 0.7;
   animation: circle 3.6s ease-in-out infinite alternate;
 }
 @keyframes rise {
@@ -1197,8 +1224,8 @@ body::after {
 }
 .farolero.shadow .piece,
 .farolero.lured .piece:not(.senuelo):not(.senuelo-faro) {
-  filter: brightness(0) blur(2px);
-  opacity: 0.8;
+  filter: brightness(0) blur(6px);
+  opacity: 0.75;
 }
 .puppet .piece,
 .puppet .whole {

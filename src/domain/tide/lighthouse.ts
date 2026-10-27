@@ -51,5 +51,5 @@ export function afterEncounter(ctx: Ctx): void {
   const tide = activeTide(ctx.g);
   if (tide.phase !== "farolero" || !tide.encounter) return;
   tide.encounter = null;
-  tide.phase = "map";
+  tide.phase = "room";
 }

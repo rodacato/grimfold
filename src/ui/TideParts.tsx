@@ -55,13 +55,9 @@ export function Status({ tide }: { tide: Tide }) {
           </span>
         </span>
         <span>
-          {t("status.sanityLabel")}
-          <span
-            className="eyes"
-            role="img"
-            aria-label={t("status.sanity", { n: tide.sanity, max: tide.ceiling })}
-          >
-            {Array.from({ length: BASE_SANITY }, (_, i) => (
+          {t("status.sanity", { n: tide.sanity, max: tide.ceiling })}
+          <span className="eyes" aria-hidden="true">
+            {Array.from({ length: Math.max(BASE_SANITY, tide.ceiling) }, (_, i) => (
               <i key={i} className={eye(i)} />
             ))}
           </span>

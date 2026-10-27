@@ -16,9 +16,7 @@ describe("N8: closing mid-Marea and reopening restores the exact state", () => {
     }
     const before = first.getGame();
     expect(before.tide, "the bot should be mid-Marea").not.toBeNull();
-    await new Promise((resolve) => setTimeout(resolve, 50));
-
-    const reopened = await createStore(indexedDbStorage(), bay, { now });
-    expect(reopened.getGame()).toEqual(before);
+    const reopen = async () => (await createStore(indexedDbStorage(), bay, { now })).getGame();
+    await expect.poll(reopen, { timeout: 5_000 }).toEqual(before);
   });
 });

@@ -28,7 +28,7 @@ export function timePasses(ctx: Ctx): boolean {
     note(ctx.g, tide.lead ? "farolero.leaving" : "farolero.inWater", { lead: tide.lead + 1 });
     return false;
   }
-  const jump = d6(ctx.g) >= 5 ? 2 : 1;
+  const jump = d6(ctx.g) >= 4 ? 2 : 1;
   for (let i = 0; i < jump && tide.farolero !== tide.room; i++) {
     tide.farolero = stepToward(nodes, tide.farolero, tide.room);
   }
@@ -204,14 +204,17 @@ export function decide(ctx: Ctx, yes: boolean): void {
       }
       break;
     case "sirena":
-      if (tide.farolero !== null) {
+      if (tide.farolero === null) note(g, yes ? "event.sirena.asleep" : "event.sirena.deaf");
+      else if (!yes) {
+        if (loseSanity(ctx, 1, "events", "event.sirena.covered")) return;
+      } else {
         tide.farolero = stepToward(place.map.nodes, tide.farolero, tide.room);
         note(g, "event.sirena.closer", undefined, true);
         if (tide.farolero === tide.room) {
           tide.phase = "farolero";
           return;
         }
-      } else note(g, yes ? "event.sirena.asleep" : "event.sirena.deaf");
+      }
       break;
   }
   timePasses(ctx);

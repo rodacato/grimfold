@@ -30,7 +30,9 @@ export function FaroleroView() {
       <section className="paper dark">
         <p className="kicker">{t("lighthouse.boss")}</p>
         <h2>{t("farolero.caught", { farolero: name })}</h2>
-        <p className="small">{t("farolero.rule", { n: escapeTarget(ctx) })}</p>
+        <p className="small">
+          {t(game.tide?.light ? "farolero.rule.light" : "farolero.rule", { n: escapeTarget(ctx) })}
+        </p>
         {encounter && (
           <Roll dice={encounter.dice} rollKey={game.rng} total={encounter.dice.reduce((a, b) => a + b, 0)}>
             {t(encounter.escapes ? "farolero.escaped" : "farolero.hit")}

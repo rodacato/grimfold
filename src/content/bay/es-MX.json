@@ -132,5 +132,7 @@
   "event.sal.no.sub": "cuenta como una Sala en la bruma",
   "event.sirena.text": "La bocina del faro suena tres veces.",
   "event.sirena.yes": "Escuchar",
-  "event.sirena.no": "Taparte los oídos"
+  "event.sirena.yes.sub": "si despertó, se acerca 1 Sala",
+  "event.sirena.no": "Taparte los oídos",
+  "event.sirena.no.sub": "si despertó, −1 Cordura"
 }

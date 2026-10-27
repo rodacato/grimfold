@@ -1,9 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { bay } from "../src/content/bay";
 import { type Command, reduce } from "../src/domain/actions";
-import { spareLoot } from "../src/domain/derived";
+import { faroleroStage, spareLoot } from "../src/domain/derived";
 import { type Game, HOLD_SIZE, newGame, type Tide } from "../src/domain/state";
 import { startFight } from "../src/domain/tide/fight";
+import { distance } from "../src/domain/tide/map";
 
 const send = (game: Game, command: Command): Game => reduce(game, { ...command, at: 0 }, bay);
 const tideOf = (game: Game) => game.tide as Tide;
@@ -160,5 +161,64 @@ describe("the town", () => {
     const game = newGame(1, bay.id);
     game.campaign.shelf = ["corona"];
     expect(spareLoot(bay, game.campaign)).toBe(-1);
+  });
+});
+
+function caughtWithLight(seed: number): Game {
+  const game = atSea(seed);
+  const tide = tideOf(game);
+  tide.room = nextToDock;
+  tide.light = true;
+  tide.farolero = nextToDock;
+  tide.phase = "farolero";
+  return send(game, { type: "flee" });
+}
+
+describe("the Farolero catching you with the light", () => {
+  it("takes it back to the tower when you fail to escape, where it can be stolen again", () => {
+    const outcomes = Array.from({ length: 40 }, (_, i) => caughtWithLight(i + 1));
+    const taken = outcomes.filter((g) => !tideOf(g).encounter?.escapes);
+    const escaped = outcomes.filter((g) => tideOf(g).encounter?.escapes);
+    expect(taken.length).toBeGreaterThan(0);
+    expect(escaped.length).toBeGreaterThan(0);
+    for (const g of taken) {
+      expect(tideOf(g).light).toBe(false);
+      expect(tideOf(g).farolero).toBeNull();
+      expect(tideOf(g).rooms[bay.map.lighthouse]?.resolved).toBe(false);
+    }
+    for (const g of escaped) expect(tideOf(g).light).toBe(true);
+  });
+});
+
+describe("the lighthouse's horn", () => {
+  function hearing(yes: boolean): { before: Tide; after: Tide } {
+    const game = atSea();
+    const tide = tideOf(game);
+    tide.rooms[nextToDock] = { kind: "event", water: "rio", resolved: false, casts: 0, content: "sirena" };
+    tide.room = nextToDock;
+    tide.phase = "room";
+    tide.farolero = bay.map.lighthouse;
+    const before = structuredClone(tide);
+    return { before, after: tideOf(send(game, { type: "decide", yes })) };
+  }
+
+  it("trades distance for Cordura once he is awake", () => {
+    const away = (tide: Tide) => distance(bay.map.nodes, tide.farolero as number, tide.room);
+    const listened = hearing(true);
+    const covered = hearing(false);
+    expect(listened.after.sanity).toBe(listened.before.sanity);
+    expect(covered.after.sanity).toBe(covered.before.sanity - 1);
+    expect(away(listened.after)).toBe(away(covered.after) - 1);
+  });
+});
+
+describe("the Farolero's face", () => {
+  it("shows one more stage each Capítulo, and nothing before he is first seen", () => {
+    const game = newGame(1, bay.id);
+    expect(faroleroStage(game)).toBe(0);
+    game.sightings = 1;
+    expect(
+      bay.chapters.map((_, i) => faroleroStage({ ...game, campaign: { ...game.campaign, chapter: i } })),
+    ).toEqual([1, 2, 3]);
   });
 });

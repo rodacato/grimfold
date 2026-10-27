@@ -17,7 +17,7 @@ describe("losing Cordura says what it costs", () => {
         game = reduce(game, { ...command, at: step * 15_000 }, bay);
         const after = game.tide;
         const sameTide = before && after && before.number === after.number;
-        const line = after?.light ? WANDERER_SANITY_LIT : WANDERER_SANITY;
+        const line = after?.light || before?.light ? WANDERER_SANITY_LIT : WANDERER_SANITY;
         const crossed = sameTide && before.sanity > line && after.sanity <= line && after.sanity > 0;
         const warned = game.notes.some((n) => n.key === "sanity.hunted");
         if (sameTide) expect(warned, `seed ${seed} step ${step}`).toBe(Boolean(crossed));

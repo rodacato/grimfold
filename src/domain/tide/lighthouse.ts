@@ -12,13 +12,13 @@ export function stealLight(ctx: Ctx): void {
   g.sightings++;
   (tide.rooms[place.map.lighthouse] as Room).resolved = true;
   tide.farolero = place.map.lighthouse;
-  tide.lead = gearLevel(g.campaign, "motor") >= 2 ? 2 : 1;
+  tide.lead = 1;
   note(g, "light.stolen");
   if (loseSanity(ctx, 1, "farolero", "light.saw")) return;
   tide.phase = "map";
 }
 
-export const escapeTarget = (ctx: Ctx): number => (gearLevel(ctx.g.campaign, "motor") >= 3 ? 7 : 8);
+export const escapeTarget = (ctx: Ctx): number => 10 - gearLevel(ctx.g.campaign, "motor");
 
 export function flee(ctx: Ctx): void {
   const tide = activeTide(ctx.g);
@@ -33,7 +33,18 @@ export function flee(ctx: Ctx): void {
     return;
   }
   if (changeHp(ctx, -3)) return;
-  loseSanity(ctx, 1, "farolero");
+  if (loseSanity(ctx, 1, "farolero")) return;
+  if (tide.light) takeLightBack(ctx);
+}
+
+/** Caught with the light, he takes his watch back to the tower; it can be stolen again. */
+function takeLightBack({ g, place }: Ctx): void {
+  const tide = activeTide(g);
+  tide.light = false;
+  tide.farolero = null;
+  tide.lead = 0;
+  (tide.rooms[place.map.lighthouse] as Room).resolved = false;
+  note(g, "farolero.tookLight", undefined, true);
 }
 
 export function afterEncounter(ctx: Ctx): void {

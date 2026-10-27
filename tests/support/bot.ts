@@ -5,6 +5,9 @@ import type { Game, Room, Tide } from "../../src/domain/state";
 import { blocked, routes } from "../../src/domain/tide/map";
 import { castsLeft } from "../../src/domain/tide/sea";
 
+/** Without the Luz, a plain player turns for home at this Cordura rather than risk a Marca. */
+const RETREAT_AT = 2;
+
 /** A plain player: chases the chapter, fishes for its piece, runs home with the Luz. */
 export function nextCommand(g: Game, place: Place, ending: "faro" | "bajar" = "faro"): Command | null {
   const c = g.campaign;
@@ -70,12 +73,13 @@ function fishOrMove(g: Game, place: Place): Command | null {
   const room = tide.rooms[tide.room] as Room;
   const wanted = needsPiece(g, place);
   const source = place.creatures.find((cr) => wanted.includes(cr.loot) && cr.water === room.water);
-  if (!tide.light && source && room.kind === "water" && castsLeft(room) > 0) {
+  const retreating = !tide.light && tide.sanity <= RETREAT_AT;
+  if (!tide.light && !retreating && source && room.kind === "water" && castsLeft(room) > 0) {
     if (tide.phase === "map") return { type: "stayHere" };
     if (tide.depth < source.depth && tide.depth < place.maxDepth[room.water]) return { type: "descend" };
     return { type: "cast" };
   }
-  const goal = tide.light ? place.map.dock : place.map.lighthouse;
+  const goal = tide.light || retreating ? place.map.dock : place.map.lighthouse;
   const next = nextStep(g, place, goal);
   return next === null ? null : { type: "navigate", room: next };
 }

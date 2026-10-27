@@ -27,7 +27,8 @@ export function loot(place: Place, id: string): Loot {
 }
 
 /** 0 unseen, 1 a shadow, 2 a shadow with a lit lure, 3 the whole fish. */
-export const faroleroStage = (g: Game): number => Math.min(g.sightings, 3);
+/** How much of the Farolero has been seen: nothing before the first sighting, then one stage per Capítulo. */
+export const faroleroStage = (g: Game): number => (g.sightings ? Math.min(g.campaign.chapter + 1, 3) : 0);
 
 export const known = (g: Game, creatureId: string): boolean => g.bestiary.includes(creatureId);
 export const caught = (g: Game, creatureId: string): boolean => g.caught.includes(creatureId);
